@@ -1,0 +1,13 @@
+__pycache__/
+.pytest_cache/
+*.pyc
+
+# Local WhatsApp exports and incremental cursor. These may contain private chats.
+exports/
+.whatsapp_export_state.json
+
+# Local/generated analysis artifacts.
+data/
+.learning_state.json
+whatsapp-english-learning-report.md
+
