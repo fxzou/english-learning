@@ -20,6 +20,8 @@ const vocabIndexSummary = document.getElementById("vocabIndexSummary");
 const vocabDuplicateStatus = document.getElementById("vocabDuplicateStatus");
 const vocabIndexSearch = document.getElementById("vocabIndexSearch");
 const copyVocabIndex = document.getElementById("copyVocabIndex");
+const toggleVocabIndex = document.getElementById("toggleVocabIndex");
+const vocabIndexBody = document.getElementById("vocabIndexBody");
 const vocabIndexMeta = document.getElementById("vocabIndexMeta");
 const vocabIndexList = document.getElementById("vocabIndexList");
 const reviewTitle = document.getElementById("reviewTitle");
@@ -91,6 +93,7 @@ let activeDialogueSession = null;
 let activePlaybackButton = null;
 let vocabularyIndex = null;
 let ttsMode = localStorage.getItem(ttsModeKey) === ttsModes.proxy ? ttsModes.proxy : ttsModes.direct;
+let vocabIndexExpanded = false;
 
 const englishVoices = [
   { shortName: "en-AU-NatashaNeural", gender: "Female", locale: "en-AU", name: "Natasha" },
@@ -152,6 +155,8 @@ const icons = {
   list: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6h13v2H8zM8 11h13v2H8zM8 16h13v2H8zM3 6h2v2H3zM3 11h2v2H3zM3 16h2v2H3z"></path></svg>',
   cloud: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 18H8a5 5 0 0 1-.9-9.9A7 7 0 0 1 20.7 10.4 4 4 0 0 1 19 18z"></path></svg>',
   link: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 15.5a4 4 0 0 1 0-5.7l2.3-2.3 1.4 1.4-2.3 2.3a2 2 0 0 0 2.8 2.8l2.3-2.3 1.4 1.4-2.3 2.3a4 4 0 0 1-5.6.1z"></path><path d="M12.8 16.5 15.1 14a2 2 0 0 0-2.8-2.8L10 13.5l-1.4-1.4 2.3-2.3a4 4 0 0 1 5.7 5.7l-2.3 2.3z"></path></svg>',
+  chevronDown: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5z"></path></svg>',
+  chevronUp: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 14 5-5 5 5z"></path></svg>',
 };
 
 function saveProgress() {
@@ -196,6 +201,16 @@ function toggleTtsMode() {
   localStorage.setItem(ttsModeKey, ttsMode);
   renderTtsMode();
   setFeedback(ttsMode === ttsModes.proxy ? "已切换到后端转发 TTS。" : "已切换到直连 TTS。");
+}
+
+function setVocabularyIndexExpanded(isExpanded) {
+  vocabIndexExpanded = isExpanded;
+  vocabIndexBody.hidden = !vocabIndexExpanded;
+  setButtonIcon(
+    toggleVocabIndex,
+    vocabIndexExpanded ? "chevronUp" : "chevronDown",
+    vocabIndexExpanded ? "收起已学单词列表" : "展开已学单词列表"
+  );
 }
 
 function setActivePlaybackButton(button) {
@@ -294,6 +309,7 @@ function setupStaticIconButtons() {
   setButtonIcon(copyTts, "copy", "复制对话文本");
   setButtonIcon(copyVocabIndex, "copy", "复制单词列表");
   renderTtsMode();
+  setVocabularyIndexExpanded(false);
 }
 
 function clearActiveAudio(options = {}) {
@@ -647,6 +663,9 @@ function matchesVocabularySearch(day, word, query) {
 function renderVocabularyIndex(query = "") {
   if (!vocabularyIndex) return;
   const normalizedQuery = normalizeSearchText(query);
+  if (normalizedQuery && !vocabIndexExpanded) {
+    setVocabularyIndexExpanded(true);
+  }
   vocabIndexList.innerHTML = "";
   vocabIndexSummary.textContent = `${vocabularyIndex.lessonCount} days · ${vocabularyIndex.wordCount} words`;
   const duplicateCount = vocabularyIndex.duplicates?.length || 0;
@@ -1128,6 +1147,9 @@ vocabIndexSearch.addEventListener("input", () => {
 });
 
 ttsModeToggle.addEventListener("click", toggleTtsMode);
+toggleVocabIndex.addEventListener("click", () => {
+  setVocabularyIndexExpanded(!vocabIndexExpanded);
+});
 
 setupStaticIconButtons();
 setupVoiceConfig();

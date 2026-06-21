@@ -133,7 +133,7 @@
         <section class="panel vocabulary-index-panel">
           <div class="panel-head">
             <h2>已学单词列表</h2>
-            <span>Vocabulary index</span>
+            <button id="toggleVocabIndex" class="mini-btn icon-btn vocab-index-toggle" aria-label="展开已学单词列表" title="展开已学单词列表"></button>
           </div>
           <div class="vocab-index-tools">
             <div>
@@ -145,8 +145,10 @@
               <button id="copyVocabIndex" class="mini-btn icon-btn" aria-label="复制单词列表" title="复制单词列表"></button>
             </div>
           </div>
-          <div id="vocabIndexMeta" class="vocab-index-meta"></div>
-          <div id="vocabIndexList" class="vocab-index-list"></div>
+          <div id="vocabIndexBody" class="vocab-index-body" hidden>
+            <div id="vocabIndexMeta" class="vocab-index-meta"></div>
+            <div id="vocabIndexList" class="vocab-index-list"></div>
+          </div>
         </section>
 
         <section class="panel review-panel">
