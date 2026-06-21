@@ -1005,9 +1005,31 @@ body {
   border-color: var(--accent);
 }
 
+.speech-control-btn.loop {
+  background: var(--panel);
+  color: var(--accent);
+  border-color: var(--line);
+}
+
+.speech-control-btn.loop.active {
+  background: var(--good);
+  color: white;
+  border-color: var(--good);
+}
+
 .speech-control-btn:hover {
   background: #1d4ed8;
   border-color: #1d4ed8;
+}
+
+.speech-control-btn.loop:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+
+.speech-control-btn.loop.active:hover {
+  background: var(--good);
+  border-color: var(--good);
 }
 
 .speech-control-btn.danger {

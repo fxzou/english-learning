@@ -56,6 +56,8 @@ The frontend includes a TTS mode toggle in the voice settings area:
 
 - Direct mode: the browser calls the TTS service directly and keeps the original segmented playback.
 - Backend mode: the browser calls Vercel API routes; multi-line playback is lightly concatenated into one audio response. This avoids heavy ffmpeg processing, but very long readings may take longer to start.
+- TTS audio is cached locally in the browser to avoid repeated requests for the same text and voice.
+- The floating playback controls include a repeat toggle for single-play or loop playback.
 
 ## Privacy
 

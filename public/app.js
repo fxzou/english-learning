@@ -48,6 +48,7 @@ const previewSalesVoice = document.getElementById("previewSalesVoice");
 const ttsModeToggle = document.getElementById("ttsModeToggle");
 const ttsModeText = document.getElementById("ttsModeText");
 const speechDock = document.getElementById("speechDock");
+const loopSpeech = document.getElementById("loopSpeech");
 const pauseSpeech = document.getElementById("pauseSpeech");
 const stopSpeech = document.getElementById("stopSpeech");
 
@@ -67,6 +68,8 @@ const ttsModes = {
   direct: "direct",
   proxy: "proxy",
 };
+const ttsCacheName = "sales-coach-tts-v1";
+const speechLoopKey = "salesCoachSpeechLoop";
 const defaultTtsVoice = "en-US-JennyNeural";
 const defaultCustomerVoice = "en-CA-LiamNeural";
 const defaultSalesVoice = "en-US-JennyNeural";
@@ -94,6 +97,9 @@ let activePlaybackButton = null;
 let vocabularyIndex = null;
 let ttsMode = localStorage.getItem(ttsModeKey) === ttsModes.proxy ? ttsModes.proxy : ttsModes.direct;
 let vocabIndexExpanded = false;
+let speechLoopEnabled = localStorage.getItem(speechLoopKey) === "true";
+let activeReplay = null;
+let ttsDbPromise = null;
 
 const englishVoices = [
   { shortName: "en-AU-NatashaNeural", gender: "Female", locale: "en-AU", name: "Natasha" },
@@ -149,6 +155,7 @@ const icons = {
   play: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg>',
   pause: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z"></path></svg>',
   stop: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v10H7z"></path></svg>',
+  repeat: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h9a4 4 0 0 1 0 8h-1v-2h1a2 2 0 0 0 0-4H7v3L3 8l4-4z"></path><path d="M17 17H8a4 4 0 0 1 0-8h1v2H8a2 2 0 0 0 0 4h9v-3l4 4-4 4z"></path></svg>',
   copy: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8h10v12H8z"></path><path d="M6 16H4V4h10v2H6z"></path></svg>',
   check: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.2 16.6 4.9 12.3 3.5 13.7 9.2 19.4 20.5 8.1 19.1 6.7z"></path></svg>',
   send: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20 21 12 3 4v6l11 2-11 2z"></path></svg>',
@@ -213,6 +220,18 @@ function setVocabularyIndexExpanded(isExpanded) {
   );
 }
 
+function renderSpeechLoop() {
+  loopSpeech.classList.toggle("active", speechLoopEnabled);
+  setButtonIcon(loopSpeech, "repeat", speechLoopEnabled ? "关闭循环播放" : "开启循环播放");
+}
+
+function toggleSpeechLoop() {
+  speechLoopEnabled = !speechLoopEnabled;
+  localStorage.setItem(speechLoopKey, String(speechLoopEnabled));
+  renderSpeechLoop();
+  setFeedback(speechLoopEnabled ? "已开启循环播放。" : "已切换为单次播放。");
+}
+
 function setActivePlaybackButton(button) {
   if (activePlaybackButton) {
     activePlaybackButton.disabled = false;
@@ -227,7 +246,16 @@ function setActivePlaybackButton(button) {
 
 function beginPlayback(button) {
   clearActiveAudio({ keepButton: true });
+  activeReplay = null;
   setActivePlaybackButton(button);
+}
+
+function replayActivePlayback() {
+  if (speechLoopEnabled && activeReplay) {
+    setTimeout(() => activeReplay?.(), 250);
+    return true;
+  }
+  return false;
 }
 
 function createSpeakButton(label, getText) {
@@ -309,6 +337,7 @@ function setupStaticIconButtons() {
   setButtonIcon(copyTts, "copy", "复制对话文本");
   setButtonIcon(copyVocabIndex, "copy", "复制单词列表");
   renderTtsMode();
+  renderSpeechLoop();
   setVocabularyIndexExpanded(false);
 }
 
@@ -332,6 +361,9 @@ function clearActiveAudio(options = {}) {
     activeAudioUrl = null;
   }
   updateSpeechControls(false);
+  if (!options.keepReplay) {
+    activeReplay = null;
+  }
   if (!options.keepButton) {
     setActivePlaybackButton(null);
   }
@@ -390,23 +422,124 @@ function extractEnglish(text) {
     .trim();
 }
 
-async function requestSpeechBlob(input, voice, signal) {
-  const response = await fetch(ttsMode === ttsModes.proxy ? "/api/tts" : ttsEndpoint, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    signal,
-    body: JSON.stringify({
-      input,
-      voice,
-      speed: 1.0,
-      pitch: "0",
-      style: "general",
-    }),
+async function sha256(text) {
+  const data = new TextEncoder().encode(text);
+  const hash = await crypto.subtle.digest("SHA-256", data);
+  return Array.from(new Uint8Array(hash))
+    .map((byte) => byte.toString(16).padStart(2, "0"))
+    .join("");
+}
+
+function openTtsDb() {
+  if (!("indexedDB" in window)) return Promise.resolve(null);
+  if (ttsDbPromise) return ttsDbPromise;
+  ttsDbPromise = new Promise((resolve) => {
+    const request = indexedDB.open("sales-coach-tts", 1);
+    request.onupgradeneeded = () => {
+      request.result.createObjectStore("audio");
+    };
+    request.onsuccess = () => resolve(request.result);
+    request.onerror = () => resolve(null);
   });
-  if (!response.ok) {
-    throw new Error(`TTS request failed: ${response.status}`);
+  return ttsDbPromise;
+}
+
+async function getIndexedDbBlob(cacheKey) {
+  const db = await openTtsDb();
+  if (!db) return null;
+  return new Promise((resolve) => {
+    const transaction = db.transaction("audio", "readonly");
+    const request = transaction.objectStore("audio").get(cacheKey);
+    request.onsuccess = () => resolve(request.result || null);
+    request.onerror = () => resolve(null);
+  });
+}
+
+async function putIndexedDbBlob(cacheKey, blob) {
+  const db = await openTtsDb();
+  if (!db) return;
+  await new Promise((resolve) => {
+    const transaction = db.transaction("audio", "readwrite");
+    transaction.objectStore("audio").put(blob, cacheKey);
+    transaction.oncomplete = resolve;
+    transaction.onerror = resolve;
+  });
+}
+
+async function getCachedTtsBlob(cacheKey, fetchBlob) {
+  if ("caches" in window && crypto?.subtle) {
+    const cache = await caches.open(ttsCacheName);
+    const cacheUrl = `/tts-cache/${await sha256(cacheKey)}.mp3`;
+    const cached = await cache.match(cacheUrl);
+    if (cached) {
+      return cached.blob();
+    }
+
+    const blob = await fetchBlob();
+    await cache.put(cacheUrl, new Response(blob, {
+      headers: {
+        "Content-Type": blob.type || "audio/mpeg",
+        "X-TTS-Cache-Key": cacheKey,
+      },
+    }));
+    return blob;
   }
-  return response.blob();
+
+  const indexedDbBlob = await getIndexedDbBlob(cacheKey);
+  if (indexedDbBlob) {
+    return indexedDbBlob;
+  }
+
+  const blob = await fetchBlob();
+  await putIndexedDbBlob(cacheKey, blob);
+  return blob;
+}
+
+function buildSpeechCacheKey(input, voice) {
+  return JSON.stringify({
+    kind: "single",
+    mode: ttsMode,
+    input,
+    voice,
+    speed: 1.0,
+    pitch: "0",
+    style: "general",
+  });
+}
+
+function buildCombinedCacheKey(items) {
+  return JSON.stringify({
+    kind: "combined",
+    mode: ttsMode,
+    items: items.map((item) => ({
+      input: item.input,
+      voice: item.voice,
+      speed: item.speed,
+      pitch: item.pitch,
+      style: item.style,
+    })),
+  });
+}
+
+async function requestSpeechBlob(input, voice, signal) {
+  return getCachedTtsBlob(buildSpeechCacheKey(input, voice), async () => {
+    const response = await fetch(ttsMode === ttsModes.proxy ? "/api/tts" : ttsEndpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      signal,
+      body: JSON.stringify({
+        input,
+        voice,
+        speed: 1.0,
+        pitch: "0",
+        style: "general",
+      }),
+    });
+    if (!response.ok) {
+      throw new Error(`TTS request failed: ${response.status}`);
+    }
+    return response.blob();
+  });
 }
 
 async function requestCombinedSpeechBlob(speechItems, signal) {
@@ -420,18 +553,20 @@ async function requestCombinedSpeechBlob(speechItems, signal) {
     }))
     .filter((item) => item.input);
 
-  const response = await fetch("/api/tts-combine", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    signal,
-    body: JSON.stringify({ items }),
+  return getCachedTtsBlob(buildCombinedCacheKey(items), async () => {
+    const response = await fetch("/api/tts-combine", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      signal,
+      body: JSON.stringify({ items }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Combined TTS request failed: ${response.status}`);
+    }
+
+    return response.blob();
   });
-
-  if (!response.ok) {
-    throw new Error(`Combined TTS request failed: ${response.status}`);
-  }
-
-  return response.blob();
 }
 
 async function playSpeech(text, voice = voiceConfig.default || defaultTtsVoice, triggerButton = null) {
@@ -441,6 +576,7 @@ async function playSpeech(text, voice = voiceConfig.default || defaultTtsVoice, 
     return;
   }
   beginPlayback(triggerButton);
+  activeReplay = () => playSpeech(text, voice, triggerButton);
   setFeedback("正在生成朗读音频...");
   activeTtsRequest = new AbortController();
   updateSpeechControls(true, false);
@@ -449,7 +585,11 @@ async function playSpeech(text, voice = voiceConfig.default || defaultTtsVoice, 
     activeTtsRequest = null;
     activeAudioUrl = URL.createObjectURL(blob);
     activeAudio = new Audio(activeAudioUrl);
-    activeAudio.addEventListener("ended", clearActiveAudio, { once: true });
+    activeAudio.addEventListener("ended", () => {
+      if (!replayActivePlayback()) {
+        clearActiveAudio();
+      }
+    }, { once: true });
     activeAudio.addEventListener("pause", () => updateSpeechControls(Boolean(activeAudio)));
     activeAudio.addEventListener("play", () => updateSpeechControls(true));
     await startAudio(activeAudio, audioStartDelayMs);
@@ -528,6 +668,7 @@ async function playSpeechItems(speechItems, labels, triggerButton = null) {
   }
 
   beginPlayback(triggerButton);
+  activeReplay = () => playSpeechItems(speechItems, labels, triggerButton);
   const session = {
     cancelled: false,
     controllers: new Set(),
@@ -558,8 +699,10 @@ async function playSpeechItems(speechItems, labels, triggerButton = null) {
     }
     await preloadPromise;
     if (activeDialogueSession === session) {
-      clearActiveAudio();
-      setFeedback(labels.complete);
+      if (!replayActivePlayback()) {
+        clearActiveAudio();
+        setFeedback(labels.complete);
+      }
     }
   } catch (error) {
     if (error.name === "AbortError") {
@@ -573,6 +716,7 @@ async function playSpeechItems(speechItems, labels, triggerButton = null) {
 
 async function playCombinedSpeechItems(speechItems, labels, triggerButton = null) {
   beginPlayback(triggerButton);
+  activeReplay = () => playCombinedSpeechItems(speechItems, labels, triggerButton);
   activeTtsRequest = new AbortController();
   updateSpeechControls(true, false);
   setFeedback(`${labels.generating}，正在由后端轻度拼接 ${speechItems.length} 段音频...`);
@@ -582,8 +726,10 @@ async function playCombinedSpeechItems(speechItems, labels, triggerButton = null
     activeAudioUrl = URL.createObjectURL(blob);
     activeAudio = new Audio(activeAudioUrl);
     activeAudio.addEventListener("ended", () => {
-      clearActiveAudio();
-      setFeedback(labels.complete);
+      if (!replayActivePlayback()) {
+        clearActiveAudio();
+        setFeedback(labels.complete);
+      }
     }, { once: true });
     activeAudio.addEventListener("pause", () => updateSpeechControls(Boolean(activeAudio)));
     activeAudio.addEventListener("play", () => updateSpeechControls(true));
@@ -1150,6 +1296,7 @@ ttsModeToggle.addEventListener("click", toggleTtsMode);
 toggleVocabIndex.addEventListener("click", () => {
   setVocabularyIndexExpanded(!vocabIndexExpanded);
 });
+loopSpeech.addEventListener("click", toggleSpeechLoop);
 
 setupStaticIconButtons();
 setupVoiceConfig();
