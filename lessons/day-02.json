@@ -1,0 +1,385 @@
+{
+  "day": 2,
+  "title": "确认数量、颜色和规格",
+  "theme": "从 how many / what color / same as picture 开始",
+  "durationMinutes": 28,
+  "goals": [
+    "能礼貌询问客户需要的数量、颜色和规格",
+    "掌握 quantity / color / size / material / specification 的基础用法",
+    "客户信息不完整时，能用英文引导客户确认细节"
+  ],
+  "review": {
+    "title": "Day 01 复习",
+    "items": [
+      "昨天练了 Please give me a moment to check. 和 I will update you today.",
+      "今天继续练确认信息，但重点从“我去查”转到“请客户确认细节”。",
+      "不要只问 how many，要把 quantity、color、size、material 说清楚。"
+    ]
+  },
+  "preview": {
+    "scenario": "客户问价格或想下单，但没有说清楚数量、颜色、尺寸和材料。",
+    "needToKnow": [
+      "报价前先确认 quantity，否则价格可能不准确。",
+      "颜色、尺寸、材料会影响价格和交期，不能默认客户知道。",
+      "客户说 same as picture 时，最好再次确认颜色、logo 和包装细节。"
+    ]
+  },
+  "vocabulary": [
+    {
+      "word": "quantity",
+      "phonetic": "/ˈkwɑːntəti/",
+      "meaning": "数量",
+      "usage": "用于正式询问客户需要多少件。",
+      "example": "Could you please confirm the quantity you need?"
+    },
+    {
+      "word": "color",
+      "phonetic": "/ˈkʌlər/",
+      "meaning": "颜色",
+      "usage": "确认产品颜色或客户指定颜色。",
+      "example": "Which color would you like?"
+    },
+    {
+      "word": "size",
+      "phonetic": "/saɪz/",
+      "meaning": "尺寸 / 大小",
+      "usage": "询问客户需要的规格尺寸。",
+      "example": "Could you please confirm the size?"
+    },
+    {
+      "word": "material",
+      "phonetic": "/məˈtɪriəl/",
+      "meaning": "材料 / 材质",
+      "usage": "确认产品使用什么材料。",
+      "example": "Please confirm the material before we quote."
+    },
+    {
+      "word": "specification",
+      "phonetic": "/ˌspesɪfɪˈkeɪʃən/",
+      "meaning": "规格",
+      "usage": "比 size 更全面，包含尺寸、材料、颜色等。",
+      "example": "Please send us the detailed specification."
+    },
+    {
+      "word": "available",
+      "phonetic": "/əˈveɪləbl/",
+      "meaning": "可用的 / 有货的",
+      "usage": "说明颜色、材料或库存是否可做。",
+      "example": "This color is available for the quantity you need."
+    },
+    {
+      "word": "sample",
+      "phonetic": "/ˈsæmpəl/",
+      "meaning": "样品",
+      "usage": "确认客户是否需要样品或样品颜色。",
+      "example": "Would you like to check a sample first?"
+    },
+    {
+      "word": "details",
+      "phonetic": "/ˈdiːteɪlz/",
+      "meaning": "细节",
+      "usage": "泛指客户需要确认的信息。",
+      "example": "Please confirm the details so we can quote correctly."
+    }
+  ],
+  "sentences": [
+    {
+      "label": "确认数量",
+      "basic": "How many do you need?",
+      "natural": "How many pieces do you need?",
+      "business": "Could you please confirm the quantity you need?"
+    },
+    {
+      "label": "确认颜色",
+      "basic": "What color?",
+      "natural": "Which color would you like?",
+      "business": "Could you please confirm the color you need for this order?"
+    },
+    {
+      "label": "确认尺寸",
+      "basic": "What size?",
+      "natural": "What size do you need?",
+      "business": "Could you please send us the size or detailed specification?"
+    },
+    {
+      "label": "确认材质",
+      "basic": "What material?",
+      "natural": "Which material do you prefer?",
+      "business": "Please confirm the material before we check the price."
+    },
+    {
+      "label": "信息不完整",
+      "basic": "Need more details.",
+      "natural": "We need more details to quote.",
+      "business": "To quote accurately, could you please confirm the quantity, color, size, and material?"
+    }
+  ],
+  "chatAnalysis": [
+    {
+      "old": "how many?",
+      "problem": "太短，语气生硬，也没有说明是 pieces 还是 cartons。",
+      "better": "How many pieces do you need?",
+      "upgrade": "Could you please confirm the quantity you need for this order?"
+    },
+    {
+      "old": "what color?",
+      "problem": "像审问，缺少礼貌表达。",
+      "better": "Which color would you like?",
+      "upgrade": "Could you please confirm the color you need for this order?"
+    },
+    {
+      "old": "same as picture?",
+      "problem": "不够清楚，客户可能不知道你在确认颜色、logo 还是包装。",
+      "better": "Do you need the same color as the picture?",
+      "upgrade": "Please confirm if you need the same color, logo position, and packaging as the picture."
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "慢速基础版：确认数量和颜色",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Can you quote this item?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. Could you please confirm the quantity you need?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "We need 1,000 pieces."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. Which color would you like?"
+        }
+      ]
+    },
+    {
+      "title": "正常商务版：确认规格后报价",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Please send me the best price."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. To quote accurately, could you please confirm the quantity, color, and size?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "The quantity is 3,000 pieces, black color."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Got it. Could you also confirm the material you need?"
+        }
+      ]
+    },
+    {
+      "title": "压力场景版：客户想马上要价格",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Why do you need so many details?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Because the price depends on the quantity, material, and specification."
+        },
+        {
+          "speaker": "Customer",
+          "text": "I just need a rough price now."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand. I can give you an estimated price first, and update the final price after you confirm the details."
+        }
+      ]
+    }
+  ],
+  "longDialogues": [
+    {
+      "title": "长对话实战：客户询价但信息不完整",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Hi, can you quote this product?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. Could you please confirm the quantity you need?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "We may need around 2,000 pieces."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. Is 2,000 pieces for the first order or for a sample order?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "It is for the first order."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Got it. Which color would you like for this order?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "Same as the picture."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. Please confirm if you need the same color and logo position as the picture."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Yes, same color and same logo position."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. Could you please confirm the size as well?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "The size should be 20 centimeters."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Understood. Do you need any special material or standard material?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "Standard material is fine."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Okay. I will check the price based on 2,000 pieces, same color, same logo position, 20 centimeters, and standard material."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you send the price today?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes. Please give me a moment to check with our factory, and I will update you today."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Do you have this color available?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Let me check the available color with our factory first."
+        },
+        {
+          "speaker": "Customer",
+          "text": "If the color is not available, what should we do?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "If it is not available, I will suggest the closest available color for you."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Okay, please also check the sample cost."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will check the sample cost and the bulk order price together."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please make sure the quotation is accurate."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Of course. I will confirm all details carefully before sending the quotation."
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "d2-q1",
+      "type": "translate",
+      "prompt": "中译英：请确认你需要的数量。",
+      "answer": "Please confirm the quantity you need.",
+      "acceptable": [
+        "please confirm the quantity you need",
+        "could you please confirm the quantity you need"
+      ],
+      "hint": "quantity 表示数量。"
+    },
+    {
+      "id": "d2-q2",
+      "type": "rewrite",
+      "prompt": "把这句话改得更自然：what color?",
+      "answer": "Which color would you like?",
+      "acceptable": [
+        "which color would you like",
+        "could you please confirm the color you need"
+      ],
+      "hint": "which color 比 what color 更自然。"
+    },
+    {
+      "id": "d2-q3",
+      "type": "fill",
+      "prompt": "填空：To quote accurately, please confirm the quantity, color, size, and ____.",
+      "answer": "material",
+      "acceptable": [
+        "material"
+      ],
+      "hint": "意思是材质。"
+    },
+    {
+      "id": "d2-q4",
+      "type": "choice",
+      "prompt": "客户只发图片让你报价，哪个回复更适合？",
+      "options": [
+        "price later",
+        "How many?",
+        "Could you please confirm the quantity, color, size, and material?",
+        "No details no price"
+      ],
+      "answer": "Could you please confirm the quantity, color, size, and material?",
+      "acceptable": [
+        "could you please confirm the quantity color size and material"
+      ],
+      "hint": "要礼貌地引导客户补全信息。"
+    },
+    {
+      "id": "d2-q5",
+      "type": "translate",
+      "prompt": "中译英：价格取决于数量和规格。",
+      "answer": "The price depends on the quantity and specification.",
+      "acceptable": [
+        "the price depends on the quantity and specification",
+        "the price depends on quantity and specification",
+        "the price depends on the quantity and specifications"
+      ],
+      "hint": "depends on 表示取决于。"
+    },
+    {
+      "id": "d2-q6",
+      "type": "reply",
+      "prompt": "客户说：Please send me the best price. 但没有提供细节，你应该怎么回复？",
+      "answer": "Sure. To quote accurately, could you please confirm the quantity, color, size, and material?",
+      "acceptable": [
+        "to quote accurately could you please confirm the quantity color size and material",
+        "could you please confirm the quantity color size and material",
+        "please confirm the quantity color size and material"
+      ],
+      "hint": "先说明为了准确报价，然后确认关键细节。"
+    }
+  ],
+  "homework": [
+    "把今天 5 个核心句子各读 5 遍。",
+    "用 quantity / color / size / material 各造 1 个客户确认句。",
+    "把三个短对话和长对话各听 2 遍，然后跟读 1 遍。"
+  ],
+  "tomorrow": "Day 3 会练客户问 MOQ、样品和交期时的回复。"
+}

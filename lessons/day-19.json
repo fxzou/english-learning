@@ -1,0 +1,395 @@
+{
+  "day": 19,
+  "title": "返工、重做和质量复检",
+  "theme": "从 rework / reprocessing / quality control 开始",
+  "durationMinutes": 40,
+  "goals": [
+    "能解释产品不合格时的 sorting、rework 和 recheck 流程",
+    "能向客户说明质量控制动作，而不是简单说 factory will fix",
+    "能用 corrective action 和 quality standard 稳住客户对质量的信心"
+  ],
+  "review": {
+    "title": "Day 18 复习",
+    "items": [
+      "昨天练了 material delay、machine issue、quality rework、root cause、revised timeline 和 recovery plan。",
+      "今天继续处理生产中的质量异常：发现不合格品后，如何说明筛选、返工、复检和纠正动作。",
+      "客户担心质量时，不要说 no problem，要告诉客户你们如何控制风险、如何确认最终质量。"
+    ]
+  },
+  "preview": {
+    "scenario": "工厂发现一部分产品不符合要求，需要筛选、返工、重做或复检。客户担心大货质量，你需要专业解释处理流程，并承诺复检结果会更新给客户。",
+    "needToKnow": [
+      "rework 表示返工，reprocessing 更偏重新处理流程。",
+      "sorting 是先把不合格品和合格品分开，避免混入大货。",
+      "corrective action 表示纠正措施，比 we will fix it 更专业。"
+    ]
+  },
+  "vocabulary": [
+    {
+      "word": "rework",
+      "phonetic": "/ˌriːˈwɜːrk/",
+      "meaning": "返工",
+      "usage": "用于说明产品需要重新处理以达到要求。",
+      "example": "We will arrange rework for the affected goods."
+    },
+    {
+      "word": "reprocessing",
+      "phonetic": "/ˌriːˈprɑːsesɪŋ/",
+      "meaning": "重新处理 / 再加工",
+      "usage": "用于说明需要重新走某个生产或处理流程。",
+      "example": "Reprocessing will take about two more days."
+    },
+    {
+      "word": "recheck",
+      "phonetic": "/ˌriːˈtʃek/",
+      "meaning": "复检 / 重新检查",
+      "usage": "用于返工、包装或出货前再次检查。",
+      "example": "We will recheck the goods before packing."
+    },
+    {
+      "word": "quality control",
+      "phonetic": "/ˈkwɑːləti kənˈtroʊl/",
+      "meaning": "质量控制",
+      "usage": "用于说明工厂控制产品质量的检查和流程。",
+      "example": "Our quality control team is checking the full batch."
+    },
+    {
+      "word": "nonconforming goods",
+      "phonetic": "/ˌnɑːnkənˈfɔːrmɪŋ ɡʊdz/",
+      "meaning": "不合格品 / 不符合要求的货物",
+      "usage": "用于正式说明未达到标准的产品。",
+      "example": "We separated the nonconforming goods from the approved goods."
+    },
+    {
+      "word": "sorting",
+      "phonetic": "/ˈsɔːrtɪŋ/",
+      "meaning": "筛选 / 分拣",
+      "usage": "用于把合格品和不合格品分开检查。",
+      "example": "We are doing sorting to make sure only qualified goods are packed."
+    },
+    {
+      "word": "corrective action",
+      "phonetic": "/kəˈrektɪv ˈækʃən/",
+      "meaning": "纠正措施",
+      "usage": "用于说明针对质量问题采取的改正和预防动作。",
+      "example": "We have taken corrective action to prevent the same issue."
+    },
+    {
+      "word": "quality standard",
+      "phonetic": "/ˈkwɑːləti ˈstændərd/",
+      "meaning": "质量标准",
+      "usage": "用于说明产品必须达到的质量要求。",
+      "example": "The goods must meet the approved quality standard before shipment."
+    }
+  ],
+  "sentences": [
+    {
+      "label": "说明返工安排",
+      "basic": "We will redo it.",
+      "natural": "We will arrange rework for the affected goods.",
+      "business": "We will arrange rework for the affected goods and recheck them before packing."
+    },
+    {
+      "label": "说明筛选动作",
+      "basic": "We check and pick bad ones.",
+      "natural": "We are doing sorting to separate the nonconforming goods.",
+      "business": "Our quality control team is doing sorting to make sure only qualified goods are packed."
+    },
+    {
+      "label": "解释重新处理时间",
+      "basic": "Need two days to fix.",
+      "natural": "Reprocessing will take about two more days.",
+      "business": "Reprocessing will take about two more days, and we will send you the recheck result after it is completed."
+    },
+    {
+      "label": "说明纠正措施",
+      "basic": "We fixed the problem.",
+      "natural": "We have taken corrective action to prevent the same issue.",
+      "business": "We have taken corrective action in production to prevent the same issue from happening again."
+    },
+    {
+      "label": "稳定客户质量信心",
+      "basic": "Quality will be okay.",
+      "natural": "We will make sure the goods meet the quality standard.",
+      "business": "We will make sure all goods meet the approved quality standard before shipment."
+    }
+  ],
+  "chatAnalysis": [
+    {
+      "old": "we will redo",
+      "problem": "redo 太口语，也没有说明返工后会复检。",
+      "better": "We will arrange rework for the affected goods.",
+      "upgrade": "We will arrange rework for the affected goods and recheck them before packing."
+    },
+    {
+      "old": "bad goods will not ship",
+      "problem": "bad goods 不专业，客户也不知道你如何筛选。",
+      "better": "We separated the nonconforming goods from the approved goods.",
+      "upgrade": "Our quality control team is doing sorting to make sure only qualified goods are packed."
+    },
+    {
+      "old": "we fixed already",
+      "problem": "没有说明纠正措施，客户无法判断同类问题是否会再次出现。",
+      "better": "We have taken corrective action to prevent the same issue.",
+      "upgrade": "We have taken corrective action in production and will recheck the full batch before shipment."
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "慢速基础版：说明返工和复检",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Did you find any quality problems?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "We found that a small part of the goods needs rework."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Will those goods be shipped?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "No. We will arrange rework and recheck them before packing."
+        }
+      ]
+    },
+    {
+      "title": "正常商务版：筛选不合格品",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "How do you make sure the problem goods are not packed?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Our quality control team is doing sorting to separate the nonconforming goods."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Will you check the full batch?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, we will recheck the full batch before shipment."
+        }
+      ]
+    },
+    {
+      "title": "压力场景版：客户担心质量标准",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "We are worried this issue will happen again."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand. We have taken corrective action in production."
+        },
+        {
+          "speaker": "Customer",
+          "text": "How can you prove the quality is okay now?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "We will send the recheck result and make sure all goods meet the approved quality standard."
+        }
+      ]
+    }
+  ],
+  "longDialogues": [
+    {
+      "title": "长对话实战：发现不合格品后的返工、筛选和复检沟通",
+      "lines": [
+        {
+          "speaker": "Sales",
+          "text": "Hi, I want to update you about the latest quality control result."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Is there any problem with the goods?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "We found that a small part of the goods does not fully meet the approved quality standard."
+        },
+        {
+          "speaker": "Customer",
+          "text": "What kind of problem is it?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "The issue is related to the logo position on part of the goods."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Will those goods be mixed with the good ones?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "No. Our quality control team is doing sorting to separate the nonconforming goods from the approved goods."
+        },
+        {
+          "speaker": "Customer",
+          "text": "How many pieces are affected?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "We are still checking the exact quantity, and I will update you after the sorting is completed."
+        },
+        {
+          "speaker": "Customer",
+          "text": "What will you do with the affected goods?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "We will arrange rework for the affected goods and recheck them before packing."
+        },
+        {
+          "speaker": "Customer",
+          "text": "How long will the rework take?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "The reprocessing will take about two more days."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Will this delay shipment?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "It may affect the ready date by one to two days, but we are trying to catch up by adding extra working hours."
+        },
+        {
+          "speaker": "Customer",
+          "text": "How do you prevent this from happening again?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "We have taken corrective action in production and reminded the team to follow the approved artwork strictly."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you send us photos after the rework?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, we will send photos and the recheck result after the rework is completed."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We need to be sure the final goods are acceptable."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Understood. We will make sure all goods meet the approved quality standard before shipment."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please do not ship anything without final checking."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. We will not pack the goods until the recheck is completed and approved by our quality control team."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please keep us updated every day."
+        },
+        {
+          "speaker": "Sales",
+          "text": "No problem. I will keep you posted on the sorting, rework, and final recheck result."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Thank you. We need transparent communication."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand. We will share the real status and the corrective action clearly."
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "d19-q1",
+      "type": "translate",
+      "prompt": "中译英：我们会安排受影响货物返工，并在包装前复检。",
+      "answer": "We will arrange rework for the affected goods and recheck them before packing.",
+      "acceptable": [
+        "we will arrange rework for the affected goods and recheck them before packing",
+        "we will arrange rework for the affected goods and recheck before packing"
+      ],
+      "hint": "rework 是返工，recheck 是复检。"
+    },
+    {
+      "id": "d19-q2",
+      "type": "rewrite",
+      "prompt": "把这句话改得更专业：bad goods will not ship",
+      "answer": "Our quality control team is doing sorting to make sure only qualified goods are packed.",
+      "acceptable": [
+        "our quality control team is doing sorting to make sure only qualified goods are packed",
+        "our quality control team is doing sorting to separate the nonconforming goods"
+      ],
+      "hint": "不要说 bad goods，用 nonconforming goods 或 qualified goods。"
+    },
+    {
+      "id": "d19-q3",
+      "type": "fill",
+      "prompt": "填空：We have taken corrective ____ to prevent the same issue.",
+      "answer": "action",
+      "acceptable": [
+        "action"
+      ],
+      "hint": "corrective action 是纠正措施。"
+    },
+    {
+      "id": "d19-q4",
+      "type": "choice",
+      "prompt": "客户担心不合格品混入大货，哪个回复更合适？",
+      "options": [
+        "No worry",
+        "Bad goods not ship",
+        "Our quality control team is doing sorting to make sure only qualified goods are packed.",
+        "Factory will fix"
+      ],
+      "answer": "Our quality control team is doing sorting to make sure only qualified goods are packed.",
+      "acceptable": [
+        "our quality control team is doing sorting to make sure only qualified goods are packed"
+      ],
+      "hint": "要说明 quality control 和 sorting。"
+    },
+    {
+      "id": "d19-q5",
+      "type": "translate",
+      "prompt": "中译英：重新处理大约还需要两天。",
+      "answer": "Reprocessing will take about two more days.",
+      "acceptable": [
+        "reprocessing will take about two more days",
+        "the reprocessing will take about two more days"
+      ],
+      "hint": "reprocessing 是重新处理。"
+    },
+    {
+      "id": "d19-q6",
+      "type": "reply",
+      "prompt": "客户说：How can you prove the quality is okay now? 你应该怎么回复？",
+      "answer": "We will send the recheck result and make sure all goods meet the approved quality standard.",
+      "acceptable": [
+        "we will send the recheck result and make sure all goods meet the approved quality standard",
+        "we will send you the recheck result and make sure all goods meet the approved quality standard"
+      ],
+      "hint": "用 recheck result 和 approved quality standard。"
+    }
+  ],
+  "homework": [
+    "把 rework、reprocessing、recheck、quality control、nonconforming goods、sorting、corrective action、quality standard 各造 1 句。",
+    "把 5 个核心句子的 business 版本各读 5 遍，重点练 sorting、rework、recheck 的流程说明。",
+    "写一段 WhatsApp 回复：工厂发现部分 logo 位置不合格，你要说明 sorting、rework、recheck 和 corrective action。"
+  ],
+  "tomorrow": "Day 20 会练出货前照片、视频和验货报告，并处理客户验货反馈。"
+}

@@ -1,0 +1,391 @@
+{
+  "day": 27,
+  "title": "到货后反馈、破损和缺件处理",
+  "theme": "从 damaged goods / missing items / claim process 开始",
+  "durationMinutes": 40,
+  "goals": [
+    "能礼貌接收到货后的负面反馈，不急着推卸责任",
+    "能要求客户提供 unboxing photos、数量和外箱状态，判断 damaged goods、missing items 或 short delivery",
+    "能提出 resend、compensation 或下单抵扣等补救方案"
+  ],
+  "review": {
+    "title": "Day 26 复习",
+    "items": [
+      "昨天练了 delayed shipment、customs hold、tracking update、in transit、clearance status、estimated arrival、carrier 和 delivery exception。",
+      "物流异常阶段结束后，客户收到货可能继续反馈破损、少件或包装问题。",
+      "售后回复的重点不是先争辩责任，而是先确认事实、收集证据、给出清晰补救方案。"
+    ]
+  },
+  "preview": {
+    "scenario": "客户收到货后说部分产品破损、数量不对或少了配件。你需要先表达重视，然后要求照片、视频、数量和外箱情况，再提出补发、抵扣或赔偿方案。",
+    "needToKnow": [
+      "damaged goods 表示收到的货物已经破损，通常需要照片确认破损程度。",
+      "missing items 表示缺少某些产品或配件，必须确认缺少的具体数量和型号。",
+      "claim process 是售后索赔流程，语气要专业，不能让客户感觉你在拖延。"
+    ]
+  },
+  "vocabulary": [
+    {
+      "word": "damaged goods",
+      "phonetic": "/ˈdæmɪdʒd ɡʊdz/",
+      "meaning": "破损货物",
+      "usage": "用于客户收到货后反馈产品或包装已经损坏。",
+      "example": "Please send us photos of the damaged goods."
+    },
+    {
+      "word": "missing items",
+      "phonetic": "/ˈmɪsɪŋ ˈaɪtəmz/",
+      "meaning": "缺少的物品 / 缺件",
+      "usage": "用于客户反馈收到的产品、配件或数量不完整。",
+      "example": "Please confirm the model and quantity of the missing items."
+    },
+    {
+      "word": "short delivery",
+      "phonetic": "/ʃɔːrt dɪˈlɪvəri/",
+      "meaning": "少发 / 少交货",
+      "usage": "用于说明实际到货数量少于订单或装箱清单数量。",
+      "example": "We need to check whether this is a short delivery or a counting mistake."
+    },
+    {
+      "word": "arrival feedback",
+      "phonetic": "/əˈraɪvəl ˈfiːdbæk/",
+      "meaning": "到货反馈",
+      "usage": "用于客户收到货后对数量、包装、质量或破损情况的反馈。",
+      "example": "Thank you for your arrival feedback. We will check it carefully."
+    },
+    {
+      "word": "unboxing photos",
+      "phonetic": "/ʌnˈbɑːksɪŋ ˈfoʊtoʊz/",
+      "meaning": "开箱照片",
+      "usage": "用于确认货物刚打开时的产品状态、包装状态和数量。",
+      "example": "Could you please send us the unboxing photos and carton photos?"
+    },
+    {
+      "word": "claim process",
+      "phonetic": "/kleɪm ˈprɑːses/",
+      "meaning": "索赔流程 / 售后处理流程",
+      "usage": "用于正式处理破损、少件或运输损坏的售后问题。",
+      "example": "We will start the claim process after we receive the photos."
+    },
+    {
+      "word": "compensation",
+      "phonetic": "/ˌkɑːmpenˈseɪʃən/",
+      "meaning": "赔偿 / 补偿",
+      "usage": "用于提出现金补偿、折扣、抵扣或其他补救方式。",
+      "example": "We can discuss reasonable compensation after we confirm the details."
+    },
+    {
+      "word": "resend",
+      "phonetic": "/ˌriːˈsend/",
+      "meaning": "重新寄出 / 补发",
+      "usage": "用于少件、破损件或错误产品需要重新发送。",
+      "example": "We can resend the missing parts with your next order."
+    }
+  ],
+  "sentences": [
+    {
+      "label": "接收到货反馈",
+      "basic": "We got your problem.",
+      "natural": "Thank you for your arrival feedback. We will check it carefully.",
+      "business": "Thank you for your arrival feedback. We take this seriously and will check the details carefully with our packing record."
+    },
+    {
+      "label": "要求破损照片",
+      "basic": "Send damaged photos.",
+      "natural": "Please send us photos of the damaged goods.",
+      "business": "Could you please send us clear photos of the damaged goods, the inner packing, and the outer cartons?"
+    },
+    {
+      "label": "确认缺件数量",
+      "basic": "How many missing?",
+      "natural": "Please confirm the model and quantity of the missing items.",
+      "business": "Please confirm the model, quantity, and carton number of the missing items so we can compare them with our packing list."
+    },
+    {
+      "label": "判断少发还是清点错误",
+      "basic": "Maybe count wrong.",
+      "natural": "We need to check whether this is a short delivery or a counting mistake.",
+      "business": "We need to check whether this is a short delivery or a counting mistake by comparing your receiving record with our packing photos."
+    },
+    {
+      "label": "提出补救方案",
+      "basic": "We can send again.",
+      "natural": "We can resend the missing parts with your next order.",
+      "business": "After we confirm the details, we can either resend the missing parts with your next order or discuss reasonable compensation."
+    }
+  ],
+  "chatAnalysis": [
+    {
+      "old": "send photo first",
+      "problem": "语气太硬，客户会觉得你不相信他的反馈。",
+      "better": "Thank you for your arrival feedback. Could you please send us clear photos?",
+      "upgrade": "Thank you for your arrival feedback. We take this seriously. Could you please send us clear photos of the damaged goods and outer cartons so we can check it quickly?"
+    },
+    {
+      "old": "not our problem, maybe shipping",
+      "problem": "直接推责会激化矛盾，也不利于后续索赔。",
+      "better": "We need to check the details first before confirming the reason.",
+      "upgrade": "We need to check the details first by reviewing the unboxing photos, carton condition, and our packing record before confirming the reason."
+    },
+    {
+      "old": "we give discount next time",
+      "problem": "还没确认数量和责任就承诺折扣，容易造成损失。",
+      "better": "We can discuss compensation after we confirm the details.",
+      "upgrade": "After we confirm the model, quantity, and photos, we can discuss a reasonable compensation plan or resend the missing parts with your next order."
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "慢速基础版：客户反馈破损",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "We received the goods, but some items are damaged."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I am sorry to hear that. Please send us photos of the damaged goods."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Okay, I will send the photos now."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. We will check the photos and give you a solution as soon as possible."
+        }
+      ]
+    },
+    {
+      "title": "正常商务版：缺少物品",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "We checked the cartons and found some missing items."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you for the arrival feedback. Please confirm the model and quantity of the missing items."
+        },
+        {
+          "speaker": "Customer",
+          "text": "It looks like ten pieces are missing from carton number five."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Understood. We will compare your receiving record with our packing photos and update you today."
+        }
+      ]
+    },
+    {
+      "title": "压力场景版：客户要求马上赔偿",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "This is unacceptable. We need compensation now."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand your concern, and we take this seriously."
+        },
+        {
+          "speaker": "Customer",
+          "text": "The goods arrived late and now some products are damaged."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Please send us the unboxing photos, carton photos, and damaged quantity. After we confirm the details, we will offer a fair solution."
+        }
+      ]
+    }
+  ],
+  "longDialogues": [
+    {
+      "title": "长对话实战：到货后破损、缺件和售后补救",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Hi, we received the goods today, but there are some problems."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I am sorry to hear that. Thank you for your arrival feedback. What happened?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "Some products are damaged, and a few items seem to be missing."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Understood. We take this seriously and will check it carefully."
+        },
+        {
+          "speaker": "Customer",
+          "text": "This affects our customer delivery schedule."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand. Could you please send us clear photos of the damaged goods first?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "Do you also need photos of the cartons?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, please send photos of the outer cartons, inner packing, and unboxing photos if available."
+        },
+        {
+          "speaker": "Customer",
+          "text": "The outer cartons look a little crushed."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. The carton condition will help us check whether the damage happened during transport."
+        },
+        {
+          "speaker": "Customer",
+          "text": "For the missing items, what information do you need?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Please confirm the model, quantity, and carton number of the missing items."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We think ten pieces of model A are missing from carton number five."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thanks. We will compare your receiving record with our packing list and packing photos."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Could this be a short delivery from your side?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "We need to check whether it is a short delivery or a counting mistake before confirming the reason."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please do not delay this. We need a solution quickly."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Understood. After we receive the photos and quantity details, we will start the claim process immediately."
+        },
+        {
+          "speaker": "Customer",
+          "text": "What solution can you offer?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "If the missing items are confirmed, we can resend them with your next order or discuss compensation."
+        },
+        {
+          "speaker": "Customer",
+          "text": "What about the damaged goods?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "For the damaged goods, we will check the damage level and confirm whether replacement or compensation is more suitable."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you resend the parts by courier?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, if the quantity is small and urgent, courier resend is possible. We will confirm the cost and timing."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you give me an update today?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes. Please send the photos and quantity details now, and I will update you today after checking with our warehouse and factory."
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "d27-q1",
+      "type": "translate",
+      "prompt": "中译英：请发送破损货物、内包装和外箱的清晰照片。",
+      "answer": "Could you please send us clear photos of the damaged goods, the inner packing, and the outer cartons?",
+      "acceptable": [
+        "could you please send us clear photos of the damaged goods the inner packing and the outer cartons",
+        "please send us clear photos of the damaged goods the inner packing and the outer cartons"
+      ],
+      "hint": "damaged goods 是破损货物，outer cartons 是外箱。"
+    },
+    {
+      "id": "d27-q2",
+      "type": "rewrite",
+      "prompt": "把这句话改得更专业：send photo first",
+      "answer": "Thank you for your arrival feedback. Could you please send us clear photos so we can check it quickly?",
+      "acceptable": [
+        "thank you for your arrival feedback could you please send us clear photos so we can check it quickly",
+        "thank you for your arrival feedback please send us clear photos so we can check it quickly"
+      ],
+      "hint": "先感谢反馈，再说明要照片是为了快速处理。"
+    },
+    {
+      "id": "d27-q3",
+      "type": "fill",
+      "prompt": "填空：We need to check whether this is a short ____ or a counting mistake.",
+      "answer": "delivery",
+      "acceptable": [
+        "delivery"
+      ],
+      "hint": "short delivery 是少发或少交货。"
+    },
+    {
+      "id": "d27-q4",
+      "type": "choice",
+      "prompt": "客户说有缺件，哪个回复更适合？",
+      "options": [
+        "Maybe your side lost them",
+        "Please confirm the model, quantity, and carton number of the missing items so we can compare them with our packing list.",
+        "No problem, next time discount",
+        "We already shipped everything"
+      ],
+      "answer": "Please confirm the model, quantity, and carton number of the missing items so we can compare them with our packing list.",
+      "acceptable": [
+        "please confirm the model quantity and carton number of the missing items so we can compare them with our packing list"
+      ],
+      "hint": "缺件处理要确认型号、数量和箱号，再和记录对比。"
+    },
+    {
+      "id": "d27-q5",
+      "type": "translate",
+      "prompt": "中译英：确认细节后，我们可以补发缺少的配件或讨论合理补偿。",
+      "answer": "After we confirm the details, we can resend the missing parts or discuss reasonable compensation.",
+      "acceptable": [
+        "after we confirm the details we can resend the missing parts or discuss reasonable compensation",
+        "after confirming the details we can resend the missing parts or discuss reasonable compensation"
+      ],
+      "hint": "resend 是补发，compensation 是补偿。"
+    },
+    {
+      "id": "d27-q6",
+      "type": "reply",
+      "prompt": "客户说：Some products are damaged, and we need compensation now. 你应该怎么回复？",
+      "answer": "I understand your concern. Please send us the photos and damaged quantity first, and after we confirm the details, we will offer a fair solution.",
+      "acceptable": [
+        "i understand your concern please send us the photos and damaged quantity first and after we confirm the details we will offer a fair solution",
+        "i understand your concern please send us the photos and damaged quantity and after we confirm the details we will offer a fair solution"
+      ],
+      "hint": "先安抚，再要照片和数量，再承诺公平方案。"
+    }
+  ],
+  "homework": [
+    "把 damaged goods、missing items、short delivery、arrival feedback、unboxing photos、claim process、compensation、resend 各造 1 句。",
+    "把 5 个核心句子的 business 版本各读 5 遍，重点练 photos、quantity、packing record 和 compensation。",
+    "写一段 WhatsApp 回复：客户收到货后说 10 件产品破损、5 件缺失，你要先表达重视，要求照片、箱号和数量，并说明确认后给出补发或补偿方案。"
+  ],
+  "tomorrow": "Day 28 会进入价格谈判和让步边界，练习客户要求 discount、best price 和 match competitor price 时如何守住条件。"
+}

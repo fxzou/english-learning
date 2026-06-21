@@ -1,0 +1,391 @@
+{
+  "day": 28,
+  "title": "价格谈判和让步边界",
+  "theme": "从 best price request / competitor offer / final offer 开始",
+  "durationMinutes": 45,
+  "goals": [
+    "能回应客户要求 best price、降价或对标竞争对手报价的压力",
+    "能在不直接拒绝客户的情况下说明成本、数量和服务边界",
+    "能把让步和条件绑定，例如 bulk pricing、cost sharing、free sample request 或长期订单"
+  ],
+  "review": {
+    "title": "Day 27 复习",
+    "items": [
+      "昨天练了 damaged goods、missing items、short delivery、arrival feedback、unboxing photos、claim process、compensation 和 resend。",
+      "售后处理要先确认事实，再给方案；谈判也一样，不能先情绪化降价或拒绝。",
+      "今天进入综合实战阶段：客户会要求更低价格、更好条件或拿竞争对手报价压价。"
+    ]
+  },
+  "preview": {
+    "scenario": "客户说价格太高、别人更便宜、要求免费样品或分摊运费。你需要守住底线，同时给出可执行的条件和替代方案。",
+    "needToKnow": [
+      "best price request 不一定要直接降价，可以先确认数量、包装、交期和付款条件。",
+      "competitor offer 要礼貌回应，不能贬低对方，也不能盲目 match price。",
+      "final offer 表示你已经给到当前条件下的最终报价，语气要坚定但不生硬。"
+    ]
+  },
+  "vocabulary": [
+    {
+      "word": "best price request",
+      "phonetic": "/best praɪs rɪˈkwest/",
+      "meaning": "最低价请求 / 最优价请求",
+      "usage": "用于客户要求 better price、best price 或 lower price 的场景。",
+      "example": "Thank you for your best price request. Let me check what we can support based on your quantity."
+    },
+    {
+      "word": "competitor offer",
+      "phonetic": "/kəmˈpetɪtər ˈɔːfər/",
+      "meaning": "竞争对手报价",
+      "usage": "用于客户拿其他供应商价格来压价。",
+      "example": "We understand you have a competitor offer, but our price includes stricter quality control."
+    },
+    {
+      "word": "bulk pricing",
+      "phonetic": "/bʌlk ˈpraɪsɪŋ/",
+      "meaning": "大批量价格",
+      "usage": "用于更大数量时可以给更好的阶梯价格。",
+      "example": "We can offer better bulk pricing if the quantity increases to five thousand pieces."
+    },
+    {
+      "word": "price match",
+      "phonetic": "/praɪs mætʃ/",
+      "meaning": "匹配价格 / 对标价格",
+      "usage": "用于客户要求你按竞争对手价格成交。",
+      "example": "It is difficult for us to price match without the same specifications and quality standard."
+    },
+    {
+      "word": "final offer",
+      "phonetic": "/ˈfaɪnəl ˈɔːfər/",
+      "meaning": "最终报价",
+      "usage": "用于说明当前条件下已经给到可接受的最终价格。",
+      "example": "This is our final offer based on the current quantity and requirements."
+    },
+    {
+      "word": "cost sharing",
+      "phonetic": "/kɔːst ˈʃerɪŋ/",
+      "meaning": "费用分摊",
+      "usage": "用于样品费、运费、模具费或额外成本双方共同承担。",
+      "example": "We can consider cost sharing for the sample shipping cost."
+    },
+    {
+      "word": "free sample request",
+      "phonetic": "/friː ˈsæmpəl rɪˈkwest/",
+      "meaning": "免费样品请求",
+      "usage": "用于客户要求免费寄样或免样品费的场景。",
+      "example": "For the free sample request, we can offer the sample without charge if you cover the shipping cost."
+    },
+    {
+      "word": "concession",
+      "phonetic": "/kənˈseʃən/",
+      "meaning": "让步 / 妥协条件",
+      "usage": "用于谈判中给客户的价格、费用、交期或服务方面让步。",
+      "example": "This concession is possible only if the order quantity is confirmed today."
+    }
+  ],
+  "sentences": [
+    {
+      "label": "回应最低价请求",
+      "basic": "This is best price.",
+      "natural": "Thank you for your best price request. Let me check what we can support.",
+      "business": "Thank you for your best price request. Let me review the quantity, packing requirements, and payment terms to see what we can support."
+    },
+    {
+      "label": "回应竞争对手报价",
+      "basic": "Other supplier cheaper because quality bad.",
+      "natural": "We understand you have a competitor offer, but the specifications may be different.",
+      "business": "We understand you have a competitor offer, but it is difficult to compare prices without checking the same specifications, packing, and quality standard."
+    },
+    {
+      "label": "绑定大数量条件",
+      "basic": "More quantity, price lower.",
+      "natural": "We can offer better bulk pricing if the quantity increases.",
+      "business": "If the quantity increases to five thousand pieces, we can apply better bulk pricing and reduce the unit cost."
+    },
+    {
+      "label": "守住最终报价",
+      "basic": "No lower price.",
+      "natural": "This is our final offer based on the current quantity.",
+      "business": "This is our final offer based on the current quantity, material cost, and quality requirements. We have already kept the margin very tight."
+    },
+    {
+      "label": "处理免费样品",
+      "basic": "Sample not free.",
+      "natural": "For the free sample request, we can offer the sample without charge if you cover the shipping cost.",
+      "business": "For the free sample request, we can support the sample without charge as a concession, but the sample shipping cost needs to be covered by your side."
+    }
+  ],
+  "chatAnalysis": [
+    {
+      "old": "cannot cheaper",
+      "problem": "语气太硬，只拒绝不解释，客户容易继续压价或失去兴趣。",
+      "better": "This is our final offer based on the current quantity.",
+      "upgrade": "This is our final offer based on the current quantity, material cost, and quality requirements. If the quantity increases, we can review better bulk pricing."
+    },
+    {
+      "old": "their price low, quality no good",
+      "problem": "直接贬低竞争对手不专业，也没有把比较条件说清楚。",
+      "better": "It is difficult to compare prices without the same specifications.",
+      "upgrade": "We understand you have a competitor offer, but it is difficult to compare prices without checking the same specifications, packing, and quality standard."
+    },
+    {
+      "old": "free sample impossible",
+      "problem": "完全拒绝会让客户觉得没有合作空间，可以把免费样品和运费条件绑定。",
+      "better": "We can offer the sample without charge if you cover the shipping cost.",
+      "upgrade": "For the free sample request, we can support the sample without charge as a concession, but the sample shipping cost needs to be covered by your side."
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "慢速基础版：客户要求最低价",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Can you give me your best price?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you for your best price request. May I confirm the quantity first?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "We may order two thousand pieces."
+        },
+        {
+          "speaker": "Sales",
+          "text": "For two thousand pieces, this is our final offer based on the current material cost."
+        }
+      ]
+    },
+    {
+      "title": "正常商务版：客户拿竞争对手压价",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Another supplier offered a lower price. Can you match it?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "We understand you have a competitor offer, but we need to compare the same specifications and quality standard."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Their price is about eight percent lower."
+        },
+        {
+          "speaker": "Sales",
+          "text": "It is difficult for us to price match without confirming the material, packing, and inspection standard."
+        }
+      ]
+    },
+    {
+      "title": "压力场景版：客户要求免费样品和分摊运费",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "We need a free sample and lower shipping cost before placing the order."
+        },
+        {
+          "speaker": "Sales",
+          "text": "For the free sample request, we can support the sample without charge as a concession."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you also cover the shipping cost?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "We can consider cost sharing, but the full shipping cost cannot be covered by our side for this sample."
+        }
+      ]
+    }
+  ],
+  "longDialogues": [
+    {
+      "title": "长对话实战：客户压价、要求对标竞争对手和免费样品",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Hi, we reviewed your quotation. Your price is still too high."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you for your feedback. May I know your target quantity and expected price range?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "We need your best price before we can move forward."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you for your best price request. Let me review the quantity, packing requirements, and payment terms."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Another supplier offered us a lower price."
+        },
+        {
+          "speaker": "Sales",
+          "text": "We understand you have a competitor offer, but we need to compare the same specifications and quality standard."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Their offer is about ten percent lower than yours."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand. It is difficult for us to price match without checking the material, packing, and inspection standard."
+        },
+        {
+          "speaker": "Customer",
+          "text": "The product looks similar from the photos."
+        },
+        {
+          "speaker": "Sales",
+          "text": "The appearance may look similar, but the material grade, thickness, packing, and quality control can make a clear cost difference."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you reduce the price if we order more?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes. If the quantity increases to five thousand pieces, we can apply better bulk pricing."
+        },
+        {
+          "speaker": "Customer",
+          "text": "What price can you give for five thousand pieces?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "For five thousand pieces, we can reduce the unit price by three percent."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Only three percent? That is not enough."
+        },
+        {
+          "speaker": "Sales",
+          "text": "This is already a tight concession based on the current material cost and quality requirements."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you give five percent if we pay the deposit today?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "If the deposit is confirmed today and the packing remains unchanged, I can apply for a slightly better final offer."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We also need a free sample before confirming the order."
+        },
+        {
+          "speaker": "Sales",
+          "text": "For the free sample request, we can support the sample without charge as a concession."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you also cover the sample shipping cost?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "We can consider cost sharing, but the full shipping cost cannot be covered by our side for this sample."
+        },
+        {
+          "speaker": "Customer",
+          "text": "What cost sharing do you suggest?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "We can cover the sample cost, and your side can cover the shipping cost. If the order is confirmed, we can deduct part of the sample shipping cost from the order value."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please send me your final offer today."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will send the final offer based on five thousand pieces, unchanged packing, and deposit confirmation today."
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "d28-q1",
+      "type": "translate",
+      "prompt": "中译英：谢谢你的最低价请求。请让我根据数量和包装要求确认我们能支持什么。",
+      "answer": "Thank you for your best price request. Please let me check what we can support based on the quantity and packing requirements.",
+      "acceptable": [
+        "thank you for your best price request please let me check what we can support based on the quantity and packing requirements",
+        "thank you for your best price request let me check what we can support based on the quantity and packing requirements"
+      ],
+      "hint": "best price request 是客户要求最低价。"
+    },
+    {
+      "id": "d28-q2",
+      "type": "rewrite",
+      "prompt": "把这句话改得更专业：cannot cheaper",
+      "answer": "This is our final offer based on the current quantity, material cost, and quality requirements.",
+      "acceptable": [
+        "this is our final offer based on the current quantity material cost and quality requirements",
+        "this is our final offer based on the current quantity and quality requirements"
+      ],
+      "hint": "不要只说不能便宜，要说明 final offer 的依据。"
+    },
+    {
+      "id": "d28-q3",
+      "type": "fill",
+      "prompt": "填空：If the quantity increases, we can apply better bulk ____.",
+      "answer": "pricing",
+      "acceptable": [
+        "pricing"
+      ],
+      "hint": "bulk pricing 是大批量价格。"
+    },
+    {
+      "id": "d28-q4",
+      "type": "choice",
+      "prompt": "客户说竞争对手价格更低，哪个回复更适合？",
+      "options": [
+        "Their quality must be bad",
+        "We understand you have a competitor offer, but we need to compare the same specifications, packing, and quality standard.",
+        "Then buy from them",
+        "Our price cannot change"
+      ],
+      "answer": "We understand you have a competitor offer, but we need to compare the same specifications, packing, and quality standard.",
+      "acceptable": [
+        "we understand you have a competitor offer but we need to compare the same specifications packing and quality standard"
+      ],
+      "hint": "不要贬低对手，先要求同规格比较。"
+    },
+    {
+      "id": "d28-q5",
+      "type": "translate",
+      "prompt": "中译英：对于免费样品请求，我们可以免费提供样品，但运费需要由贵方承担。",
+      "answer": "For the free sample request, we can offer the sample without charge, but the shipping cost needs to be covered by your side.",
+      "acceptable": [
+        "for the free sample request we can offer the sample without charge but the shipping cost needs to be covered by your side",
+        "for the free sample request we can provide the sample without charge but the shipping cost needs to be covered by your side"
+      ],
+      "hint": "without charge 表示免费，covered by your side 表示由贵方承担。"
+    },
+    {
+      "id": "d28-q6",
+      "type": "reply",
+      "prompt": "客户说：Can you match the competitor price? 你应该怎么回复？",
+      "answer": "It is difficult for us to price match without confirming the same specifications, packing, and quality standard.",
+      "acceptable": [
+        "it is difficult for us to price match without confirming the same specifications packing and quality standard",
+        "it is difficult to price match without confirming the same specifications packing and quality standard"
+      ],
+      "hint": "price match 之前要确认同规格、包装和质量标准。"
+    }
+  ],
+  "homework": [
+    "把 best price request、competitor offer、bulk pricing、price match、final offer、cost sharing、free sample request、concession 各造 1 句。",
+    "把 5 个核心句子的 business 版本各读 5 遍，重点练 final offer、competitor offer 和 free sample request。",
+    "写一段 WhatsApp 回复：客户说你的价格比竞争对手高 10%，并要求免费样品和更低运费。你要说明需要同规格比较，并把让步和数量、运费承担条件绑定。"
+  ],
+  "tomorrow": "Day 29 会练长期客户跟进和订单推进，包括报价后跟进、样品后跟进、沉默客户唤醒和推进 next step。"
+}

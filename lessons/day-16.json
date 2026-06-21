@@ -1,0 +1,403 @@
+{
+  "day": 16,
+  "title": "生产前最终确认",
+  "theme": "从 final confirmation / order summary / production start 开始",
+  "durationMinutes": 40,
+  "goals": [
+    "能在生产前发送清晰的订单确认清单，减少生产错误",
+    "能确认数量、规格、Logo 文件、包装方式、唛头和付款状态",
+    "能在客户确认后自然推进 production start，并说明修改截止点"
+  ],
+  "review": {
+    "title": "Day 15 复习",
+    "items": [
+      "昨天练了 trial order、below MOQ、higher unit price、stock option、mixed order 和 repeat order。",
+      "今天进入生产跟进阶段：客户下单后，开产前必须把所有细节做 final confirmation。",
+      "生产前确认不是重复聊天，而是防止数量、颜色、logo、包装、唛头和付款信息出错。"
+    ]
+  },
+  "preview": {
+    "scenario": "客户已经确认价格并准备生产。你需要在开产前发一份 order summary，让客户确认数量、颜色、规格、Logo artwork、包装、唛头、付款和交期。",
+    "needToKnow": [
+      "final confirmation 是生产前最后一次确认，不要只问 Can we start production?",
+      "order summary 要像清单一样清楚，方便客户逐项确认。",
+      "production start 前要提醒客户：确认后再修改，可能会影响时间和费用。"
+    ]
+  },
+  "vocabulary": [
+    {
+      "word": "final confirmation",
+      "phonetic": "/ˈfaɪnl ˌkɑːnfərˈmeɪʃən/",
+      "meaning": "最终确认",
+      "usage": "用于生产、付款或出货前最后一次确认重要信息。",
+      "example": "Please check the details below for final confirmation."
+    },
+    {
+      "word": "order summary",
+      "phonetic": "/ˈɔːrdər ˈsʌməri/",
+      "meaning": "订单摘要 / 订单汇总",
+      "usage": "用于把数量、价格、规格、包装和交期集中列给客户确认。",
+      "example": "I will send you the order summary before production."
+    },
+    {
+      "word": "production details",
+      "phonetic": "/prəˈdʌkʃən dɪˈteɪlz/",
+      "meaning": "生产细节",
+      "usage": "用于确认生产涉及的规格、颜色、工艺、包装和唛头。",
+      "example": "Please confirm the production details before we start."
+    },
+    {
+      "word": "approved artwork",
+      "phonetic": "/əˈpruːvd ˈɑːrtwɜːrk/",
+      "meaning": "已确认的设计稿 / 已批准的图稿",
+      "usage": "用于说明 logo、包装或印刷文件已被客户确认。",
+      "example": "We will produce the logo based on the approved artwork."
+    },
+    {
+      "word": "packing method",
+      "phonetic": "/ˈpækɪŋ ˈmeθəd/",
+      "meaning": "包装方式",
+      "usage": "用于确认单个包装、内盒、外箱、袋装或特殊包装要求。",
+      "example": "Please confirm the packing method before production."
+    },
+    {
+      "word": "shipping mark confirmation",
+      "phonetic": "/ˈʃɪpɪŋ mɑːrk ˌkɑːnfərˈmeɪʃən/",
+      "meaning": "唛头确认",
+      "usage": "用于出货箱上的客户标识、箱号、目的港或订单号确认。",
+      "example": "We need your shipping mark confirmation before carton printing."
+    },
+    {
+      "word": "payment confirmation",
+      "phonetic": "/ˈpeɪmənt ˌkɑːnfərˈmeɪʃən/",
+      "meaning": "付款确认 / 到账确认",
+      "usage": "用于确认定金、尾款或付款凭证后再安排生产或出货。",
+      "example": "We can arrange production after payment confirmation."
+    },
+    {
+      "word": "production start",
+      "phonetic": "/prəˈdʌkʃən stɑːrt/",
+      "meaning": "开始生产 / 开产",
+      "usage": "用于说明客户最终确认后工厂开始生产。",
+      "example": "After your final confirmation, we will arrange production start."
+    }
+  ],
+  "sentences": [
+    {
+      "label": "发送最终确认",
+      "basic": "Please confirm all.",
+      "natural": "Please check the details below for final confirmation.",
+      "business": "Please check the order summary below for final confirmation before we arrange production start."
+    },
+    {
+      "label": "确认生产细节",
+      "basic": "Check production details.",
+      "natural": "Please confirm the production details before we start.",
+      "business": "Please confirm the production details, including quantity, color, size, logo, packing method, and shipping mark."
+    },
+    {
+      "label": "按确认图稿生产",
+      "basic": "We use this artwork.",
+      "natural": "We will use the approved artwork for production.",
+      "business": "We will produce the logo based on the approved artwork, so please confirm if the file is final."
+    },
+    {
+      "label": "确认付款后开产",
+      "basic": "Pay then produce.",
+      "natural": "We can arrange production after payment confirmation.",
+      "business": "After payment confirmation and final details approval, we will arrange production start immediately."
+    },
+    {
+      "label": "提醒确认后修改影响",
+      "basic": "After confirm, cannot change.",
+      "natural": "After final confirmation, changes may affect the lead time.",
+      "business": "Please note that after final confirmation and production start, any change may affect the lead time and extra cost."
+    }
+  ],
+  "chatAnalysis": [
+    {
+      "old": "confirm all details",
+      "problem": "太模糊，客户不知道具体要确认哪些项目，也容易漏掉包装或唛头。",
+      "better": "Please check the details below for final confirmation.",
+      "upgrade": "Please confirm the production details, including quantity, color, size, logo, packing method, and shipping mark."
+    },
+    {
+      "old": "we start after payment",
+      "problem": "表达太硬，也没有说明还需要 final details approval。",
+      "better": "We can arrange production after payment confirmation.",
+      "upgrade": "After payment confirmation and final details approval, we will arrange production start immediately."
+    },
+    {
+      "old": "cannot change after production",
+      "problem": "容易让客户觉得被拒绝，应该说明修改会影响时间和费用。",
+      "better": "After final confirmation, changes may affect the lead time.",
+      "upgrade": "Please note that after final confirmation and production start, any change may affect the lead time and extra cost."
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "慢速基础版：发送订单汇总",
+      "lines": [
+        {
+          "speaker": "Sales",
+          "text": "Please check the order summary below for final confirmation."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Okay, what details do we need to confirm?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Please confirm the quantity, color, logo, packing method, and shipping mark."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Sure, I will check and confirm today."
+        }
+      ]
+    },
+    {
+      "title": "正常商务版：确认图稿和包装",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Can you start production now?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "We can arrange production start after final confirmation."
+        },
+        {
+          "speaker": "Customer",
+          "text": "What is still pending?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "We still need your confirmation on the approved artwork and packing method."
+        }
+      ]
+    },
+    {
+      "title": "压力场景版：客户临时想改细节",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "We may change the logo size after production starts."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Please note that after final confirmation and production start, any change may affect the lead time and extra cost."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Then please wait for our final approval."
+        },
+        {
+          "speaker": "Sales",
+          "text": "No problem. We will wait for your final confirmation before arranging production start."
+        }
+      ]
+    }
+  ],
+  "longDialogues": [
+    {
+      "title": "长对话实战：开产前逐项确认订单细节",
+      "lines": [
+        {
+          "speaker": "Sales",
+          "text": "Hi, before we arrange production start, I would like to confirm the order summary with you."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Okay, please send the details."
+        },
+        {
+          "speaker": "Sales",
+          "text": "The order quantity is 1,000 pieces, matte black finish, with your logo by engraving. Is that correct?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "Yes, the quantity and finish are correct."
+        },
+        {
+          "speaker": "Sales",
+          "text": "For the logo, we will produce based on the approved artwork you confirmed yesterday."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you send the artwork one more time?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will send the approved artwork again for your final confirmation."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please also confirm the packing method."
+        },
+        {
+          "speaker": "Sales",
+          "text": "The packing method is one piece in one poly bag, then 100 pieces per carton."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can we use a white inner box instead of a poly bag?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, but the inner box may affect the packing cost and carton size."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please update the packing cost if we use the inner box."
+        },
+        {
+          "speaker": "Sales",
+          "text": "No problem. I will check the updated packing cost and confirm it before production."
+        },
+        {
+          "speaker": "Customer",
+          "text": "What about the shipping mark?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "We need your shipping mark confirmation before carton printing."
+        },
+        {
+          "speaker": "Customer",
+          "text": "I will send the shipping mark file today."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. After we receive it, we will add it to the final order summary."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Have you received our deposit?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Our finance team is checking it now. We can arrange production after payment confirmation."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can production start tomorrow?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "If we receive payment confirmation and final details approval today, we can arrange production start tomorrow."
+        },
+        {
+          "speaker": "Customer",
+          "text": "After production starts, can we still change the logo size?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Please note that after final confirmation and production start, any change may affect the lead time and extra cost."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Understood. We will check everything carefully today."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. Please confirm the approved artwork, packing method, shipping mark, and payment status."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Once we confirm all details, can you send us the production schedule?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes. After final confirmation, I will send you the production schedule and estimated ready date."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Okay, please wait for our confirmation."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. We will wait for your final confirmation before arranging production start."
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "d16-q1",
+      "type": "translate",
+      "prompt": "中译英：请检查下面的订单汇总，做最终确认。",
+      "answer": "Please check the order summary below for final confirmation.",
+      "acceptable": [
+        "please check the order summary below for final confirmation",
+        "please check the below order summary for final confirmation"
+      ],
+      "hint": "order summary 是订单汇总，final confirmation 是最终确认。"
+    },
+    {
+      "id": "d16-q2",
+      "type": "rewrite",
+      "prompt": "把这句话改得更自然：confirm all details",
+      "answer": "Please confirm the production details, including quantity, color, size, logo, packing method, and shipping mark.",
+      "acceptable": [
+        "please confirm the production details including quantity color size logo packing method and shipping mark",
+        "please confirm the production details including quantity color size logo packaging method and shipping mark"
+      ],
+      "hint": "要把具体项目列出来，不要只说 all details。"
+    },
+    {
+      "id": "d16-q3",
+      "type": "fill",
+      "prompt": "填空：We will produce the logo based on the approved ____.",
+      "answer": "artwork",
+      "acceptable": [
+        "artwork"
+      ],
+      "hint": "approved artwork 是已确认的设计稿。"
+    },
+    {
+      "id": "d16-q4",
+      "type": "choice",
+      "prompt": "客户问什么时候可以开产，哪个回复更适合？",
+      "options": [
+        "We start now",
+        "After payment confirmation and final details approval, we will arrange production start immediately.",
+        "Pay first",
+        "Confirm all"
+      ],
+      "answer": "After payment confirmation and final details approval, we will arrange production start immediately.",
+      "acceptable": [
+        "after payment confirmation and final details approval we will arrange production start immediately"
+      ],
+      "hint": "开产前需要 payment confirmation 和 final details approval。"
+    },
+    {
+      "id": "d16-q5",
+      "type": "translate",
+      "prompt": "中译英：生产开始后，任何修改都可能影响交期和额外费用。",
+      "answer": "After production start, any change may affect the lead time and extra cost.",
+      "acceptable": [
+        "after production start any change may affect the lead time and extra cost",
+        "after production starts any change may affect the lead time and extra cost"
+      ],
+      "hint": "不要说 cannot change，用 may affect lead time and extra cost。"
+    },
+    {
+      "id": "d16-q6",
+      "type": "reply",
+      "prompt": "客户说：Can you start production tomorrow? 你应该怎么回复？",
+      "answer": "If we receive payment confirmation and final details approval today, we can arrange production start tomorrow.",
+      "acceptable": [
+        "if we receive payment confirmation and final details approval today we can arrange production start tomorrow",
+        "if we get payment confirmation and final details approval today we can arrange production start tomorrow"
+      ],
+      "hint": "要加条件，不能乱承诺。"
+    }
+  ],
+  "homework": [
+    "把 final confirmation、order summary、production details、approved artwork、packing method、shipping mark confirmation、payment confirmation、production start 各造 1 句。",
+    "用今天的词写一份生产前 WhatsApp 确认清单，至少包含 quantity、finish、logo、packing method、shipping mark 和 payment confirmation。",
+    "跟读长对话 2 遍，重点练 if we receive payment confirmation and final details approval today。"
+  ],
+  "tomorrow": "Day 17 会练客户催单和紧急订单，重点是安抚客户、推动工厂，但不乱承诺。"
+}

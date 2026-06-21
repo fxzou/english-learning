@@ -1,0 +1,399 @@
+{
+  "day": 8,
+  "title": "处理缺货、替代方案和补货时间",
+  "theme": "从 out of stock / alternative / restock 开始",
+  "durationMinutes": 34,
+  "goals": [
+    "能礼貌说明产品暂时缺货，而不是直接说 no stock",
+    "能给客户推荐可用替代方案，减少订单流失",
+    "能说明补货时间、预订安排和下一步确认动作"
+  ],
+  "review": {
+    "title": "Day 07 复习",
+    "items": [
+      "昨天练了 schedule、progress、delay、inspection 和 ready date。",
+      "今天继续练客户最常遇到的生产和库存问题：缺货、替代品、补货时间。",
+      "客户要的款式没有库存时，不要只说 no，要给 alternative 或 restock time。"
+    ]
+  },
+  "preview": {
+    "scenario": "客户想下单某个颜色、尺寸或款式，但工厂暂时没有库存，或者原材料短缺，需要你解释并推荐替代方案。",
+    "needToKnow": [
+      "out of stock 比 no stock 更自然，但要配合替代方案。",
+      "alternative 和 substitute 都可以表示替代选择，商务回复里 alternative 更常用。",
+      "restock 是补货，客户常问 when will it be restocked。"
+    ]
+  },
+  "vocabulary": [
+    {
+      "word": "out of stock",
+      "phonetic": "/aʊt əv stɑːk/",
+      "meaning": "缺货 / 没有库存",
+      "usage": "用于说明产品、颜色或尺寸暂时无货。",
+      "example": "This color is currently out of stock."
+    },
+    {
+      "word": "substitute",
+      "phonetic": "/ˈsʌbstɪtuːt/",
+      "meaning": "替代品",
+      "usage": "用于说明可代替原产品的物料或产品。",
+      "example": "We can use a similar material as a substitute."
+    },
+    {
+      "word": "alternative",
+      "phonetic": "/ɔːlˈtɜːrnətɪv/",
+      "meaning": "替代选择 / 备选方案",
+      "usage": "用于给客户推荐可选颜色、款式或方案。",
+      "example": "I can recommend an alternative color for you."
+    },
+    {
+      "word": "restock",
+      "phonetic": "/ˌriːˈstɑːk/",
+      "meaning": "补货",
+      "usage": "用于说明库存什么时候重新补上。",
+      "example": "This item will be restocked next week."
+    },
+    {
+      "word": "backorder",
+      "phonetic": "/ˈbækɔːrdər/",
+      "meaning": "缺货待补订单 / 预订",
+      "usage": "用于客户可以先下单，等补货后发货的情况。",
+      "example": "We can place this item on backorder if you can wait."
+    },
+    {
+      "word": "shortage",
+      "phonetic": "/ˈʃɔːrtɪdʒ/",
+      "meaning": "短缺",
+      "usage": "用于说明原材料、包装或产能不足。",
+      "example": "There is a temporary material shortage for this color."
+    },
+    {
+      "word": "option",
+      "phonetic": "/ˈɑːpʃən/",
+      "meaning": "选择 / 选项",
+      "usage": "用于列出客户可选择的方案。",
+      "example": "I can offer two options for you."
+    },
+    {
+      "word": "recommend",
+      "phonetic": "/ˌrekəˈmend/",
+      "meaning": "推荐",
+      "usage": "用于向客户建议更合适的替代产品或方案。",
+      "example": "I recommend the black color because it is available now."
+    }
+  ],
+  "sentences": [
+    {
+      "label": "说明缺货",
+      "basic": "No stock.",
+      "natural": "This item is out of stock now.",
+      "business": "This item is currently out of stock, but I can check the restock time for you."
+    },
+    {
+      "label": "推荐替代颜色",
+      "basic": "Use other color.",
+      "natural": "You can choose another color.",
+      "business": "I can recommend an alternative color that is available now."
+    },
+    {
+      "label": "说明补货时间",
+      "basic": "Stock next week.",
+      "natural": "This item will be restocked next week.",
+      "business": "This item is expected to be restocked next week, and I can reserve it for you if needed."
+    },
+    {
+      "label": "说明材料短缺",
+      "basic": "Material not enough.",
+      "natural": "There is a material shortage now.",
+      "business": "There is a temporary material shortage, so the lead time may be a little longer."
+    },
+    {
+      "label": "给两个方案",
+      "basic": "Two ways.",
+      "natural": "I can offer two options for you.",
+      "business": "I can offer two options: wait for restock or choose an available alternative."
+    }
+  ],
+  "chatAnalysis": [
+    {
+      "old": "no stock",
+      "problem": "太直接，容易让客户觉得没有继续沟通的空间。",
+      "better": "This item is currently out of stock.",
+      "upgrade": "This item is currently out of stock, but I can check the restock time or recommend an alternative for you."
+    },
+    {
+      "old": "choose other color",
+      "problem": "像命令客户换颜色，缺少推荐理由。",
+      "better": "You can choose another color.",
+      "upgrade": "I recommend the black color because it is available now and the lead time is shorter."
+    },
+    {
+      "old": "wait stock",
+      "problem": "不够清楚，客户不知道等多久、是否可以先预订。",
+      "better": "This item will be restocked next week.",
+      "upgrade": "This item is expected to be restocked next week, and we can place it on backorder if you can wait."
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "慢速基础版：说明暂时缺货",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Do you have this color in stock?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "This color is currently out of stock."
+        },
+        {
+          "speaker": "Customer",
+          "text": "When will it be available again?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "I will check the restock time with our factory and update you today."
+        }
+      ]
+    },
+    {
+      "title": "正常商务版：推荐替代方案",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "We need the white color urgently."
+        },
+        {
+          "speaker": "Sales",
+          "text": "The white color is currently out of stock, but I can recommend an alternative color that is available now."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Which color do you recommend?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "I recommend the black color because it is available now and the lead time is shorter."
+        }
+      ]
+    },
+    {
+      "title": "压力场景版：客户不想等补货",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "We cannot wait until next week."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand. I can offer two options: choose an available alternative or split the order."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you ship the available quantity first?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Let me check the available quantity and confirm if partial shipment is possible."
+        }
+      ]
+    }
+  ],
+  "longDialogues": [
+    {
+      "title": "长对话实战：缺货后推荐替代方案和补货安排",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Hi, we want to order the white color again."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. Let me check the current stock for the white color first."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We need 2,000 pieces urgently."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand. I will check the available quantity and restock time for you."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Do you have enough stock now?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "The white color is currently out of stock."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Why is it out of stock?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "There is a temporary material shortage for this color."
+        },
+        {
+          "speaker": "Customer",
+          "text": "When will it be restocked?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "It is expected to be restocked next week, but I will confirm the exact date with our factory."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We cannot wait that long."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand. I can recommend an alternative color that is available now."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Which alternative do you recommend?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "I recommend the black color because it is available now and the lead time is shorter."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Is the black color the same price?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Let me check the price again, but it should be very close to the white color."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can we split the order?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, that may be possible. We can ship the available alternative first and wait for the white color restock."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can we place the white color on backorder?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, we can place it on backorder if you can wait for the restock."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Will the lead time be longer?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, because of the material shortage, the lead time may be a little longer."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please give me the best option."
+        },
+        {
+          "speaker": "Sales",
+          "text": "The best option is to ship the available black color first and keep the white color on backorder."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please confirm the price and restock date today."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will confirm the price, available quantity, and restock date with our factory today."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Thank you. Please update us as soon as possible."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Of course. I will update you as soon as I receive the final information."
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "d8-q1",
+      "type": "translate",
+      "prompt": "中译英：这个颜色目前缺货。",
+      "answer": "This color is currently out of stock.",
+      "acceptable": [
+        "this color is currently out of stock",
+        "this color is out of stock now"
+      ],
+      "hint": "out of stock 表示缺货。"
+    },
+    {
+      "id": "d8-q2",
+      "type": "rewrite",
+      "prompt": "把这句话改得更自然：no stock",
+      "answer": "This item is currently out of stock.",
+      "acceptable": [
+        "this item is currently out of stock",
+        "this item is out of stock now"
+      ],
+      "hint": "不要只说 no stock。"
+    },
+    {
+      "id": "d8-q3",
+      "type": "fill",
+      "prompt": "填空：I can recommend an ____ color that is available now.",
+      "answer": "alternative",
+      "acceptable": [
+        "alternative"
+      ],
+      "hint": "alternative 表示替代选择。"
+    },
+    {
+      "id": "d8-q4",
+      "type": "choice",
+      "prompt": "客户要的颜色缺货，哪个回复更适合？",
+      "options": [
+        "No stock",
+        "Choose other color",
+        "This color is currently out of stock, but I can recommend an alternative color that is available now.",
+        "Wait stock"
+      ],
+      "answer": "This color is currently out of stock, but I can recommend an alternative color that is available now.",
+      "acceptable": [
+        "this color is currently out of stock but i can recommend an alternative color that is available now"
+      ],
+      "hint": "说明缺货后，要给替代方案。"
+    },
+    {
+      "id": "d8-q5",
+      "type": "translate",
+      "prompt": "中译英：这个产品预计下周补货。",
+      "answer": "This item is expected to be restocked next week.",
+      "acceptable": [
+        "this item is expected to be restocked next week",
+        "this item will be restocked next week"
+      ],
+      "hint": "restock 表示补货。"
+    },
+    {
+      "id": "d8-q6",
+      "type": "reply",
+      "prompt": "客户说：We cannot wait until next week. 你应该怎么回复？",
+      "answer": "I understand. I can offer two options: choose an available alternative or split the order.",
+      "acceptable": [
+        "i understand i can offer two options choose an available alternative or split the order",
+        "i can offer two options choose an available alternative or split the order"
+      ],
+      "hint": "先表示理解，再给两个可执行方案。"
+    }
+  ],
+  "homework": [
+    "把 out of stock、alternative、restock、shortage、recommend 各造 1 句。",
+    "把 5 个核心句子的 business 版本各读 5 遍。",
+    "跟读长对话 2 遍，重点练缺货解释和替代方案推荐。"
+  ],
+  "tomorrow": "Day 9 会练客户改规格、改数量和改包装时的回复。"
+}

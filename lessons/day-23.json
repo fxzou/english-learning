@@ -1,0 +1,391 @@
+{
+  "day": 23,
+  "title": "发票、装箱单和清关文件",
+  "theme": "从 invoice / packing list / declared value 开始",
+  "durationMinutes": 40,
+  "goals": [
+    "能根据客户或货代要求准备 invoice、packing list 和清关资料",
+    "能确认 HS code、declared value、consignee 和产品描述等关键信息",
+    "能处理客户要求修改单据时的风险和确认流程"
+  ],
+  "review": {
+    "title": "Day 22 复习",
+    "items": [
+      "昨天练了 balance payment、payment reminder、before shipment、credit term 和 release goods。",
+      "今天进入出货单据阶段：付款确认后，客户或货代通常会要求发票、装箱单和清关资料。",
+      "单据沟通要准确，尤其是 consignee、product description、HS code 和 declared value。"
+    ]
+  },
+  "preview": {
+    "scenario": "客户货代要求你提供商业发票、装箱单、HS code 和申报金额。客户可能要求修改收货人信息、产品描述或申报价值，你需要谨慎确认并避免不合规表达。",
+    "needToKnow": [
+      "invoice 和 packing list 是清关常用基础文件。",
+      "HS code 和 declared value 会影响清关和税费，不能随意填写。",
+      "document revision 需要客户确认最终版本，避免发错文件给货代。"
+    ]
+  },
+  "vocabulary": [
+    {
+      "word": "invoice",
+      "phonetic": "/ˈɪnvɔɪs/",
+      "meaning": "发票",
+      "usage": "用于列明货物、金额、买卖双方和付款信息的单据。",
+      "example": "I will prepare the invoice for your customs clearance."
+    },
+    {
+      "word": "packing list",
+      "phonetic": "/ˈpækɪŋ lɪst/",
+      "meaning": "装箱单",
+      "usage": "用于列明箱数、重量、尺寸和包装明细。",
+      "example": "The packing list will show the carton quantity and gross weight."
+    },
+    {
+      "word": "HS code",
+      "phonetic": "/ˌeɪtʃ ˈes koʊd/",
+      "meaning": "海关编码",
+      "usage": "用于清关申报和税率判断。",
+      "example": "Please ask your customs broker to confirm the HS code."
+    },
+    {
+      "word": "declared value",
+      "phonetic": "/dɪˈklerd ˈvæljuː/",
+      "meaning": "申报价值",
+      "usage": "用于海关申报金额，通常需与实际交易保持一致。",
+      "example": "Please confirm the declared value before we issue the invoice."
+    },
+    {
+      "word": "customs documents",
+      "phonetic": "/ˈkʌstəmz ˈdɑːkjumənts/",
+      "meaning": "清关文件",
+      "usage": "用于发票、装箱单、提单信息、产地证等清关资料。",
+      "example": "We will send the customs documents to your forwarder."
+    },
+    {
+      "word": "consignee",
+      "phonetic": "/ˌkɑːnsaɪˈniː/",
+      "meaning": "收货人 / 提单收货方",
+      "usage": "用于单据上的收货公司或收货人信息。",
+      "example": "Please confirm the consignee information for the invoice."
+    },
+    {
+      "word": "product description",
+      "phonetic": "/ˈprɑːdʌkt dɪˈskrɪpʃən/",
+      "meaning": "产品描述",
+      "usage": "用于发票和装箱单上描述货物名称、型号或材质。",
+      "example": "The product description should match the actual goods."
+    },
+    {
+      "word": "document revision",
+      "phonetic": "/ˈdɑːkjumənt rɪˈvɪʒən/",
+      "meaning": "文件修改 / 单据修改",
+      "usage": "用于客户要求修改发票、装箱单或其他清关文件。",
+      "example": "Please confirm the document revision before we send it to your forwarder."
+    }
+  ],
+  "sentences": [
+    {
+      "label": "发送清关文件",
+      "basic": "I send invoice and packing list.",
+      "natural": "I will send you the invoice and packing list.",
+      "business": "I will send you the invoice, packing list, and other customs documents for your forwarder to review."
+    },
+    {
+      "label": "确认 HS code",
+      "basic": "HS code is this.",
+      "natural": "Please ask your customs broker to confirm the HS code.",
+      "business": "We can provide our suggested HS code, but please ask your customs broker to confirm the final HS code for import clearance."
+    },
+    {
+      "label": "确认申报金额",
+      "basic": "What value on invoice?",
+      "natural": "Please confirm the declared value for the invoice.",
+      "business": "Please confirm the declared value before we issue the invoice, as it should match the actual order information."
+    },
+    {
+      "label": "确认收货人信息",
+      "basic": "Send consignee.",
+      "natural": "Please confirm the consignee information.",
+      "business": "Please confirm the consignee name, address, tax number, and contact information for the customs documents."
+    },
+    {
+      "label": "处理单据修改",
+      "basic": "We can change document.",
+      "natural": "We can revise the document after your confirmation.",
+      "business": "We can make the document revision after your confirmation, but please check carefully before we send the final version to your forwarder."
+    }
+  ],
+  "chatAnalysis": [
+    {
+      "old": "invoice packing list sent",
+      "problem": "太短，没有说明文件用途，也没有提醒客户或货代检查。",
+      "better": "I will send you the invoice and packing list for review.",
+      "upgrade": "I will send you the invoice, packing list, and other customs documents for your forwarder to review."
+    },
+    {
+      "old": "we can write low value",
+      "problem": "有合规风险，不应随意承诺低报申报价值。",
+      "better": "Please confirm the declared value for the invoice.",
+      "upgrade": "Please confirm the declared value before we issue the invoice, as it should match the actual order information."
+    },
+    {
+      "old": "HS code no problem",
+      "problem": "HS code 需要进口方或货代最终确认，不能由卖方随意保证。",
+      "better": "Please ask your customs broker to confirm the HS code.",
+      "upgrade": "We can provide our suggested HS code, but please ask your customs broker to confirm the final HS code for import clearance."
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "慢速基础版：货代索要发票和装箱单",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Our forwarder needs the invoice and packing list."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will prepare the invoice and packing list for your forwarder."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please send them today."
+        },
+        {
+          "speaker": "Sales",
+          "text": "No problem. I will send the customs documents for your review today."
+        }
+      ]
+    },
+    {
+      "title": "正常商务版：确认收货人和产品描述",
+      "lines": [
+        {
+          "speaker": "Sales",
+          "text": "Before we issue the invoice, please confirm the consignee information."
+        },
+        {
+          "speaker": "Customer",
+          "text": "What information do you need?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "We need the consignee name, address, tax number, and contact information."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Okay, I will send the details to you."
+        }
+      ]
+    },
+    {
+      "title": "压力场景版：客户要求修改申报价值",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Can you put a lower declared value on the invoice?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "We need to make sure the declared value matches the actual order information."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Our broker said it may reduce tax."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Please confirm the correct declared value with your customs broker before we issue the final invoice."
+        }
+      ]
+    }
+  ],
+  "longDialogues": [
+    {
+      "title": "长对话实战：货代要求清关文件并修改单据",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Our forwarder is asking for the customs documents."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will prepare the invoice, packing list, and other customs documents for your forwarder to review."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please include the HS code on the invoice."
+        },
+        {
+          "speaker": "Sales",
+          "text": "We can provide our suggested HS code, but please ask your customs broker to confirm the final HS code for import clearance."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Okay, I will check with the broker."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. Please also confirm the consignee information for the invoice."
+        },
+        {
+          "speaker": "Customer",
+          "text": "The consignee should be our importing company."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Please send the consignee name, address, tax number, and contact information."
+        },
+        {
+          "speaker": "Customer",
+          "text": "What product description will you use?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "We will use the product description based on the actual goods and the PI."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you make the description more general?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "We can adjust the wording if needed, but the product description should still match the actual goods."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Our broker also asked about the declared value."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Please confirm the declared value before we issue the invoice, as it should match the actual order information."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can we use a lower value?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "We need to follow the correct order information. Please confirm the proper declared value with your customs broker."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Understood. I will confirm it first."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. After you confirm the value and consignee information, I will issue the draft documents."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you send a draft before the final documents?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, I will send the draft invoice and packing list for your review first."
+        },
+        {
+          "speaker": "Customer",
+          "text": "If we need changes, can you revise them?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, we can make the document revision after your confirmation."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please do not send the final version to the forwarder before our approval."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Understood. We will wait for your approval before sending the final version to your forwarder."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please send everything in one email."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will send the invoice, packing list, HS code suggestion, declared value, and consignee details together for your review."
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "d23-q1",
+      "type": "translate",
+      "prompt": "中译英：我会把发票、装箱单和其他清关文件发给您的货代审核。",
+      "answer": "I will send the invoice, packing list, and other customs documents to your forwarder for review.",
+      "acceptable": [
+        "i will send the invoice packing list and other customs documents to your forwarder for review",
+        "i will send you the invoice packing list and other customs documents for your forwarder to review"
+      ],
+      "hint": "customs documents 是清关文件。"
+    },
+    {
+      "id": "d23-q2",
+      "type": "rewrite",
+      "prompt": "把这句话改得更合规：we can write low value",
+      "answer": "Please confirm the declared value before we issue the invoice, as it should match the actual order information.",
+      "acceptable": [
+        "please confirm the declared value before we issue the invoice as it should match the actual order information",
+        "the declared value should match the actual order information"
+      ],
+      "hint": "不要承诺低报，用 declared value 和 actual order information。"
+    },
+    {
+      "id": "d23-q3",
+      "type": "fill",
+      "prompt": "填空：Please ask your customs broker to confirm the final HS ____.",
+      "answer": "code",
+      "acceptable": [
+        "code"
+      ],
+      "hint": "HS code 是海关编码。"
+    },
+    {
+      "id": "d23-q4",
+      "type": "choice",
+      "prompt": "客户货代要清关资料，哪个回复更适合？",
+      "options": [
+        "Documents later",
+        "I will send the invoice, packing list, and other customs documents for your forwarder to review.",
+        "I send paper",
+        "Ask forwarder"
+      ],
+      "answer": "I will send the invoice, packing list, and other customs documents for your forwarder to review.",
+      "acceptable": [
+        "i will send the invoice packing list and other customs documents for your forwarder to review"
+      ],
+      "hint": "要明确 invoice、packing list 和 customs documents。"
+    },
+    {
+      "id": "d23-q5",
+      "type": "translate",
+      "prompt": "中译英：请确认收货人名称、地址、税号和联系方式。",
+      "answer": "Please confirm the consignee name, address, tax number, and contact information.",
+      "acceptable": [
+        "please confirm the consignee name address tax number and contact information",
+        "please confirm the consignee name address tax id and contact information"
+      ],
+      "hint": "consignee 是收货人。"
+    },
+    {
+      "id": "d23-q6",
+      "type": "reply",
+      "prompt": "客户说：Please do not send the final documents before our approval. 你应该怎么回复？",
+      "answer": "Understood. We will wait for your approval before sending the final version to your forwarder.",
+      "acceptable": [
+        "understood we will wait for your approval before sending the final version to your forwarder",
+        "we will wait for your approval before sending the final version to your forwarder"
+      ],
+      "hint": "final version 和 forwarder 都要表达清楚。"
+    }
+  ],
+  "homework": [
+    "把 invoice、packing list、HS code、declared value、customs documents、consignee、product description、document revision 各造 1 句。",
+    "把 5 个核心句子的 business 版本各读 5 遍，重点练 HS code 和 declared value 的合规表达。",
+    "写一段 WhatsApp 回复：客户货代索要清关文件，你要确认收货人、HS code、申报价值，并说明先发草稿给客户审核。"
+  ],
+  "tomorrow": "Day 24 会练银行信息、付款错误和退款路径。"
+}

@@ -1,0 +1,395 @@
+{
+  "day": 13,
+  "title": "样品确认、修改和大货前批准",
+  "theme": "从 sample approval / sample revision / proceed 开始",
+  "durationMinutes": 36,
+  "goals": [
+    "能引导客户确认样品并给出明确反馈",
+    "能处理客户要求修改样品的场景，并说明修改会影响时间",
+    "能在客户批准样品后，自然衔接到大货生产"
+  ],
+  "review": {
+    "title": "Day 12 复习",
+    "items": [
+      "昨天练了 mold cost、mold making、mold ownership、prototype 和 exclusive。",
+      "今天继续模具后的下一步：样品确认、样品修改和大货前批准。",
+      "客户看样品时，不能只问 OK 吗，要引导客户确认颜色、尺寸、logo、包装和是否可以 proceed。"
+    ]
+  },
+  "preview": {
+    "scenario": "模具或样品完成后，你需要把样品发给客户确认；客户可能批准、要求修改，或只说 looks good 但没有明确批准大货。",
+    "needToKnow": [
+      "sample approval 是大货生产前的关键节点，要拿到明确确认。",
+      "sample revision 表示样品修改，通常会影响时间和费用。",
+      "proceed 用于确认下一步动作，例如 proceed with bulk production。"
+    ]
+  },
+  "vocabulary": [
+    {
+      "word": "sample approval",
+      "phonetic": "/ˈsæmpəl əˈpruːvəl/",
+      "meaning": "样品批准 / 样品确认通过",
+      "usage": "用于客户确认样品后进入大货生产。",
+      "example": "We can start bulk production after sample approval."
+    },
+    {
+      "word": "sample revision",
+      "phonetic": "/ˈsæmpəl rɪˈvɪʒən/",
+      "meaning": "样品修改",
+      "usage": "用于客户要求调整样品颜色、尺寸、logo 或包装。",
+      "example": "The sample revision will take about 5 days."
+    },
+    {
+      "word": "pre-production sample",
+      "phonetic": "/ˌpriː prəˈdʌkʃən ˈsæmpəl/",
+      "meaning": "产前样",
+      "usage": "用于大货生产前最终确认的样品。",
+      "example": "We can arrange a pre-production sample before bulk production."
+    },
+    {
+      "word": "feedback",
+      "phonetic": "/ˈfiːdbæk/",
+      "meaning": "反馈",
+      "usage": "用于客户对样品、报价或文件的意见。",
+      "example": "Please share your feedback after checking the sample."
+    },
+    {
+      "word": "modification",
+      "phonetic": "/ˌmɑːdɪfɪˈkeɪʃən/",
+      "meaning": "修改 / 改动",
+      "usage": "用于描述产品、样品、包装或设计的修改。",
+      "example": "This modification may affect the sample lead time."
+    },
+    {
+      "word": "reference photo",
+      "phonetic": "/ˈrefrəns ˈfoʊtoʊ/",
+      "meaning": "参考图片",
+      "usage": "用于客户说明想要的颜色、logo 位置或外观效果。",
+      "example": "Please send us a reference photo for the logo position."
+    },
+    {
+      "word": "final version",
+      "phonetic": "/ˈfaɪnl ˈvɜːrʒən/",
+      "meaning": "最终版本",
+      "usage": "用于确认最终样品、设计稿或包装版本。",
+      "example": "Please confirm if this is the final version."
+    },
+    {
+      "word": "proceed",
+      "phonetic": "/prəˈsiːd/",
+      "meaning": "继续进行 / 推进",
+      "usage": "用于确认是否进入下一步，如大货生产或付款安排。",
+      "example": "Can we proceed with bulk production after your approval?"
+    }
+  ],
+  "sentences": [
+    {
+      "label": "请求样品反馈",
+      "basic": "Please check sample.",
+      "natural": "Please check the sample and let us know your feedback.",
+      "business": "Please check the sample carefully and share your feedback so we can confirm the next step."
+    },
+    {
+      "label": "确认样品批准",
+      "basic": "Sample OK?",
+      "natural": "Is the sample approved?",
+      "business": "Could you please confirm if the sample is approved so we can proceed with bulk production?"
+    },
+    {
+      "label": "说明样品修改时间",
+      "basic": "Change sample needs 5 days.",
+      "natural": "The sample revision will take about 5 days.",
+      "business": "The sample revision will take about 5 days after we confirm the modification details."
+    },
+    {
+      "label": "请求参考图片",
+      "basic": "Send picture.",
+      "natural": "Please send us a reference photo.",
+      "business": "Please send us a reference photo so we can adjust the logo position correctly."
+    },
+    {
+      "label": "确认最终版本",
+      "basic": "This final?",
+      "natural": "Is this the final version?",
+      "business": "Could you please confirm if this is the final version before we arrange bulk production?"
+    }
+  ],
+  "chatAnalysis": [
+    {
+      "old": "sample ok?",
+      "problem": "太短，客户可能只说 looks good，但没有明确批准大货。",
+      "better": "Is the sample approved?",
+      "upgrade": "Could you please confirm if the sample is approved so we can proceed with bulk production?"
+    },
+    {
+      "old": "change needs time",
+      "problem": "没有说明需要多少时间，也没有说明从什么时候开始算。",
+      "better": "The sample revision will take about 5 days.",
+      "upgrade": "The sample revision will take about 5 days after we confirm the modification details."
+    },
+    {
+      "old": "send picture for logo",
+      "problem": "不够具体，客户不知道你需要什么类型的图片。",
+      "better": "Please send us a reference photo for the logo position.",
+      "upgrade": "Please send us a reference photo and mark the logo position clearly, so we can adjust the sample correctly."
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "慢速基础版：请求样品反馈",
+      "lines": [
+        {
+          "speaker": "Sales",
+          "text": "The sample has been sent. Please check it carefully and share your feedback."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Okay, we will check it today."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. Please confirm if the color, size, logo, and packaging are correct."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Sure, I will confirm after checking."
+        }
+      ]
+    },
+    {
+      "title": "正常商务版：客户批准样品",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "The sample looks good."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. Could you please confirm if the sample is approved?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "Yes, the sample is approved."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Great. We will proceed with bulk production based on the approved sample."
+        }
+      ]
+    },
+    {
+      "title": "压力场景版：客户要求修改样品",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "We need to change the logo position on the sample."
+        },
+        {
+          "speaker": "Sales",
+          "text": "No problem. Please send us a reference photo and mark the logo position clearly."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Will this delay the order?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "The sample revision will take about 5 days after we confirm the modification details."
+        }
+      ]
+    }
+  ],
+  "longDialogues": [
+    {
+      "title": "长对话实战：从样品反馈到修改和大货批准",
+      "lines": [
+        {
+          "speaker": "Sales",
+          "text": "Hi, the sample has been delivered. Have you had time to check it?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "Yes, we checked it today."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. Could you please share your feedback?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "The size and color are good, but the logo position needs to be changed."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Understood. Please send us a reference photo and mark the logo position clearly."
+        },
+        {
+          "speaker": "Customer",
+          "text": "I will mark it on the photo and send it to you."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Great. After we receive the reference photo, we will check the modification with our sample team."
+        },
+        {
+          "speaker": "Customer",
+          "text": "How long will the sample revision take?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "The sample revision will take about 5 days after we confirm the modification details."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you make it faster?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "I will check the fastest revision time with our sample team and update you today."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Do we need another pre-production sample?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, I suggest arranging a pre-production sample before bulk production."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Why do we need it?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Because we need to confirm the final version before bulk production."
+        },
+        {
+          "speaker": "Customer",
+          "text": "If the revised sample is good, can we approve it directly?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes. If the revised sample is approved, we can proceed with bulk production."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please make sure the logo position is exactly the same as our reference photo."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Of course. We will adjust it according to your reference photo and send photos for confirmation."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you send photos before shipping the revised sample?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, we can send photos before shipping the revised sample."
+        },
+        {
+          "speaker": "Customer",
+          "text": "After approval, how soon can you start bulk production?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "After sample approval and deposit confirmation, we can start bulk production."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please send us a final summary before production."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will send the final version details for your confirmation before we proceed."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Okay, we will confirm as soon as we receive it."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. Once you approve the final version, we will proceed with bulk production."
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "d13-q1",
+      "type": "translate",
+      "prompt": "中译英：请确认样品是否批准。",
+      "answer": "Please confirm if the sample is approved.",
+      "acceptable": [
+        "please confirm if the sample is approved",
+        "could you please confirm if the sample is approved"
+      ],
+      "hint": "sample approval 是样品批准。"
+    },
+    {
+      "id": "d13-q2",
+      "type": "rewrite",
+      "prompt": "把这句话改得更自然：sample ok?",
+      "answer": "Could you please confirm if the sample is approved?",
+      "acceptable": [
+        "could you please confirm if the sample is approved",
+        "please confirm if the sample is approved"
+      ],
+      "hint": "要得到明确 approval，不只是 looks good。"
+    },
+    {
+      "id": "d13-q3",
+      "type": "fill",
+      "prompt": "填空：The sample ____ will take about 5 days.",
+      "answer": "revision",
+      "acceptable": [
+        "revision"
+      ],
+      "hint": "sample revision 表示样品修改。"
+    },
+    {
+      "id": "d13-q4",
+      "type": "choice",
+      "prompt": "客户要求改 logo 位置，哪个回复更适合？",
+      "options": [
+        "Ok change",
+        "Please send us a reference photo and mark the logo position clearly.",
+        "Logo position later",
+        "No problem"
+      ],
+      "answer": "Please send us a reference photo and mark the logo position clearly.",
+      "acceptable": [
+        "please send us a reference photo and mark the logo position clearly"
+      ],
+      "hint": "要让客户给 reference photo 并标清楚位置。"
+    },
+    {
+      "id": "d13-q5",
+      "type": "translate",
+      "prompt": "中译英：样品批准后，我们可以开始大货生产。",
+      "answer": "After sample approval, we can start bulk production.",
+      "acceptable": [
+        "after sample approval we can start bulk production",
+        "after the sample is approved we can start bulk production"
+      ],
+      "hint": "bulk production 表示大货生产。"
+    },
+    {
+      "id": "d13-q6",
+      "type": "reply",
+      "prompt": "客户说：The sample looks good. 你应该怎么回复？",
+      "answer": "Thank you. Could you please confirm if the sample is approved so we can proceed with bulk production?",
+      "acceptable": [
+        "thank you could you please confirm if the sample is approved so we can proceed with bulk production",
+        "could you please confirm if the sample is approved so we can proceed with bulk production"
+      ],
+      "hint": "looks good 不等于正式批准，要确认是否可以 proceed。"
+    }
+  ],
+  "homework": [
+    "把 sample approval、sample revision、feedback、modification、proceed 各造 1 句。",
+    "把 5 个核心句子的 business 版本各读 5 遍。",
+    "跟读长对话 2 遍，重点练样品修改和大货前批准。"
+  ],
+  "tomorrow": "Day 14 会练表面处理、Logo 工艺和颜色确认。"
+}

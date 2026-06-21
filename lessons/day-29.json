@@ -1,0 +1,391 @@
+{
+  "day": 29,
+  "title": "长期客户跟进和订单推进",
+  "theme": "从 follow-up / decision timeline / next step 开始",
+  "durationMinutes": 45,
+  "goals": [
+    "能在报价后、寄样后和客户沉默后进行自然跟进",
+    "能询问 decision timeline、pending decision 和 next step，推动客户给明确反馈",
+    "能用 gentle reminder 和 reconnect 维护长期客户关系，不显得催促或打扰"
+  ],
+  "review": {
+    "title": "Day 28 复习",
+    "items": [
+      "昨天练了 best price request、competitor offer、bulk pricing、price match、final offer、cost sharing、free sample request 和 concession。",
+      "谈判时要把让步和条件绑定，不能无条件降价。",
+      "今天练客户还没下单时怎么跟进：报价后、样品后、沉默后，都要自然推进下一步。"
+    ]
+  },
+  "preview": {
+    "scenario": "你已经给客户发过报价、样品或最终方案，但客户暂时没有回复。你需要礼貌跟进，确认客户是否需要更多资料、内部决策时间、下一步安排或订单推进计划。",
+    "needToKnow": [
+      "follow-up 是跟进，不等于催促。好的跟进要给客户一个容易回复的问题。",
+      "decision timeline 可以帮助你判断客户什么时候会做决定，而不是每天盲目追问。",
+      "next step 是推进订单最常用的表达，可以是确认样品、更新数量、发 PI 或安排付款。"
+    ]
+  },
+  "vocabulary": [
+    {
+      "word": "follow-up",
+      "phonetic": "/ˈfɑːloʊ ʌp/",
+      "meaning": "跟进",
+      "usage": "用于报价后、样品后、会议后或客户沉默后的后续联系。",
+      "example": "I just wanted to make a quick follow-up on the quotation."
+    },
+    {
+      "word": "quotation follow-up",
+      "phonetic": "/kwoʊˈteɪʃən ˈfɑːloʊ ʌp/",
+      "meaning": "报价跟进",
+      "usage": "用于发送报价后询问客户是否看过、是否需要调整或有无问题。",
+      "example": "This is a quotation follow-up to see if you have any questions."
+    },
+    {
+      "word": "sample feedback",
+      "phonetic": "/ˈsæmpəl ˈfiːdbæk/",
+      "meaning": "样品反馈",
+      "usage": "用于客户收到样品后询问测试结果、修改意见或是否可以进入下一步。",
+      "example": "May I know if you have any sample feedback after testing?"
+    },
+    {
+      "word": "decision timeline",
+      "phonetic": "/dɪˈsɪʒən ˈtaɪmlaɪn/",
+      "meaning": "决策时间线",
+      "usage": "用于询问客户内部什么时候评估、批准或确认订单。",
+      "example": "Could you share your decision timeline for this project?"
+    },
+    {
+      "word": "next step",
+      "phonetic": "/nekst step/",
+      "meaning": "下一步",
+      "usage": "用于推进客户确认样品、数量、价格、PI、付款或生产安排。",
+      "example": "Please let me know the next step when convenient."
+    },
+    {
+      "word": "pending decision",
+      "phonetic": "/ˈpendɪŋ dɪˈsɪʒən/",
+      "meaning": "待定决定 / 尚未决定",
+      "usage": "用于客户还在内部评估、等待老板确认或比较供应商时。",
+      "example": "I understand the decision is still pending on your side."
+    },
+    {
+      "word": "gentle reminder",
+      "phonetic": "/ˈdʒentl rɪˈmaɪndər/",
+      "meaning": "礼貌提醒 / 温和提醒",
+      "usage": "用于不想显得催促，但需要客户回复关键事项时。",
+      "example": "Just a gentle reminder to check if you had time to review the proposal."
+    },
+    {
+      "word": "reconnect",
+      "phonetic": "/ˌriːkəˈnekt/",
+      "meaning": "重新联系 / 恢复沟通",
+      "usage": "用于一段时间没有联系的客户，再次开启沟通。",
+      "example": "I wanted to reconnect and see if this project is still active."
+    }
+  ],
+  "sentences": [
+    {
+      "label": "报价后跟进",
+      "basic": "Any update for quotation?",
+      "natural": "I just wanted to make a quick follow-up on the quotation.",
+      "business": "I just wanted to make a quick follow-up on the quotation and check if you have any questions about the price, quantity, or delivery time."
+    },
+    {
+      "label": "样品后跟进",
+      "basic": "Sample okay?",
+      "natural": "May I know if you have any sample feedback after testing?",
+      "business": "May I know if you have any sample feedback after testing, or if there is anything we should adjust before the order confirmation?"
+    },
+    {
+      "label": "询问决策时间",
+      "basic": "When you decide?",
+      "natural": "Could you share your decision timeline for this project?",
+      "business": "Could you share your decision timeline for this project so we can plan production capacity and material preparation accordingly?"
+    },
+    {
+      "label": "推进下一步",
+      "basic": "What next?",
+      "natural": "Please let me know the next step when convenient.",
+      "business": "Please let me know the next step when convenient, such as confirming the quantity, approving the sample, or preparing the PI."
+    },
+    {
+      "label": "唤醒沉默客户",
+      "basic": "Long time no reply.",
+      "natural": "I wanted to reconnect and see if this project is still active.",
+      "business": "I wanted to reconnect and check whether this project is still active, or if your team needs any updated information from our side."
+    }
+  ],
+  "chatAnalysis": [
+    {
+      "old": "any update?",
+      "problem": "太短太泛，客户不知道你在问报价、样品、数量还是订单决定。",
+      "better": "I just wanted to make a quick follow-up on the quotation.",
+      "upgrade": "I just wanted to make a quick follow-up on the quotation and check if you have any questions about the price, quantity, or delivery time."
+    },
+    {
+      "old": "why no reply?",
+      "problem": "语气像责问，会让客户有压力，不适合长期客户维护。",
+      "better": "Just a gentle reminder to check if you had time to review the proposal.",
+      "upgrade": "Just a gentle reminder to check if you had time to review the proposal, or if your team needs any updated information before making a decision."
+    },
+    {
+      "old": "please order soon",
+      "problem": "目的太直接，只催下单，没有给客户可执行的下一步。",
+      "better": "Please let me know the next step when convenient.",
+      "upgrade": "Please let me know the next step when convenient, such as confirming the quantity, approving the sample, or preparing the PI."
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "慢速基础版：报价后跟进",
+      "lines": [
+        {
+          "speaker": "Sales",
+          "text": "I just wanted to make a quick follow-up on the quotation."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Thanks. We are still reviewing it internally."
+        },
+        {
+          "speaker": "Sales",
+          "text": "No problem. Could you share your decision timeline for this project?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "We may have an answer by the end of this week."
+        }
+      ]
+    },
+    {
+      "title": "正常商务版：样品后跟进",
+      "lines": [
+        {
+          "speaker": "Sales",
+          "text": "May I know if you have any sample feedback after testing?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "The sample looks good, but our engineer is still checking the details."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Understood. If anything needs adjustment, please let me know and we will check it with our factory."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Okay. I will send you the final comments tomorrow."
+        }
+      ]
+    },
+    {
+      "title": "压力场景版：客户沉默后重新联系",
+      "lines": [
+        {
+          "speaker": "Sales",
+          "text": "I wanted to reconnect and see if this project is still active."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Sorry, we were busy with other projects."
+        },
+        {
+          "speaker": "Sales",
+          "text": "No worries. Would an updated quotation or revised schedule help your team review it again?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "Yes, please send an updated quotation with the latest delivery time."
+        }
+      ]
+    }
+  ],
+  "longDialogues": [
+    {
+      "title": "长对话实战：报价后、样品后和沉默客户的订单推进",
+      "lines": [
+        {
+          "speaker": "Sales",
+          "text": "Hi, I just wanted to make a quick follow-up on the quotation we sent last week."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Thanks for checking. We are still reviewing it with our team."
+        },
+        {
+          "speaker": "Sales",
+          "text": "No problem. Do you have any questions about the price, quantity, or delivery time?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "The price is acceptable, but we are comparing the delivery time with another supplier."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Understood. Could you share your decision timeline for this project?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "We hope to decide by next Friday."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. That helps us plan production capacity and material preparation accordingly."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We also need to test the sample before confirming the order."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. May I know if you have received the sample already?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "Yes, we received it yesterday."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Great. May I know if you have any sample feedback after testing?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "The appearance is good, but our engineer needs two more days for testing."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Understood. If anything needs adjustment, please let me know and we will check it with our factory."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Okay. I will send you the feedback once the testing is finished."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. Just to plan ahead, what would be the next step if the sample is approved?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "If the sample is approved, we will confirm the quantity and ask you to send the PI."
+        },
+        {
+          "speaker": "Sales",
+          "text": "That sounds good. Please let me know the next step when convenient."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Sure. If you do not hear from me by Friday, you can remind me."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. I will send a gentle reminder on Friday if the decision is still pending."
+        },
+        {
+          "speaker": "Customer",
+          "text": "That works."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Also, if your team needs any updated information, such as the latest quotation or delivery schedule, I can prepare it."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please send the latest delivery schedule. That will help our internal review."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will update the schedule today and send it to you."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Thanks. We may have more orders later if this project goes well."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Glad to hear that. I wanted to reconnect with your team regularly and support your future projects as well."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Good. Please keep in touch and send the updated schedule first."
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "d29-q1",
+      "type": "translate",
+      "prompt": "中译英：我只是想快速跟进一下上周发给您的报价。",
+      "answer": "I just wanted to make a quick follow-up on the quotation we sent last week.",
+      "acceptable": [
+        "i just wanted to make a quick follow-up on the quotation we sent last week",
+        "i wanted to make a quick follow-up on the quotation we sent last week"
+      ],
+      "hint": "quick follow-up on the quotation 是报价后自然跟进。"
+    },
+    {
+      "id": "d29-q2",
+      "type": "rewrite",
+      "prompt": "把这句话改得更专业：any update?",
+      "answer": "I just wanted to make a quick follow-up on the quotation and check if you have any questions about the price, quantity, or delivery time.",
+      "acceptable": [
+        "i just wanted to make a quick follow-up on the quotation and check if you have any questions about the price quantity or delivery time",
+        "i wanted to make a quick follow-up on the quotation and check if you have any questions about the price quantity or delivery time"
+      ],
+      "hint": "明确跟进对象和客户可以回复的问题。"
+    },
+    {
+      "id": "d29-q3",
+      "type": "fill",
+      "prompt": "填空：Could you share your decision ____ for this project?",
+      "answer": "timeline",
+      "acceptable": [
+        "timeline"
+      ],
+      "hint": "decision timeline 是决策时间线。"
+    },
+    {
+      "id": "d29-q4",
+      "type": "choice",
+      "prompt": "客户很久没回复，哪个开场更适合重新联系？",
+      "options": [
+        "Why no reply?",
+        "I wanted to reconnect and check whether this project is still active.",
+        "Please order soon",
+        "You forgot our quotation"
+      ],
+      "answer": "I wanted to reconnect and check whether this project is still active.",
+      "acceptable": [
+        "i wanted to reconnect and check whether this project is still active"
+      ],
+      "hint": "reconnect 比责问更适合长期客户。"
+    },
+    {
+      "id": "d29-q5",
+      "type": "translate",
+      "prompt": "中译英：如果样品确认通过，请告诉我下一步，例如确认数量或准备 PI。",
+      "answer": "If the sample is approved, please let me know the next step, such as confirming the quantity or preparing the PI.",
+      "acceptable": [
+        "if the sample is approved please let me know the next step such as confirming the quantity or preparing the pi",
+        "if the sample is approved please let me know the next step such as confirming the quantity or preparing pi"
+      ],
+      "hint": "next step 后面给具体选项，客户更容易回复。"
+    },
+    {
+      "id": "d29-q6",
+      "type": "reply",
+      "prompt": "客户说：We are still reviewing it internally. 你应该怎么回复？",
+      "answer": "No problem. Could you share your decision timeline for this project so we can plan production capacity accordingly?",
+      "acceptable": [
+        "no problem could you share your decision timeline for this project so we can plan production capacity accordingly",
+        "no problem could you share your decision timeline so we can plan production capacity accordingly"
+      ],
+      "hint": "客户内部评估时，问 decision timeline 比催单更自然。"
+    }
+  ],
+  "homework": [
+    "把 follow-up、quotation follow-up、sample feedback、decision timeline、next step、pending decision、gentle reminder、reconnect 各造 1 句。",
+    "把 5 个核心句子的 business 版本各读 5 遍，重点练 quotation follow-up、decision timeline 和 next step。",
+    "写一段 WhatsApp 跟进：客户上周收到报价但没有回复，你要礼貌跟进，询问是否有价格、数量或交期问题，并请客户分享 decision timeline。"
+  ],
+  "tomorrow": "Day 30 会做综合实战复盘，从询价、报价、样品、PI、付款、生产、物流到售后，串联完整订单流程。"
+}

@@ -1,0 +1,391 @@
+{
+  "day": 10,
+  "title": "处理客户投诉和质量问题",
+  "theme": "从 complaint / defect / solution 开始",
+  "durationMinutes": 36,
+  "goals": [
+    "能先安抚客户情绪，再收集问题证据",
+    "能区分 scratch、defect、missing piece 等常见质量问题",
+    "能给出内部检查、替换、补发或下一单抵扣等补救方向"
+  ],
+  "review": {
+    "title": "Day 09 复习",
+    "items": [
+      "昨天练了 revise、change request、adjustment、affect 和 extra cost。",
+      "今天进入更高难度的售后场景：客户投诉质量问题、数量少件或包装破损。",
+      "处理投诉时，先表达理解和重视，再要照片、视频、数量等证据，最后给解决方案。"
+    ]
+  },
+  "preview": {
+    "scenario": "客户收到样品或大货后反馈有划痕、破损、少件、颜色不对或质量不稳定，需要你稳住客户并推进内部调查。",
+    "needToKnow": [
+      "客户投诉时，不要马上争辩，也不要马上承诺赔偿。",
+      "先收集 evidence，例如 photos、videos、quantity、carton number。",
+      "solution 要具体：replacement、repair、discount、credit for next order 或重新检查库存。"
+    ]
+  },
+  "vocabulary": [
+    {
+      "word": "complaint",
+      "phonetic": "/kəmˈpleɪnt/",
+      "meaning": "投诉 / 抱怨",
+      "usage": "用于客户反馈质量、数量或服务问题。",
+      "example": "We take your complaint seriously and will check it right away."
+    },
+    {
+      "word": "issue",
+      "phonetic": "/ˈɪʃuː/",
+      "meaning": "问题",
+      "usage": "比 problem 更商务，适合描述客户反馈的问题。",
+      "example": "Could you please send us photos of the issue?"
+    },
+    {
+      "word": "defect",
+      "phonetic": "/ˈdiːfekt/",
+      "meaning": "缺陷 / 瑕疵",
+      "usage": "用于产品本身有质量缺陷的情况。",
+      "example": "Please mark the defective items clearly in the photos."
+    },
+    {
+      "word": "scratch",
+      "phonetic": "/skrætʃ/",
+      "meaning": "划痕",
+      "usage": "用于表面有刮痕、擦伤或外观损伤。",
+      "example": "There are some scratches on the surface."
+    },
+    {
+      "word": "missing piece",
+      "phonetic": "/ˈmɪsɪŋ piːs/",
+      "meaning": "少件 / 缺少的产品",
+      "usage": "用于客户收到的数量比订单少。",
+      "example": "Please confirm how many missing pieces there are."
+    },
+    {
+      "word": "evidence",
+      "phonetic": "/ˈevɪdəns/",
+      "meaning": "证据",
+      "usage": "用于要求客户提供照片、视频、箱号等证明材料。",
+      "example": "Please send us clear evidence so we can investigate the issue."
+    },
+    {
+      "word": "replacement",
+      "phonetic": "/rɪˈpleɪsmənt/",
+      "meaning": "替换品 / 补发",
+      "usage": "用于质量问题后的补发或替换安排。",
+      "example": "We can arrange replacement for the defective items."
+    },
+    {
+      "word": "solution",
+      "phonetic": "/səˈluːʃən/",
+      "meaning": "解决方案",
+      "usage": "用于客户投诉后提出处理办法。",
+      "example": "We will check internally and offer a solution as soon as possible."
+    }
+  ],
+  "sentences": [
+    {
+      "label": "重视投诉",
+      "basic": "We will check.",
+      "natural": "We will check this issue right away.",
+      "business": "We take your complaint seriously and will check this issue with our team right away."
+    },
+    {
+      "label": "请求照片视频",
+      "basic": "Send photos.",
+      "natural": "Could you please send us photos of the issue?",
+      "business": "Could you please send us clear photos or videos of the issue so we can investigate it properly?"
+    },
+    {
+      "label": "确认缺陷数量",
+      "basic": "How many bad?",
+      "natural": "How many defective items did you receive?",
+      "business": "Could you please confirm the quantity of defective items and mark them clearly in the photos?"
+    },
+    {
+      "label": "提出补发方向",
+      "basic": "We can replace.",
+      "natural": "We can arrange replacement for the defective items.",
+      "business": "After we verify the issue, we can arrange replacement for the defective items or discuss another suitable solution."
+    },
+    {
+      "label": "内部调查",
+      "basic": "We ask factory.",
+      "natural": "We will check this with our production team.",
+      "business": "We will investigate this issue with our production and quality control teams, then update you with a solution."
+    }
+  ],
+  "chatAnalysis": [
+    {
+      "old": "send photo",
+      "problem": "太直接，客户已经不满时，这样说容易显得你不重视。",
+      "better": "Could you please send us photos of the issue?",
+      "upgrade": "We are sorry to hear that. Could you please send us clear photos or videos of the issue so we can investigate it properly?"
+    },
+    {
+      "old": "we check factory",
+      "problem": "表达不完整，没有说明你会查什么、什么时候给方案。",
+      "better": "We will check this issue with our factory.",
+      "upgrade": "We will investigate this issue with our production and quality control teams, then update you with a solution as soon as possible."
+    },
+    {
+      "old": "we replace bad goods",
+      "problem": "太快承诺，应该先核实问题数量和原因，再给补救方案。",
+      "better": "We can arrange replacement after we verify the issue.",
+      "upgrade": "After we verify the issue and defective quantity, we can arrange replacement or discuss another suitable solution."
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "慢速基础版：客户反馈划痕",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Some products have scratches on the surface."
+        },
+        {
+          "speaker": "Sales",
+          "text": "We are sorry to hear that. Could you please send us clear photos of the scratches?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "I will send photos now."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. We will check this issue with our quality control team right away."
+        }
+      ]
+    },
+    {
+      "title": "正常商务版：客户反馈少件",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "We received fewer pieces than expected."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I am sorry for the inconvenience. Could you please confirm how many missing pieces there are?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "There are 30 missing pieces."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. Please also send us the carton number so we can investigate it with our warehouse."
+        }
+      ]
+    },
+    {
+      "title": "压力场景版：客户要求马上赔偿",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "This is unacceptable. We need compensation now."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand your concern, and we take this complaint seriously."
+        },
+        {
+          "speaker": "Customer",
+          "text": "What solution can you offer?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "After we verify the issue and defective quantity, we will offer a fair solution as soon as possible."
+        }
+      ]
+    }
+  ],
+  "longDialogues": [
+    {
+      "title": "长对话实战：客户投诉质量问题并要求解决方案",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Hi, we received the goods, but there is a quality issue."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I am sorry to hear that. Could you please tell me what happened?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "Some items have scratches on the surface."
+        },
+        {
+          "speaker": "Sales",
+          "text": "We take this complaint seriously. Could you please send us clear photos or videos of the issue?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "Yes, I will send the photos now."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. Please also mark the defective items clearly in the photos."
+        },
+        {
+          "speaker": "Customer",
+          "text": "There are around 50 defective items."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Could you please confirm the exact quantity of defective items?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "I will count them again and confirm."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. Please also send us the carton numbers if possible."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Why did this happen? Did you inspect the goods before shipment?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, we arranged inspection before shipment, but we will investigate this issue with our quality control team again."
+        },
+        {
+          "speaker": "Customer",
+          "text": "This affects our customer delivery."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand your concern. We will handle this as a priority."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you send replacements immediately?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "After we verify the issue and defective quantity, we can arrange replacement or discuss another suitable solution."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We need a clear solution today."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Understood. I will share the evidence with our production and quality control teams right away."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please do not delay this."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand. I will update you as soon as we finish the internal check."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you offer a discount if we keep the defective items?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "That may be possible. Let us verify the issue first, then we can discuss replacement, discount, or credit for the next order."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Okay, I will send all photos and carton numbers."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. Once we receive the evidence, we will investigate it immediately and offer a solution."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please keep me updated."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Of course. I will keep you updated until this issue is solved."
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "d10-q1",
+      "type": "translate",
+      "prompt": "中译英：我们非常重视你的投诉。",
+      "answer": "We take your complaint seriously.",
+      "acceptable": [
+        "we take your complaint seriously",
+        "we take this complaint seriously"
+      ],
+      "hint": "take something seriously 表示认真对待。"
+    },
+    {
+      "id": "d10-q2",
+      "type": "rewrite",
+      "prompt": "把这句话改得更自然：send photo",
+      "answer": "Could you please send us clear photos of the issue?",
+      "acceptable": [
+        "could you please send us clear photos of the issue",
+        "please send us clear photos of the issue"
+      ],
+      "hint": "客户投诉时语气要更礼貌。"
+    },
+    {
+      "id": "d10-q3",
+      "type": "fill",
+      "prompt": "填空：Please confirm the quantity of ____ items.",
+      "answer": "defective",
+      "acceptable": [
+        "defective"
+      ],
+      "hint": "defective items 表示有缺陷的产品。"
+    },
+    {
+      "id": "d10-q4",
+      "type": "choice",
+      "prompt": "客户要求马上赔偿，哪个回复更适合？",
+      "options": [
+        "We compensate now",
+        "Not our problem",
+        "After we verify the issue and defective quantity, we will offer a fair solution as soon as possible.",
+        "Send photos first"
+      ],
+      "answer": "After we verify the issue and defective quantity, we will offer a fair solution as soon as possible.",
+      "acceptable": [
+        "after we verify the issue and defective quantity we will offer a fair solution as soon as possible"
+      ],
+      "hint": "不要马上承诺赔偿，先核实问题和数量。"
+    },
+    {
+      "id": "d10-q5",
+      "type": "translate",
+      "prompt": "中译英：我们会安排有缺陷产品的补发。",
+      "answer": "We will arrange replacement for the defective items.",
+      "acceptable": [
+        "we will arrange replacement for the defective items",
+        "we can arrange replacement for the defective items"
+      ],
+      "hint": "replacement 表示替换品或补发。"
+    },
+    {
+      "id": "d10-q6",
+      "type": "reply",
+      "prompt": "客户说：Some items have scratches on the surface. 你应该怎么回复？",
+      "answer": "We are sorry to hear that. Could you please send us clear photos of the scratches so we can investigate the issue?",
+      "acceptable": [
+        "we are sorry to hear that could you please send us clear photos of the scratches so we can investigate the issue",
+        "could you please send us clear photos of the scratches so we can investigate the issue"
+      ],
+      "hint": "先表达遗憾，再请求照片证据。"
+    }
+  ],
+  "homework": [
+    "把 complaint、issue、defect、scratch、replacement、solution 各造 1 句。",
+    "把 5 个核心句子的 business 版本各读 5 遍。",
+    "跟读长对话 2 遍，重点练客户投诉时的安抚、取证和补救方案。"
+  ],
+  "tomorrow": "Day 11 会练解释价格差异和涨价原因。"
+}

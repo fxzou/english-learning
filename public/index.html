@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sales English Coach</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.svg" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">SE</div>
+          <div>
+            <div class="brand-title">Sales English Coach</div>
+            <div class="brand-subtitle">Daily WhatsApp training</div>
+          </div>
+        </div>
+        <section class="progress-card" aria-label="Today's progress">
+          <div class="progress-card-head">
+            <span>今日进度</span>
+            <strong id="progressPercent">0%</strong>
+          </div>
+          <div class="progress-track" aria-hidden="true">
+            <div id="progressBar" class="progress-fill"></div>
+          </div>
+          <div class="progress-metrics">
+            <div>
+              <span>单词</span>
+              <strong id="masteredWords">0 / 0</strong>
+            </div>
+            <div>
+              <span>练习</span>
+              <strong id="exerciseProgress">0 / 0</strong>
+            </div>
+          </div>
+        </section>
+        <div class="nav-heading">
+          <span>30 天路线</span>
+          <span id="availableDays">1 day ready</span>
+        </div>
+        <div class="day-nav" id="dayNav"></div>
+        <div class="sidebar-note">
+          <div class="note-label">Focus</div>
+          <div id="focusText">Loading lesson...</div>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="hero">
+          <div>
+            <div class="eyebrow" id="lessonDay">Day 01</div>
+            <h1 id="lessonTitle">Loading...</h1>
+            <p id="lessonTheme"></p>
+            <div id="goalPills" class="goal-pills"></div>
+            <div class="hero-actions">
+              <button id="speakLesson" class="secondary-btn icon-btn" aria-label="朗读本课英文" title="朗读本课英文">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg>
+              </button>
+            </div>
+          </div>
+          <div class="hero-meta">
+            <div class="meta-card">
+              <span class="meta-label">Time</span>
+              <strong id="lessonDuration">25 min</strong>
+            </div>
+            <div class="meta-card">
+              <span class="meta-label">Score</span>
+              <strong id="lessonScore">0 / 0</strong>
+            </div>
+            <div class="meta-card">
+              <span class="meta-label">Status</span>
+              <strong id="lessonStatus">Not started</strong>
+            </div>
+          </div>
+        </header>
+
+        <section class="voice-config" aria-label="全局音色配置">
+          <div class="voice-config-head">
+            <div>
+              <h2>音色配置</h2>
+              <span>Voice settings</span>
+            </div>
+          </div>
+          <div class="voice-config-grid">
+            <label>
+              <span>Default</span>
+              <div class="voice-select-row">
+                <select id="defaultVoiceSelect"></select>
+                <button id="previewDefaultVoice" class="mini-btn icon-btn voice-preview-btn" aria-label="试听默认音色" title="试听默认音色"></button>
+              </div>
+            </label>
+            <label>
+              <span>Customer</span>
+              <div class="voice-select-row">
+                <select id="customerVoiceSelect"></select>
+                <button id="previewCustomerVoice" class="mini-btn icon-btn voice-preview-btn" aria-label="试听 Customer 音色" title="试听 Customer 音色"></button>
+              </div>
+            </label>
+            <label>
+              <span>Sales</span>
+              <div class="voice-select-row">
+                <select id="salesVoiceSelect"></select>
+                <button id="previewSalesVoice" class="mini-btn icon-btn voice-preview-btn" aria-label="试听 Sales 音色" title="试听 Sales 音色"></button>
+              </div>
+            </label>
+          </div>
+        </section>
+
+        <section class="lesson-strip" aria-label="Lesson summary">
+          <div class="strip-item">
+            <span>Vocabulary</span>
+            <strong id="wordCount">0</strong>
+          </div>
+          <div class="strip-item">
+            <span>Sentences</span>
+            <strong id="sentenceCount">0</strong>
+          </div>
+          <div class="strip-item">
+            <span>Dialogues</span>
+            <strong id="dialogueCount">0</strong>
+          </div>
+          <div class="strip-item">
+            <span>Exercises</span>
+            <strong id="exerciseCount">0</strong>
+          </div>
+        </section>
+
+        <section class="panel vocabulary-index-panel">
+          <div class="panel-head">
+            <h2>已学单词列表</h2>
+            <span>Vocabulary index</span>
+          </div>
+          <div class="vocab-index-tools">
+            <div>
+              <strong id="vocabIndexSummary">Loading...</strong>
+              <span id="vocabDuplicateStatus"></span>
+            </div>
+            <div class="vocab-index-actions">
+              <input id="vocabIndexSearch" type="search" placeholder="Search word / meaning / day" />
+              <button id="copyVocabIndex" class="mini-btn icon-btn" aria-label="复制单词列表" title="复制单词列表"></button>
+            </div>
+          </div>
+          <div id="vocabIndexMeta" class="vocab-index-meta"></div>
+          <div id="vocabIndexList" class="vocab-index-list"></div>
+        </section>
+
+        <section class="panel review-panel">
+          <div class="panel-head">
+            <h2>复习</h2>
+            <span>Review</span>
+          </div>
+          <p id="reviewTitle" class="section-copy"></p>
+          <ul id="reviewList" class="list"></ul>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h2>今日预习</h2>
+            <span>Warm-up</span>
+          </div>
+          <p id="previewScenario" class="section-copy"></p>
+          <ul id="previewList" class="list"></ul>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h2>新单词</h2>
+            <span>Vocabulary</span>
+          </div>
+          <div id="vocabGrid" class="grid cards"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h2>核心句子</h2>
+            <span>Sentence upgrade</span>
+          </div>
+          <div id="sentenceGrid" class="grid sentence-grid"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h2>聊天分析</h2>
+            <span>What to improve</span>
+          </div>
+          <div id="analysisGrid" class="analysis-grid"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h2>TTS 模拟对话</h2>
+            <span>Listen and shadow</span>
+          </div>
+          <div id="dialogueList" class="dialogue-list"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h2>长对话模拟</h2>
+            <span>Extended role play</span>
+          </div>
+          <div id="longDialogueList" class="dialogue-list long-dialogue-list"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h2>练习题</h2>
+            <span>Submit answers</span>
+          </div>
+          <div id="exerciseList" class="exercise-list"></div>
+        </section>
+
+        <section class="panel footer-panel">
+          <div class="panel-head">
+            <h2>今日作业</h2>
+            <span>Homework</span>
+          </div>
+          <ul id="homeworkList" class="list"></ul>
+          <div class="footer-actions">
+            <button id="markDone" class="primary-btn icon-btn" aria-label="标记今日完成" title="标记今日完成"></button>
+            <button id="copyTts" class="secondary-btn icon-btn" aria-label="复制对话文本" title="复制对话文本"></button>
+          </div>
+          <div id="feedback" class="feedback"></div>
+        </section>
+      </main>
+    </div>
+
+    <div id="speechDock" class="speech-dock" aria-label="语音播放控制" hidden>
+      <button id="pauseSpeech" class="secondary-btn icon-btn speech-control-btn" aria-label="暂停朗读" title="暂停朗读" disabled>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z"></path></svg>
+      </button>
+      <button id="stopSpeech" class="secondary-btn icon-btn speech-control-btn danger" aria-label="停止朗读" title="停止朗读" disabled>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v10H7z"></path></svg>
+      </button>
+    </div>
+
+    <template id="vocabTemplate">
+      <article class="card vocab-card">
+        <div class="card-top">
+          <div class="word-block">
+            <strong class="word"></strong>
+            <span class="phonetic"></span>
+          </div>
+          <div class="card-actions">
+            <label class="mastery-toggle" aria-label="标记已掌握" title="标记已掌握">
+              <input type="checkbox" class="vocab-check" />
+              <span></span>
+            </label>
+          </div>
+        </div>
+        <div class="meaning"></div>
+        <div class="usage"></div>
+        <div class="example"></div>
+      </article>
+    </template>
+
+    <template id="sentenceTemplate">
+      <article class="card sentence-card">
+        <div class="sentence-label"></div>
+        <div class="sentence-basic"></div>
+        <div class="sentence-natural"></div>
+        <div class="sentence-business"></div>
+        <div class="sentence-actions">
+          <button class="mini-btn copy-btn icon-btn" aria-label="复制句子" title="复制句子"></button>
+        </div>
+      </article>
+    </template>
+
+    <template id="analysisTemplate">
+      <article class="analysis-card">
+        <div class="analysis-main">
+          <div class="analysis-cell analysis-old">
+            <span>Old</span>
+            <strong></strong>
+          </div>
+          <div class="analysis-cell analysis-note">
+            <span>问题</span>
+            <p></p>
+          </div>
+          <div class="analysis-cell analysis-new">
+            <span>Better</span>
+            <strong></strong>
+          </div>
+          <div class="analysis-cell analysis-upgrade">
+            <span>Upgrade</span>
+            <p></p>
+          </div>
+          <div class="analysis-actions"></div>
+        </div>
+      </article>
+    </template>
+
+    <template id="dialogueTemplate">
+      <article class="dialogue-card">
+        <div class="dialogue-head">
+          <h3></h3>
+          <div class="dialogue-actions">
+            <button class="mini-btn copy-dialogue icon-btn" aria-label="复制整段" title="复制整段"></button>
+          </div>
+        </div>
+        <pre class="dialogue-body"></pre>
+      </article>
+    </template>
+
+    <template id="exerciseTemplate">
+      <article class="exercise-card">
+        <div class="exercise-head">
+          <span class="exercise-type"></span>
+          <strong class="exercise-prompt"></strong>
+          <div class="exercise-actions"></div>
+        </div>
+        <div class="exercise-input-row">
+          <input class="exercise-input" type="text" placeholder="输入答案" />
+          <button class="primary-btn submit-answer icon-btn" aria-label="提交答案" title="提交答案"></button>
+        </div>
+        <div class="exercise-options"></div>
+        <div class="exercise-hint"></div>
+        <div class="exercise-result"></div>
+      </article>
+    </template>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

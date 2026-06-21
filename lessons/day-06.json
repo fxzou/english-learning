@@ -1,0 +1,399 @@
+{
+  "day": 6,
+  "title": "确认物流方式和运费",
+  "theme": "从 courier / air freight / sea freight 开始",
+  "durationMinutes": 33,
+  "goals": [
+    "能向客户解释快递、空运和海运的区别",
+    "能收集收货地址、目的港和货代信息，用于确认运费",
+    "能在客户催发货时，说明跟踪单号、清关和预计运输时间"
+  ],
+  "review": {
+    "title": "Day 05 复习",
+    "items": [
+      "昨天练了 packaging、carton size、gross weight、net weight 和 shipping mark。",
+      "今天继续出货前的下一步：选择物流方式、确认运费、收集地址和货代信息。",
+      "客户问 shipping cost 时，先确认物流方式和收货信息，再给准确费用。"
+    ]
+  },
+  "preview": {
+    "scenario": "客户已经确认包装和订单细节，现在询问用快递、空运还是海运，以及运费、运输时间和跟踪信息。",
+    "needToKnow": [
+      "courier 适合样品或小货，例如 DHL、FedEx、UPS。",
+      "air freight 比海运快，但通常费用更高，适合赶时间的大货。",
+      "sea freight 适合大货，费用低一些，但运输时间更长，还要确认目的港和清关安排。"
+    ]
+  },
+  "vocabulary": [
+    {
+      "word": "courier",
+      "phonetic": "/ˈkʊriər/",
+      "meaning": "快递",
+      "usage": "用于 DHL、FedEx、UPS 等门到门快递服务。",
+      "example": "For samples, courier is usually faster and easier."
+    },
+    {
+      "word": "air freight",
+      "phonetic": "/er freɪt/",
+      "meaning": "空运",
+      "usage": "用于较急的大货运输，速度快但费用较高。",
+      "example": "Air freight is faster, but the cost is higher."
+    },
+    {
+      "word": "sea freight",
+      "phonetic": "/siː freɪt/",
+      "meaning": "海运",
+      "usage": "用于大货运输，费用较低但时间更长。",
+      "example": "Sea freight is more economical for bulk orders."
+    },
+    {
+      "word": "destination port",
+      "phonetic": "/ˌdestɪˈneɪʃən pɔːrt/",
+      "meaning": "目的港",
+      "usage": "客户选择海运时，用来确认货物到达港口。",
+      "example": "Please confirm the destination port so we can check the sea freight cost."
+    },
+    {
+      "word": "tracking number",
+      "phonetic": "/ˈtrækɪŋ ˈnʌmbər/",
+      "meaning": "跟踪单号",
+      "usage": "用于快递或物流发出后提供查询信息。",
+      "example": "I will send you the tracking number after shipment."
+    },
+    {
+      "word": "customs clearance",
+      "phonetic": "/ˈkʌstəmz ˈklɪrəns/",
+      "meaning": "清关",
+      "usage": "用于进口环节，说明客户或货代需要处理清关。",
+      "example": "Please confirm who will handle customs clearance at your side."
+    },
+    {
+      "word": "delivery address",
+      "phonetic": "/dɪˈlɪvəri əˈdres/",
+      "meaning": "收货地址",
+      "usage": "用于确认快递或门到门运输的具体地址。",
+      "example": "Please send us the delivery address so we can check the courier cost."
+    },
+    {
+      "word": "freight forwarder",
+      "phonetic": "/freɪt ˈfɔːrwərdər/",
+      "meaning": "货代",
+      "usage": "用于客户指定自己的物流代理或货运公司。",
+      "example": "If you have your own freight forwarder, please send us their contact information."
+    }
+  ],
+  "sentences": [
+    {
+      "label": "询问物流方式",
+      "basic": "How ship?",
+      "natural": "Which shipping method do you prefer?",
+      "business": "Could you please confirm if you prefer courier, air freight, or sea freight?"
+    },
+    {
+      "label": "确认快递地址",
+      "basic": "Send address.",
+      "natural": "Please send us your delivery address.",
+      "business": "Please send us your delivery address so we can check the courier cost for you."
+    },
+    {
+      "label": "说明空运",
+      "basic": "Air is fast.",
+      "natural": "Air freight is faster, but the cost is higher.",
+      "business": "Air freight is faster than sea freight, but the shipping cost will be higher."
+    },
+    {
+      "label": "说明海运",
+      "basic": "Sea is cheaper.",
+      "natural": "Sea freight is more economical for bulk orders.",
+      "business": "Sea freight is more economical for bulk orders, but the transit time will be longer."
+    },
+    {
+      "label": "提供跟踪单号",
+      "basic": "Tracking later.",
+      "natural": "I will send you the tracking number after shipment.",
+      "business": "After the goods are shipped, I will send you the tracking number and keep you updated."
+    }
+  ],
+  "chatAnalysis": [
+    {
+      "old": "shipping cost?",
+      "problem": "如果没有地址、重量和物流方式，很难给准确运费。",
+      "better": "Please send us your delivery address so we can check the courier cost.",
+      "upgrade": "Please confirm the shipping method and delivery address, and I will check the accurate freight cost for you."
+    },
+    {
+      "old": "sea cheaper",
+      "problem": "只说便宜不够完整，客户还需要知道时间更长。",
+      "better": "Sea freight is more economical for bulk orders.",
+      "upgrade": "Sea freight is more economical for bulk orders, but the transit time will be longer than air freight."
+    },
+    {
+      "old": "tracking tomorrow",
+      "problem": "太短，客户不知道什么时候发货、什么时候能查。",
+      "better": "I will send you the tracking number after shipment.",
+      "upgrade": "After the goods are shipped, I will send you the tracking number and keep you updated."
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "慢速基础版：确认快递地址",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Can you check the courier cost?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. Please send us your delivery address so we can check the courier cost."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Is courier good for samples?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes. For samples, courier is usually faster and easier."
+        }
+      ]
+    },
+    {
+      "title": "正常商务版：比较空运和海运",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Should we ship by air or by sea?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Air freight is faster, but the cost is higher. Sea freight is more economical, but the transit time is longer."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We need the goods urgently."
+        },
+        {
+          "speaker": "Sales",
+          "text": "In that case, air freight may be better. I can check the air freight cost for you."
+        }
+      ]
+    },
+    {
+      "title": "压力场景版：客户指定货代",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "We want to use our own freight forwarder."
+        },
+        {
+          "speaker": "Sales",
+          "text": "No problem. Please send us your freight forwarder's contact information."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can your factory contact them directly?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes. After receiving their contact information, we will coordinate the pickup details with them."
+        }
+      ]
+    }
+  ],
+  "longDialogues": [
+    {
+      "title": "长对话实战：从物流方式到运费、货代和跟踪单号",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Hi, can you help us check the shipping cost?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. Could you please confirm the shipping method you prefer?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "What options do we have?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "You can choose courier, air freight, or sea freight."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Which one is best for samples?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "For samples, courier is usually faster and easier."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please check the courier cost first."
+        },
+        {
+          "speaker": "Sales",
+          "text": "No problem. Please send us your delivery address so we can check the courier cost."
+        },
+        {
+          "speaker": "Customer",
+          "text": "For the bulk order, we may ship by sea."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sea freight is more economical for bulk orders, but the transit time will be longer."
+        },
+        {
+          "speaker": "Customer",
+          "text": "What information do you need for sea freight?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Please confirm the destination port and whether you have your own freight forwarder."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Our destination port is Los Angeles."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Got it. I will check the sea freight cost to Los Angeles for you."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you also check air freight?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will compare air freight and sea freight for you."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We need the goods before the end of next month."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Then air freight may be safer for the schedule, but I will check both options."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Do we need to handle customs clearance?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "If you use your own freight forwarder, please confirm who will handle customs clearance at your side."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We have a freight forwarder in China."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Great. Please send us their contact information and pickup address."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can your factory deliver the goods to their warehouse?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, we can deliver the goods to their warehouse. I will check the local delivery cost if needed."
+        },
+        {
+          "speaker": "Customer",
+          "text": "After shipment, can you send the tracking number?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes. After the goods are shipped, I will send you the tracking number and keep you updated."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please send all shipping options today."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will check courier, air freight, and sea freight, then update you today."
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "d6-q1",
+      "type": "translate",
+      "prompt": "中译英：请确认你想用快递、空运还是海运。",
+      "answer": "Please confirm if you prefer courier, air freight, or sea freight.",
+      "acceptable": [
+        "please confirm if you prefer courier air freight or sea freight",
+        "could you please confirm if you prefer courier air freight or sea freight"
+      ],
+      "hint": "快递 courier，空运 air freight，海运 sea freight。"
+    },
+    {
+      "id": "d6-q2",
+      "type": "rewrite",
+      "prompt": "把这句话改得更自然：sea cheaper",
+      "answer": "Sea freight is more economical for bulk orders.",
+      "acceptable": [
+        "sea freight is more economical for bulk orders",
+        "sea freight is cheaper for bulk orders"
+      ],
+      "hint": "more economical 比 cheaper 更商务。"
+    },
+    {
+      "id": "d6-q3",
+      "type": "fill",
+      "prompt": "填空：Please send us your delivery ____ so we can check the courier cost.",
+      "answer": "address",
+      "acceptable": [
+        "address"
+      ],
+      "hint": "delivery address 表示收货地址。"
+    },
+    {
+      "id": "d6-q4",
+      "type": "choice",
+      "prompt": "客户说 We want to use our own freight forwarder. 哪个回复更适合？",
+      "options": [
+        "Okay",
+        "Send forwarder",
+        "No problem. Please send us your freight forwarder's contact information.",
+        "We use ours"
+      ],
+      "answer": "No problem. Please send us your freight forwarder's contact information.",
+      "acceptable": [
+        "no problem please send us your freight forwarders contact information"
+      ],
+      "hint": "确认可以，并要求货代联系方式。"
+    },
+    {
+      "id": "d6-q5",
+      "type": "translate",
+      "prompt": "中译英：发货后，我会把跟踪单号发给你。",
+      "answer": "After shipment, I will send you the tracking number.",
+      "acceptable": [
+        "after shipment i will send you the tracking number",
+        "after the goods are shipped i will send you the tracking number"
+      ],
+      "hint": "tracking number 表示跟踪单号。"
+    },
+    {
+      "id": "d6-q6",
+      "type": "reply",
+      "prompt": "客户说：Should we ship by air or by sea? 你应该怎么回复？",
+      "answer": "Air freight is faster, but the cost is higher. Sea freight is more economical, but the transit time is longer.",
+      "acceptable": [
+        "air freight is faster but the cost is higher sea freight is more economical but the transit time is longer",
+        "air freight is faster but more expensive sea freight is more economical but takes longer"
+      ],
+      "hint": "比较速度、费用和运输时间。"
+    }
+  ],
+  "homework": [
+    "把 courier、air freight、sea freight、destination port、tracking number 各造 1 句。",
+    "把 5 个核心句子的 business 版本各读 5 遍。",
+    "跟读长对话 2 遍，重点练物流方式比较和货代沟通。"
+  ],
+  "tomorrow": "Day 7 会练生产进度、出货时间和延误解释。"
+}

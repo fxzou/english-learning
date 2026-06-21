@@ -1,0 +1,395 @@
+{
+  "day": 20,
+  "title": "出货前照片、视频和验货报告",
+  "theme": "从 pre-shipment inspection / photo confirmation / shipment release 开始",
+  "durationMinutes": 40,
+  "goals": [
+    "能发送出货前照片、视频和验货报告给客户确认",
+    "能处理客户对包装、唛头、外箱和产品细节的验货反馈",
+    "能在客户确认后推进 shipment release，避免未经确认就出货"
+  ],
+  "review": {
+    "title": "Day 19 复习",
+    "items": [
+      "昨天练了 rework、reprocessing、recheck、quality control、sorting 和 corrective action。",
+      "今天把质量复检衔接到出货前确认：照片、视频、验货报告和客户放行。",
+      "出货前不要只说 goods ready，要给客户可确认的证据，并拿到明确 approval 后再放行。"
+    ]
+  },
+  "preview": {
+    "scenario": "货物完成生产和复检后，你需要发送产品照片、包装照片、外箱唛头、视频和验货报告。客户可能要求补拍、修改标签或确认后放行出货。",
+    "needToKnow": [
+      "pre-shipment inspection 是出货前验货，通常发生在包装完成或接近完成时。",
+      "photo confirmation 和 video confirmation 能减少客户对质量和包装的疑虑。",
+      "shipment release 表示客户确认后可以安排出货，不要在客户未确认时擅自发货。"
+    ]
+  },
+  "vocabulary": [
+    {
+      "word": "pre-shipment inspection",
+      "phonetic": "/ˌpriː ˈʃɪpmənt ɪnˈspekʃən/",
+      "meaning": "出货前验货",
+      "usage": "用于出货前检查产品、包装、数量和唛头。",
+      "example": "We have completed the pre-shipment inspection."
+    },
+    {
+      "word": "inspection report",
+      "phonetic": "/ɪnˈspekʃən rɪˈpɔːrt/",
+      "meaning": "验货报告",
+      "usage": "用于汇总验货结果、照片、数量和问题说明。",
+      "example": "I will send you the inspection report for review."
+    },
+    {
+      "word": "photo confirmation",
+      "phonetic": "/ˈfoʊtoʊ ˌkɑːnfərˈmeɪʃən/",
+      "meaning": "照片确认",
+      "usage": "用于客户通过照片确认产品、包装、唛头或细节。",
+      "example": "Please check the photos for photo confirmation."
+    },
+    {
+      "word": "video confirmation",
+      "phonetic": "/ˈvɪdioʊ ˌkɑːnfərˈmeɪʃən/",
+      "meaning": "视频确认",
+      "usage": "用于客户通过视频确认产品状态、功能、包装或数量。",
+      "example": "We can send a video confirmation before shipment."
+    },
+    {
+      "word": "packing photos",
+      "phonetic": "/ˈpækɪŋ ˈfoʊtoʊz/",
+      "meaning": "包装照片",
+      "usage": "用于展示单品包装、内盒、外箱和装箱方式。",
+      "example": "Please find the packing photos attached."
+    },
+    {
+      "word": "carton label",
+      "phonetic": "/ˈkɑːrtən ˈleɪbəl/",
+      "meaning": "外箱标签",
+      "usage": "用于确认外箱上的标签内容、条码、SKU 或客户信息。",
+      "example": "Please confirm if the carton label is correct."
+    },
+    {
+      "word": "final check",
+      "phonetic": "/ˈfaɪnl tʃek/",
+      "meaning": "最终检查",
+      "usage": "用于出货前最后一次检查产品和包装。",
+      "example": "We are doing the final check before shipment."
+    },
+    {
+      "word": "shipment release",
+      "phonetic": "/ˈʃɪpmənt rɪˈliːs/",
+      "meaning": "放行出货 / 出货放行",
+      "usage": "用于客户确认后允许安排出货。",
+      "example": "After your approval, we will arrange shipment release."
+    }
+  ],
+  "sentences": [
+    {
+      "label": "发送验货报告",
+      "basic": "Inspection report attached.",
+      "natural": "I will send you the inspection report for review.",
+      "business": "I will send you the inspection report, product photos, and packing photos for your review before shipment."
+    },
+    {
+      "label": "请求照片确认",
+      "basic": "Please check photos.",
+      "natural": "Please check the photos for confirmation.",
+      "business": "Please check the product photos, packing photos, and carton label for photo confirmation."
+    },
+    {
+      "label": "提供视频确认",
+      "basic": "We can send video.",
+      "natural": "We can send a video confirmation before shipment.",
+      "business": "If you need, we can send a video confirmation to show the product details and packing condition before shipment."
+    },
+    {
+      "label": "说明最终检查",
+      "basic": "We final check now.",
+      "natural": "We are doing the final check before shipment.",
+      "business": "Our quality control team is doing the final check before shipment release."
+    },
+    {
+      "label": "确认后放行出货",
+      "basic": "After OK, we ship.",
+      "natural": "After your approval, we will arrange shipment release.",
+      "business": "After your photo confirmation and approval, we will arrange shipment release with the warehouse."
+    }
+  ],
+  "chatAnalysis": [
+    {
+      "old": "goods ready, can ship?",
+      "problem": "太简单，没有给客户照片、报告或包装证据，客户不好确认。",
+      "better": "Please check the photos for confirmation before shipment.",
+      "upgrade": "I will send you the inspection report, product photos, and packing photos for your review before shipment."
+    },
+    {
+      "old": "see carton picture",
+      "problem": "不够明确，客户可能不知道要确认外箱标签、唛头还是包装方式。",
+      "better": "Please check if the carton label is correct.",
+      "upgrade": "Please check the product photos, packing photos, and carton label for photo confirmation."
+    },
+    {
+      "old": "we ship after you say ok",
+      "problem": "能理解，但不够商务，也没有 shipment release 的流程感。",
+      "better": "After your approval, we will arrange shipment release.",
+      "upgrade": "After your photo confirmation and approval, we will arrange shipment release with the warehouse."
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "慢速基础版：发送出货前照片",
+      "lines": [
+        {
+          "speaker": "Sales",
+          "text": "The goods are ready. I will send you the product photos and packing photos for review."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please also send the carton photos."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will send the carton label photos together."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We will confirm after checking them."
+        }
+      ]
+    },
+    {
+      "title": "正常商务版：验货报告和视频确认",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Did you finish the pre-shipment inspection?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, we have completed the pre-shipment inspection."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you send us the report?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will send you the inspection report and a video confirmation before shipment."
+        }
+      ]
+    },
+    {
+      "title": "压力场景版：客户发现外箱标签问题",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "The carton label looks wrong in the photo."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you for checking. Could you please mark the incorrect part?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "The SKU number should be updated."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Understood. We will correct the carton label and send new photos for confirmation before shipment release."
+        }
+      ]
+    }
+  ],
+  "longDialogues": [
+    {
+      "title": "长对话实战：出货前照片、验货报告和客户放行",
+      "lines": [
+        {
+          "speaker": "Sales",
+          "text": "Hi, the goods are ready, and we have completed the pre-shipment inspection."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please send us the inspection report first."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will send you the inspection report, product photos, and packing photos for review."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please include close-up photos of the logo."
+        },
+        {
+          "speaker": "Sales",
+          "text": "No problem. I will include close-up photos of the logo and product finish."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you also send a video?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, we can send a video confirmation to show the product details and packing condition."
+        },
+        {
+          "speaker": "Customer",
+          "text": "What about the carton label?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "I will send clear photos of the carton label for your confirmation."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please make sure the SKU and shipping mark are correct."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. We will check the SKU, shipping mark, carton quantity, and packing photos carefully."
+        },
+        {
+          "speaker": "Customer",
+          "text": "The product looks good in the first photos."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. Please also check the packing photos and carton label before shipment release."
+        },
+        {
+          "speaker": "Customer",
+          "text": "I noticed one carton label has an old SKU number."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you for pointing it out. We will correct the carton label immediately."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please send new photos after correction."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, after correction, we will do the final check and send new photos for confirmation."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Will this affect the shipment time?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "It should not affect the shipment time. The correction is only for the carton label."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Okay. After we approve the new photos, can you release the shipment?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes. After your photo confirmation and approval, we will arrange shipment release with the warehouse."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please do not ship before our confirmation."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Understood. We will wait for your approval before shipment release."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you send everything in one message for our records?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will send the inspection report, product photos, packing photos, video confirmation, and corrected carton label photos together."
+        },
+        {
+          "speaker": "Customer",
+          "text": "That is helpful. We will review and confirm today."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. Once we receive your approval, we will arrange shipment release immediately."
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "d20-q1",
+      "type": "translate",
+      "prompt": "中译英：我们已经完成出货前验货。",
+      "answer": "We have completed the pre-shipment inspection.",
+      "acceptable": [
+        "we have completed the pre-shipment inspection",
+        "we finished the pre-shipment inspection"
+      ],
+      "hint": "pre-shipment inspection 是出货前验货。"
+    },
+    {
+      "id": "d20-q2",
+      "type": "rewrite",
+      "prompt": "把这句话改得更专业：goods ready, can ship?",
+      "answer": "Please check the inspection report, product photos, and packing photos for your review before shipment.",
+      "acceptable": [
+        "please check the inspection report product photos and packing photos for your review before shipment",
+        "i will send you the inspection report product photos and packing photos for your review before shipment"
+      ],
+      "hint": "出货前要给证据，不要只问 can ship。"
+    },
+    {
+      "id": "d20-q3",
+      "type": "fill",
+      "prompt": "填空：After your approval, we will arrange shipment ____.",
+      "answer": "release",
+      "acceptable": [
+        "release"
+      ],
+      "hint": "shipment release 是放行出货。"
+    },
+    {
+      "id": "d20-q4",
+      "type": "choice",
+      "prompt": "客户想确认外箱标签，哪个回复更适合？",
+      "options": [
+        "See carton picture",
+        "Please check if the carton label is correct.",
+        "Carton okay",
+        "We ship now"
+      ],
+      "answer": "Please check if the carton label is correct.",
+      "acceptable": [
+        "please check if the carton label is correct"
+      ],
+      "hint": "carton label 是外箱标签。"
+    },
+    {
+      "id": "d20-q5",
+      "type": "translate",
+      "prompt": "中译英：如果您需要，我们可以在出货前发送视频确认。",
+      "answer": "If you need, we can send a video confirmation before shipment.",
+      "acceptable": [
+        "if you need we can send a video confirmation before shipment",
+        "if needed we can send a video confirmation before shipment"
+      ],
+      "hint": "video confirmation 是视频确认。"
+    },
+    {
+      "id": "d20-q6",
+      "type": "reply",
+      "prompt": "客户说：Please do not ship before our confirmation. 你应该怎么回复？",
+      "answer": "Understood. We will wait for your approval before shipment release.",
+      "acceptable": [
+        "understood we will wait for your approval before shipment release",
+        "we will wait for your approval before shipment release"
+      ],
+      "hint": "用 approval 和 shipment release。"
+    }
+  ],
+  "homework": [
+    "把 pre-shipment inspection、inspection report、photo confirmation、video confirmation、packing photos、carton label、final check、shipment release 各造 1 句。",
+    "把 5 个核心句子的 business 版本各读 5 遍，重点练 inspection report、photo confirmation 和 shipment release。",
+    "写一段 WhatsApp 回复：货物已完成验货，你要发送报告、产品照片、包装照片、外箱标签照片，并等待客户确认后放行。"
+  ],
+  "tomorrow": "Day 21 会练付款凭证、到账和财务审核，进入付款和单据沟通阶段。"
+}

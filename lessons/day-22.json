@@ -1,0 +1,387 @@
+{
+  "day": 22,
+  "title": "尾款、发货前付款和付款提醒",
+  "theme": "从 balance payment / payment reminder / release goods 开始",
+  "durationMinutes": 40,
+  "goals": [
+    "能礼貌提醒客户安排尾款，而不是生硬催款",
+    "能说明发货前需要付款确认，并守住付款边界",
+    "能处理客户要求先发货后付款或拖延付款的场景"
+  ],
+  "review": {
+    "title": "Day 21 复习",
+    "items": [
+      "昨天练了 payment receipt、bank review、finance confirmation、remittance slip、received amount 和 bank fee。",
+      "今天继续财务沟通：货物已完成或准备出货，但客户尾款还没有安排。",
+      "催尾款时要礼貌、清楚、有依据：根据付款条款，balance payment 需要在 shipment release 前完成。"
+    ]
+  },
+  "preview": {
+    "scenario": "货物已经通过出货前确认，但客户还没付尾款，或者要求先发货后付款。你需要提醒客户付款、说明公司付款条款，并在客户付款后推进放行出货。",
+    "needToKnow": [
+      "balance payment 是尾款，不等于简单的 balance 余额。",
+      "payment reminder 要礼貌，避免让客户感觉被催得不舒服。",
+      "release goods 表示放货，通常要在付款确认后才能安排。"
+    ]
+  },
+  "vocabulary": [
+    {
+      "word": "balance payment",
+      "phonetic": "/ˈbæləns ˈpeɪmənt/",
+      "meaning": "尾款",
+      "usage": "用于订单发货前客户需要支付的剩余款项。",
+      "example": "Please arrange the balance payment before shipment."
+    },
+    {
+      "word": "payment reminder",
+      "phonetic": "/ˈpeɪmənt rɪˈmaɪndər/",
+      "meaning": "付款提醒",
+      "usage": "用于礼貌提醒客户付款。",
+      "example": "This is a friendly payment reminder for the balance payment."
+    },
+    {
+      "word": "before shipment",
+      "phonetic": "/bɪˈfɔːr ˈʃɪpmənt/",
+      "meaning": "发货前",
+      "usage": "用于说明付款、确认或检查需要在出货前完成。",
+      "example": "The balance payment should be completed before shipment."
+    },
+    {
+      "word": "credit term",
+      "phonetic": "/ˈkredɪt tɜːrm/",
+      "meaning": "账期 / 信用付款条件",
+      "usage": "用于客户要求先发货后付款或延后付款时说明公司是否支持账期。",
+      "example": "We are sorry, but we cannot offer a credit term for this order."
+    },
+    {
+      "word": "release goods",
+      "phonetic": "/rɪˈliːs ɡʊdz/",
+      "meaning": "放货 / 放行货物",
+      "usage": "用于付款确认后安排仓库或货代提货。",
+      "example": "We can release goods after the balance payment is confirmed."
+    },
+    {
+      "word": "payment deadline",
+      "phonetic": "/ˈpeɪmənt ˈdedlaɪn/",
+      "meaning": "付款截止时间",
+      "usage": "用于提醒客户在某个日期前安排付款，以免影响出货。",
+      "example": "Please arrange payment before the payment deadline."
+    },
+    {
+      "word": "overdue payment",
+      "phonetic": "/ˌoʊvərˈduː ˈpeɪmənt/",
+      "meaning": "逾期付款",
+      "usage": "用于说明付款已经超过约定时间。",
+      "example": "The payment is overdue according to the agreed terms."
+    },
+    {
+      "word": "settle payment",
+      "phonetic": "/ˈsetl ˈpeɪmənt/",
+      "meaning": "结清付款 / 付清款项",
+      "usage": "用于正式说明完成付款后才能推进下一步。",
+      "example": "Please settle payment so we can arrange shipment."
+    }
+  ],
+  "sentences": [
+    {
+      "label": "礼貌提醒尾款",
+      "basic": "Please pay balance.",
+      "natural": "Please arrange the balance payment before shipment.",
+      "business": "This is a friendly payment reminder. Please arrange the balance payment before shipment so we can release the goods on time."
+    },
+    {
+      "label": "说明发货前付款",
+      "basic": "Need payment before ship.",
+      "natural": "The balance payment should be completed before shipment.",
+      "business": "According to our payment terms, the balance payment should be completed before shipment release."
+    },
+    {
+      "label": "拒绝先发货后付款",
+      "basic": "Cannot ship before payment.",
+      "natural": "We are sorry, but we cannot release goods before payment confirmation.",
+      "business": "We are sorry, but we cannot offer a credit term for this order, so we need payment confirmation before we release goods."
+    },
+    {
+      "label": "提醒付款截止",
+      "basic": "Pay before Friday.",
+      "natural": "Please arrange payment before Friday.",
+      "business": "To avoid affecting the shipment schedule, please arrange payment before the payment deadline this Friday."
+    },
+    {
+      "label": "付款后安排出货",
+      "basic": "Pay then we ship.",
+      "natural": "After payment is confirmed, we will arrange shipment.",
+      "business": "Once the balance payment is confirmed by our finance team, we will arrange shipment release immediately."
+    }
+  ],
+  "chatAnalysis": [
+    {
+      "old": "pay balance now",
+      "problem": "语气太硬，容易让客户反感；需要用 friendly reminder 和发货安排衔接。",
+      "better": "Please arrange the balance payment before shipment.",
+      "upgrade": "This is a friendly payment reminder. Please arrange the balance payment before shipment so we can release the goods on time."
+    },
+    {
+      "old": "no payment no ship",
+      "problem": "虽然意思准确，但太直接；商务表达要说明付款条款。",
+      "better": "We cannot release goods before payment confirmation.",
+      "upgrade": "According to our payment terms, we need payment confirmation before we release goods."
+    },
+    {
+      "old": "you are late to pay",
+      "problem": "容易显得指责客户，可以改成客观说明付款已超过约定时间。",
+      "better": "The payment is overdue according to the agreed terms.",
+      "upgrade": "The payment is overdue according to the agreed terms, so please help arrange the balance payment as soon as possible."
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "慢速基础版：礼貌提醒尾款",
+      "lines": [
+        {
+          "speaker": "Sales",
+          "text": "The goods are ready for shipment."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Okay, when can you ship?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Please arrange the balance payment before shipment, then we can release the goods."
+        },
+        {
+          "speaker": "Customer",
+          "text": "I will arrange it with our finance team."
+        }
+      ]
+    },
+    {
+      "title": "正常商务版：客户要求先发货后付款",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Can you ship first? We will pay the balance next week."
+        },
+        {
+          "speaker": "Sales",
+          "text": "We are sorry, but we cannot offer a credit term for this order."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We need the goods urgently."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand. Once the balance payment is confirmed, we will arrange shipment release immediately."
+        }
+      ]
+    },
+    {
+      "title": "压力场景版：尾款逾期影响出货",
+      "lines": [
+        {
+          "speaker": "Sales",
+          "text": "This is a friendly payment reminder for the balance payment."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We are still waiting for internal approval."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Understood. To avoid affecting the shipment schedule, please arrange payment before the payment deadline this Friday."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Okay, I will push our finance team."
+        }
+      ]
+    }
+  ],
+  "longDialogues": [
+    {
+      "title": "长对话实战：货物已好，客户拖尾款并要求先发货",
+      "lines": [
+        {
+          "speaker": "Sales",
+          "text": "Hi, the goods have passed the final check and are ready for shipment."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Great. Please arrange shipment as soon as possible."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. Before shipment release, we still need the balance payment confirmation."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you ship first? We will pay the balance next week."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand your request, but according to our payment terms, the balance payment should be completed before shipment release."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We have worked together before. Can you make an exception?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you for your trust. However, we cannot offer a credit term for this order."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Our finance team is slow this week."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand. This is a friendly payment reminder, so you can plan the payment before shipment."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Will the goods be held if payment is not made this week?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, the goods will stay in our warehouse until the balance payment is confirmed."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you at least book the shipment first?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "We can prepare the shipment documents and coordinate with the warehouse, but we can release goods only after payment confirmation."
+        },
+        {
+          "speaker": "Customer",
+          "text": "When is the payment deadline?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "To avoid affecting the shipment schedule, please arrange payment before the payment deadline this Friday."
+        },
+        {
+          "speaker": "Customer",
+          "text": "If we pay on Friday, can you ship immediately?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Once the balance payment is confirmed by our finance team, we will arrange shipment release immediately."
+        },
+        {
+          "speaker": "Customer",
+          "text": "What if the bank transfer takes one or two days?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "If the payment is under bank review, we will wait for finance confirmation before release goods."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can a payment receipt help you release the goods earlier?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "The payment receipt can help us check the transfer, but shipment release still needs finance confirmation."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Understood. I will ask our finance team to settle payment as soon as possible."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. Please send us the payment receipt after the balance payment is arranged."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Okay, I will update you once payment is done."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. Once we receive finance confirmation, we will release goods and update you immediately."
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "d22-q1",
+      "type": "translate",
+      "prompt": "中译英：请在发货前安排尾款。",
+      "answer": "Please arrange the balance payment before shipment.",
+      "acceptable": [
+        "please arrange the balance payment before shipment",
+        "please arrange balance payment before shipment"
+      ],
+      "hint": "balance payment 是尾款，before shipment 是发货前。"
+    },
+    {
+      "id": "d22-q2",
+      "type": "rewrite",
+      "prompt": "把这句话改得更商务：pay balance now",
+      "answer": "This is a friendly payment reminder. Please arrange the balance payment before shipment.",
+      "acceptable": [
+        "this is a friendly payment reminder please arrange the balance payment before shipment",
+        "please arrange the balance payment before shipment"
+      ],
+      "hint": "用 friendly payment reminder 软化语气。"
+    },
+    {
+      "id": "d22-q3",
+      "type": "fill",
+      "prompt": "填空：We can ____ goods after the balance payment is confirmed.",
+      "answer": "release",
+      "acceptable": [
+        "release"
+      ],
+      "hint": "release goods 是放货。"
+    },
+    {
+      "id": "d22-q4",
+      "type": "choice",
+      "prompt": "客户要求先发货后付款，哪个回复更合适？",
+      "options": [
+        "No payment no ship",
+        "We are sorry, but we cannot offer a credit term for this order.",
+        "Pay now",
+        "Impossible"
+      ],
+      "answer": "We are sorry, but we cannot offer a credit term for this order.",
+      "acceptable": [
+        "we are sorry but we cannot offer a credit term for this order"
+      ],
+      "hint": "credit term 是账期。"
+    },
+    {
+      "id": "d22-q5",
+      "type": "translate",
+      "prompt": "中译英：为了避免影响出货排期，请在本周五付款截止前安排付款。",
+      "answer": "To avoid affecting the shipment schedule, please arrange payment before the payment deadline this Friday.",
+      "acceptable": [
+        "to avoid affecting the shipment schedule please arrange payment before the payment deadline this friday",
+        "to avoid affecting shipment schedule please arrange payment before the payment deadline this friday"
+      ],
+      "hint": "payment deadline 是付款截止时间。"
+    },
+    {
+      "id": "d22-q6",
+      "type": "reply",
+      "prompt": "客户说：Can you ship first? We will pay next week. 你应该怎么回复？",
+      "answer": "I understand your request, but according to our payment terms, the balance payment should be completed before shipment release.",
+      "acceptable": [
+        "i understand your request but according to our payment terms the balance payment should be completed before shipment release",
+        "according to our payment terms the balance payment should be completed before shipment release"
+      ],
+      "hint": "先理解客户，再说明付款条款。"
+    }
+  ],
+  "homework": [
+    "把 balance payment、payment reminder、before shipment、credit term、release goods、payment deadline、overdue payment、settle payment 各造 1 句。",
+    "把 5 个核心句子的 business 版本各读 5 遍，重点练 friendly payment reminder 和 shipment release。",
+    "写一段 WhatsApp 回复：货物已好，客户要先发货后付款，你要礼貌拒绝账期，并提醒尾款确认后立即放货。"
+  ],
+  "tomorrow": "Day 23 会练发票、装箱单和清关文件。"
+}

@@ -1,0 +1,400 @@
+{
+  "day": 4,
+  "title": "发送报价、付款方式和 PI",
+  "theme": "从 quotation / payment terms / PI 开始",
+  "durationMinutes": 32,
+  "goals": [
+    "能清楚说明报价单、单价、付款方式和报价有效期",
+    "能礼貌引导客户确认订单后安排 PI",
+    "能解释定金、尾款和银行信息，避免付款沟通含糊"
+  ],
+  "review": {
+    "title": "Day 03 复习",
+    "items": [
+      "昨天练了 MOQ、sample cost、lead time、production 和 shipping cost。",
+      "今天进入报价后的下一步：发送 quotation、确认 payment terms、准备 PI。",
+      "客户准备下单时，不要只说 pay now，要先确认订单细节和付款方式。"
+    ]
+  },
+  "preview": {
+    "scenario": "客户已经确认数量、规格、样品或交期，现在要求正式报价，并询问付款方式和 PI。",
+    "needToKnow": [
+      "quotation 是报价单或报价内容，比 price 更完整。",
+      "payment terms 要说清楚定金、尾款和付款节点。",
+      "PI 是 proforma invoice，通常在客户确认订单细节后发送。"
+    ]
+  },
+  "vocabulary": [
+    {
+      "word": "quotation",
+      "phonetic": "/kwoʊˈteɪʃən/",
+      "meaning": "报价 / 报价单",
+      "usage": "用于给客户正式报价或发送报价单。",
+      "example": "I will prepare the quotation and send it to you today."
+    },
+    {
+      "word": "unit price",
+      "phonetic": "/ˈjuːnɪt praɪs/",
+      "meaning": "单价",
+      "usage": "说明每件产品的价格。",
+      "example": "The unit price is 2.5 dollars for 1,000 pieces."
+    },
+    {
+      "word": "payment terms",
+      "phonetic": "/ˈpeɪmənt tɜːrmz/",
+      "meaning": "付款方式 / 付款条款",
+      "usage": "说明定金、尾款和付款节点。",
+      "example": "Our payment terms are 30 percent deposit and 70 percent balance before shipment."
+    },
+    {
+      "word": "deposit",
+      "phonetic": "/dɪˈpɑːzɪt/",
+      "meaning": "定金",
+      "usage": "用于订单开始生产前的预付款。",
+      "example": "We can start production after receiving the deposit."
+    },
+    {
+      "word": "balance",
+      "phonetic": "/ˈbæləns/",
+      "meaning": "尾款 / 余款",
+      "usage": "用于发货前客户需要支付的剩余款项。",
+      "example": "The balance should be paid before shipment."
+    },
+    {
+      "word": "PI",
+      "phonetic": "/ˌpiː ˈaɪ/",
+      "meaning": "形式发票",
+      "usage": "proforma invoice 的缩写，用于客户确认订单和付款。",
+      "example": "I will send the PI after you confirm the order details."
+    },
+    {
+      "word": "bank information",
+      "phonetic": "/bæŋk ˌɪnfərˈmeɪʃən/",
+      "meaning": "银行信息",
+      "usage": "用于说明收款账户资料。",
+      "example": "The bank information is included in the PI."
+    },
+    {
+      "word": "valid",
+      "phonetic": "/ˈvælɪd/",
+      "meaning": "有效的",
+      "usage": "用于说明报价有效期。",
+      "example": "This quotation is valid for 7 days."
+    }
+  ],
+  "sentences": [
+    {
+      "label": "发送报价",
+      "basic": "I send price.",
+      "natural": "I will send you the price.",
+      "business": "I will prepare the quotation and send it to you today."
+    },
+    {
+      "label": "说明单价",
+      "basic": "Price is 2.5 dollars.",
+      "natural": "The unit price is 2.5 dollars.",
+      "business": "The unit price is 2.5 dollars based on 1,000 pieces and standard packaging."
+    },
+    {
+      "label": "说明付款方式",
+      "basic": "Payment is 30 and 70.",
+      "natural": "Our payment terms are 30 percent deposit and 70 percent balance.",
+      "business": "Our payment terms are 30 percent deposit before production and 70 percent balance before shipment."
+    },
+    {
+      "label": "发送 PI",
+      "basic": "I make PI.",
+      "natural": "I will send you the PI.",
+      "business": "After you confirm the order details, I will prepare the PI for your payment arrangement."
+    },
+    {
+      "label": "报价有效期",
+      "basic": "Price valid 7 days.",
+      "natural": "This price is valid for 7 days.",
+      "business": "This quotation is valid for 7 days because material costs may change."
+    }
+  ],
+  "chatAnalysis": [
+    {
+      "old": "price is 2.5",
+      "problem": "没有说明币种、数量基础和包装条件，客户可能误解。",
+      "better": "The unit price is 2.5 dollars.",
+      "upgrade": "The unit price is 2.5 dollars based on 1,000 pieces and standard packaging."
+    },
+    {
+      "old": "pay 30 before",
+      "problem": "表达不完整，不清楚是定金还是全款，也没有说明尾款时间。",
+      "better": "The payment terms are 30 percent deposit and 70 percent balance.",
+      "upgrade": "Our payment terms are 30 percent deposit before production and 70 percent balance before shipment."
+    },
+    {
+      "old": "I send PI now",
+      "problem": "太急，最好先让客户确认订单细节，避免 PI 信息错误。",
+      "better": "I will send the PI after you confirm the details.",
+      "upgrade": "After you confirm the quantity, specification, shipping method, and company information, I will prepare the PI for you."
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "慢速基础版：发送正式报价",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Can you send me the quotation?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will prepare the quotation and send it to you today."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please include the unit price."
+        },
+        {
+          "speaker": "Sales",
+          "text": "No problem. I will include the unit price, quantity, packaging, and lead time."
+        }
+      ]
+    },
+    {
+      "title": "正常商务版：说明付款方式",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "What are your payment terms?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Our payment terms are 30 percent deposit before production and 70 percent balance before shipment."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you send the PI?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. Please confirm the order details first, and I will prepare the PI for you."
+        }
+      ]
+    },
+    {
+      "title": "压力场景版：客户要求价格保持不变",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Can you keep this price for one month?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "This quotation is valid for 7 days because material costs may change."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We need more time to decide."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand. If you need more time, I can recheck the price before you place the order."
+        }
+      ]
+    }
+  ],
+  "longDialogues": [
+    {
+      "title": "长对话实战：从正式报价到 PI 和付款安排",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Hi, we confirmed the quantity and logo details."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. I will prepare the quotation based on the confirmed details."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please include the unit price and total amount."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will include the unit price, total amount, packaging, lead time, and shipping cost."
+        },
+        {
+          "speaker": "Customer",
+          "text": "What is the unit price for 1,000 pieces?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "The unit price is 2.5 dollars based on 1,000 pieces and standard packaging."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Does this price include our logo?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, this price includes one color logo printing."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Does it include shipping cost?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "No, the unit price does not include shipping cost. I will list the shipping cost separately."
+        },
+        {
+          "speaker": "Customer",
+          "text": "How long is this quotation valid?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "This quotation is valid for 7 days because material costs may change."
+        },
+        {
+          "speaker": "Customer",
+          "text": "What are your payment terms?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Our payment terms are 30 percent deposit before production and 70 percent balance before shipment."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can we pay 50 percent before production and 50 percent after delivery?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "For the first order, we usually need the balance before shipment. I can check if there is any flexibility."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Okay. Please send the PI first."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. Before I prepare the PI, please confirm the company name and billing address."
+        },
+        {
+          "speaker": "Customer",
+          "text": "I will send the company information now."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. Please also confirm the shipping method and delivery address."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We prefer air shipping for this order."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Got it. I will include air shipping cost in the PI."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Where can we find your bank information?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "The bank information will be included in the PI."
+        },
+        {
+          "speaker": "Customer",
+          "text": "After we pay the deposit, when can you start production?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "We can start production after receiving the deposit and confirming all order details."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please send the quotation and PI today."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will send the quotation first, and after you confirm it, I will prepare the PI today."
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "d4-q1",
+      "type": "translate",
+      "prompt": "中译英：我今天会准备报价单并发给你。",
+      "answer": "I will prepare the quotation and send it to you today.",
+      "acceptable": [
+        "i will prepare the quotation and send it to you today",
+        "i will prepare the quotation and send you today"
+      ],
+      "hint": "quotation 表示报价或报价单。"
+    },
+    {
+      "id": "d4-q2",
+      "type": "rewrite",
+      "prompt": "把这句话改得更自然：price is 2.5",
+      "answer": "The unit price is 2.5 dollars.",
+      "acceptable": [
+        "the unit price is 2.5 dollars",
+        "the unit price is 2.5 usd"
+      ],
+      "hint": "说明是 unit price，并加上币种。"
+    },
+    {
+      "id": "d4-q3",
+      "type": "fill",
+      "prompt": "填空：Our payment terms are 30 percent deposit and 70 percent ____ before shipment.",
+      "answer": "balance",
+      "acceptable": [
+        "balance"
+      ],
+      "hint": "尾款是 balance。"
+    },
+    {
+      "id": "d4-q4",
+      "type": "choice",
+      "prompt": "客户让你马上发 PI，哪个回复更适合？",
+      "options": [
+        "I send now",
+        "Pay first",
+        "Please confirm the order details first, and I will prepare the PI for you.",
+        "PI later"
+      ],
+      "answer": "Please confirm the order details first, and I will prepare the PI for you.",
+      "acceptable": [
+        "please confirm the order details first and i will prepare the pi for you"
+      ],
+      "hint": "先确认订单细节，再准备 PI。"
+    },
+    {
+      "id": "d4-q5",
+      "type": "translate",
+      "prompt": "中译英：银行信息会包含在 PI 里。",
+      "answer": "The bank information will be included in the PI.",
+      "acceptable": [
+        "the bank information will be included in the pi",
+        "bank information will be included in the pi"
+      ],
+      "hint": "bank information 表示银行信息。"
+    },
+    {
+      "id": "d4-q6",
+      "type": "reply",
+      "prompt": "客户说：Can you keep this price for one month? 你应该怎么回复？",
+      "answer": "This quotation is valid for 7 days because material costs may change. If you need more time, I can recheck the price before you place the order.",
+      "acceptable": [
+        "this quotation is valid for 7 days because material costs may change",
+        "the quotation is valid for 7 days",
+        "i can recheck the price before you place the order"
+      ],
+      "hint": "说明报价有效期和原因，再给后续方案。"
+    }
+  ],
+  "homework": [
+    "把 quotation、unit price、payment terms、deposit、balance、PI 各造 1 句。",
+    "把 5 个核心句子的 business 版本各读 5 遍。",
+    "跟读长对话 2 遍，重点练报价有效期和 PI 前确认。"
+  ],
+  "tomorrow": "Day 5 会练包装、唛头和出货方式的表达。"
+}

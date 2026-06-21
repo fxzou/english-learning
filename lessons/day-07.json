@@ -1,0 +1,399 @@
+{
+  "day": 7,
+  "title": "更新生产进度和出货时间",
+  "theme": "从 schedule / progress / delay 开始",
+  "durationMinutes": 34,
+  "goals": [
+    "能向客户说明当前生产进度和预计完成时间",
+    "能礼貌解释延误原因，并给出下一次更新时间",
+    "能在出货前确认验货、完成日期和发货安排"
+  ],
+  "review": {
+    "title": "Day 06 复习",
+    "items": [
+      "昨天练了 courier、air freight、sea freight、destination port 和 tracking number。",
+      "今天进入生产进度沟通：客户催货、问什么时候完成、问能否按时出货。",
+      "客户问进度时，不要只说 soon，要说明当前状态、预计时间和下一步动作。"
+    ]
+  },
+  "preview": {
+    "scenario": "客户已经下单付款，正在等待生产完成和出货，现在频繁询问生产进度、完成时间和是否会延误。",
+    "needToKnow": [
+      "progress 是进度，适合表达 current progress 或 production progress。",
+      "delay 要谨慎使用，说明原因后要给解决方案或下一次更新时间。",
+      "ready date、inspection、dispatch 可以把“做好、验货、发出”三个节点说清楚。"
+    ]
+  },
+  "vocabulary": [
+    {
+      "word": "schedule",
+      "phonetic": "/ˈskedʒuːl/",
+      "meaning": "时间表 / 计划",
+      "usage": "用于生产计划、出货计划或客户要求的时间安排。",
+      "example": "We are checking the production schedule with our factory."
+    },
+    {
+      "word": "progress",
+      "phonetic": "/ˈprɑːɡres/",
+      "meaning": "进度",
+      "usage": "用于说明订单、样品或生产的当前状态。",
+      "example": "I will update you on the production progress today."
+    },
+    {
+      "word": "delay",
+      "phonetic": "/dɪˈleɪ/",
+      "meaning": "延误 / 推迟",
+      "usage": "用于说明生产、包装或出货不能按原计划完成。",
+      "example": "There may be a short delay because the packaging material arrived late."
+    },
+    {
+      "word": "inspection",
+      "phonetic": "/ɪnˈspekʃən/",
+      "meaning": "验货 / 检查",
+      "usage": "用于出货前质量检查或客户第三方验货。",
+      "example": "We can arrange inspection before shipment."
+    },
+    {
+      "word": "completion",
+      "phonetic": "/kəmˈpliːʃən/",
+      "meaning": "完成",
+      "usage": "用于说明生产完成或订单完成。",
+      "example": "The estimated completion date is next Friday."
+    },
+    {
+      "word": "ready date",
+      "phonetic": "/ˈredi deɪt/",
+      "meaning": "可出货日期 / 备好日期",
+      "usage": "用于说明货物什么时候可以发出或提货。",
+      "example": "I will confirm the ready date and update you today."
+    },
+    {
+      "word": "dispatch",
+      "phonetic": "/dɪˈspætʃ/",
+      "meaning": "发出 / 派送",
+      "usage": "用于货物从工厂发出或交给物流。",
+      "example": "We will dispatch the goods after final inspection."
+    },
+    {
+      "word": "on time",
+      "phonetic": "/ɑːn taɪm/",
+      "meaning": "准时",
+      "usage": "用于说明订单是否能按计划完成或出货。",
+      "example": "We are doing our best to ship the goods on time."
+    }
+  ],
+  "sentences": [
+    {
+      "label": "更新进度",
+      "basic": "Production not finished.",
+      "natural": "Production is not finished yet.",
+      "business": "Production is still in progress, and I will update you again after checking with our factory."
+    },
+    {
+      "label": "确认完成时间",
+      "basic": "When ready, I tell you.",
+      "natural": "I will let you know when the goods are ready.",
+      "business": "I will confirm the ready date with our factory and update you today."
+    },
+    {
+      "label": "解释延误",
+      "basic": "It is delayed.",
+      "natural": "There may be a short delay.",
+      "business": "There may be a short delay because the packaging material arrived late, but we are pushing the factory to finish as soon as possible."
+    },
+    {
+      "label": "安排验货",
+      "basic": "We check before shipping.",
+      "natural": "We will inspect the goods before shipment.",
+      "business": "We will arrange final inspection before shipment and send you photos for confirmation."
+    },
+    {
+      "label": "按时出货",
+      "basic": "We try ship on time.",
+      "natural": "We will try to ship the goods on time.",
+      "business": "We are doing our best to keep the schedule and ship the goods on time."
+    }
+  ],
+  "chatAnalysis": [
+    {
+      "old": "soon finish",
+      "problem": "soon 太模糊，客户不知道当前进度和具体时间。",
+      "better": "Production is still in progress.",
+      "upgrade": "Production is still in progress, and I will confirm the ready date with our factory today."
+    },
+    {
+      "old": "delay because factory busy",
+      "problem": "只说工厂忙会显得推卸责任，需要说明原因和处理动作。",
+      "better": "There may be a short delay.",
+      "upgrade": "There may be a short delay, but we are pushing the factory and will update you with the new ready date today."
+    },
+    {
+      "old": "we ship after check",
+      "problem": "check 太泛，需要说明是 final inspection，并承诺发照片或结果。",
+      "better": "We will inspect the goods before shipment.",
+      "upgrade": "We will arrange final inspection before shipment and send you photos for confirmation."
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "慢速基础版：客户询问生产进度",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "What is the production progress now?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Production is still in progress. I will check the latest status with our factory."
+        },
+        {
+          "speaker": "Customer",
+          "text": "When will the goods be ready?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "I will confirm the ready date and update you today."
+        }
+      ]
+    },
+    {
+      "title": "正常商务版：出货前验货",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Can you inspect the goods before shipment?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes. We will arrange final inspection before shipment and send you photos for confirmation."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please make sure everything is correct."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Of course. We will check the quantity, packaging, label, and shipping mark carefully."
+        }
+      ]
+    },
+    {
+      "title": "压力场景版：客户担心延误",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Will there be any delay?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "There may be a short delay because the packaging material arrived late."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We cannot accept a long delay."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand. We are pushing the factory and will update you with the new ready date today."
+        }
+      ]
+    }
+  ],
+  "longDialogues": [
+    {
+      "title": "长对话实战：客户催生产进度、验货和出货时间",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Hi, can you update me on the production progress?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. Production is still in progress, and I am checking the latest status with our factory."
+        },
+        {
+          "speaker": "Customer",
+          "text": "How much has been finished?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "About 60 percent has been finished, and the remaining quantity is still under production."
+        },
+        {
+          "speaker": "Customer",
+          "text": "When will all goods be ready?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "I will confirm the ready date with our factory and update you today."
+        },
+        {
+          "speaker": "Customer",
+          "text": "The original schedule was this Friday."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, we are doing our best to keep the schedule and finish on time."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Is there any risk of delay?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "There may be a short delay because the packaging material arrived late."
+        },
+        {
+          "speaker": "Customer",
+          "text": "How many days will it be delayed?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "I need to confirm the exact delay with our factory first."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please push them. We need the goods urgently."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand. We are pushing the factory and will try to finish as soon as possible."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you ship part of the goods first?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Let me check if partial dispatch is possible for this order."
+        },
+        {
+          "speaker": "Customer",
+          "text": "If partial dispatch is possible, please send the first batch quickly."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will check the finished quantity and shipping schedule for the first batch."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Will you inspect the goods before shipment?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes. We will arrange final inspection before shipment."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you send photos after inspection?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Of course. We will send you photos for confirmation before dispatch."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please also check the packaging and labels."
+        },
+        {
+          "speaker": "Sales",
+          "text": "No problem. We will check the quantity, packaging, labels, and shipping mark carefully."
+        },
+        {
+          "speaker": "Customer",
+          "text": "When can you give me the final ready date?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "I will confirm the final ready date with our factory and update you before the end of today."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please keep us updated every day."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will keep you updated on the production progress every day until shipment."
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "d7-q1",
+      "type": "translate",
+      "prompt": "中译英：生产仍在进行中，我会今天更新你。",
+      "answer": "Production is still in progress, and I will update you today.",
+      "acceptable": [
+        "production is still in progress and i will update you today",
+        "production is still in progress i will update you today"
+      ],
+      "hint": "in progress 表示正在进行中。"
+    },
+    {
+      "id": "d7-q2",
+      "type": "rewrite",
+      "prompt": "把这句话改得更自然：soon finish",
+      "answer": "Production is still in progress, and I will confirm the ready date today.",
+      "acceptable": [
+        "production is still in progress and i will confirm the ready date today",
+        "i will confirm the ready date with our factory today"
+      ],
+      "hint": "不要只说 soon，要说进度和 ready date。"
+    },
+    {
+      "id": "d7-q3",
+      "type": "fill",
+      "prompt": "填空：We will arrange final ____ before shipment.",
+      "answer": "inspection",
+      "acceptable": [
+        "inspection"
+      ],
+      "hint": "inspection 表示验货或检查。"
+    },
+    {
+      "id": "d7-q4",
+      "type": "choice",
+      "prompt": "客户问 Will there be any delay? 哪个回复更适合？",
+      "options": [
+        "Maybe delay",
+        "Factory busy",
+        "There may be a short delay, but we are pushing the factory and will update you today.",
+        "Wait please"
+      ],
+      "answer": "There may be a short delay, but we are pushing the factory and will update you today.",
+      "acceptable": [
+        "there may be a short delay but we are pushing the factory and will update you today"
+      ],
+      "hint": "说明延误风险，同时给处理动作和更新时间。"
+    },
+    {
+      "id": "d7-q5",
+      "type": "translate",
+      "prompt": "中译英：我们会尽力按时出货。",
+      "answer": "We will do our best to ship the goods on time.",
+      "acceptable": [
+        "we will do our best to ship the goods on time",
+        "we are doing our best to ship the goods on time"
+      ],
+      "hint": "on time 表示准时。"
+    },
+    {
+      "id": "d7-q6",
+      "type": "reply",
+      "prompt": "客户说：Can you send photos after inspection? 你应该怎么回复？",
+      "answer": "Of course. We will send you photos for confirmation before dispatch.",
+      "acceptable": [
+        "of course we will send you photos for confirmation before dispatch",
+        "we will send you photos for confirmation before dispatch"
+      ],
+      "hint": "photos for confirmation 表示发照片给客户确认。"
+    }
+  ],
+  "homework": [
+    "把 schedule、progress、delay、inspection、ready date 各造 1 句。",
+    "把 5 个核心句子的 business 版本各读 5 遍。",
+    "跟读长对话 2 遍，重点练生产延误和验货前确认。"
+  ],
+  "tomorrow": "Day 8 会练缺货、替代方案和补货时间的表达。"
+}

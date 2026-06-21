@@ -1,0 +1,2382 @@
+{
+  "lessonCount": 30,
+  "wordCount": 240,
+  "days": [
+    {
+      "day": 1,
+      "file": "day-01.json",
+      "title": "把生硬回复改自然",
+      "words": [
+        "check",
+        "confirm",
+        "update",
+        "arrange",
+        "moment",
+        "factory",
+        "accordingly",
+        "question"
+      ]
+    },
+    {
+      "day": 2,
+      "file": "day-02.json",
+      "title": "确认数量、颜色和规格",
+      "words": [
+        "quantity",
+        "color",
+        "size",
+        "material",
+        "specification",
+        "available",
+        "sample",
+        "details"
+      ]
+    },
+    {
+      "day": 3,
+      "file": "day-03.json",
+      "title": "回复 MOQ、样品和交期",
+      "words": [
+        "MOQ",
+        "stock",
+        "sample cost",
+        "lead time",
+        "production",
+        "shipping cost",
+        "customized",
+        "approval"
+      ]
+    },
+    {
+      "day": 4,
+      "file": "day-04.json",
+      "title": "发送报价、付款方式和 PI",
+      "words": [
+        "quotation",
+        "unit price",
+        "payment terms",
+        "deposit",
+        "balance",
+        "PI",
+        "bank information",
+        "valid"
+      ]
+    },
+    {
+      "day": 5,
+      "file": "day-05.json",
+      "title": "确认包装、唛头和出货方式",
+      "words": [
+        "packaging",
+        "carton",
+        "carton size",
+        "gross weight",
+        "net weight",
+        "shipping mark",
+        "label",
+        "fragile"
+      ]
+    },
+    {
+      "day": 6,
+      "file": "day-06.json",
+      "title": "确认物流方式和运费",
+      "words": [
+        "courier",
+        "air freight",
+        "sea freight",
+        "destination port",
+        "tracking number",
+        "customs clearance",
+        "delivery address",
+        "freight forwarder"
+      ]
+    },
+    {
+      "day": 7,
+      "file": "day-07.json",
+      "title": "更新生产进度和出货时间",
+      "words": [
+        "schedule",
+        "progress",
+        "delay",
+        "inspection",
+        "completion",
+        "ready date",
+        "dispatch",
+        "on time"
+      ]
+    },
+    {
+      "day": 8,
+      "file": "day-08.json",
+      "title": "处理缺货、替代方案和补货时间",
+      "words": [
+        "out of stock",
+        "substitute",
+        "alternative",
+        "restock",
+        "backorder",
+        "shortage",
+        "option",
+        "recommend"
+      ]
+    },
+    {
+      "day": 9,
+      "file": "day-09.json",
+      "title": "处理客户修改规格、数量和包装",
+      "words": [
+        "revise",
+        "change request",
+        "adjustment",
+        "original",
+        "requirement",
+        "affect",
+        "extra cost",
+        "deadline"
+      ]
+    },
+    {
+      "day": 10,
+      "file": "day-10.json",
+      "title": "处理客户投诉和质量问题",
+      "words": [
+        "complaint",
+        "issue",
+        "defect",
+        "scratch",
+        "missing piece",
+        "evidence",
+        "replacement",
+        "solution"
+      ]
+    },
+    {
+      "day": 11,
+      "file": "day-11.json",
+      "title": "解释价格差异和涨价原因",
+      "words": [
+        "price difference",
+        "increase",
+        "raw material",
+        "exchange rate",
+        "discount",
+        "margin",
+        "target price",
+        "negotiation"
+      ]
+    },
+    {
+      "day": 12,
+      "file": "day-12.json",
+      "title": "说明模具费、开模时间和模具归属",
+      "words": [
+        "mold cost",
+        "mold making",
+        "mold ownership",
+        "refund policy",
+        "tooling",
+        "cavity",
+        "prototype",
+        "exclusive"
+      ]
+    },
+    {
+      "day": 13,
+      "file": "day-13.json",
+      "title": "样品确认、修改和大货前批准",
+      "words": [
+        "sample approval",
+        "sample revision",
+        "pre-production sample",
+        "feedback",
+        "modification",
+        "reference photo",
+        "final version",
+        "proceed"
+      ]
+    },
+    {
+      "day": 14,
+      "file": "day-14.json",
+      "title": "表面处理、Logo 工艺和颜色确认",
+      "words": [
+        "finish",
+        "matte",
+        "glossy",
+        "engraving",
+        "printing",
+        "Pantone",
+        "color matching",
+        "swatch"
+      ]
+    },
+    {
+      "day": 15,
+      "file": "day-15.json",
+      "title": "低数量、小订单和试单谈判",
+      "words": [
+        "trial order",
+        "small quantity",
+        "below MOQ",
+        "higher unit price",
+        "stock option",
+        "mixed order",
+        "repeat order",
+        "price break"
+      ]
+    },
+    {
+      "day": 16,
+      "file": "day-16.json",
+      "title": "生产前最终确认",
+      "words": [
+        "final confirmation",
+        "order summary",
+        "production details",
+        "approved artwork",
+        "packing method",
+        "shipping mark confirmation",
+        "payment confirmation",
+        "production start"
+      ]
+    },
+    {
+      "day": 17,
+      "file": "day-17.json",
+      "title": "客户催单和紧急订单",
+      "words": [
+        "urgent order",
+        "push factory",
+        "fastest schedule",
+        "expedite",
+        "priority",
+        "rush production",
+        "realistic timeline",
+        "keep you posted"
+      ]
+    },
+    {
+      "day": 18,
+      "file": "day-18.json",
+      "title": "生产延误的专业解释",
+      "words": [
+        "material delay",
+        "machine issue",
+        "quality rework",
+        "root cause",
+        "impact",
+        "revised timeline",
+        "catch up",
+        "recovery plan"
+      ]
+    },
+    {
+      "day": 19,
+      "file": "day-19.json",
+      "title": "返工、重做和质量复检",
+      "words": [
+        "rework",
+        "reprocessing",
+        "recheck",
+        "quality control",
+        "nonconforming goods",
+        "sorting",
+        "corrective action",
+        "quality standard"
+      ]
+    },
+    {
+      "day": 20,
+      "file": "day-20.json",
+      "title": "出货前照片、视频和验货报告",
+      "words": [
+        "pre-shipment inspection",
+        "inspection report",
+        "photo confirmation",
+        "video confirmation",
+        "packing photos",
+        "carton label",
+        "final check",
+        "shipment release"
+      ]
+    },
+    {
+      "day": 21,
+      "file": "day-21.json",
+      "title": "付款凭证、到账和财务审核",
+      "words": [
+        "payment receipt",
+        "bank review",
+        "finance confirmation",
+        "remittance slip",
+        "transaction record",
+        "received amount",
+        "bank fee",
+        "pending payment"
+      ]
+    },
+    {
+      "day": 22,
+      "file": "day-22.json",
+      "title": "尾款、发货前付款和付款提醒",
+      "words": [
+        "balance payment",
+        "payment reminder",
+        "before shipment",
+        "credit term",
+        "release goods",
+        "payment deadline",
+        "overdue payment",
+        "settle payment"
+      ]
+    },
+    {
+      "day": 23,
+      "file": "day-23.json",
+      "title": "发票、装箱单和清关文件",
+      "words": [
+        "invoice",
+        "packing list",
+        "HS code",
+        "declared value",
+        "customs documents",
+        "consignee",
+        "product description",
+        "document revision"
+      ]
+    },
+    {
+      "day": 24,
+      "file": "day-24.json",
+      "title": "银行信息、付款错误和退款路径",
+      "words": [
+        "beneficiary account",
+        "account name",
+        "SWIFT code",
+        "wrong payment",
+        "refund request",
+        "deduction",
+        "payment correction",
+        "transfer mistake"
+      ]
+    },
+    {
+      "day": 25,
+      "file": "day-25.json",
+      "title": "货代仓库、提货和截仓时间",
+      "words": [
+        "pickup",
+        "cut-off time",
+        "warehouse address",
+        "factory pickup",
+        "delivery note",
+        "loading time",
+        "handover",
+        "warehouse receipt"
+      ]
+    },
+    {
+      "day": 26,
+      "file": "day-26.json",
+      "title": "物流延误、清关问题和跟踪更新",
+      "words": [
+        "delayed shipment",
+        "customs hold",
+        "tracking update",
+        "in transit",
+        "clearance status",
+        "estimated arrival",
+        "carrier",
+        "delivery exception"
+      ]
+    },
+    {
+      "day": 27,
+      "file": "day-27.json",
+      "title": "到货后反馈、破损和缺件处理",
+      "words": [
+        "damaged goods",
+        "missing items",
+        "short delivery",
+        "arrival feedback",
+        "unboxing photos",
+        "claim process",
+        "compensation",
+        "resend"
+      ]
+    },
+    {
+      "day": 28,
+      "file": "day-28.json",
+      "title": "价格谈判和让步边界",
+      "words": [
+        "best price request",
+        "competitor offer",
+        "bulk pricing",
+        "price match",
+        "final offer",
+        "cost sharing",
+        "free sample request",
+        "concession"
+      ]
+    },
+    {
+      "day": 29,
+      "file": "day-29.json",
+      "title": "长期客户跟进和订单推进",
+      "words": [
+        "follow-up",
+        "quotation follow-up",
+        "sample feedback",
+        "decision timeline",
+        "next step",
+        "pending decision",
+        "gentle reminder",
+        "reconnect"
+      ]
+    },
+    {
+      "day": 30,
+      "file": "day-30.json",
+      "title": "综合实战复盘：从询价到售后完整订单",
+      "words": [
+        "order lifecycle",
+        "project recap",
+        "requirement summary",
+        "commercial terms",
+        "approval chain",
+        "shipment follow-through",
+        "after-sales handling",
+        "final recap"
+      ]
+    }
+  ],
+  "words": [
+    {
+      "day": 1,
+      "file": "day-01.json",
+      "title": "把生硬回复改自然",
+      "word": "check",
+      "meaning": "检查 / 看一下"
+    },
+    {
+      "day": 1,
+      "file": "day-01.json",
+      "title": "把生硬回复改自然",
+      "word": "confirm",
+      "meaning": "确认"
+    },
+    {
+      "day": 1,
+      "file": "day-01.json",
+      "title": "把生硬回复改自然",
+      "word": "update",
+      "meaning": "更新 / 告知进展"
+    },
+    {
+      "day": 1,
+      "file": "day-01.json",
+      "title": "把生硬回复改自然",
+      "word": "arrange",
+      "meaning": "安排"
+    },
+    {
+      "day": 1,
+      "file": "day-01.json",
+      "title": "把生硬回复改自然",
+      "word": "moment",
+      "meaning": "片刻 / 一会儿"
+    },
+    {
+      "day": 1,
+      "file": "day-01.json",
+      "title": "把生硬回复改自然",
+      "word": "factory",
+      "meaning": "工厂"
+    },
+    {
+      "day": 1,
+      "file": "day-01.json",
+      "title": "把生硬回复改自然",
+      "word": "accordingly",
+      "meaning": "相应地 / 按此"
+    },
+    {
+      "day": 1,
+      "file": "day-01.json",
+      "title": "把生硬回复改自然",
+      "word": "question",
+      "meaning": "问题"
+    },
+    {
+      "day": 2,
+      "file": "day-02.json",
+      "title": "确认数量、颜色和规格",
+      "word": "quantity",
+      "meaning": "数量"
+    },
+    {
+      "day": 2,
+      "file": "day-02.json",
+      "title": "确认数量、颜色和规格",
+      "word": "color",
+      "meaning": "颜色"
+    },
+    {
+      "day": 2,
+      "file": "day-02.json",
+      "title": "确认数量、颜色和规格",
+      "word": "size",
+      "meaning": "尺寸 / 大小"
+    },
+    {
+      "day": 2,
+      "file": "day-02.json",
+      "title": "确认数量、颜色和规格",
+      "word": "material",
+      "meaning": "材料 / 材质"
+    },
+    {
+      "day": 2,
+      "file": "day-02.json",
+      "title": "确认数量、颜色和规格",
+      "word": "specification",
+      "meaning": "规格"
+    },
+    {
+      "day": 2,
+      "file": "day-02.json",
+      "title": "确认数量、颜色和规格",
+      "word": "available",
+      "meaning": "可用的 / 有货的"
+    },
+    {
+      "day": 2,
+      "file": "day-02.json",
+      "title": "确认数量、颜色和规格",
+      "word": "sample",
+      "meaning": "样品"
+    },
+    {
+      "day": 2,
+      "file": "day-02.json",
+      "title": "确认数量、颜色和规格",
+      "word": "details",
+      "meaning": "细节"
+    },
+    {
+      "day": 3,
+      "file": "day-03.json",
+      "title": "回复 MOQ、样品和交期",
+      "word": "MOQ",
+      "meaning": "最小起订量"
+    },
+    {
+      "day": 3,
+      "file": "day-03.json",
+      "title": "回复 MOQ、样品和交期",
+      "word": "stock",
+      "meaning": "库存 / 现货"
+    },
+    {
+      "day": 3,
+      "file": "day-03.json",
+      "title": "回复 MOQ、样品和交期",
+      "word": "sample cost",
+      "meaning": "样品费"
+    },
+    {
+      "day": 3,
+      "file": "day-03.json",
+      "title": "回复 MOQ、样品和交期",
+      "word": "lead time",
+      "meaning": "交期 / 生产周期"
+    },
+    {
+      "day": 3,
+      "file": "day-03.json",
+      "title": "回复 MOQ、样品和交期",
+      "word": "production",
+      "meaning": "生产"
+    },
+    {
+      "day": 3,
+      "file": "day-03.json",
+      "title": "回复 MOQ、样品和交期",
+      "word": "shipping cost",
+      "meaning": "运费"
+    },
+    {
+      "day": 3,
+      "file": "day-03.json",
+      "title": "回复 MOQ、样品和交期",
+      "word": "customized",
+      "meaning": "定制的"
+    },
+    {
+      "day": 3,
+      "file": "day-03.json",
+      "title": "回复 MOQ、样品和交期",
+      "word": "approval",
+      "meaning": "批准 / 确认通过"
+    },
+    {
+      "day": 4,
+      "file": "day-04.json",
+      "title": "发送报价、付款方式和 PI",
+      "word": "quotation",
+      "meaning": "报价 / 报价单"
+    },
+    {
+      "day": 4,
+      "file": "day-04.json",
+      "title": "发送报价、付款方式和 PI",
+      "word": "unit price",
+      "meaning": "单价"
+    },
+    {
+      "day": 4,
+      "file": "day-04.json",
+      "title": "发送报价、付款方式和 PI",
+      "word": "payment terms",
+      "meaning": "付款方式 / 付款条款"
+    },
+    {
+      "day": 4,
+      "file": "day-04.json",
+      "title": "发送报价、付款方式和 PI",
+      "word": "deposit",
+      "meaning": "定金"
+    },
+    {
+      "day": 4,
+      "file": "day-04.json",
+      "title": "发送报价、付款方式和 PI",
+      "word": "balance",
+      "meaning": "尾款 / 余款"
+    },
+    {
+      "day": 4,
+      "file": "day-04.json",
+      "title": "发送报价、付款方式和 PI",
+      "word": "PI",
+      "meaning": "形式发票"
+    },
+    {
+      "day": 4,
+      "file": "day-04.json",
+      "title": "发送报价、付款方式和 PI",
+      "word": "bank information",
+      "meaning": "银行信息"
+    },
+    {
+      "day": 4,
+      "file": "day-04.json",
+      "title": "发送报价、付款方式和 PI",
+      "word": "valid",
+      "meaning": "有效的"
+    },
+    {
+      "day": 5,
+      "file": "day-05.json",
+      "title": "确认包装、唛头和出货方式",
+      "word": "packaging",
+      "meaning": "包装"
+    },
+    {
+      "day": 5,
+      "file": "day-05.json",
+      "title": "确认包装、唛头和出货方式",
+      "word": "carton",
+      "meaning": "纸箱 / 外箱"
+    },
+    {
+      "day": 5,
+      "file": "day-05.json",
+      "title": "确认包装、唛头和出货方式",
+      "word": "carton size",
+      "meaning": "箱规 / 纸箱尺寸"
+    },
+    {
+      "day": 5,
+      "file": "day-05.json",
+      "title": "确认包装、唛头和出货方式",
+      "word": "gross weight",
+      "meaning": "毛重"
+    },
+    {
+      "day": 5,
+      "file": "day-05.json",
+      "title": "确认包装、唛头和出货方式",
+      "word": "net weight",
+      "meaning": "净重"
+    },
+    {
+      "day": 5,
+      "file": "day-05.json",
+      "title": "确认包装、唛头和出货方式",
+      "word": "shipping mark",
+      "meaning": "唛头 / 外箱标记"
+    },
+    {
+      "day": 5,
+      "file": "day-05.json",
+      "title": "确认包装、唛头和出货方式",
+      "word": "label",
+      "meaning": "标签"
+    },
+    {
+      "day": 5,
+      "file": "day-05.json",
+      "title": "确认包装、唛头和出货方式",
+      "word": "fragile",
+      "meaning": "易碎的"
+    },
+    {
+      "day": 6,
+      "file": "day-06.json",
+      "title": "确认物流方式和运费",
+      "word": "courier",
+      "meaning": "快递"
+    },
+    {
+      "day": 6,
+      "file": "day-06.json",
+      "title": "确认物流方式和运费",
+      "word": "air freight",
+      "meaning": "空运"
+    },
+    {
+      "day": 6,
+      "file": "day-06.json",
+      "title": "确认物流方式和运费",
+      "word": "sea freight",
+      "meaning": "海运"
+    },
+    {
+      "day": 6,
+      "file": "day-06.json",
+      "title": "确认物流方式和运费",
+      "word": "destination port",
+      "meaning": "目的港"
+    },
+    {
+      "day": 6,
+      "file": "day-06.json",
+      "title": "确认物流方式和运费",
+      "word": "tracking number",
+      "meaning": "跟踪单号"
+    },
+    {
+      "day": 6,
+      "file": "day-06.json",
+      "title": "确认物流方式和运费",
+      "word": "customs clearance",
+      "meaning": "清关"
+    },
+    {
+      "day": 6,
+      "file": "day-06.json",
+      "title": "确认物流方式和运费",
+      "word": "delivery address",
+      "meaning": "收货地址"
+    },
+    {
+      "day": 6,
+      "file": "day-06.json",
+      "title": "确认物流方式和运费",
+      "word": "freight forwarder",
+      "meaning": "货代"
+    },
+    {
+      "day": 7,
+      "file": "day-07.json",
+      "title": "更新生产进度和出货时间",
+      "word": "schedule",
+      "meaning": "时间表 / 计划"
+    },
+    {
+      "day": 7,
+      "file": "day-07.json",
+      "title": "更新生产进度和出货时间",
+      "word": "progress",
+      "meaning": "进度"
+    },
+    {
+      "day": 7,
+      "file": "day-07.json",
+      "title": "更新生产进度和出货时间",
+      "word": "delay",
+      "meaning": "延误 / 推迟"
+    },
+    {
+      "day": 7,
+      "file": "day-07.json",
+      "title": "更新生产进度和出货时间",
+      "word": "inspection",
+      "meaning": "验货 / 检查"
+    },
+    {
+      "day": 7,
+      "file": "day-07.json",
+      "title": "更新生产进度和出货时间",
+      "word": "completion",
+      "meaning": "完成"
+    },
+    {
+      "day": 7,
+      "file": "day-07.json",
+      "title": "更新生产进度和出货时间",
+      "word": "ready date",
+      "meaning": "可出货日期 / 备好日期"
+    },
+    {
+      "day": 7,
+      "file": "day-07.json",
+      "title": "更新生产进度和出货时间",
+      "word": "dispatch",
+      "meaning": "发出 / 派送"
+    },
+    {
+      "day": 7,
+      "file": "day-07.json",
+      "title": "更新生产进度和出货时间",
+      "word": "on time",
+      "meaning": "准时"
+    },
+    {
+      "day": 8,
+      "file": "day-08.json",
+      "title": "处理缺货、替代方案和补货时间",
+      "word": "out of stock",
+      "meaning": "缺货 / 没有库存"
+    },
+    {
+      "day": 8,
+      "file": "day-08.json",
+      "title": "处理缺货、替代方案和补货时间",
+      "word": "substitute",
+      "meaning": "替代品"
+    },
+    {
+      "day": 8,
+      "file": "day-08.json",
+      "title": "处理缺货、替代方案和补货时间",
+      "word": "alternative",
+      "meaning": "替代选择 / 备选方案"
+    },
+    {
+      "day": 8,
+      "file": "day-08.json",
+      "title": "处理缺货、替代方案和补货时间",
+      "word": "restock",
+      "meaning": "补货"
+    },
+    {
+      "day": 8,
+      "file": "day-08.json",
+      "title": "处理缺货、替代方案和补货时间",
+      "word": "backorder",
+      "meaning": "缺货待补订单 / 预订"
+    },
+    {
+      "day": 8,
+      "file": "day-08.json",
+      "title": "处理缺货、替代方案和补货时间",
+      "word": "shortage",
+      "meaning": "短缺"
+    },
+    {
+      "day": 8,
+      "file": "day-08.json",
+      "title": "处理缺货、替代方案和补货时间",
+      "word": "option",
+      "meaning": "选择 / 选项"
+    },
+    {
+      "day": 8,
+      "file": "day-08.json",
+      "title": "处理缺货、替代方案和补货时间",
+      "word": "recommend",
+      "meaning": "推荐"
+    },
+    {
+      "day": 9,
+      "file": "day-09.json",
+      "title": "处理客户修改规格、数量和包装",
+      "word": "revise",
+      "meaning": "修改 / 修订"
+    },
+    {
+      "day": 9,
+      "file": "day-09.json",
+      "title": "处理客户修改规格、数量和包装",
+      "word": "change request",
+      "meaning": "修改要求"
+    },
+    {
+      "day": 9,
+      "file": "day-09.json",
+      "title": "处理客户修改规格、数量和包装",
+      "word": "adjustment",
+      "meaning": "调整"
+    },
+    {
+      "day": 9,
+      "file": "day-09.json",
+      "title": "处理客户修改规格、数量和包装",
+      "word": "original",
+      "meaning": "原来的 / 原始的"
+    },
+    {
+      "day": 9,
+      "file": "day-09.json",
+      "title": "处理客户修改规格、数量和包装",
+      "word": "requirement",
+      "meaning": "要求 / 需求"
+    },
+    {
+      "day": 9,
+      "file": "day-09.json",
+      "title": "处理客户修改规格、数量和包装",
+      "word": "affect",
+      "meaning": "影响"
+    },
+    {
+      "day": 9,
+      "file": "day-09.json",
+      "title": "处理客户修改规格、数量和包装",
+      "word": "extra cost",
+      "meaning": "额外费用"
+    },
+    {
+      "day": 9,
+      "file": "day-09.json",
+      "title": "处理客户修改规格、数量和包装",
+      "word": "deadline",
+      "meaning": "截止时间"
+    },
+    {
+      "day": 10,
+      "file": "day-10.json",
+      "title": "处理客户投诉和质量问题",
+      "word": "complaint",
+      "meaning": "投诉 / 抱怨"
+    },
+    {
+      "day": 10,
+      "file": "day-10.json",
+      "title": "处理客户投诉和质量问题",
+      "word": "issue",
+      "meaning": "问题"
+    },
+    {
+      "day": 10,
+      "file": "day-10.json",
+      "title": "处理客户投诉和质量问题",
+      "word": "defect",
+      "meaning": "缺陷 / 瑕疵"
+    },
+    {
+      "day": 10,
+      "file": "day-10.json",
+      "title": "处理客户投诉和质量问题",
+      "word": "scratch",
+      "meaning": "划痕"
+    },
+    {
+      "day": 10,
+      "file": "day-10.json",
+      "title": "处理客户投诉和质量问题",
+      "word": "missing piece",
+      "meaning": "少件 / 缺少的产品"
+    },
+    {
+      "day": 10,
+      "file": "day-10.json",
+      "title": "处理客户投诉和质量问题",
+      "word": "evidence",
+      "meaning": "证据"
+    },
+    {
+      "day": 10,
+      "file": "day-10.json",
+      "title": "处理客户投诉和质量问题",
+      "word": "replacement",
+      "meaning": "替换品 / 补发"
+    },
+    {
+      "day": 10,
+      "file": "day-10.json",
+      "title": "处理客户投诉和质量问题",
+      "word": "solution",
+      "meaning": "解决方案"
+    },
+    {
+      "day": 11,
+      "file": "day-11.json",
+      "title": "解释价格差异和涨价原因",
+      "word": "price difference",
+      "meaning": "价格差异"
+    },
+    {
+      "day": 11,
+      "file": "day-11.json",
+      "title": "解释价格差异和涨价原因",
+      "word": "increase",
+      "meaning": "增加 / 上涨"
+    },
+    {
+      "day": 11,
+      "file": "day-11.json",
+      "title": "解释价格差异和涨价原因",
+      "word": "raw material",
+      "meaning": "原材料"
+    },
+    {
+      "day": 11,
+      "file": "day-11.json",
+      "title": "解释价格差异和涨价原因",
+      "word": "exchange rate",
+      "meaning": "汇率"
+    },
+    {
+      "day": 11,
+      "file": "day-11.json",
+      "title": "解释价格差异和涨价原因",
+      "word": "discount",
+      "meaning": "折扣"
+    },
+    {
+      "day": 11,
+      "file": "day-11.json",
+      "title": "解释价格差异和涨价原因",
+      "word": "margin",
+      "meaning": "利润空间"
+    },
+    {
+      "day": 11,
+      "file": "day-11.json",
+      "title": "解释价格差异和涨价原因",
+      "word": "target price",
+      "meaning": "目标价"
+    },
+    {
+      "day": 11,
+      "file": "day-11.json",
+      "title": "解释价格差异和涨价原因",
+      "word": "negotiation",
+      "meaning": "谈判 / 协商"
+    },
+    {
+      "day": 12,
+      "file": "day-12.json",
+      "title": "说明模具费、开模时间和模具归属",
+      "word": "mold cost",
+      "meaning": "模具费"
+    },
+    {
+      "day": 12,
+      "file": "day-12.json",
+      "title": "说明模具费、开模时间和模具归属",
+      "word": "mold making",
+      "meaning": "开模"
+    },
+    {
+      "day": 12,
+      "file": "day-12.json",
+      "title": "说明模具费、开模时间和模具归属",
+      "word": "mold ownership",
+      "meaning": "模具归属"
+    },
+    {
+      "day": 12,
+      "file": "day-12.json",
+      "title": "说明模具费、开模时间和模具归属",
+      "word": "refund policy",
+      "meaning": "退款政策"
+    },
+    {
+      "day": 12,
+      "file": "day-12.json",
+      "title": "说明模具费、开模时间和模具归属",
+      "word": "tooling",
+      "meaning": "工装 / 模具工具"
+    },
+    {
+      "day": 12,
+      "file": "day-12.json",
+      "title": "说明模具费、开模时间和模具归属",
+      "word": "cavity",
+      "meaning": "模穴"
+    },
+    {
+      "day": 12,
+      "file": "day-12.json",
+      "title": "说明模具费、开模时间和模具归属",
+      "word": "prototype",
+      "meaning": "原型 / 手板"
+    },
+    {
+      "day": 12,
+      "file": "day-12.json",
+      "title": "说明模具费、开模时间和模具归属",
+      "word": "exclusive",
+      "meaning": "专属的 / 独家的"
+    },
+    {
+      "day": 13,
+      "file": "day-13.json",
+      "title": "样品确认、修改和大货前批准",
+      "word": "sample approval",
+      "meaning": "样品批准 / 样品确认通过"
+    },
+    {
+      "day": 13,
+      "file": "day-13.json",
+      "title": "样品确认、修改和大货前批准",
+      "word": "sample revision",
+      "meaning": "样品修改"
+    },
+    {
+      "day": 13,
+      "file": "day-13.json",
+      "title": "样品确认、修改和大货前批准",
+      "word": "pre-production sample",
+      "meaning": "产前样"
+    },
+    {
+      "day": 13,
+      "file": "day-13.json",
+      "title": "样品确认、修改和大货前批准",
+      "word": "feedback",
+      "meaning": "反馈"
+    },
+    {
+      "day": 13,
+      "file": "day-13.json",
+      "title": "样品确认、修改和大货前批准",
+      "word": "modification",
+      "meaning": "修改 / 改动"
+    },
+    {
+      "day": 13,
+      "file": "day-13.json",
+      "title": "样品确认、修改和大货前批准",
+      "word": "reference photo",
+      "meaning": "参考图片"
+    },
+    {
+      "day": 13,
+      "file": "day-13.json",
+      "title": "样品确认、修改和大货前批准",
+      "word": "final version",
+      "meaning": "最终版本"
+    },
+    {
+      "day": 13,
+      "file": "day-13.json",
+      "title": "样品确认、修改和大货前批准",
+      "word": "proceed",
+      "meaning": "继续进行 / 推进"
+    },
+    {
+      "day": 14,
+      "file": "day-14.json",
+      "title": "表面处理、Logo 工艺和颜色确认",
+      "word": "finish",
+      "meaning": "表面处理 / 表面效果"
+    },
+    {
+      "day": 14,
+      "file": "day-14.json",
+      "title": "表面处理、Logo 工艺和颜色确认",
+      "word": "matte",
+      "meaning": "哑光的"
+    },
+    {
+      "day": 14,
+      "file": "day-14.json",
+      "title": "表面处理、Logo 工艺和颜色确认",
+      "word": "glossy",
+      "meaning": "亮面的 / 有光泽的"
+    },
+    {
+      "day": 14,
+      "file": "day-14.json",
+      "title": "表面处理、Logo 工艺和颜色确认",
+      "word": "engraving",
+      "meaning": "雕刻 / 镭雕"
+    },
+    {
+      "day": 14,
+      "file": "day-14.json",
+      "title": "表面处理、Logo 工艺和颜色确认",
+      "word": "printing",
+      "meaning": "印刷"
+    },
+    {
+      "day": 14,
+      "file": "day-14.json",
+      "title": "表面处理、Logo 工艺和颜色确认",
+      "word": "Pantone",
+      "meaning": "潘通色号"
+    },
+    {
+      "day": 14,
+      "file": "day-14.json",
+      "title": "表面处理、Logo 工艺和颜色确认",
+      "word": "color matching",
+      "meaning": "配色 / 颜色匹配"
+    },
+    {
+      "day": 14,
+      "file": "day-14.json",
+      "title": "表面处理、Logo 工艺和颜色确认",
+      "word": "swatch",
+      "meaning": "色卡 / 小样片"
+    },
+    {
+      "day": 15,
+      "file": "day-15.json",
+      "title": "低数量、小订单和试单谈判",
+      "word": "trial order",
+      "meaning": "试单"
+    },
+    {
+      "day": 15,
+      "file": "day-15.json",
+      "title": "低数量、小订单和试单谈判",
+      "word": "small quantity",
+      "meaning": "小数量"
+    },
+    {
+      "day": 15,
+      "file": "day-15.json",
+      "title": "低数量、小订单和试单谈判",
+      "word": "below MOQ",
+      "meaning": "低于最小起订量"
+    },
+    {
+      "day": 15,
+      "file": "day-15.json",
+      "title": "低数量、小订单和试单谈判",
+      "word": "higher unit price",
+      "meaning": "更高单价"
+    },
+    {
+      "day": 15,
+      "file": "day-15.json",
+      "title": "低数量、小订单和试单谈判",
+      "word": "stock option",
+      "meaning": "库存方案 / 现货选项"
+    },
+    {
+      "day": 15,
+      "file": "day-15.json",
+      "title": "低数量、小订单和试单谈判",
+      "word": "mixed order",
+      "meaning": "混合订单 / 混款订单"
+    },
+    {
+      "day": 15,
+      "file": "day-15.json",
+      "title": "低数量、小订单和试单谈判",
+      "word": "repeat order",
+      "meaning": "复购订单 / 返单"
+    },
+    {
+      "day": 15,
+      "file": "day-15.json",
+      "title": "低数量、小订单和试单谈判",
+      "word": "price break",
+      "meaning": "价格阶梯 / 数量折扣点"
+    },
+    {
+      "day": 16,
+      "file": "day-16.json",
+      "title": "生产前最终确认",
+      "word": "final confirmation",
+      "meaning": "最终确认"
+    },
+    {
+      "day": 16,
+      "file": "day-16.json",
+      "title": "生产前最终确认",
+      "word": "order summary",
+      "meaning": "订单摘要 / 订单汇总"
+    },
+    {
+      "day": 16,
+      "file": "day-16.json",
+      "title": "生产前最终确认",
+      "word": "production details",
+      "meaning": "生产细节"
+    },
+    {
+      "day": 16,
+      "file": "day-16.json",
+      "title": "生产前最终确认",
+      "word": "approved artwork",
+      "meaning": "已确认的设计稿 / 已批准的图稿"
+    },
+    {
+      "day": 16,
+      "file": "day-16.json",
+      "title": "生产前最终确认",
+      "word": "packing method",
+      "meaning": "包装方式"
+    },
+    {
+      "day": 16,
+      "file": "day-16.json",
+      "title": "生产前最终确认",
+      "word": "shipping mark confirmation",
+      "meaning": "唛头确认"
+    },
+    {
+      "day": 16,
+      "file": "day-16.json",
+      "title": "生产前最终确认",
+      "word": "payment confirmation",
+      "meaning": "付款确认 / 到账确认"
+    },
+    {
+      "day": 16,
+      "file": "day-16.json",
+      "title": "生产前最终确认",
+      "word": "production start",
+      "meaning": "开始生产 / 开产"
+    },
+    {
+      "day": 17,
+      "file": "day-17.json",
+      "title": "客户催单和紧急订单",
+      "word": "urgent order",
+      "meaning": "紧急订单"
+    },
+    {
+      "day": 17,
+      "file": "day-17.json",
+      "title": "客户催单和紧急订单",
+      "word": "push factory",
+      "meaning": "催工厂 / 推动工厂"
+    },
+    {
+      "day": 17,
+      "file": "day-17.json",
+      "title": "客户催单和紧急订单",
+      "word": "fastest schedule",
+      "meaning": "最快排期"
+    },
+    {
+      "day": 17,
+      "file": "day-17.json",
+      "title": "客户催单和紧急订单",
+      "word": "expedite",
+      "meaning": "加急处理 / 加快"
+    },
+    {
+      "day": 17,
+      "file": "day-17.json",
+      "title": "客户催单和紧急订单",
+      "word": "priority",
+      "meaning": "优先事项 / 优先级"
+    },
+    {
+      "day": 17,
+      "file": "day-17.json",
+      "title": "客户催单和紧急订单",
+      "word": "rush production",
+      "meaning": "赶工生产 / 加急生产"
+    },
+    {
+      "day": 17,
+      "file": "day-17.json",
+      "title": "客户催单和紧急订单",
+      "word": "realistic timeline",
+      "meaning": "现实可行的时间线"
+    },
+    {
+      "day": 17,
+      "file": "day-17.json",
+      "title": "客户催单和紧急订单",
+      "word": "keep you posted",
+      "meaning": "持续告知你进展"
+    },
+    {
+      "day": 18,
+      "file": "day-18.json",
+      "title": "生产延误的专业解释",
+      "word": "material delay",
+      "meaning": "材料延误 / 材料到货晚"
+    },
+    {
+      "day": 18,
+      "file": "day-18.json",
+      "title": "生产延误的专业解释",
+      "word": "machine issue",
+      "meaning": "机器问题 / 设备问题"
+    },
+    {
+      "day": 18,
+      "file": "day-18.json",
+      "title": "生产延误的专业解释",
+      "word": "quality rework",
+      "meaning": "质量返工"
+    },
+    {
+      "day": 18,
+      "file": "day-18.json",
+      "title": "生产延误的专业解释",
+      "word": "root cause",
+      "meaning": "根本原因"
+    },
+    {
+      "day": 18,
+      "file": "day-18.json",
+      "title": "生产延误的专业解释",
+      "word": "impact",
+      "meaning": "影响"
+    },
+    {
+      "day": 18,
+      "file": "day-18.json",
+      "title": "生产延误的专业解释",
+      "word": "revised timeline",
+      "meaning": "更新后的时间线"
+    },
+    {
+      "day": 18,
+      "file": "day-18.json",
+      "title": "生产延误的专业解释",
+      "word": "catch up",
+      "meaning": "赶上进度 / 追回进度"
+    },
+    {
+      "day": 18,
+      "file": "day-18.json",
+      "title": "生产延误的专业解释",
+      "word": "recovery plan",
+      "meaning": "补救计划 / 追赶计划"
+    },
+    {
+      "day": 19,
+      "file": "day-19.json",
+      "title": "返工、重做和质量复检",
+      "word": "rework",
+      "meaning": "返工"
+    },
+    {
+      "day": 19,
+      "file": "day-19.json",
+      "title": "返工、重做和质量复检",
+      "word": "reprocessing",
+      "meaning": "重新处理 / 再加工"
+    },
+    {
+      "day": 19,
+      "file": "day-19.json",
+      "title": "返工、重做和质量复检",
+      "word": "recheck",
+      "meaning": "复检 / 重新检查"
+    },
+    {
+      "day": 19,
+      "file": "day-19.json",
+      "title": "返工、重做和质量复检",
+      "word": "quality control",
+      "meaning": "质量控制"
+    },
+    {
+      "day": 19,
+      "file": "day-19.json",
+      "title": "返工、重做和质量复检",
+      "word": "nonconforming goods",
+      "meaning": "不合格品 / 不符合要求的货物"
+    },
+    {
+      "day": 19,
+      "file": "day-19.json",
+      "title": "返工、重做和质量复检",
+      "word": "sorting",
+      "meaning": "筛选 / 分拣"
+    },
+    {
+      "day": 19,
+      "file": "day-19.json",
+      "title": "返工、重做和质量复检",
+      "word": "corrective action",
+      "meaning": "纠正措施"
+    },
+    {
+      "day": 19,
+      "file": "day-19.json",
+      "title": "返工、重做和质量复检",
+      "word": "quality standard",
+      "meaning": "质量标准"
+    },
+    {
+      "day": 20,
+      "file": "day-20.json",
+      "title": "出货前照片、视频和验货报告",
+      "word": "pre-shipment inspection",
+      "meaning": "出货前验货"
+    },
+    {
+      "day": 20,
+      "file": "day-20.json",
+      "title": "出货前照片、视频和验货报告",
+      "word": "inspection report",
+      "meaning": "验货报告"
+    },
+    {
+      "day": 20,
+      "file": "day-20.json",
+      "title": "出货前照片、视频和验货报告",
+      "word": "photo confirmation",
+      "meaning": "照片确认"
+    },
+    {
+      "day": 20,
+      "file": "day-20.json",
+      "title": "出货前照片、视频和验货报告",
+      "word": "video confirmation",
+      "meaning": "视频确认"
+    },
+    {
+      "day": 20,
+      "file": "day-20.json",
+      "title": "出货前照片、视频和验货报告",
+      "word": "packing photos",
+      "meaning": "包装照片"
+    },
+    {
+      "day": 20,
+      "file": "day-20.json",
+      "title": "出货前照片、视频和验货报告",
+      "word": "carton label",
+      "meaning": "外箱标签"
+    },
+    {
+      "day": 20,
+      "file": "day-20.json",
+      "title": "出货前照片、视频和验货报告",
+      "word": "final check",
+      "meaning": "最终检查"
+    },
+    {
+      "day": 20,
+      "file": "day-20.json",
+      "title": "出货前照片、视频和验货报告",
+      "word": "shipment release",
+      "meaning": "放行出货 / 出货放行"
+    },
+    {
+      "day": 21,
+      "file": "day-21.json",
+      "title": "付款凭证、到账和财务审核",
+      "word": "payment receipt",
+      "meaning": "付款凭证 / 收款凭证"
+    },
+    {
+      "day": 21,
+      "file": "day-21.json",
+      "title": "付款凭证、到账和财务审核",
+      "word": "bank review",
+      "meaning": "银行审核 / 银行处理中"
+    },
+    {
+      "day": 21,
+      "file": "day-21.json",
+      "title": "付款凭证、到账和财务审核",
+      "word": "finance confirmation",
+      "meaning": "财务确认"
+    },
+    {
+      "day": 21,
+      "file": "day-21.json",
+      "title": "付款凭证、到账和财务审核",
+      "word": "remittance slip",
+      "meaning": "汇款单 / 转账水单"
+    },
+    {
+      "day": 21,
+      "file": "day-21.json",
+      "title": "付款凭证、到账和财务审核",
+      "word": "transaction record",
+      "meaning": "交易记录"
+    },
+    {
+      "day": 21,
+      "file": "day-21.json",
+      "title": "付款凭证、到账和财务审核",
+      "word": "received amount",
+      "meaning": "到账金额 / 实收金额"
+    },
+    {
+      "day": 21,
+      "file": "day-21.json",
+      "title": "付款凭证、到账和财务审核",
+      "word": "bank fee",
+      "meaning": "银行手续费"
+    },
+    {
+      "day": 21,
+      "file": "day-21.json",
+      "title": "付款凭证、到账和财务审核",
+      "word": "pending payment",
+      "meaning": "待处理付款 / 未到账付款"
+    },
+    {
+      "day": 22,
+      "file": "day-22.json",
+      "title": "尾款、发货前付款和付款提醒",
+      "word": "balance payment",
+      "meaning": "尾款"
+    },
+    {
+      "day": 22,
+      "file": "day-22.json",
+      "title": "尾款、发货前付款和付款提醒",
+      "word": "payment reminder",
+      "meaning": "付款提醒"
+    },
+    {
+      "day": 22,
+      "file": "day-22.json",
+      "title": "尾款、发货前付款和付款提醒",
+      "word": "before shipment",
+      "meaning": "发货前"
+    },
+    {
+      "day": 22,
+      "file": "day-22.json",
+      "title": "尾款、发货前付款和付款提醒",
+      "word": "credit term",
+      "meaning": "账期 / 信用付款条件"
+    },
+    {
+      "day": 22,
+      "file": "day-22.json",
+      "title": "尾款、发货前付款和付款提醒",
+      "word": "release goods",
+      "meaning": "放货 / 放行货物"
+    },
+    {
+      "day": 22,
+      "file": "day-22.json",
+      "title": "尾款、发货前付款和付款提醒",
+      "word": "payment deadline",
+      "meaning": "付款截止时间"
+    },
+    {
+      "day": 22,
+      "file": "day-22.json",
+      "title": "尾款、发货前付款和付款提醒",
+      "word": "overdue payment",
+      "meaning": "逾期付款"
+    },
+    {
+      "day": 22,
+      "file": "day-22.json",
+      "title": "尾款、发货前付款和付款提醒",
+      "word": "settle payment",
+      "meaning": "结清付款 / 付清款项"
+    },
+    {
+      "day": 23,
+      "file": "day-23.json",
+      "title": "发票、装箱单和清关文件",
+      "word": "invoice",
+      "meaning": "发票"
+    },
+    {
+      "day": 23,
+      "file": "day-23.json",
+      "title": "发票、装箱单和清关文件",
+      "word": "packing list",
+      "meaning": "装箱单"
+    },
+    {
+      "day": 23,
+      "file": "day-23.json",
+      "title": "发票、装箱单和清关文件",
+      "word": "HS code",
+      "meaning": "海关编码"
+    },
+    {
+      "day": 23,
+      "file": "day-23.json",
+      "title": "发票、装箱单和清关文件",
+      "word": "declared value",
+      "meaning": "申报价值"
+    },
+    {
+      "day": 23,
+      "file": "day-23.json",
+      "title": "发票、装箱单和清关文件",
+      "word": "customs documents",
+      "meaning": "清关文件"
+    },
+    {
+      "day": 23,
+      "file": "day-23.json",
+      "title": "发票、装箱单和清关文件",
+      "word": "consignee",
+      "meaning": "收货人 / 提单收货方"
+    },
+    {
+      "day": 23,
+      "file": "day-23.json",
+      "title": "发票、装箱单和清关文件",
+      "word": "product description",
+      "meaning": "产品描述"
+    },
+    {
+      "day": 23,
+      "file": "day-23.json",
+      "title": "发票、装箱单和清关文件",
+      "word": "document revision",
+      "meaning": "文件修改 / 单据修改"
+    },
+    {
+      "day": 24,
+      "file": "day-24.json",
+      "title": "银行信息、付款错误和退款路径",
+      "word": "beneficiary account",
+      "meaning": "收款账户"
+    },
+    {
+      "day": 24,
+      "file": "day-24.json",
+      "title": "银行信息、付款错误和退款路径",
+      "word": "account name",
+      "meaning": "账户名称 / 户名"
+    },
+    {
+      "day": 24,
+      "file": "day-24.json",
+      "title": "银行信息、付款错误和退款路径",
+      "word": "SWIFT code",
+      "meaning": "银行国际代码"
+    },
+    {
+      "day": 24,
+      "file": "day-24.json",
+      "title": "银行信息、付款错误和退款路径",
+      "word": "wrong payment",
+      "meaning": "错误付款 / 付款错误"
+    },
+    {
+      "day": 24,
+      "file": "day-24.json",
+      "title": "银行信息、付款错误和退款路径",
+      "word": "refund request",
+      "meaning": "退款申请 / 退款请求"
+    },
+    {
+      "day": 24,
+      "file": "day-24.json",
+      "title": "银行信息、付款错误和退款路径",
+      "word": "deduction",
+      "meaning": "扣款 / 扣除"
+    },
+    {
+      "day": 24,
+      "file": "day-24.json",
+      "title": "银行信息、付款错误和退款路径",
+      "word": "payment correction",
+      "meaning": "付款更正 / 付款修正"
+    },
+    {
+      "day": 24,
+      "file": "day-24.json",
+      "title": "银行信息、付款错误和退款路径",
+      "word": "transfer mistake",
+      "meaning": "转账错误"
+    },
+    {
+      "day": 25,
+      "file": "day-25.json",
+      "title": "货代仓库、提货和截仓时间",
+      "word": "pickup",
+      "meaning": "提货 / 上门取货"
+    },
+    {
+      "day": 25,
+      "file": "day-25.json",
+      "title": "货代仓库、提货和截仓时间",
+      "word": "cut-off time",
+      "meaning": "截仓时间 / 截止入仓时间"
+    },
+    {
+      "day": 25,
+      "file": "day-25.json",
+      "title": "货代仓库、提货和截仓时间",
+      "word": "warehouse address",
+      "meaning": "仓库地址"
+    },
+    {
+      "day": 25,
+      "file": "day-25.json",
+      "title": "货代仓库、提货和截仓时间",
+      "word": "factory pickup",
+      "meaning": "工厂提货"
+    },
+    {
+      "day": 25,
+      "file": "day-25.json",
+      "title": "货代仓库、提货和截仓时间",
+      "word": "delivery note",
+      "meaning": "送货单 / 交货单"
+    },
+    {
+      "day": 25,
+      "file": "day-25.json",
+      "title": "货代仓库、提货和截仓时间",
+      "word": "loading time",
+      "meaning": "装货时间"
+    },
+    {
+      "day": 25,
+      "file": "day-25.json",
+      "title": "货代仓库、提货和截仓时间",
+      "word": "handover",
+      "meaning": "交接 / 移交"
+    },
+    {
+      "day": 25,
+      "file": "day-25.json",
+      "title": "货代仓库、提货和截仓时间",
+      "word": "warehouse receipt",
+      "meaning": "仓库收货凭证"
+    },
+    {
+      "day": 26,
+      "file": "day-26.json",
+      "title": "物流延误、清关问题和跟踪更新",
+      "word": "delayed shipment",
+      "meaning": "延误的货件 / 运输延误"
+    },
+    {
+      "day": 26,
+      "file": "day-26.json",
+      "title": "物流延误、清关问题和跟踪更新",
+      "word": "customs hold",
+      "meaning": "海关暂扣 / 清关卡住"
+    },
+    {
+      "day": 26,
+      "file": "day-26.json",
+      "title": "物流延误、清关问题和跟踪更新",
+      "word": "tracking update",
+      "meaning": "物流跟踪更新"
+    },
+    {
+      "day": 26,
+      "file": "day-26.json",
+      "title": "物流延误、清关问题和跟踪更新",
+      "word": "in transit",
+      "meaning": "运输中"
+    },
+    {
+      "day": 26,
+      "file": "day-26.json",
+      "title": "物流延误、清关问题和跟踪更新",
+      "word": "clearance status",
+      "meaning": "清关状态"
+    },
+    {
+      "day": 26,
+      "file": "day-26.json",
+      "title": "物流延误、清关问题和跟踪更新",
+      "word": "estimated arrival",
+      "meaning": "预计到达时间"
+    },
+    {
+      "day": 26,
+      "file": "day-26.json",
+      "title": "物流延误、清关问题和跟踪更新",
+      "word": "carrier",
+      "meaning": "承运商 / 运输公司"
+    },
+    {
+      "day": 26,
+      "file": "day-26.json",
+      "title": "物流延误、清关问题和跟踪更新",
+      "word": "delivery exception",
+      "meaning": "派送异常"
+    },
+    {
+      "day": 27,
+      "file": "day-27.json",
+      "title": "到货后反馈、破损和缺件处理",
+      "word": "damaged goods",
+      "meaning": "破损货物"
+    },
+    {
+      "day": 27,
+      "file": "day-27.json",
+      "title": "到货后反馈、破损和缺件处理",
+      "word": "missing items",
+      "meaning": "缺少的物品 / 缺件"
+    },
+    {
+      "day": 27,
+      "file": "day-27.json",
+      "title": "到货后反馈、破损和缺件处理",
+      "word": "short delivery",
+      "meaning": "少发 / 少交货"
+    },
+    {
+      "day": 27,
+      "file": "day-27.json",
+      "title": "到货后反馈、破损和缺件处理",
+      "word": "arrival feedback",
+      "meaning": "到货反馈"
+    },
+    {
+      "day": 27,
+      "file": "day-27.json",
+      "title": "到货后反馈、破损和缺件处理",
+      "word": "unboxing photos",
+      "meaning": "开箱照片"
+    },
+    {
+      "day": 27,
+      "file": "day-27.json",
+      "title": "到货后反馈、破损和缺件处理",
+      "word": "claim process",
+      "meaning": "索赔流程 / 售后处理流程"
+    },
+    {
+      "day": 27,
+      "file": "day-27.json",
+      "title": "到货后反馈、破损和缺件处理",
+      "word": "compensation",
+      "meaning": "赔偿 / 补偿"
+    },
+    {
+      "day": 27,
+      "file": "day-27.json",
+      "title": "到货后反馈、破损和缺件处理",
+      "word": "resend",
+      "meaning": "重新寄出 / 补发"
+    },
+    {
+      "day": 28,
+      "file": "day-28.json",
+      "title": "价格谈判和让步边界",
+      "word": "best price request",
+      "meaning": "最低价请求 / 最优价请求"
+    },
+    {
+      "day": 28,
+      "file": "day-28.json",
+      "title": "价格谈判和让步边界",
+      "word": "competitor offer",
+      "meaning": "竞争对手报价"
+    },
+    {
+      "day": 28,
+      "file": "day-28.json",
+      "title": "价格谈判和让步边界",
+      "word": "bulk pricing",
+      "meaning": "大批量价格"
+    },
+    {
+      "day": 28,
+      "file": "day-28.json",
+      "title": "价格谈判和让步边界",
+      "word": "price match",
+      "meaning": "匹配价格 / 对标价格"
+    },
+    {
+      "day": 28,
+      "file": "day-28.json",
+      "title": "价格谈判和让步边界",
+      "word": "final offer",
+      "meaning": "最终报价"
+    },
+    {
+      "day": 28,
+      "file": "day-28.json",
+      "title": "价格谈判和让步边界",
+      "word": "cost sharing",
+      "meaning": "费用分摊"
+    },
+    {
+      "day": 28,
+      "file": "day-28.json",
+      "title": "价格谈判和让步边界",
+      "word": "free sample request",
+      "meaning": "免费样品请求"
+    },
+    {
+      "day": 28,
+      "file": "day-28.json",
+      "title": "价格谈判和让步边界",
+      "word": "concession",
+      "meaning": "让步 / 妥协条件"
+    },
+    {
+      "day": 29,
+      "file": "day-29.json",
+      "title": "长期客户跟进和订单推进",
+      "word": "follow-up",
+      "meaning": "跟进"
+    },
+    {
+      "day": 29,
+      "file": "day-29.json",
+      "title": "长期客户跟进和订单推进",
+      "word": "quotation follow-up",
+      "meaning": "报价跟进"
+    },
+    {
+      "day": 29,
+      "file": "day-29.json",
+      "title": "长期客户跟进和订单推进",
+      "word": "sample feedback",
+      "meaning": "样品反馈"
+    },
+    {
+      "day": 29,
+      "file": "day-29.json",
+      "title": "长期客户跟进和订单推进",
+      "word": "decision timeline",
+      "meaning": "决策时间线"
+    },
+    {
+      "day": 29,
+      "file": "day-29.json",
+      "title": "长期客户跟进和订单推进",
+      "word": "next step",
+      "meaning": "下一步"
+    },
+    {
+      "day": 29,
+      "file": "day-29.json",
+      "title": "长期客户跟进和订单推进",
+      "word": "pending decision",
+      "meaning": "待定决定 / 尚未决定"
+    },
+    {
+      "day": 29,
+      "file": "day-29.json",
+      "title": "长期客户跟进和订单推进",
+      "word": "gentle reminder",
+      "meaning": "礼貌提醒 / 温和提醒"
+    },
+    {
+      "day": 29,
+      "file": "day-29.json",
+      "title": "长期客户跟进和订单推进",
+      "word": "reconnect",
+      "meaning": "重新联系 / 恢复沟通"
+    },
+    {
+      "day": 30,
+      "file": "day-30.json",
+      "title": "综合实战复盘：从询价到售后完整订单",
+      "word": "order lifecycle",
+      "meaning": "订单生命周期 / 订单完整流程"
+    },
+    {
+      "day": 30,
+      "file": "day-30.json",
+      "title": "综合实战复盘：从询价到售后完整订单",
+      "word": "project recap",
+      "meaning": "项目复盘 / 项目阶段总结"
+    },
+    {
+      "day": 30,
+      "file": "day-30.json",
+      "title": "综合实战复盘：从询价到售后完整订单",
+      "word": "requirement summary",
+      "meaning": "需求总结"
+    },
+    {
+      "day": 30,
+      "file": "day-30.json",
+      "title": "综合实战复盘：从询价到售后完整订单",
+      "word": "commercial terms",
+      "meaning": "商务条款"
+    },
+    {
+      "day": 30,
+      "file": "day-30.json",
+      "title": "综合实战复盘：从询价到售后完整订单",
+      "word": "approval chain",
+      "meaning": "审批链 / 内部审批流程"
+    },
+    {
+      "day": 30,
+      "file": "day-30.json",
+      "title": "综合实战复盘：从询价到售后完整订单",
+      "word": "shipment follow-through",
+      "meaning": "出货后续跟进"
+    },
+    {
+      "day": 30,
+      "file": "day-30.json",
+      "title": "综合实战复盘：从询价到售后完整订单",
+      "word": "after-sales handling",
+      "meaning": "售后处理"
+    },
+    {
+      "day": 30,
+      "file": "day-30.json",
+      "title": "综合实战复盘：从询价到售后完整订单",
+      "word": "final recap",
+      "meaning": "最终复盘 / 最终总结"
+    }
+  ],
+  "wordList": [
+    "check",
+    "confirm",
+    "update",
+    "arrange",
+    "moment",
+    "factory",
+    "accordingly",
+    "question",
+    "quantity",
+    "color",
+    "size",
+    "material",
+    "specification",
+    "available",
+    "sample",
+    "details",
+    "MOQ",
+    "stock",
+    "sample cost",
+    "lead time",
+    "production",
+    "shipping cost",
+    "customized",
+    "approval",
+    "quotation",
+    "unit price",
+    "payment terms",
+    "deposit",
+    "balance",
+    "PI",
+    "bank information",
+    "valid",
+    "packaging",
+    "carton",
+    "carton size",
+    "gross weight",
+    "net weight",
+    "shipping mark",
+    "label",
+    "fragile",
+    "courier",
+    "air freight",
+    "sea freight",
+    "destination port",
+    "tracking number",
+    "customs clearance",
+    "delivery address",
+    "freight forwarder",
+    "schedule",
+    "progress",
+    "delay",
+    "inspection",
+    "completion",
+    "ready date",
+    "dispatch",
+    "on time",
+    "out of stock",
+    "substitute",
+    "alternative",
+    "restock",
+    "backorder",
+    "shortage",
+    "option",
+    "recommend",
+    "revise",
+    "change request",
+    "adjustment",
+    "original",
+    "requirement",
+    "affect",
+    "extra cost",
+    "deadline",
+    "complaint",
+    "issue",
+    "defect",
+    "scratch",
+    "missing piece",
+    "evidence",
+    "replacement",
+    "solution",
+    "price difference",
+    "increase",
+    "raw material",
+    "exchange rate",
+    "discount",
+    "margin",
+    "target price",
+    "negotiation",
+    "mold cost",
+    "mold making",
+    "mold ownership",
+    "refund policy",
+    "tooling",
+    "cavity",
+    "prototype",
+    "exclusive",
+    "sample approval",
+    "sample revision",
+    "pre-production sample",
+    "feedback",
+    "modification",
+    "reference photo",
+    "final version",
+    "proceed",
+    "finish",
+    "matte",
+    "glossy",
+    "engraving",
+    "printing",
+    "Pantone",
+    "color matching",
+    "swatch",
+    "trial order",
+    "small quantity",
+    "below MOQ",
+    "higher unit price",
+    "stock option",
+    "mixed order",
+    "repeat order",
+    "price break",
+    "final confirmation",
+    "order summary",
+    "production details",
+    "approved artwork",
+    "packing method",
+    "shipping mark confirmation",
+    "payment confirmation",
+    "production start",
+    "urgent order",
+    "push factory",
+    "fastest schedule",
+    "expedite",
+    "priority",
+    "rush production",
+    "realistic timeline",
+    "keep you posted",
+    "material delay",
+    "machine issue",
+    "quality rework",
+    "root cause",
+    "impact",
+    "revised timeline",
+    "catch up",
+    "recovery plan",
+    "rework",
+    "reprocessing",
+    "recheck",
+    "quality control",
+    "nonconforming goods",
+    "sorting",
+    "corrective action",
+    "quality standard",
+    "pre-shipment inspection",
+    "inspection report",
+    "photo confirmation",
+    "video confirmation",
+    "packing photos",
+    "carton label",
+    "final check",
+    "shipment release",
+    "payment receipt",
+    "bank review",
+    "finance confirmation",
+    "remittance slip",
+    "transaction record",
+    "received amount",
+    "bank fee",
+    "pending payment",
+    "balance payment",
+    "payment reminder",
+    "before shipment",
+    "credit term",
+    "release goods",
+    "payment deadline",
+    "overdue payment",
+    "settle payment",
+    "invoice",
+    "packing list",
+    "HS code",
+    "declared value",
+    "customs documents",
+    "consignee",
+    "product description",
+    "document revision",
+    "beneficiary account",
+    "account name",
+    "SWIFT code",
+    "wrong payment",
+    "refund request",
+    "deduction",
+    "payment correction",
+    "transfer mistake",
+    "pickup",
+    "cut-off time",
+    "warehouse address",
+    "factory pickup",
+    "delivery note",
+    "loading time",
+    "handover",
+    "warehouse receipt",
+    "delayed shipment",
+    "customs hold",
+    "tracking update",
+    "in transit",
+    "clearance status",
+    "estimated arrival",
+    "carrier",
+    "delivery exception",
+    "damaged goods",
+    "missing items",
+    "short delivery",
+    "arrival feedback",
+    "unboxing photos",
+    "claim process",
+    "compensation",
+    "resend",
+    "best price request",
+    "competitor offer",
+    "bulk pricing",
+    "price match",
+    "final offer",
+    "cost sharing",
+    "free sample request",
+    "concession",
+    "follow-up",
+    "quotation follow-up",
+    "sample feedback",
+    "decision timeline",
+    "next step",
+    "pending decision",
+    "gentle reminder",
+    "reconnect",
+    "order lifecycle",
+    "project recap",
+    "requirement summary",
+    "commercial terms",
+    "approval chain",
+    "shipment follow-through",
+    "after-sales handling",
+    "final recap"
+  ],
+  "wordsText": "check\nconfirm\nupdate\narrange\nmoment\nfactory\naccordingly\nquestion\nquantity\ncolor\nsize\nmaterial\nspecification\navailable\nsample\ndetails\nMOQ\nstock\nsample cost\nlead time\nproduction\nshipping cost\ncustomized\napproval\nquotation\nunit price\npayment terms\ndeposit\nbalance\nPI\nbank information\nvalid\npackaging\ncarton\ncarton size\ngross weight\nnet weight\nshipping mark\nlabel\nfragile\ncourier\nair freight\nsea freight\ndestination port\ntracking number\ncustoms clearance\ndelivery address\nfreight forwarder\nschedule\nprogress\ndelay\ninspection\ncompletion\nready date\ndispatch\non time\nout of stock\nsubstitute\nalternative\nrestock\nbackorder\nshortage\noption\nrecommend\nrevise\nchange request\nadjustment\noriginal\nrequirement\naffect\nextra cost\ndeadline\ncomplaint\nissue\ndefect\nscratch\nmissing piece\nevidence\nreplacement\nsolution\nprice difference\nincrease\nraw material\nexchange rate\ndiscount\nmargin\ntarget price\nnegotiation\nmold cost\nmold making\nmold ownership\nrefund policy\ntooling\ncavity\nprototype\nexclusive\nsample approval\nsample revision\npre-production sample\nfeedback\nmodification\nreference photo\nfinal version\nproceed\nfinish\nmatte\nglossy\nengraving\nprinting\nPantone\ncolor matching\nswatch\ntrial order\nsmall quantity\nbelow MOQ\nhigher unit price\nstock option\nmixed order\nrepeat order\nprice break\nfinal confirmation\norder summary\nproduction details\napproved artwork\npacking method\nshipping mark confirmation\npayment confirmation\nproduction start\nurgent order\npush factory\nfastest schedule\nexpedite\npriority\nrush production\nrealistic timeline\nkeep you posted\nmaterial delay\nmachine issue\nquality rework\nroot cause\nimpact\nrevised timeline\ncatch up\nrecovery plan\nrework\nreprocessing\nrecheck\nquality control\nnonconforming goods\nsorting\ncorrective action\nquality standard\npre-shipment inspection\ninspection report\nphoto confirmation\nvideo confirmation\npacking photos\ncarton label\nfinal check\nshipment release\npayment receipt\nbank review\nfinance confirmation\nremittance slip\ntransaction record\nreceived amount\nbank fee\npending payment\nbalance payment\npayment reminder\nbefore shipment\ncredit term\nrelease goods\npayment deadline\noverdue payment\nsettle payment\ninvoice\npacking list\nHS code\ndeclared value\ncustoms documents\nconsignee\nproduct description\ndocument revision\nbeneficiary account\naccount name\nSWIFT code\nwrong payment\nrefund request\ndeduction\npayment correction\ntransfer mistake\npickup\ncut-off time\nwarehouse address\nfactory pickup\ndelivery note\nloading time\nhandover\nwarehouse receipt\ndelayed shipment\ncustoms hold\ntracking update\nin transit\nclearance status\nestimated arrival\ncarrier\ndelivery exception\ndamaged goods\nmissing items\nshort delivery\narrival feedback\nunboxing photos\nclaim process\ncompensation\nresend\nbest price request\ncompetitor offer\nbulk pricing\nprice match\nfinal offer\ncost sharing\nfree sample request\nconcession\nfollow-up\nquotation follow-up\nsample feedback\ndecision timeline\nnext step\npending decision\ngentle reminder\nreconnect\norder lifecycle\nproject recap\nrequirement summary\ncommercial terms\napproval chain\nshipment follow-through\nafter-sales handling\nfinal recap",
+  "duplicates": []
+}

@@ -1,0 +1,410 @@
+{
+  "day": 3,
+  "title": "回复 MOQ、样品和交期",
+  "theme": "从 MOQ / sample cost / lead time 开始",
+  "durationMinutes": 30,
+  "goals": [
+    "能解释 MOQ、样品费和交期，不让回复显得生硬",
+    "客户想少量下单时，能给出可执行的替代方案",
+    "能在确认规格后，把报价、样品和生产时间自然连接起来"
+  ],
+  "review": {
+    "title": "Day 02 复习",
+    "items": [
+      "昨天练了确认 quantity、color、size、material 和 specification。",
+      "今天继续练确认后的下一步：MOQ、样品、交期和付款前信息。",
+      "客户问价格时，不只给价格，还要说明 MOQ、样品费和生产时间。"
+    ]
+  },
+  "preview": {
+    "scenario": "客户已经提供基本规格，现在开始追问最小起订量、样品费用、样品时间和大货交期。",
+    "needToKnow": [
+      "MOQ 是 minimum order quantity，回复时要说明数量和原因。",
+      "sample cost 不只是样品价格，还可能包含 logo、模具或快递费用。",
+      "lead time 要区分 sample lead time 和 bulk production lead time。"
+    ]
+  },
+  "vocabulary": [
+    {
+      "word": "MOQ",
+      "phonetic": "/ˌem oʊ ˈkjuː/",
+      "meaning": "最小起订量",
+      "usage": "说明工厂可接受的最低订单数量。",
+      "example": "Our MOQ for this item is 1,000 pieces."
+    },
+    {
+      "word": "stock",
+      "phonetic": "/stɑːk/",
+      "meaning": "库存 / 现货",
+      "usage": "客户想少量下单时，用来说明是否有现货可卖。",
+      "example": "I can check if we have available stock for you."
+    },
+    {
+      "word": "sample cost",
+      "phonetic": "/ˈsæmpəl kɔːst/",
+      "meaning": "样品费",
+      "usage": "说明样品本身费用，不一定包含运费。",
+      "example": "The sample cost is 50 dollars, excluding shipping cost."
+    },
+    {
+      "word": "lead time",
+      "phonetic": "/ˈliːd taɪm/",
+      "meaning": "交期 / 生产周期",
+      "usage": "说明样品或大货需要多少时间完成。",
+      "example": "The production lead time is about 20 days after payment."
+    },
+    {
+      "word": "production",
+      "phonetic": "/prəˈdʌkʃən/",
+      "meaning": "生产",
+      "usage": "用于大货生产、生产时间和生产安排。",
+      "example": "We will start production after confirming the payment."
+    },
+    {
+      "word": "shipping cost",
+      "phonetic": "/ˈʃɪpɪŋ kɔːst/",
+      "meaning": "运费",
+      "usage": "说明快递、空运或海运费用。",
+      "example": "Please confirm your address so we can check the shipping cost."
+    },
+    {
+      "word": "customized",
+      "phonetic": "/ˈkʌstəmaɪzd/",
+      "meaning": "定制的",
+      "usage": "说明带 logo、特殊颜色、特殊包装等定制要求。",
+      "example": "For customized logo, the MOQ may be higher."
+    },
+    {
+      "word": "approval",
+      "phonetic": "/əˈpruːvəl/",
+      "meaning": "批准 / 确认通过",
+      "usage": "用于样品确认通过后，再安排大货生产。",
+      "example": "We will arrange bulk production after sample approval."
+    }
+  ],
+  "sentences": [
+    {
+      "label": "说明 MOQ",
+      "basic": "MOQ is 1,000 pieces.",
+      "natural": "Our MOQ for this item is 1,000 pieces.",
+      "business": "For this item, our MOQ is 1,000 pieces because the factory needs to arrange production materials."
+    },
+    {
+      "label": "客户想少量",
+      "basic": "Small quantity no.",
+      "natural": "A smaller quantity may be difficult for production.",
+      "business": "A smaller quantity may be difficult for production, but I can check if we have any available stock for you."
+    },
+    {
+      "label": "说明样品费",
+      "basic": "Sample cost 50 dollars.",
+      "natural": "The sample cost is 50 dollars.",
+      "business": "The sample cost is 50 dollars, excluding shipping cost. I can check the shipping cost after you confirm the delivery address."
+    },
+    {
+      "label": "说明样品时间",
+      "basic": "Sample needs 7 days.",
+      "natural": "The sample lead time is about 7 days.",
+      "business": "The sample lead time is about 7 days after we confirm the sample details and payment."
+    },
+    {
+      "label": "说明大货交期",
+      "basic": "Production time is 20 days.",
+      "natural": "The production lead time is about 20 days.",
+      "business": "The bulk production lead time is about 20 days after sample approval and deposit payment."
+    }
+  ],
+  "chatAnalysis": [
+    {
+      "old": "MOQ 1000",
+      "problem": "太短，客户不知道这是规则、建议还是最终限制。",
+      "better": "Our MOQ is 1,000 pieces.",
+      "upgrade": "For this item, our MOQ is 1,000 pieces. If you need a smaller quantity, I can check available stock for you."
+    },
+    {
+      "old": "sample cost not free",
+      "problem": "语气直接，容易让客户觉得不友好。",
+      "better": "The sample is not free for this item.",
+      "upgrade": "For this customized item, there is a sample cost. I can confirm the exact sample cost and shipping cost for you."
+    },
+    {
+      "old": "delivery 20 days",
+      "problem": "delivery 容易被理解成运输时间，不等于生产交期。",
+      "better": "The production lead time is about 20 days.",
+      "upgrade": "The bulk production lead time is about 20 days after sample approval and deposit payment."
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "慢速基础版：客户问 MOQ",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "What is the MOQ for this item?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Our MOQ for this item is 1,000 pieces."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can we order 500 pieces first?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Let me check if we have available stock for a smaller quantity."
+        }
+      ]
+    },
+    {
+      "title": "正常商务版：客户问样品和运费",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Can you arrange a sample first?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. The sample cost is 50 dollars, excluding shipping cost."
+        },
+        {
+          "speaker": "Customer",
+          "text": "How can you check the shipping cost?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Please confirm your delivery address, and I will check the shipping cost for you."
+        }
+      ]
+    },
+    {
+      "title": "压力场景版：客户催交期",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Can you finish production in 10 days?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "For this customized order, 10 days may be difficult."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We really need it urgently."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand. I will check the fastest lead time with our factory and update you today."
+        }
+      ]
+    }
+  ],
+  "longDialogues": [
+    {
+      "title": "长对话实战：从 MOQ 到样品、交期和付款前确认",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Hi, we like this product. What is the MOQ?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "For this item, our MOQ is 1,000 pieces."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can we order 500 pieces for the first order?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "A smaller quantity may be difficult for production, but I can check available stock for you."
+        },
+        {
+          "speaker": "Customer",
+          "text": "If you have stock, can we use our logo?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "If it is stock, the logo option may be limited. For customized logo, the MOQ may be higher."
+        },
+        {
+          "speaker": "Customer",
+          "text": "What is the MOQ for customized logo?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "For customized logo, the MOQ is usually 1,000 pieces. Let me confirm the exact requirement with our factory."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can we make a sample with our logo first?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, we can arrange a customized sample first."
+        },
+        {
+          "speaker": "Customer",
+          "text": "How much is the sample cost?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "The sample cost is 50 dollars, excluding shipping cost."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Does the sample cost include logo printing?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "For a simple logo, it can include logo printing. If the logo process is complex, I need to confirm the cost again."
+        },
+        {
+          "speaker": "Customer",
+          "text": "How long does the sample take?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "The sample lead time is about 7 days after we confirm the sample details and payment."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you make it faster?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "I can check the fastest sample lead time with our factory, but we need to confirm the logo file first."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We can send the logo file today."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Great. Please send the logo file in AI or PDF format if possible."
+        },
+        {
+          "speaker": "Customer",
+          "text": "After sample approval, how long is bulk production?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "The bulk production lead time is about 20 days after sample approval and deposit payment."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you ship by air if we need it urgently?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, we can check air shipping, but the shipping cost will be higher than sea shipping."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please check the total cost for sample and shipping."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. Please confirm your delivery address, and I will check the sample cost and shipping cost together."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Do you need anything else from us?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes. Please confirm the quantity, logo file, color, delivery address, and preferred shipping method."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Okay, I will send all details soon."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. After receiving the details, I will prepare the sample quotation and update you today."
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "d3-q1",
+      "type": "translate",
+      "prompt": "中译英：这个产品的最小起订量是 1000 件。",
+      "answer": "Our MOQ for this item is 1,000 pieces.",
+      "acceptable": [
+        "our moq for this item is 1000 pieces",
+        "the moq for this item is 1000 pieces",
+        "our minimum order quantity for this item is 1000 pieces"
+      ],
+      "hint": "MOQ = minimum order quantity。"
+    },
+    {
+      "id": "d3-q2",
+      "type": "rewrite",
+      "prompt": "把这句话改得更自然：sample cost not free",
+      "answer": "There is a sample cost for this item.",
+      "acceptable": [
+        "there is a sample cost for this item",
+        "the sample is not free for this item",
+        "for this item there is a sample cost"
+      ],
+      "hint": "不要直接说 not free，可以说 there is a sample cost。"
+    },
+    {
+      "id": "d3-q3",
+      "type": "fill",
+      "prompt": "填空：The production ____ time is about 20 days after deposit payment.",
+      "answer": "lead",
+      "acceptable": [
+        "lead"
+      ],
+      "hint": "lead time 表示交期或生产周期。"
+    },
+    {
+      "id": "d3-q4",
+      "type": "choice",
+      "prompt": "客户问 Can we order 500 pieces first? 哪个回复更适合？",
+      "options": [
+        "No, MOQ 1000",
+        "Small quantity impossible",
+        "A smaller quantity may be difficult, but I can check available stock for you.",
+        "Order 1000 please"
+      ],
+      "answer": "A smaller quantity may be difficult, but I can check available stock for you.",
+      "acceptable": [
+        "a smaller quantity may be difficult but i can check available stock for you"
+      ],
+      "hint": "先解释困难，再给替代方案。"
+    },
+    {
+      "id": "d3-q5",
+      "type": "translate",
+      "prompt": "中译英：请确认收货地址，我来帮你查运费。",
+      "answer": "Please confirm your delivery address, and I will check the shipping cost for you.",
+      "acceptable": [
+        "please confirm your delivery address and i will check the shipping cost for you",
+        "please confirm the delivery address and i will check the shipping cost for you"
+      ],
+      "hint": "shipping cost 表示运费。"
+    },
+    {
+      "id": "d3-q6",
+      "type": "reply",
+      "prompt": "客户说：Can you finish production in 10 days? 你应该怎么回复？",
+      "answer": "For this customized order, 10 days may be difficult. I will check the fastest lead time with our factory and update you today.",
+      "acceptable": [
+        "10 days may be difficult i will check the fastest lead time with our factory and update you today",
+        "for this customized order 10 days may be difficult i will check the fastest lead time with our factory",
+        "i will check the fastest lead time with our factory and update you today"
+      ],
+      "hint": "不要直接拒绝，说明困难并承诺确认最快交期。"
+    }
+  ],
+  "homework": [
+    "把 MOQ、sample cost、lead time、shipping cost 各造 1 句。",
+    "把 5 个核心句子的 business 版本各读 5 遍。",
+    "跟读长对话 2 遍，重点练客户要求少量下单和催交期的回复。"
+  ],
+  "tomorrow": "Day 4 会练报价单、付款方式和 PI 的表达。"
+}

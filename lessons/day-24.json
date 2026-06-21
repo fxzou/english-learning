@@ -1,0 +1,391 @@
+{
+  "day": 24,
+  "title": "银行信息、付款错误和退款路径",
+  "theme": "从 beneficiary account / wrong payment / refund request 开始",
+  "durationMinutes": 40,
+  "goals": [
+    "能在客户付款前确认收款账户、账户名和 SWIFT code",
+    "能处理客户打错账户、金额少付或银行扣费的场景",
+    "能解释退款、差额补付或下单抵扣的处理路径"
+  ],
+  "review": {
+    "title": "Day 23 复习",
+    "items": [
+      "昨天练了 invoice、packing list、HS code、declared value、customs documents 和 consignee。",
+      "今天继续财务沟通的最后一课：付款前核对银行信息，付款后处理错误、扣费和退款。",
+      "涉及钱的沟通要特别谨慎：不要随口承诺 refund，要先让财务核实金额、路径和手续费。"
+    ]
+  },
+  "preview": {
+    "scenario": "客户付款前要求确认收款账户；付款后发现打错账户、到账金额少、银行扣费，或要求退款。你需要准确说明下一步处理方式。",
+    "needToKnow": [
+      "beneficiary account 和 account name 必须和 PI 上的信息一致。",
+      "wrong payment 需要先收集交易记录，再由财务和银行核实。",
+      "refund request 不能只说 yes，要说明审核、手续费、时间和可选抵扣方案。"
+    ]
+  },
+  "vocabulary": [
+    {
+      "word": "beneficiary account",
+      "phonetic": "/ˌbenəˈfɪʃieri əˈkaʊnt/",
+      "meaning": "收款账户",
+      "usage": "用于银行转账中的收款方账户。",
+      "example": "Please make sure the beneficiary account matches the PI."
+    },
+    {
+      "word": "account name",
+      "phonetic": "/əˈkaʊnt neɪm/",
+      "meaning": "账户名称 / 户名",
+      "usage": "用于确认银行账户的收款公司名称。",
+      "example": "Please check the account name before arranging payment."
+    },
+    {
+      "word": "SWIFT code",
+      "phonetic": "/swɪft koʊd/",
+      "meaning": "银行国际代码",
+      "usage": "用于国际电汇中识别收款银行。",
+      "example": "Please use the SWIFT code shown on the PI."
+    },
+    {
+      "word": "wrong payment",
+      "phonetic": "/rɔːŋ ˈpeɪmənt/",
+      "meaning": "错误付款 / 付款错误",
+      "usage": "用于客户打错账户、金额或收款方。",
+      "example": "If it was a wrong payment, please contact your bank immediately."
+    },
+    {
+      "word": "refund request",
+      "phonetic": "/ˈriːfʌnd rɪˈkwest/",
+      "meaning": "退款申请 / 退款请求",
+      "usage": "用于客户要求退回多付、错付或取消订单款项。",
+      "example": "We need finance approval before processing the refund request."
+    },
+    {
+      "word": "deduction",
+      "phonetic": "/dɪˈdʌkʃən/",
+      "meaning": "扣款 / 扣除",
+      "usage": "用于银行手续费、下单抵扣或金额差额扣除。",
+      "example": "The deduction may be caused by the bank charge."
+    },
+    {
+      "word": "payment correction",
+      "phonetic": "/ˈpeɪmənt kəˈrekʃən/",
+      "meaning": "付款更正 / 付款修正",
+      "usage": "用于客户付款信息或金额错误后进行更正。",
+      "example": "Please arrange the payment correction after checking with your bank."
+    },
+    {
+      "word": "transfer mistake",
+      "phonetic": "/trænsˈfɜːr mɪˈsteɪk/",
+      "meaning": "转账错误",
+      "usage": "用于银行转账过程中填错信息或金额。",
+      "example": "Please send us the transaction record if there was a transfer mistake."
+    }
+  ],
+  "sentences": [
+    {
+      "label": "付款前核对账户",
+      "basic": "Check bank account.",
+      "natural": "Please check the beneficiary account before arranging payment.",
+      "business": "Please make sure the beneficiary account, account name, and SWIFT code match the PI before arranging payment."
+    },
+    {
+      "label": "处理错误付款",
+      "basic": "You paid wrong.",
+      "natural": "If it was a wrong payment, please contact your bank immediately.",
+      "business": "If it was a wrong payment or transfer mistake, please contact your bank immediately and send us the transaction record for checking."
+    },
+    {
+      "label": "解释银行扣款",
+      "basic": "Bank took money.",
+      "natural": "The deduction may be caused by the bank charge.",
+      "business": "The deduction may be caused by the intermediary bank charge, so please confirm the fee details with your bank."
+    },
+    {
+      "label": "说明退款申请流程",
+      "basic": "We can refund later.",
+      "natural": "We need finance approval before processing the refund request.",
+      "business": "We need finance approval and bank confirmation before processing the refund request, and the bank fee may be deducted."
+    },
+    {
+      "label": "建议差额抵扣",
+      "basic": "Deduct next order.",
+      "natural": "We can deduct the amount from your next order.",
+      "business": "If you prefer, we can keep the extra amount as a credit and deduct it from your next order."
+    }
+  ],
+  "chatAnalysis": [
+    {
+      "old": "bank info same as PI",
+      "problem": "能理解，但不够明确，客户付款时需要核对账户、户名和 SWIFT code。",
+      "better": "Please check the beneficiary account before arranging payment.",
+      "upgrade": "Please make sure the beneficiary account, account name, and SWIFT code match the PI before arranging payment."
+    },
+    {
+      "old": "you paid wrong account",
+      "problem": "语气像指责客户，且没有说明下一步要联系银行和提供交易记录。",
+      "better": "If it was a wrong payment, please contact your bank immediately.",
+      "upgrade": "If it was a wrong payment or transfer mistake, please contact your bank immediately and send us the transaction record for checking."
+    },
+    {
+      "old": "we refund you",
+      "problem": "退款涉及财务和银行审核，不能直接承诺。",
+      "better": "We need finance approval before processing the refund request.",
+      "upgrade": "We need finance approval and bank confirmation before processing the refund request, and the bank fee may be deducted."
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "慢速基础版：付款前核对账户",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Can you confirm the bank details before we pay?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. Please make sure the beneficiary account, account name, and SWIFT code match the PI."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Okay, I will ask our finance team to check."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. Please let us know if your bank needs any additional information."
+        }
+      ]
+    },
+    {
+      "title": "正常商务版：客户发现打错账户",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "We may have sent the payment to the wrong account."
+        },
+        {
+          "speaker": "Sales",
+          "text": "If it was a wrong payment, please contact your bank immediately."
+        },
+        {
+          "speaker": "Customer",
+          "text": "What should we send you?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Please send us the transaction record so our finance team can check it."
+        }
+      ]
+    },
+    {
+      "title": "压力场景版：客户要求退款",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "We paid too much. Please refund the extra amount."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Understood. We need finance approval before processing the refund request."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Will there be any deduction?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "The bank fee may be deducted, but we will confirm the exact amount before processing it."
+        }
+      ]
+    }
+  ],
+  "longDialogues": [
+    {
+      "title": "长对话实战：付款前核对、错付和退款处理",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Hi, our finance team is preparing the payment. Can you confirm the bank details again?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. Please make sure the beneficiary account, account name, and SWIFT code match the PI."
+        },
+        {
+          "speaker": "Customer",
+          "text": "The account name is a little different from the company name on the invoice."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Please do not arrange payment yet. I will check the account name with our finance team first."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Okay, please confirm quickly."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I will confirm it now and send you the correct beneficiary account information again."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Actually, our finance team already sent the payment this morning."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Understood. Could you please send us the transaction record for checking?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "We are worried it may be a transfer mistake."
+        },
+        {
+          "speaker": "Sales",
+          "text": "If it was a wrong payment or transfer mistake, please contact your bank immediately."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you check if the money arrived in your account?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, I will ask our finance team to check the bank account, but it may take some time if the payment is still under bank review."
+        },
+        {
+          "speaker": "Customer",
+          "text": "If it goes to the wrong account, can you refund it?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "If we receive the wrong payment, we need finance approval and bank confirmation before processing the refund request."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Will the bank fee be deducted from the refund?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "The bank fee may be deducted. We will confirm the exact deduction before processing the refund."
+        },
+        {
+          "speaker": "Customer",
+          "text": "What if the received amount is less than the PI amount?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "If the difference is caused by a bank charge, we can confirm whether you prefer to pay the difference or deduct it from the next order."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can we keep the extra amount for the next order instead of refunding it?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, if you prefer, we can keep the extra amount as a credit and deduct it from your next order."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please write that clearly in the payment record."
+        },
+        {
+          "speaker": "Sales",
+          "text": "No problem. We will note the credit amount clearly after finance confirmation."
+        },
+        {
+          "speaker": "Customer",
+          "text": "For future payments, should we always use the PI bank details?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes. Please always use the beneficiary account, account name, and SWIFT code shown on the latest PI."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Understood. Please update us after your finance team checks the transaction."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will keep you posted after finance confirmation and bank checking."
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "d24-q1",
+      "type": "translate",
+      "prompt": "中译英：请确认收款账户、账户名称和 SWIFT code 与 PI 一致。",
+      "answer": "Please make sure the beneficiary account, account name, and SWIFT code match the PI.",
+      "acceptable": [
+        "please make sure the beneficiary account account name and swift code match the pi",
+        "please make sure the beneficiary account account name and swift code are the same as the pi"
+      ],
+      "hint": "beneficiary account 是收款账户。"
+    },
+    {
+      "id": "d24-q2",
+      "type": "rewrite",
+      "prompt": "把这句话改得更专业：you paid wrong account",
+      "answer": "If it was a wrong payment or transfer mistake, please contact your bank immediately and send us the transaction record for checking.",
+      "acceptable": [
+        "if it was a wrong payment or transfer mistake please contact your bank immediately and send us the transaction record for checking",
+        "if it was a wrong payment please contact your bank immediately and send us the transaction record"
+      ],
+      "hint": "避免指责客户，说明 wrong payment / transfer mistake 后的下一步。"
+    },
+    {
+      "id": "d24-q3",
+      "type": "fill",
+      "prompt": "填空：The bank fee may be ____ from the refund.",
+      "answer": "deducted",
+      "acceptable": [
+        "deducted"
+      ],
+      "hint": "deduction 是扣除，deducted 是被扣除。"
+    },
+    {
+      "id": "d24-q4",
+      "type": "choice",
+      "prompt": "客户要求退款，哪个回复更合适？",
+      "options": [
+        "We refund now",
+        "We need finance approval and bank confirmation before processing the refund request.",
+        "No refund",
+        "Ask bank yourself"
+      ],
+      "answer": "We need finance approval and bank confirmation before processing the refund request.",
+      "acceptable": [
+        "we need finance approval and bank confirmation before processing the refund request"
+      ],
+      "hint": "退款要等 finance approval 和 bank confirmation。"
+    },
+    {
+      "id": "d24-q5",
+      "type": "translate",
+      "prompt": "中译英：如果您愿意，我们可以把多余金额作为下个订单的抵扣。",
+      "answer": "If you prefer, we can keep the extra amount as a credit and deduct it from your next order.",
+      "acceptable": [
+        "if you prefer we can keep the extra amount as a credit and deduct it from your next order",
+        "if you prefer we can deduct the extra amount from your next order"
+      ],
+      "hint": "deduct it from your next order 表示从下个订单抵扣。"
+    },
+    {
+      "id": "d24-q6",
+      "type": "reply",
+      "prompt": "客户说：We may have sent the payment to the wrong account. 你应该怎么回复？",
+      "answer": "If it was a wrong payment, please contact your bank immediately and send us the transaction record for checking.",
+      "acceptable": [
+        "if it was a wrong payment please contact your bank immediately and send us the transaction record for checking",
+        "please contact your bank immediately and send us the transaction record for checking"
+      ],
+      "hint": "先让客户联系银行，再索要 transaction record。"
+    }
+  ],
+  "homework": [
+    "把 beneficiary account、account name、SWIFT code、wrong payment、refund request、deduction、payment correction、transfer mistake 各造 1 句。",
+    "把 5 个核心句子的 business 版本各读 5 遍，重点练 wrong payment 和 refund request 的谨慎表达。",
+    "写一段 WhatsApp 回复：客户可能打错账户，你要让客户联系银行、发交易记录，并说明退款需财务和银行确认。"
+  ],
+  "tomorrow": "Day 25 会练货代仓库、提货和截仓时间，进入物流清关、到货和售后阶段。"
+}

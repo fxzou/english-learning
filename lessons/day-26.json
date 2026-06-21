@@ -1,0 +1,391 @@
+{
+  "day": 26,
+  "title": "物流延误、清关问题和跟踪更新",
+  "theme": "从 delayed shipment / customs hold / tracking update 开始",
+  "durationMinutes": 40,
+  "goals": [
+    "能解释货物运输延误、清关卡住和派送异常",
+    "能用 tracking update、clearance status 和 estimated arrival 给客户清晰进展",
+    "能协调 carrier、货代和客户一起处理物流异常"
+  ],
+  "review": {
+    "title": "Day 25 复习",
+    "items": [
+      "昨天练了 pickup、cut-off time、warehouse address、factory pickup、delivery note 和 warehouse receipt。",
+      "今天继续物流阶段：货物交给货代或运输商后，客户最关心货到哪里、为什么没动、什么时候能到。",
+      "物流跟进不能只发单号，要说明当前状态、异常原因、谁在处理和下一次更新时间。"
+    ]
+  },
+  "preview": {
+    "scenario": "客户问货物为什么还没到，跟踪信息没有更新，或者清关被卡住。你需要联系货代或承运商，解释当前状态，并给出下一步更新。",
+    "needToKnow": [
+      "delayed shipment 表示货物运输延误，不等于生产延误。",
+      "customs hold 表示货物被海关暂扣或等待审核，需要确认原因和所需文件。",
+      "delivery exception 是运输商系统里的派送异常状态，通常需要进一步核实。"
+    ]
+  },
+  "vocabulary": [
+    {
+      "word": "delayed shipment",
+      "phonetic": "/dɪˈleɪd ˈʃɪpmənt/",
+      "meaning": "延误的货件 / 运输延误",
+      "usage": "用于说明货物在运输途中出现延迟。",
+      "example": "We are checking the reason for the delayed shipment."
+    },
+    {
+      "word": "customs hold",
+      "phonetic": "/ˈkʌstəmz hoʊld/",
+      "meaning": "海关暂扣 / 清关卡住",
+      "usage": "用于说明货物在海关等待审核或补充资料。",
+      "example": "The shipment is currently under customs hold."
+    },
+    {
+      "word": "tracking update",
+      "phonetic": "/ˈtrækɪŋ ˈʌpdeɪt/",
+      "meaning": "物流跟踪更新",
+      "usage": "用于提供运输状态的新信息。",
+      "example": "I will send you the tracking update as soon as I receive it."
+    },
+    {
+      "word": "in transit",
+      "phonetic": "/ɪn ˈtrænzɪt/",
+      "meaning": "运输中",
+      "usage": "用于说明货物已经发出，正在运输途中。",
+      "example": "The goods are still in transit."
+    },
+    {
+      "word": "clearance status",
+      "phonetic": "/ˈklɪrəns ˈsteɪtəs/",
+      "meaning": "清关状态",
+      "usage": "用于确认货物是否已清关、等待审核或需要资料。",
+      "example": "We are checking the clearance status with the forwarder."
+    },
+    {
+      "word": "estimated arrival",
+      "phonetic": "/ˈestɪmeɪtɪd əˈraɪvəl/",
+      "meaning": "预计到达时间",
+      "usage": "用于说明货物预计到港、到仓或派送时间。",
+      "example": "The estimated arrival is next Monday."
+    },
+    {
+      "word": "carrier",
+      "phonetic": "/ˈkæriər/",
+      "meaning": "承运商 / 运输公司",
+      "usage": "用于 DHL、FedEx、UPS、船公司或卡车公司等运输方。",
+      "example": "We are checking the status with the carrier."
+    },
+    {
+      "word": "delivery exception",
+      "phonetic": "/dɪˈlɪvəri ɪkˈsepʃən/",
+      "meaning": "派送异常",
+      "usage": "用于运输商系统显示地址、清关、收件人或派送失败等异常。",
+      "example": "The tracking page shows a delivery exception."
+    }
+  ],
+  "sentences": [
+    {
+      "label": "解释运输延误",
+      "basic": "Shipment delayed.",
+      "natural": "The shipment is delayed, and we are checking the reason.",
+      "business": "We are checking the reason for the delayed shipment with the carrier and will update you as soon as we receive the details."
+    },
+    {
+      "label": "说明清关卡住",
+      "basic": "Customs has problem.",
+      "natural": "The shipment is currently under customs hold.",
+      "business": "The shipment is currently under customs hold, and we are checking the clearance status with the forwarder."
+    },
+    {
+      "label": "提供物流更新",
+      "basic": "I update tracking later.",
+      "natural": "I will send you the tracking update once I receive it.",
+      "business": "I will contact the carrier now and send you the latest tracking update once I receive it."
+    },
+    {
+      "label": "说明运输中",
+      "basic": "Goods on the way.",
+      "natural": "The goods are still in transit.",
+      "business": "The goods are still in transit, and the estimated arrival is next Monday based on the latest carrier update."
+    },
+    {
+      "label": "处理派送异常",
+      "basic": "Delivery has exception.",
+      "natural": "The tracking page shows a delivery exception.",
+      "business": "The tracking page shows a delivery exception, so we are checking with the carrier to confirm whether they need additional information."
+    }
+  ],
+  "chatAnalysis": [
+    {
+      "old": "shipping delayed, wait",
+      "problem": "太被动，没有说明延误原因、谁在查、什么时候更新。",
+      "better": "The shipment is delayed, and we are checking the reason.",
+      "upgrade": "We are checking the reason for the delayed shipment with the carrier and will update you as soon as we receive the details."
+    },
+    {
+      "old": "customs problem",
+      "problem": "customs problem 太笼统，客户不知道是等待审核、缺文件还是要缴税。",
+      "better": "The shipment is currently under customs hold.",
+      "upgrade": "The shipment is currently under customs hold, and we are checking the clearance status with the forwarder."
+    },
+    {
+      "old": "tracking no update",
+      "problem": "只描述现象，没有下一步动作。",
+      "better": "I will contact the carrier for the latest tracking update.",
+      "upgrade": "I will contact the carrier now and send you the latest tracking update once I receive it."
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "慢速基础版：客户问货在哪里",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Where is the shipment now?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "The goods are still in transit."
+        },
+        {
+          "speaker": "Customer",
+          "text": "When will they arrive?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Based on the latest carrier update, the estimated arrival is next Monday."
+        }
+      ]
+    },
+    {
+      "title": "正常商务版：清关卡住",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "The tracking says customs hold. What does it mean?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "It means the shipment is currently waiting for customs review."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Do they need any documents?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "We are checking the clearance status with the forwarder and will update you if any documents are needed."
+        }
+      ]
+    },
+    {
+      "title": "压力场景版：派送异常",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "The tracking page shows a delivery exception."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I saw that. We are checking with the carrier to confirm the reason."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please solve it quickly. The goods are urgent."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Understood. I will contact the carrier now and send you the latest tracking update as soon as possible."
+        }
+      ]
+    }
+  ],
+  "longDialogues": [
+    {
+      "title": "长对话实战：物流延误、清关卡住和跟踪更新",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Hi, the tracking has not updated for two days. Where is the shipment now?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand your concern. Let me check the latest tracking update with the carrier."
+        },
+        {
+          "speaker": "Customer",
+          "text": "The goods should have arrived already."
+        },
+        {
+          "speaker": "Sales",
+          "text": "According to the last update, the goods are still in transit."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Why is the shipment delayed?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "We are checking the reason for the delayed shipment with the carrier."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you give me the estimated arrival?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "The current estimated arrival is next Monday, but I will confirm again with the carrier today."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Now the tracking page says customs hold."
+        },
+        {
+          "speaker": "Sales",
+          "text": "That means the shipment is currently waiting for customs review."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Do we need to provide any documents?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "We are checking the clearance status with the forwarder and will let you know if any documents are needed."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please check if the invoice and packing list are enough."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will ask the forwarder whether customs needs any additional documents."
+        },
+        {
+          "speaker": "Customer",
+          "text": "The final customer is pushing us every day."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand. I will keep you posted and send updates as soon as I receive news from the carrier or forwarder."
+        },
+        {
+          "speaker": "Customer",
+          "text": "What if it becomes a delivery exception?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "If the tracking page shows a delivery exception, we will check whether the carrier needs address confirmation, customs documents, or receiver contact information."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you contact the local carrier directly?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "We can ask our forwarder to contact the local carrier and confirm the latest status."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please send me an update before the end of today."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will send you the latest tracking update before the end of today."
+        },
+        {
+          "speaker": "Customer",
+          "text": "If customs needs documents, send them immediately."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Understood. We will prepare the customs documents and coordinate with your forwarder immediately if needed."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Thank you. Please keep tracking it closely."
+        },
+        {
+          "speaker": "Sales",
+          "text": "No problem. We will monitor the shipment closely and keep you posted until delivery is completed."
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "d26-q1",
+      "type": "translate",
+      "prompt": "中译英：我们正在和承运商确认货物延误的原因。",
+      "answer": "We are checking the reason for the delayed shipment with the carrier.",
+      "acceptable": [
+        "we are checking the reason for the delayed shipment with the carrier",
+        "we are checking the reason for the delayed shipment with our carrier"
+      ],
+      "hint": "delayed shipment 是运输延误，carrier 是承运商。"
+    },
+    {
+      "id": "d26-q2",
+      "type": "rewrite",
+      "prompt": "把这句话改得更专业：customs problem",
+      "answer": "The shipment is currently under customs hold, and we are checking the clearance status with the forwarder.",
+      "acceptable": [
+        "the shipment is currently under customs hold and we are checking the clearance status with the forwarder",
+        "the shipment is under customs hold and we are checking the clearance status with the forwarder"
+      ],
+      "hint": "customs hold 和 clearance status 更具体。"
+    },
+    {
+      "id": "d26-q3",
+      "type": "fill",
+      "prompt": "填空：The goods are still in ____.",
+      "answer": "transit",
+      "acceptable": [
+        "transit"
+      ],
+      "hint": "in transit 是运输中。"
+    },
+    {
+      "id": "d26-q4",
+      "type": "choice",
+      "prompt": "客户说 tracking 两天没更新，哪个回复更适合？",
+      "options": [
+        "No update, wait",
+        "I will contact the carrier now and send you the latest tracking update once I receive it.",
+        "Maybe tomorrow",
+        "Ask your side"
+      ],
+      "answer": "I will contact the carrier now and send you the latest tracking update once I receive it.",
+      "acceptable": [
+        "i will contact the carrier now and send you the latest tracking update once i receive it"
+      ],
+      "hint": "要给下一步动作：contact carrier + tracking update。"
+    },
+    {
+      "id": "d26-q5",
+      "type": "translate",
+      "prompt": "中译英：根据最新承运商更新，预计到达时间是下周一。",
+      "answer": "Based on the latest carrier update, the estimated arrival is next Monday.",
+      "acceptable": [
+        "based on the latest carrier update the estimated arrival is next monday",
+        "according to the latest carrier update the estimated arrival is next monday"
+      ],
+      "hint": "estimated arrival 是预计到达时间。"
+    },
+    {
+      "id": "d26-q6",
+      "type": "reply",
+      "prompt": "客户说：The tracking page shows a delivery exception. 你应该怎么回复？",
+      "answer": "We are checking with the carrier to confirm the reason and will update you as soon as possible.",
+      "acceptable": [
+        "we are checking with the carrier to confirm the reason and will update you as soon as possible",
+        "we are checking with the carrier to confirm the reason and will send you an update as soon as possible"
+      ],
+      "hint": "delivery exception 要联系 carrier 查原因。"
+    }
+  ],
+  "homework": [
+    "把 delayed shipment、customs hold、tracking update、in transit、clearance status、estimated arrival、carrier、delivery exception 各造 1 句。",
+    "把 5 个核心句子的 business 版本各读 5 遍，重点练 customs hold 和 tracking update。",
+    "写一段 WhatsApp 回复：客户说物流两天没更新且显示 customs hold，你要说明正在查 clearance status，并承诺今天给 tracking update。"
+  ],
+  "tomorrow": "Day 27 会练到货后反馈、破损和缺件处理。"
+}

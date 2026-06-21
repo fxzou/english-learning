@@ -1,0 +1,399 @@
+{
+  "day": 18,
+  "title": "生产延误的专业解释",
+  "theme": "从 material delay / machine issue / recovery plan 开始",
+  "durationMinutes": 40,
+  "goals": [
+    "能说明生产延误的具体原因，而不是只说 sorry delay",
+    "能解释延误影响、给出 revised timeline，并提出 recovery plan",
+    "能在客户追问时表达会 catch up，但不做不现实承诺"
+  ],
+  "review": {
+    "title": "Day 17 复习",
+    "items": [
+      "昨天练了 urgent order、push factory、fastest schedule、expedite、priority 和 realistic timeline。",
+      "今天处理更难的情况：即使你推动了工厂，生产仍然可能因为材料、机器或质量问题延误。",
+      "客户最需要的不是一句 sorry，而是清楚知道原因、影响、补救动作和新的时间表。"
+    ]
+  },
+  "preview": {
+    "scenario": "订单生产中出现材料到货晚、机器故障或质量返工。客户催问为什么没按计划完成，你需要解释事实、承担沟通责任，并给出新的可执行时间线。",
+    "needToKnow": [
+      "material delay 和 machine issue 是常见生产延误原因，但要说明影响到哪个环节。",
+      "quality rework 表示为了保证质量而返工，不要说成 factory mistake。",
+      "recovery plan 可以让客户看到你在解决问题，而不是被动等待。"
+    ]
+  },
+  "vocabulary": [
+    {
+      "word": "material delay",
+      "phonetic": "/məˈtɪriəl dɪˈleɪ/",
+      "meaning": "材料延误 / 材料到货晚",
+      "usage": "用于说明原材料、配件、包装材料等没有按计划到位。",
+      "example": "There is a material delay from our supplier."
+    },
+    {
+      "word": "machine issue",
+      "phonetic": "/məˈʃiːn ˈɪʃuː/",
+      "meaning": "机器问题 / 设备问题",
+      "usage": "用于说明设备故障、调机异常或产线暂时停顿。",
+      "example": "A machine issue affected today's production output."
+    },
+    {
+      "word": "quality rework",
+      "phonetic": "/ˈkwɑːləti ˌriːˈwɜːrk/",
+      "meaning": "质量返工",
+      "usage": "用于说明为了达到质量标准而重新处理产品。",
+      "example": "We need quality rework to make sure the goods meet the standard."
+    },
+    {
+      "word": "root cause",
+      "phonetic": "/ruːt kɔːz/",
+      "meaning": "根本原因",
+      "usage": "用于解释问题真正来源，而不是只描述表面现象。",
+      "example": "We are checking the root cause with our production team."
+    },
+    {
+      "word": "impact",
+      "phonetic": "/ˈɪmpækt/",
+      "meaning": "影响",
+      "usage": "用于说明问题对交期、数量、质量或成本的影响。",
+      "example": "The impact on the delivery date is about two days."
+    },
+    {
+      "word": "revised timeline",
+      "phonetic": "/rɪˈvaɪzd ˈtaɪmlaɪn/",
+      "meaning": "更新后的时间线",
+      "usage": "用于说明延误后的新生产或出货安排。",
+      "example": "I will send you the revised timeline today."
+    },
+    {
+      "word": "catch up",
+      "phonetic": "/kætʃ ʌp/",
+      "meaning": "赶上进度 / 追回进度",
+      "usage": "用于说明工厂会通过加班、调产线等方式尽量追回时间。",
+      "example": "We will try to catch up by adding extra working hours."
+    },
+    {
+      "word": "recovery plan",
+      "phonetic": "/rɪˈkʌvəri plæn/",
+      "meaning": "补救计划 / 追赶计划",
+      "usage": "用于给客户说明如何减少延误影响。",
+      "example": "We have prepared a recovery plan to reduce the delay."
+    }
+  ],
+  "sentences": [
+    {
+      "label": "说明材料延误",
+      "basic": "Material is late.",
+      "natural": "There is a material delay from our supplier.",
+      "business": "There is a material delay from our supplier, and it may affect the production timeline by about two days."
+    },
+    {
+      "label": "说明机器问题",
+      "basic": "Machine has problem.",
+      "natural": "A machine issue affected today's production output.",
+      "business": "A machine issue affected today's production output, but our maintenance team is working on it now."
+    },
+    {
+      "label": "解释质量返工",
+      "basic": "Need redo for quality.",
+      "natural": "We need quality rework to make sure the goods meet the standard.",
+      "business": "We need quality rework for part of the goods to make sure the final quality meets the approved standard."
+    },
+    {
+      "label": "给更新后的时间线",
+      "basic": "New time later.",
+      "natural": "I will send you the revised timeline today.",
+      "business": "After we confirm the root cause and production impact, I will send you the revised timeline today."
+    },
+    {
+      "label": "提出补救计划",
+      "basic": "We will hurry.",
+      "natural": "We will try to catch up by adding extra working hours.",
+      "business": "We have prepared a recovery plan and will try to catch up by adding extra working hours and adjusting the production line."
+    }
+  ],
+  "chatAnalysis": [
+    {
+      "old": "sorry delay",
+      "problem": "只道歉没有说明原因、影响和下一步，客户会更焦虑。",
+      "better": "There is a material delay from our supplier.",
+      "upgrade": "There is a material delay from our supplier, and it may affect the production timeline by about two days. I will send you the revised timeline today."
+    },
+    {
+      "old": "factory problem, wait",
+      "problem": "factory problem 太笼统，wait 也像让客户被动等待。",
+      "better": "A machine issue affected today's production output.",
+      "upgrade": "A machine issue affected today's production output, but our maintenance team is working on it now, and we are checking the recovery plan."
+    },
+    {
+      "old": "we will hurry to fix",
+      "problem": "没有说明怎么补救，也没有说明是否能追回交期。",
+      "better": "We will try to catch up by adding extra working hours.",
+      "upgrade": "We have prepared a recovery plan and will try to catch up by adding extra working hours and adjusting the production line."
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "慢速基础版：解释材料延误",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Why is the production not finished yet?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "There is a material delay from our supplier."
+        },
+        {
+          "speaker": "Customer",
+          "text": "How many days will it affect?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "It may affect the production timeline by about two days, and I will send you the revised timeline today."
+        }
+      ]
+    },
+    {
+      "title": "正常商务版：机器问题和补救",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "You told us the order would be ready this week."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand. A machine issue affected today's production output."
+        },
+        {
+          "speaker": "Customer",
+          "text": "What is your solution?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Our maintenance team is working on it now, and we are preparing a recovery plan to reduce the delay."
+        }
+      ]
+    },
+    {
+      "title": "压力场景版：质量返工导致延误",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "This delay is not acceptable. Why did this happen?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand your concern. We found that part of the goods needs quality rework."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Does that mean the goods have quality problems?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "We are doing the rework to make sure the final quality meets the approved standard before shipment."
+        }
+      ]
+    }
+  ],
+  "longDialogues": [
+    {
+      "title": "长对话实战：解释延误原因、影响和补救计划",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Hi, we expected the goods to be ready this week. What is the current status?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you for checking. I have just confirmed the latest production status with our factory."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Is there any delay?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, there is a material delay from our supplier, and it has affected part of the production timeline."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Why did you not tell us earlier?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand your concern. We were waiting for the supplier's final confirmation, and now we have clearer information."
+        },
+        {
+          "speaker": "Customer",
+          "text": "How many days will this delay the order?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "The current impact on the delivery date is about two to three days."
+        },
+        {
+          "speaker": "Customer",
+          "text": "This order is urgent. Can you catch up?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "We will try to catch up by adding extra working hours after the materials arrive."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Is there any other problem besides the material delay?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "There was also a small machine issue this morning, but our maintenance team has already fixed it."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Will the machine issue affect quality?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "No, the machine issue mainly affected production output, not product quality."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We cannot accept quality problems."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand. That is why we are keeping the necessary quality checks even while trying to catch up."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Do you need any quality rework?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "For a small part of the goods, we need quality rework to make sure they meet the approved standard."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please be honest with us. Can you still ship this month?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Based on the current information, yes, we can still ship this month, but the ready date may move by two to three days."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please send us the new timeline."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. After we confirm the root cause and production impact, I will send you the revised timeline today."
+        },
+        {
+          "speaker": "Customer",
+          "text": "What is your recovery plan?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Our recovery plan is to add extra working hours, adjust the production line, and finish packing immediately after inspection."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you give us daily updates until the order is ready?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, I will send you daily updates and keep you posted on the latest production progress."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please make sure there are no more surprises."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Understood. I will monitor the recovery plan closely and update you immediately if anything changes."
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "d18-q1",
+      "type": "translate",
+      "prompt": "中译英：我们的供应商出现了材料延误。",
+      "answer": "There is a material delay from our supplier.",
+      "acceptable": [
+        "there is a material delay from our supplier",
+        "we have a material delay from our supplier"
+      ],
+      "hint": "material delay 是材料延误。"
+    },
+    {
+      "id": "d18-q2",
+      "type": "rewrite",
+      "prompt": "把这句话改得更专业：sorry delay",
+      "answer": "There is a material delay from our supplier, and I will send you the revised timeline today.",
+      "acceptable": [
+        "there is a material delay from our supplier and i will send you the revised timeline today",
+        "there is a material delay from our supplier and it may affect the production timeline by about two days"
+      ],
+      "hint": "要说明原因和新的时间安排。"
+    },
+    {
+      "id": "d18-q3",
+      "type": "fill",
+      "prompt": "填空：After we confirm the root cause and production impact, I will send you the revised ____ today.",
+      "answer": "timeline",
+      "acceptable": [
+        "timeline"
+      ],
+      "hint": "revised timeline 是更新后的时间线。"
+    },
+    {
+      "id": "d18-q4",
+      "type": "choice",
+      "prompt": "客户问延误后你们怎么补救，哪个回复更适合？",
+      "options": [
+        "We will hurry",
+        "Please wait",
+        "We have prepared a recovery plan and will try to catch up by adding extra working hours and adjusting the production line.",
+        "Factory problem"
+      ],
+      "answer": "We have prepared a recovery plan and will try to catch up by adding extra working hours and adjusting the production line.",
+      "acceptable": [
+        "we have prepared a recovery plan and will try to catch up by adding extra working hours and adjusting the production line"
+      ],
+      "hint": "要说清 recovery plan，而不是空泛 hurry。"
+    },
+    {
+      "id": "d18-q5",
+      "type": "translate",
+      "prompt": "中译英：机器问题影响了今天的生产产出。",
+      "answer": "A machine issue affected today's production output.",
+      "acceptable": [
+        "a machine issue affected todays production output",
+        "a machine issue affected today's production output"
+      ],
+      "hint": "production output 是生产产出。"
+    },
+    {
+      "id": "d18-q6",
+      "type": "reply",
+      "prompt": "客户说：Can you still ship this month? 你应该怎么回复？",
+      "answer": "Based on the current information, yes, we can still ship this month, but the ready date may move by two to three days.",
+      "acceptable": [
+        "based on the current information yes we can still ship this month but the ready date may move by two to three days",
+        "based on the current information we can still ship this month but the ready date may move by two to three days"
+      ],
+      "hint": "既回答 yes，也说明 ready date 可能移动。"
+    }
+  ],
+  "homework": [
+    "把 material delay、machine issue、quality rework、root cause、impact、revised timeline、catch up、recovery plan 各造 1 句。",
+    "把 5 个核心句子的 business 版本各读 5 遍，重点练原因、影响和补救动作。",
+    "写一段 WhatsApp 回复：订单延误 2-3 天，原因是材料延误，你要解释影响、给 revised timeline，并提出 recovery plan。"
+  ],
+  "tomorrow": "Day 19 会练返工、重做和质量复检，重点说明 rework、reprocessing、recheck 和 quality control。"
+}

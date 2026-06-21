@@ -1,0 +1,391 @@
+{
+  "day": 17,
+  "title": "客户催单和紧急订单",
+  "theme": "从 urgent order / push factory / fastest schedule 开始",
+  "durationMinutes": 40,
+  "goals": [
+    "能在客户催单时先安抚客户，再说明会立即核实",
+    "能表达 push factory、expedite 和 priority，但不乱承诺结果",
+    "能给客户 realistic timeline，并持续 keep you posted"
+  ],
+  "review": {
+    "title": "Day 16 复习",
+    "items": [
+      "昨天练了 final confirmation、order summary、production details、approved artwork、packing method 和 production start。",
+      "今天进入开产后的催单场景：客户希望提前、要求加急、追问最快时间。",
+      "处理催单时，不能只说 no problem 或 we will hurry。要安抚、核实、推动，并给现实可执行的时间线。"
+    ]
+  },
+  "preview": {
+    "scenario": "客户说订单很急，希望提前出货或马上确认最快生产排期。你需要稳住客户，同时和工厂核实能否加急、是否能优先处理、最快什么时候能给准确回复。",
+    "needToKnow": [
+      "urgent order 表示客户时间压力大，但不代表你可以随便承诺提前。",
+      "push factory 和 expedite 表示你会推动和加急，但最好加上 I will check / I will try。",
+      "realistic timeline 比随口说 soon 更专业，能保护你和工厂的可信度。"
+    ]
+  },
+  "vocabulary": [
+    {
+      "word": "urgent order",
+      "phonetic": "/ˈɜːrdʒənt ˈɔːrdər/",
+      "meaning": "紧急订单",
+      "usage": "用于客户需要比正常时间更快完成的订单。",
+      "example": "I understand this is an urgent order for you."
+    },
+    {
+      "word": "push factory",
+      "phonetic": "/pʊʃ ˈfæktəri/",
+      "meaning": "催工厂 / 推动工厂",
+      "usage": "用于向客户说明你会主动跟工厂确认和推进。",
+      "example": "I will push the factory and update you today."
+    },
+    {
+      "word": "fastest schedule",
+      "phonetic": "/ˈfæstɪst ˈskedʒuːl/",
+      "meaning": "最快排期",
+      "usage": "用于确认工厂最早能完成生产或出货的时间。",
+      "example": "I will check the fastest schedule with our production team."
+    },
+    {
+      "word": "expedite",
+      "phonetic": "/ˈekspədaɪt/",
+      "meaning": "加急处理 / 加快",
+      "usage": "用于正式表达尽量加快生产、样品、文件或出货流程。",
+      "example": "We will try to expedite the production for you."
+    },
+    {
+      "word": "priority",
+      "phonetic": "/praɪˈɔːrəti/",
+      "meaning": "优先事项 / 优先级",
+      "usage": "用于说明某个订单或事项被优先处理。",
+      "example": "We will treat this order as a priority."
+    },
+    {
+      "word": "rush production",
+      "phonetic": "/rʌʃ prəˈdʌkʃən/",
+      "meaning": "赶工生产 / 加急生产",
+      "usage": "用于客户要求比正常生产周期更快完成，但需评估风险。",
+      "example": "Rush production may increase the quality risk, so we need to confirm carefully."
+    },
+    {
+      "word": "realistic timeline",
+      "phonetic": "/ˌriːəˈlɪstɪk ˈtaɪmlaɪn/",
+      "meaning": "现实可行的时间线",
+      "usage": "用于避免乱承诺，给客户一个实际可执行的时间安排。",
+      "example": "I want to give you a realistic timeline after checking with our factory."
+    },
+    {
+      "word": "keep you posted",
+      "phonetic": "/kiːp juː ˈpoʊstɪd/",
+      "meaning": "持续告知你进展",
+      "usage": "用于承诺会持续更新客户进度，语气自然商务。",
+      "example": "I will keep you posted once I get the latest update."
+    }
+  ],
+  "sentences": [
+    {
+      "label": "安抚紧急订单",
+      "basic": "We know it is urgent.",
+      "natural": "I understand this is an urgent order for you.",
+      "business": "I understand this is an urgent order for you, and I will check the fastest schedule with our production team."
+    },
+    {
+      "label": "承诺推动工厂",
+      "basic": "I will hurry factory.",
+      "natural": "I will push the factory and update you today.",
+      "business": "I will push the factory to check the fastest possible schedule and update you today."
+    },
+    {
+      "label": "避免乱承诺",
+      "basic": "Maybe tomorrow.",
+      "natural": "Let me check first before I confirm the date.",
+      "business": "Let me check with our production team first so I can give you a realistic timeline."
+    },
+    {
+      "label": "说明加急风险",
+      "basic": "Rush may have problem.",
+      "natural": "Rush production may increase the quality risk.",
+      "business": "Rush production may increase the quality risk, so we need to confirm carefully before changing the schedule."
+    },
+    {
+      "label": "持续更新客户",
+      "basic": "I tell you later.",
+      "natural": "I will keep you posted once I get the latest update.",
+      "business": "I will keep you posted and share the latest progress as soon as I receive the factory update."
+    }
+  ],
+  "chatAnalysis": [
+    {
+      "old": "we will hurry",
+      "problem": "太空泛，没有说明你会催谁、确认什么、什么时候更新客户。",
+      "better": "I will push the factory and update you today.",
+      "upgrade": "I will push the factory to check the fastest possible schedule and update you today."
+    },
+    {
+      "old": "maybe can ship earlier",
+      "problem": "maybe 太不确定，ship earlier 又容易被客户理解成承诺提前出货。",
+      "better": "Let me check first before I confirm the date.",
+      "upgrade": "Let me check with our production team first so I can give you a realistic timeline."
+    },
+    {
+      "old": "urgent no problem",
+      "problem": "客户听起来会以为一定能加急，但你还没有和工厂确认。",
+      "better": "I understand this is urgent, and I will check the fastest schedule.",
+      "upgrade": "I understand this is an urgent order for you, and I will check the fastest schedule with our production team."
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "慢速基础版：客户要求尽快确认时间",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "This order is very urgent. Can you finish earlier?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand this is an urgent order for you."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please check the fastest time."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will check the fastest schedule with our production team and update you today."
+        }
+      ]
+    },
+    {
+      "title": "正常商务版：推动工厂但不乱承诺",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Can you promise delivery one week earlier?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Let me check with our production team first so I can give you a realistic timeline."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We really need it earlier."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand. I will push the factory to check the fastest possible schedule and keep you posted."
+        }
+      ]
+    },
+    {
+      "title": "压力场景版：解释加急风险",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Please rush production. Quality is not a problem."
+        },
+        {
+          "speaker": "Sales",
+          "text": "We will try to expedite it, but rush production may increase the quality risk."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Then what can you do?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "We will treat this order as a priority and confirm the safest fastest schedule with our factory."
+        }
+      ]
+    }
+  ],
+  "longDialogues": [
+    {
+      "title": "长对话实战：客户催单、要求提前并追问最快排期",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Hi, this order is very urgent. Can you finish it earlier?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand this is an urgent order for you."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Our customer is pushing us, so we need the goods as soon as possible."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand the pressure. Let me check the fastest schedule with our production team first."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you promise delivery one week earlier?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "I do not want to promise before checking, because I want to give you a realistic timeline."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please push your factory. This is very important."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will push the factory to check the fastest possible schedule and update you today."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you put our order first?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "I will ask our production team if we can treat this order as a priority."
+        },
+        {
+          "speaker": "Customer",
+          "text": "If you rush production, can it be finished faster?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Rush production may help, but it may also increase the quality risk if we compress the process too much."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Quality is also important, but time is very tight."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Understood. We will try to expedite it while keeping the necessary quality checks."
+        },
+        {
+          "speaker": "Customer",
+          "text": "When can you give me a clear answer?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "I will check with production, packing, and the warehouse today, then give you the latest update before the end of the day."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you also check if partial delivery is possible?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, I will check if we can finish part of the goods first and dispatch them earlier."
+        },
+        {
+          "speaker": "Customer",
+          "text": "That would help a lot."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I will include this option when I discuss the fastest schedule with our factory."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please keep me updated. I need to report to my customer."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Of course. I will keep you posted once I get the latest update."
+        },
+        {
+          "speaker": "Customer",
+          "text": "If you cannot finish earlier, please tell me honestly."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will give you the real situation and the most realistic timeline after checking."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Thank you. We just need a clear answer."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand. I will push the factory now and update you today with the fastest safe schedule."
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "d17-q1",
+      "type": "translate",
+      "prompt": "中译英：我理解这对您来说是一个紧急订单。",
+      "answer": "I understand this is an urgent order for you.",
+      "acceptable": [
+        "i understand this is an urgent order for you",
+        "i understand that this is an urgent order for you"
+      ],
+      "hint": "urgent order 是紧急订单。"
+    },
+    {
+      "id": "d17-q2",
+      "type": "rewrite",
+      "prompt": "把这句话改得更自然：we will hurry",
+      "answer": "I will push the factory to check the fastest possible schedule and update you today.",
+      "acceptable": [
+        "i will push the factory to check the fastest possible schedule and update you today",
+        "i will push the factory and update you today"
+      ],
+      "hint": "要说明 push factory、check schedule、update today。"
+    },
+    {
+      "id": "d17-q3",
+      "type": "fill",
+      "prompt": "填空：Let me check first so I can give you a realistic ____.",
+      "answer": "timeline",
+      "acceptable": [
+        "timeline"
+      ],
+      "hint": "realistic timeline 是现实可行的时间线。"
+    },
+    {
+      "id": "d17-q4",
+      "type": "choice",
+      "prompt": "客户问能否提前一周交货，哪个回复更专业？",
+      "options": [
+        "No problem",
+        "Maybe can",
+        "Let me check with our production team first so I can give you a realistic timeline.",
+        "We hurry factory"
+      ],
+      "answer": "Let me check with our production team first so I can give you a realistic timeline.",
+      "acceptable": [
+        "let me check with our production team first so i can give you a realistic timeline"
+      ],
+      "hint": "不要没确认就承诺。"
+    },
+    {
+      "id": "d17-q5",
+      "type": "translate",
+      "prompt": "中译英：我们会尽量加急，但赶工生产可能会增加质量风险。",
+      "answer": "We will try to expedite it, but rush production may increase the quality risk.",
+      "acceptable": [
+        "we will try to expedite it but rush production may increase the quality risk",
+        "we will try to expedite production but rush production may increase the quality risk"
+      ],
+      "hint": "expedite 是加急处理，rush production 是赶工生产。"
+    },
+    {
+      "id": "d17-q6",
+      "type": "reply",
+      "prompt": "客户说：Please keep me updated. I need to report to my customer. 你应该怎么回复？",
+      "answer": "Of course. I will keep you posted once I get the latest update.",
+      "acceptable": [
+        "of course i will keep you posted once i get the latest update",
+        "i will keep you posted once i get the latest update"
+      ],
+      "hint": "keep you posted 是持续告知进展。"
+    }
+  ],
+  "homework": [
+    "把 urgent order、push factory、fastest schedule、expedite、priority、rush production、realistic timeline、keep you posted 各造 1 句。",
+    "把 5 个核心句子的 business 版本各读 5 遍，重点练 realistic timeline 和 keep you posted。",
+    "写一段 WhatsApp 回复：客户要求提前一周出货，你要安抚、说明会 push factory、检查 fastest schedule，并避免直接承诺。"
+  ],
+  "tomorrow": "Day 18 会练生产延误的专业解释，包括延误原因、影响、补救动作和新时间表。"
+}

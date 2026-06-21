@@ -1,0 +1,391 @@
+{
+  "day": 11,
+  "title": "解释价格差异和涨价原因",
+  "theme": "从 price difference / increase / target price 开始",
+  "durationMinutes": 36,
+  "goals": [
+    "能解释为什么不同数量、规格或包装会导致价格差异",
+    "能说明涨价原因，同时保持客户关系和谈判空间",
+    "能询问客户目标价，并用商务方式争取可执行条件"
+  ],
+  "review": {
+    "title": "Day 10 复习",
+    "items": [
+      "昨天练了 complaint、issue、defect、scratch、replacement 和 solution。",
+      "今天回到报价深化：客户问为什么价格变高、为什么和上次不同、能不能再便宜。",
+      "解释价格时，不要只说 cost up，要说明影响因素，并给客户下一步选择。"
+    ]
+  },
+  "preview": {
+    "scenario": "客户对报价不满意，质疑价格比上次高、比竞争对手高，或者要求保持旧价格。",
+    "needToKnow": [
+      "price difference 要说明具体原因，例如 quantity、material、packaging、exchange rate。",
+      "increase 用于解释涨价，但要避免听起来像单方面通知客户。",
+      "target price 可以帮助你判断是否有谈判空间，而不是盲目降价。"
+    ]
+  },
+  "vocabulary": [
+    {
+      "word": "price difference",
+      "phonetic": "/praɪs ˈdɪfrəns/",
+      "meaning": "价格差异",
+      "usage": "用于解释新旧报价、不同数量或不同规格之间的价格不同。",
+      "example": "The price difference is mainly caused by the lower quantity."
+    },
+    {
+      "word": "increase",
+      "phonetic": "/ɪnˈkriːs/",
+      "meaning": "增加 / 上涨",
+      "usage": "用于说明材料、包装、运费或成本上涨。",
+      "example": "The material cost has increased recently."
+    },
+    {
+      "word": "raw material",
+      "phonetic": "/rɔː məˈtɪriəl/",
+      "meaning": "原材料",
+      "usage": "用于解释生产成本和价格变化。",
+      "example": "The raw material cost is higher than before."
+    },
+    {
+      "word": "exchange rate",
+      "phonetic": "/ɪksˈtʃeɪndʒ reɪt/",
+      "meaning": "汇率",
+      "usage": "用于说明汇率变化影响报价。",
+      "example": "The exchange rate has changed, so the price is slightly different."
+    },
+    {
+      "word": "discount",
+      "phonetic": "/ˈdɪskaʊnt/",
+      "meaning": "折扣",
+      "usage": "用于客户要求降价或大数量优惠。",
+      "example": "We can offer a small discount for a larger quantity."
+    },
+    {
+      "word": "margin",
+      "phonetic": "/ˈmɑːrdʒɪn/",
+      "meaning": "利润空间",
+      "usage": "用于解释价格已经很低或让步空间有限。",
+      "example": "Our margin is already very limited for this order."
+    },
+    {
+      "word": "target price",
+      "phonetic": "/ˈtɑːrɡɪt praɪs/",
+      "meaning": "目标价",
+      "usage": "用于询问客户期望价格，便于评估是否能调整。",
+      "example": "Could you please share your target price?"
+    },
+    {
+      "word": "negotiation",
+      "phonetic": "/nɪˌɡoʊʃiˈeɪʃən/",
+      "meaning": "谈判 / 协商",
+      "usage": "用于价格、条款或订单条件的商务协商。",
+      "example": "We can discuss the price further during negotiation."
+    }
+  ],
+  "sentences": [
+    {
+      "label": "解释价格差异",
+      "basic": "Price different because quantity.",
+      "natural": "The price is different because the quantity is different.",
+      "business": "The price difference is mainly caused by the lower quantity and updated packaging requirement."
+    },
+    {
+      "label": "说明原材料上涨",
+      "basic": "Material cost up.",
+      "natural": "The material cost has increased recently.",
+      "business": "The raw material cost has increased recently, so the unit price is slightly higher than before."
+    },
+    {
+      "label": "询问目标价",
+      "basic": "What price you want?",
+      "natural": "What is your target price?",
+      "business": "Could you please share your target price so I can check if there is any room to adjust?"
+    },
+    {
+      "label": "说明利润有限",
+      "basic": "No discount.",
+      "natural": "It is difficult to offer a discount for this quantity.",
+      "business": "For this quantity, our margin is already very limited, but I can check again with our manager."
+    },
+    {
+      "label": "给条件式优惠",
+      "basic": "More quantity cheaper.",
+      "natural": "The price can be lower if the quantity is higher.",
+      "business": "If you can increase the quantity, we can apply for a better discount for you."
+    }
+  ],
+  "chatAnalysis": [
+    {
+      "old": "price increase",
+      "problem": "太直接，像单方面通知客户涨价，没有解释原因。",
+      "better": "The material cost has increased recently.",
+      "upgrade": "The raw material cost has increased recently, so the unit price is slightly higher than before."
+    },
+    {
+      "old": "no discount",
+      "problem": "容易让谈判结束，客户会觉得没有空间。",
+      "better": "It is difficult to offer a discount for this quantity.",
+      "upgrade": "For this quantity, our margin is already very limited, but I can check again with our manager."
+    },
+    {
+      "old": "your price too low",
+      "problem": "语气容易冒犯客户，应该询问目标价并说明评估。",
+      "better": "Could you please share your target price?",
+      "upgrade": "Could you please share your target price so I can check if there is any room to adjust?"
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "慢速基础版：客户问为什么更贵",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Why is the price higher than last time?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "The raw material cost has increased recently, so the unit price is slightly higher than before."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you keep the old price?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "I will check again with our manager and see if there is any room to adjust."
+        }
+      ]
+    },
+    {
+      "title": "正常商务版：客户要求折扣",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Can you give us a better discount?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "For this quantity, our margin is already very limited."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We may increase the quantity later."
+        },
+        {
+          "speaker": "Sales",
+          "text": "If you can increase the quantity now, we can apply for a better discount for you."
+        }
+      ]
+    },
+    {
+      "title": "压力场景版：客户拿竞争对手压价",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Your competitor offered a lower price."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand. Could you please confirm if their material, packaging, and quantity are the same?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "I am not sure."
+        },
+        {
+          "speaker": "Sales",
+          "text": "The price difference may come from different material, packaging, or order conditions."
+        }
+      ]
+    }
+  ],
+  "longDialogues": [
+    {
+      "title": "长对话实战：解释涨价、询问目标价并争取订单",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Hi, your new price is higher than last time."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you for your feedback. Let me explain the price difference clearly."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please explain. We expected the old price."
+        },
+        {
+          "speaker": "Sales",
+          "text": "The raw material cost has increased recently, and the exchange rate has also changed."
+        },
+        {
+          "speaker": "Customer",
+          "text": "But the product looks the same."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, the product looks the same, but the production cost is higher than before."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you keep the old price for this order?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand your request. For this quantity, our margin is already very limited."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We have another supplier with a lower price."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand. Could you please confirm if their material, packaging, and quantity are the same?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "The packaging may be different."
+        },
+        {
+          "speaker": "Sales",
+          "text": "That may explain part of the price difference because customized packaging can affect the cost."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you reduce the packaging cost?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "We can check if standard packaging can help reduce the cost."
+        },
+        {
+          "speaker": "Customer",
+          "text": "What is the best price you can offer?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Could you please share your target price so I can check if there is any room to adjust?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "Our target price is 2.3 dollars."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. I will check this target price with our manager and factory."
+        },
+        {
+          "speaker": "Customer",
+          "text": "If we order 3,000 pieces, can you do better?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "If you can increase the quantity to 3,000 pieces, we can apply for a better discount."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please check both 2,000 and 3,000 pieces."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will compare the price for 2,000 pieces and 3,000 pieces for you."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We need your final offer today."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Understood. I will check the best possible price and update you today."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please try your best. We want to place the order."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. I will do my best, but I also need to make sure the price is workable for production."
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "d11-q1",
+      "type": "translate",
+      "prompt": "中译英：原材料成本最近上涨了。",
+      "answer": "The raw material cost has increased recently.",
+      "acceptable": [
+        "the raw material cost has increased recently",
+        "raw material cost has increased recently"
+      ],
+      "hint": "raw material 表示原材料，increase 表示上涨。"
+    },
+    {
+      "id": "d11-q2",
+      "type": "rewrite",
+      "prompt": "把这句话改得更自然：no discount",
+      "answer": "For this quantity, our margin is already very limited.",
+      "acceptable": [
+        "for this quantity our margin is already very limited",
+        "our margin is already very limited for this quantity"
+      ],
+      "hint": "不要直接拒绝，用 margin 说明原因。"
+    },
+    {
+      "id": "d11-q3",
+      "type": "fill",
+      "prompt": "填空：Could you please share your target ____?",
+      "answer": "price",
+      "acceptable": [
+        "price"
+      ],
+      "hint": "target price 表示目标价。"
+    },
+    {
+      "id": "d11-q4",
+      "type": "choice",
+      "prompt": "客户说 Your competitor offered a lower price. 哪个回复更适合？",
+      "options": [
+        "Then buy from them",
+        "Our price is better",
+        "Could you please confirm if their material, packaging, and quantity are the same?",
+        "No discount"
+      ],
+      "answer": "Could you please confirm if their material, packaging, and quantity are the same?",
+      "acceptable": [
+        "could you please confirm if their material packaging and quantity are the same"
+      ],
+      "hint": "先确认比较条件是否一致。"
+    },
+    {
+      "id": "d11-q5",
+      "type": "translate",
+      "prompt": "中译英：如果你能增加数量，我们可以申请更好的折扣。",
+      "answer": "If you can increase the quantity, we can apply for a better discount.",
+      "acceptable": [
+        "if you can increase the quantity we can apply for a better discount",
+        "if you can increase the quantity we can offer a better discount"
+      ],
+      "hint": "apply for a better discount 表示申请更好的折扣。"
+    },
+    {
+      "id": "d11-q6",
+      "type": "reply",
+      "prompt": "客户说：Why is the price higher than last time? 你应该怎么回复？",
+      "answer": "The raw material cost has increased recently, so the unit price is slightly higher than before.",
+      "acceptable": [
+        "the raw material cost has increased recently so the unit price is slightly higher than before",
+        "the raw material cost has increased so the price is slightly higher than before"
+      ],
+      "hint": "说明具体原因，不要只说 price increase。"
+    }
+  ],
+  "homework": [
+    "把 price difference、increase、raw material、margin、target price 各造 1 句。",
+    "把 5 个核心句子的 business 版本各读 5 遍。",
+    "跟读长对话 2 遍，重点练解释涨价和询问目标价。"
+  ],
+  "tomorrow": "Day 12 会练模具费、开模时间和模具归属。"
+}

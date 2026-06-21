@@ -1,0 +1,391 @@
+{
+  "day": 25,
+  "title": "货代仓库、提货和截仓时间",
+  "theme": "从 pickup / warehouse address / cut-off time 开始",
+  "durationMinutes": 40,
+  "goals": [
+    "能协调客户货代到工厂提货或把货送到指定仓库",
+    "能确认仓库地址、联系人、预约时间、装货时间和截仓时间",
+    "能处理货代临时改时间、仓库拒收或需要交接凭证的场景"
+  ],
+  "review": {
+    "title": "Day 24 复习",
+    "items": [
+      "昨天练了 beneficiary account、wrong payment、refund request、deduction 和 transfer mistake。",
+      "今天进入物流执行阶段：付款、单据和出货确认后，货物要交给客户货代或送到指定仓库。",
+      "物流协调要确认具体人、具体地址、具体时间和交接凭证，不能只说 send to warehouse。"
+    ]
+  },
+  "preview": {
+    "scenario": "客户的货代联系工厂提货，或客户要求把货送到指定仓库。你需要确认 pickup 时间、warehouse address、cut-off time、装货时间和仓库收货凭证。",
+    "needToKnow": [
+      "pickup 是货代提货，factory pickup 是到工厂提货。",
+      "cut-off time 是截仓时间，错过可能导致船期或航班延后。",
+      "warehouse receipt 是仓库收货凭证，能证明货物已经交接。"
+    ]
+  },
+  "vocabulary": [
+    {
+      "word": "pickup",
+      "phonetic": "/ˈpɪkʌp/",
+      "meaning": "提货 / 上门取货",
+      "usage": "用于货代或快递到工厂、仓库取货。",
+      "example": "Please ask your forwarder to arrange pickup tomorrow."
+    },
+    {
+      "word": "cut-off time",
+      "phonetic": "/ˈkʌt ɔːf taɪm/",
+      "meaning": "截仓时间 / 截止入仓时间",
+      "usage": "用于货物必须送达仓库或码头的最后时间。",
+      "example": "Please confirm the cut-off time with your forwarder."
+    },
+    {
+      "word": "warehouse address",
+      "phonetic": "/ˈwerhaʊs əˈdres/",
+      "meaning": "仓库地址",
+      "usage": "用于客户要求把货送到货代仓库或指定仓库。",
+      "example": "Please send us the warehouse address and contact person."
+    },
+    {
+      "word": "factory pickup",
+      "phonetic": "/ˈfæktəri ˈpɪkʌp/",
+      "meaning": "工厂提货",
+      "usage": "用于客户货代直接到工厂装货。",
+      "example": "We can support factory pickup after shipment release."
+    },
+    {
+      "word": "delivery note",
+      "phonetic": "/dɪˈlɪvəri noʊt/",
+      "meaning": "送货单 / 交货单",
+      "usage": "用于货物送仓或交接时随货提供的单据。",
+      "example": "We will prepare the delivery note for the warehouse."
+    },
+    {
+      "word": "loading time",
+      "phonetic": "/ˈloʊdɪŋ taɪm/",
+      "meaning": "装货时间",
+      "usage": "用于确认工厂装车、装柜或货代提货的时间。",
+      "example": "Please confirm the loading time with your driver."
+    },
+    {
+      "word": "handover",
+      "phonetic": "/ˈhændoʊvər/",
+      "meaning": "交接 / 移交",
+      "usage": "用于货物从工厂交给货代、仓库或司机。",
+      "example": "We will take photos during the handover."
+    },
+    {
+      "word": "warehouse receipt",
+      "phonetic": "/ˈwerhaʊs rɪˈsiːt/",
+      "meaning": "仓库收货凭证",
+      "usage": "用于证明仓库已收到货物。",
+      "example": "Please ask the warehouse to provide a warehouse receipt after delivery."
+    }
+  ],
+  "sentences": [
+    {
+      "label": "安排货代提货",
+      "basic": "Your forwarder can pick up goods.",
+      "natural": "Please ask your forwarder to arrange pickup tomorrow.",
+      "business": "Please ask your forwarder to contact us and arrange factory pickup after shipment release."
+    },
+    {
+      "label": "确认仓库地址",
+      "basic": "Send warehouse address.",
+      "natural": "Please send us the warehouse address and contact person.",
+      "business": "Please send us the warehouse address, contact person, phone number, and receiving time so we can arrange delivery."
+    },
+    {
+      "label": "确认截仓时间",
+      "basic": "When warehouse close?",
+      "natural": "Please confirm the cut-off time with your forwarder.",
+      "business": "Please confirm the warehouse cut-off time with your forwarder so we can arrange delivery without missing the schedule."
+    },
+    {
+      "label": "确认装货时间",
+      "basic": "What time driver come?",
+      "natural": "Please confirm the loading time with your driver.",
+      "business": "Please confirm the loading time, truck plate number, and driver contact before factory pickup."
+    },
+    {
+      "label": "索要收货凭证",
+      "basic": "Send receipt after warehouse receive.",
+      "natural": "Please ask the warehouse to provide a warehouse receipt after delivery.",
+      "business": "After the goods are delivered, please ask the warehouse to provide a warehouse receipt for our shipment record."
+    }
+  ],
+  "chatAnalysis": [
+    {
+      "old": "forwarder come take goods",
+      "problem": "表达不专业，也没有说明货代需要联系谁、什么时候提货。",
+      "better": "Please ask your forwarder to arrange pickup tomorrow.",
+      "upgrade": "Please ask your forwarder to contact us and arrange factory pickup after shipment release."
+    },
+    {
+      "old": "send warehouse address",
+      "problem": "只要地址不够，实际送仓还需要联系人、电话和收货时间。",
+      "better": "Please send us the warehouse address and contact person.",
+      "upgrade": "Please send us the warehouse address, contact person, phone number, and receiving time so we can arrange delivery."
+    },
+    {
+      "old": "we will deliver before closing",
+      "problem": "closing 不够具体，物流里应确认 cut-off time，避免误解。",
+      "better": "Please confirm the cut-off time with your forwarder.",
+      "upgrade": "Please confirm the warehouse cut-off time with your forwarder so we can arrange delivery without missing the schedule."
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "慢速基础版：货代到工厂提货",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Our forwarder will pick up the goods tomorrow."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Okay. Please ask your forwarder to contact us and confirm the pickup time."
+        },
+        {
+          "speaker": "Customer",
+          "text": "They will contact you today."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Great. We will prepare the goods and delivery note for factory pickup."
+        }
+      ]
+    },
+    {
+      "title": "正常商务版：送到指定仓库",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Please send the goods to our forwarder's warehouse."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. Please send us the warehouse address, contact person, phone number, and receiving time."
+        },
+        {
+          "speaker": "Customer",
+          "text": "I will send the warehouse details now."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. We will arrange delivery after confirming the cut-off time."
+        }
+      ]
+    },
+    {
+      "title": "压力场景版：赶截仓时间",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "The warehouse cut-off time is 4 PM today. Can you deliver before that?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "I will check the loading time and driver availability immediately."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please do not miss the cut-off time."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Understood. I will coordinate with our warehouse and keep you posted on the delivery status."
+        }
+      ]
+    }
+  ],
+  "longDialogues": [
+    {
+      "title": "长对话实战：协调货代提货、送仓和截仓时间",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Our forwarder will arrange pickup for this shipment."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Okay. Please ask your forwarder to contact us and confirm the factory pickup time."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Do they need an appointment?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, please ask them to confirm the loading time with us in advance."
+        },
+        {
+          "speaker": "Customer",
+          "text": "What information do you need from the driver?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "We need the truck plate number, driver contact, and estimated arrival time."
+        },
+        {
+          "speaker": "Customer",
+          "text": "If the driver cannot come tomorrow, can you deliver to their warehouse?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, we can arrange delivery if you provide the warehouse address and receiving time."
+        },
+        {
+          "speaker": "Customer",
+          "text": "The warehouse has a cut-off time."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Please confirm the warehouse cut-off time with your forwarder so we can avoid missing the schedule."
+        },
+        {
+          "speaker": "Customer",
+          "text": "The cut-off time is 4 PM on Friday."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Understood. I will check the loading time and arrange delivery before the cut-off time if possible."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please prepare the delivery note."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. We will prepare the delivery note and attach it with the goods."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you take photos when handing over the goods?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, we will take photos during the handover for your shipment record."
+        },
+        {
+          "speaker": "Customer",
+          "text": "What if the warehouse refuses to receive the goods?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "If the warehouse refuses the goods, we will contact you immediately and ask for the reason."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please ask them to provide a receipt after they receive the goods."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, we will ask the warehouse to provide a warehouse receipt after delivery."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please update me once the goods arrive at the warehouse."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will keep you posted and send the warehouse receipt once we receive it."
+        },
+        {
+          "speaker": "Customer",
+          "text": "If the driver arrives late, please inform us immediately."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Understood. We will monitor the pickup schedule and update you if anything changes."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Thank you. This shipment is urgent."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand. We will coordinate closely with your forwarder and try to complete the handover before the cut-off time."
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "d25-q1",
+      "type": "translate",
+      "prompt": "中译英：请让您的货代联系我们并安排工厂提货。",
+      "answer": "Please ask your forwarder to contact us and arrange factory pickup.",
+      "acceptable": [
+        "please ask your forwarder to contact us and arrange factory pickup",
+        "please ask your forwarder to contact us and arrange pickup at our factory"
+      ],
+      "hint": "factory pickup 是工厂提货。"
+    },
+    {
+      "id": "d25-q2",
+      "type": "rewrite",
+      "prompt": "把这句话改得更专业：send warehouse address",
+      "answer": "Please send us the warehouse address, contact person, phone number, and receiving time.",
+      "acceptable": [
+        "please send us the warehouse address contact person phone number and receiving time",
+        "please send us the warehouse address contact person phone number and receiving schedule"
+      ],
+      "hint": "送仓不只需要地址，还要联系人和收货时间。"
+    },
+    {
+      "id": "d25-q3",
+      "type": "fill",
+      "prompt": "填空：Please confirm the warehouse cut-off ____ with your forwarder.",
+      "answer": "time",
+      "acceptable": [
+        "time"
+      ],
+      "hint": "cut-off time 是截仓时间。"
+    },
+    {
+      "id": "d25-q4",
+      "type": "choice",
+      "prompt": "客户说货代明天提货，哪个回复更合适？",
+      "options": [
+        "Ok come",
+        "Please ask your forwarder to contact us and confirm the pickup time.",
+        "Driver come tomorrow",
+        "We wait"
+      ],
+      "answer": "Please ask your forwarder to contact us and confirm the pickup time.",
+      "acceptable": [
+        "please ask your forwarder to contact us and confirm the pickup time"
+      ],
+      "hint": "要确认 pickup time。"
+    },
+    {
+      "id": "d25-q5",
+      "type": "translate",
+      "prompt": "中译英：货物送达后，请让仓库提供收货凭证。",
+      "answer": "After the goods are delivered, please ask the warehouse to provide a warehouse receipt.",
+      "acceptable": [
+        "after the goods are delivered please ask the warehouse to provide a warehouse receipt",
+        "after delivery please ask the warehouse to provide a warehouse receipt"
+      ],
+      "hint": "warehouse receipt 是仓库收货凭证。"
+    },
+    {
+      "id": "d25-q6",
+      "type": "reply",
+      "prompt": "客户说：The warehouse cut-off time is 4 PM today. Can you deliver before that? 你应该怎么回复？",
+      "answer": "I will check the loading time and driver availability immediately, then update you as soon as possible.",
+      "acceptable": [
+        "i will check the loading time and driver availability immediately then update you as soon as possible",
+        "i will check the loading time and driver availability immediately and update you as soon as possible"
+      ],
+      "hint": "不要直接保证，先确认 loading time 和司机情况。"
+    }
+  ],
+  "homework": [
+    "把 pickup、cut-off time、warehouse address、factory pickup、delivery note、loading time、handover、warehouse receipt 各造 1 句。",
+    "把 5 个核心句子的 business 版本各读 5 遍，重点练 warehouse address 和 cut-off time。",
+    "写一段 WhatsApp 回复：客户货代要明天提货，你要确认提货时间、司机信息、装货时间，并说明会准备 delivery note 和 handover photos。"
+  ],
+  "tomorrow": "Day 26 会练物流延误、清关问题和跟踪更新。"
+}

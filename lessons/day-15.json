@@ -1,0 +1,400 @@
+{
+  "day": 15,
+  "title": "低数量、小订单和试单谈判",
+  "theme": "从 trial order / below MOQ / stock option 开始",
+  "durationMinutes": 38,
+  "goals": [
+    "能在客户数量低于 MOQ 时礼貌解释限制，而不是直接拒绝",
+    "能说明小数量会导致 higher unit price，并给出可选方案",
+    "能用 trial order、stock option、mixed order 和 repeat order 争取后续订单"
+  ],
+  "review": {
+    "title": "Day 14 复习",
+    "items": [
+      "昨天练了 finish、matte、glossy、printing、engraving、Pantone、color matching 和 swatch。",
+      "今天从产品细节进入订单谈判：客户可能喜欢产品，但第一次只想买很少数量。",
+      "遇到低数量不要只说 MOQ is 1000，要解释原因、给替代方案，并为后续 repeat order 留空间。"
+    ]
+  },
+  "preview": {
+    "scenario": "客户说第一次只想买 100 pcs，但你的 MOQ 是 1000 pcs。你需要判断是否有库存、能否混款、是否需要加价，并把客户引导到试单或后续复购。",
+    "needToKnow": [
+      "below MOQ 不是不能谈，而是要说明生产限制和成本影响。",
+      "trial order 可以降低客户心理压力，但供应商要保护成本。",
+      "stock option、mixed order 和 repeat order 是小订单谈判中最实用的三种转圜方式。"
+    ]
+  },
+  "vocabulary": [
+    {
+      "word": "trial order",
+      "phonetic": "/ˈtraɪəl ˈɔːrdər/",
+      "meaning": "试单",
+      "usage": "用于客户第一次小批量测试市场或质量。",
+      "example": "We can support a trial order for your first purchase."
+    },
+    {
+      "word": "small quantity",
+      "phonetic": "/smɔːl ˈkwɑːntəti/",
+      "meaning": "小数量",
+      "usage": "用于客户订购数量较少，通常低于正常生产要求。",
+      "example": "For a small quantity, the unit price will be higher."
+    },
+    {
+      "word": "below MOQ",
+      "phonetic": "/bɪˈloʊ ˌem oʊ ˈkjuː/",
+      "meaning": "低于最小起订量",
+      "usage": "用于说明客户数量达不到工厂最低生产数量。",
+      "example": "Your quantity is below MOQ, but we can check a possible solution."
+    },
+    {
+      "word": "higher unit price",
+      "phonetic": "/ˈhaɪər ˈjuːnɪt praɪs/",
+      "meaning": "更高单价",
+      "usage": "用于解释小订单分摊成本更高，所以单价会上升。",
+      "example": "A small quantity will have a higher unit price because of setup cost."
+    },
+    {
+      "word": "stock option",
+      "phonetic": "/stɑːk ˈɑːpʃən/",
+      "meaning": "库存方案 / 现货选项",
+      "usage": "用于推荐客户选择现货颜色、现货规格或库存款式来降低 MOQ。",
+      "example": "We can offer a stock option if you need a lower quantity."
+    },
+    {
+      "word": "mixed order",
+      "phonetic": "/mɪkst ˈɔːrdər/",
+      "meaning": "混合订单 / 混款订单",
+      "usage": "用于客户把多个颜色、规格或款式合并达到起订要求。",
+      "example": "A mixed order may help you reach the minimum quantity."
+    },
+    {
+      "word": "repeat order",
+      "phonetic": "/rɪˈpiːt ˈɔːrdər/",
+      "meaning": "复购订单 / 返单",
+      "usage": "用于客户试单后再次下单，常用于谈长期合作。",
+      "example": "If the trial order works well, we can discuss the repeat order soon."
+    },
+    {
+      "word": "price break",
+      "phonetic": "/praɪs breɪk/",
+      "meaning": "价格阶梯 / 数量折扣点",
+      "usage": "用于说明不同数量对应不同单价。",
+      "example": "The price break starts from 1,000 pieces."
+    }
+  ],
+  "sentences": [
+    {
+      "label": "礼貌说明低于 MOQ",
+      "basic": "This quantity is too low.",
+      "natural": "This quantity is below our MOQ.",
+      "business": "This quantity is below our MOQ, but I can check if we have a flexible solution for your trial order."
+    },
+    {
+      "label": "解释小单单价更高",
+      "basic": "Small order price high.",
+      "natural": "For a small quantity, the unit price will be higher.",
+      "business": "For a small quantity, the unit price will be higher because the setup cost is shared by fewer pieces."
+    },
+    {
+      "label": "推荐库存方案",
+      "basic": "You can choose stock.",
+      "natural": "You can choose our stock option for a lower quantity.",
+      "business": "If you can accept our stock option, we may be able to support a lower quantity and faster delivery."
+    },
+    {
+      "label": "建议混款达到数量",
+      "basic": "Mix colors maybe okay.",
+      "natural": "A mixed order may help you reach the minimum quantity.",
+      "business": "If you can mix colors or sizes in one order, it may help you reach the minimum quantity more easily."
+    },
+    {
+      "label": "争取试单后复购",
+      "basic": "Next time order more.",
+      "natural": "If the trial order works well, we can discuss the repeat order.",
+      "business": "If the trial order works well in your market, we can discuss a better price for your repeat order."
+    }
+  ],
+  "chatAnalysis": [
+    {
+      "old": "MOQ 1000, cannot do 100",
+      "problem": "太生硬，客户会觉得你只是在拒绝，没有帮他找方案。",
+      "better": "This quantity is below our MOQ, but I can check if we have a flexible solution.",
+      "upgrade": "This quantity is below our MOQ, but I can check if we have a flexible solution for your trial order, such as a stock option or mixed order."
+    },
+    {
+      "old": "small qty price expensive",
+      "problem": "expensive 容易让客户觉得你在随意加价，应该解释成本原因。",
+      "better": "For a small quantity, the unit price will be higher.",
+      "upgrade": "For a small quantity, the unit price will be higher because the setup cost is shared by fewer pieces."
+    },
+    {
+      "old": "order more then cheaper",
+      "problem": "语气像催客户加量，没有给出清晰的价格阶梯逻辑。",
+      "better": "The price break starts from 1,000 pieces.",
+      "upgrade": "The price break starts from 1,000 pieces, so if you can increase the quantity, we can offer a better unit price."
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "慢速基础版：客户数量低于 MOQ",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Can we order 100 pieces first?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "This quantity is below our MOQ, but I can check if we have a flexible solution."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We only need a trial order."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Understood. I will check if we can support a trial order for you."
+        }
+      ]
+    },
+    {
+      "title": "正常商务版：说明小单价格更高",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Why is the price higher for 200 pieces?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "For a small quantity, the unit price will be higher because the setup cost is shared by fewer pieces."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you give us a better price?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "If you can increase the quantity to the price break, we can offer a better unit price."
+        }
+      ]
+    },
+    {
+      "title": "压力场景版：推荐库存和混款方案",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "We cannot buy 1,000 pieces for the first order."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand. If you can accept our stock option, we may support a lower quantity."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can we mix colors in one order?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, a mixed order may help you reach the minimum quantity more easily."
+        }
+      ]
+    }
+  ],
+  "longDialogues": [
+    {
+      "title": "长对话实战：客户要求低数量试单并争取更低价格",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "We like the sample, but we want to start with 100 pieces."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you for your feedback. May I know if this is for a trial order?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "Yes, we want to test the market first."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Understood. Our normal MOQ is 1,000 pieces, so 100 pieces is below MOQ."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you make an exception for us?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "I can check it for you, but for a small quantity, the unit price will be higher."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Why is the unit price higher?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Because the setup cost, logo cost, and packing cost are shared by fewer pieces."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We understand, but the price still needs to be reasonable."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. Let me check whether we have a stock option that can support a lower quantity."
+        },
+        {
+          "speaker": "Customer",
+          "text": "What do you mean by stock option?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "It means you choose our available stock color or standard specification instead of a fully customized version."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can we still add our logo?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Possibly yes, but we need to check the logo method and minimum logo quantity."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can we mix different colors to reach the MOQ?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "A mixed order may help, especially if the colors are available in stock."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We may take 300 pieces first, mixed in three colors."
+        },
+        {
+          "speaker": "Sales",
+          "text": "That sounds more workable. I will check if 300 pieces mixed order can be accepted."
+        },
+        {
+          "speaker": "Customer",
+          "text": "If the market response is good, we will place a repeat order."
+        },
+        {
+          "speaker": "Sales",
+          "text": "That would be great. If the trial order works well, we can discuss a better price for your repeat order."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you give me the price for 300 pieces and 1,000 pieces?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes. I will send you two price levels so you can compare the price break clearly."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please include the logo cost and packing cost."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will include the product price, logo cost, packing cost, and estimated lead time."
+        },
+        {
+          "speaker": "Customer",
+          "text": "If the 300-piece price is too high, we may wait until we can order more."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand. I will try to give you the best workable option for the trial order."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please update us today if possible."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will check with our factory and update you today with the available options."
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "d15-q1",
+      "type": "translate",
+      "prompt": "中译英：这个数量低于我们的 MOQ，但我可以帮您确认是否有灵活方案。",
+      "answer": "This quantity is below our MOQ, but I can check if we have a flexible solution for you.",
+      "acceptable": [
+        "this quantity is below our moq but i can check if we have a flexible solution for you",
+        "this quantity is below our moq but i can check if we have a flexible solution",
+        "your quantity is below our moq but i can check if we have a flexible solution"
+      ],
+      "hint": "不要直接说 cannot do，要加 flexible solution。"
+    },
+    {
+      "id": "d15-q2",
+      "type": "rewrite",
+      "prompt": "把这句话改得更自然：MOQ 1000, cannot do 100",
+      "answer": "This quantity is below our MOQ, but I can check if we have a flexible solution for your trial order.",
+      "acceptable": [
+        "this quantity is below our moq but i can check if we have a flexible solution for your trial order",
+        "this quantity is below our moq but i can check if we have a flexible solution"
+      ],
+      "hint": "保留 MOQ 信息，但语气要帮客户找方案。"
+    },
+    {
+      "id": "d15-q3",
+      "type": "fill",
+      "prompt": "填空：For a small quantity, the ____ price will be higher.",
+      "answer": "unit",
+      "acceptable": [
+        "unit"
+      ],
+      "hint": "unit price 是单价。"
+    },
+    {
+      "id": "d15-q4",
+      "type": "choice",
+      "prompt": "客户第一次只要 100 pcs，哪个回复更适合？",
+      "options": [
+        "Too small, cannot",
+        "This quantity is below our MOQ, but I can check if we have a flexible solution for your trial order.",
+        "Order 1000 first",
+        "No, MOQ 1000"
+      ],
+      "answer": "This quantity is below our MOQ, but I can check if we have a flexible solution for your trial order.",
+      "acceptable": [
+        "this quantity is below our moq but i can check if we have a flexible solution for your trial order"
+      ],
+      "hint": "既说明 MOQ，又给客户台阶。"
+    },
+    {
+      "id": "d15-q5",
+      "type": "translate",
+      "prompt": "中译英：如果您能接受库存方案，我们可能可以支持更低数量。",
+      "answer": "If you can accept our stock option, we may be able to support a lower quantity.",
+      "acceptable": [
+        "if you can accept our stock option we may be able to support a lower quantity",
+        "if you can accept our stock option we may support a lower quantity"
+      ],
+      "hint": "stock option 是库存方案。"
+    },
+    {
+      "id": "d15-q6",
+      "type": "reply",
+      "prompt": "客户说：If the trial order works, we will order more next time. 你应该怎么回复？",
+      "answer": "That would be great. If the trial order works well, we can discuss a better price for your repeat order.",
+      "acceptable": [
+        "that would be great if the trial order works well we can discuss a better price for your repeat order",
+        "if the trial order works well we can discuss a better price for your repeat order"
+      ],
+      "hint": "用 repeat order 承接后续复购和更好价格。"
+    }
+  ],
+  "homework": [
+    "把 trial order、small quantity、below MOQ、higher unit price、stock option、mixed order、repeat order、price break 各造 1 句。",
+    "把 5 个核心句子的 business 版本各读 5 遍，重点练 below MOQ 和 higher unit price 的解释。",
+    "写一段 WhatsApp 回复：客户要 100 pcs 试单，你要说明低于 MOQ、可查库存方案、并给 300 pcs / 1000 pcs 两个价格阶梯。"
+  ],
+  "tomorrow": "Day 16 会练生产前最终确认，避免数量、规格、包装、唛头和交期出错。"
+}

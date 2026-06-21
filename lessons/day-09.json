@@ -1,0 +1,399 @@
+{
+  "day": 9,
+  "title": "处理客户修改规格、数量和包装",
+  "theme": "从 revise / change request / adjustment 开始",
+  "durationMinutes": 35,
+  "goals": [
+    "能礼貌确认客户的修改要求，避免漏掉细节",
+    "能说明修改规格、数量或包装可能影响价格和交期",
+    "能把客户改动整理成清晰的确认句，再继续报价或生产"
+  ],
+  "review": {
+    "title": "Day 08 复习",
+    "items": [
+      "昨天练了 out of stock、alternative、restock、shortage 和 recommend。",
+      "今天练客户临时改要求：改规格、改数量、改包装、改唛头。",
+      "客户说 change 时，不要直接 OK，要先确认改动内容、影响和截止时间。"
+    ]
+  },
+  "preview": {
+    "scenario": "客户已经拿到报价或订单已进入准备阶段，但突然要求修改数量、颜色、尺寸、包装、标签或交期。",
+    "needToKnow": [
+      "revise 常用于修改报价单、PI、设计稿或订单信息。",
+      "change request 表示客户提出的修改需求，比 change 更正式。",
+      "修改可能 affect price and lead time，要提前说明，避免后续争议。"
+    ]
+  },
+  "vocabulary": [
+    {
+      "word": "revise",
+      "phonetic": "/rɪˈvaɪz/",
+      "meaning": "修改 / 修订",
+      "usage": "用于修改报价单、PI、订单信息或文件。",
+      "example": "I will revise the PI after you confirm the changes."
+    },
+    {
+      "word": "change request",
+      "phonetic": "/tʃeɪndʒ rɪˈkwest/",
+      "meaning": "修改要求",
+      "usage": "用于正式描述客户提出的改动需求。",
+      "example": "Please confirm the change request before we update the order."
+    },
+    {
+      "word": "adjustment",
+      "phonetic": "/əˈdʒʌstmənt/",
+      "meaning": "调整",
+      "usage": "用于价格、数量、包装或交期的调整。",
+      "example": "This adjustment may affect the price and lead time."
+    },
+    {
+      "word": "original",
+      "phonetic": "/əˈrɪdʒənl/",
+      "meaning": "原来的 / 原始的",
+      "usage": "用于对比原订单和新修改内容。",
+      "example": "The original quantity was 1,000 pieces."
+    },
+    {
+      "word": "requirement",
+      "phonetic": "/rɪˈkwaɪərmənt/",
+      "meaning": "要求 / 需求",
+      "usage": "用于客户对产品、包装、标签或交期的具体要求。",
+      "example": "Please send us the updated requirement."
+    },
+    {
+      "word": "affect",
+      "phonetic": "/əˈfekt/",
+      "meaning": "影响",
+      "usage": "用于说明修改会影响价格、交期或生产安排。",
+      "example": "This change may affect the production schedule."
+    },
+    {
+      "word": "extra cost",
+      "phonetic": "/ˈekstrə kɔːst/",
+      "meaning": "额外费用",
+      "usage": "用于说明修改包装、标签、颜色或数量带来的新增费用。",
+      "example": "Customized packaging may require extra cost."
+    },
+    {
+      "word": "deadline",
+      "phonetic": "/ˈdedlaɪn/",
+      "meaning": "截止时间",
+      "usage": "用于说明修改信息必须在某个时间前确认。",
+      "example": "Please confirm the changes before the deadline."
+    }
+  ],
+  "sentences": [
+    {
+      "label": "确认修改要求",
+      "basic": "You want change?",
+      "natural": "Do you want to change the order details?",
+      "business": "Could you please confirm the exact change request so we can update the order correctly?"
+    },
+    {
+      "label": "修改 PI",
+      "basic": "I change PI.",
+      "natural": "I will revise the PI.",
+      "business": "After you confirm the updated requirement, I will revise the PI and send it to you again."
+    },
+    {
+      "label": "说明影响",
+      "basic": "Price may change.",
+      "natural": "This change may affect the price.",
+      "business": "This adjustment may affect the price and lead time, so I need to check with our factory first."
+    },
+    {
+      "label": "确认原数量和新数量",
+      "basic": "Old quantity 1000, new 2000?",
+      "natural": "Do you want to change the quantity from 1,000 pieces to 2,000 pieces?",
+      "business": "Please confirm if you want to change the original quantity from 1,000 pieces to 2,000 pieces."
+    },
+    {
+      "label": "提醒截止时间",
+      "basic": "Confirm soon.",
+      "natural": "Please confirm the changes soon.",
+      "business": "Please confirm the changes before the deadline so we can keep the production schedule."
+    }
+  ],
+  "chatAnalysis": [
+    {
+      "old": "ok change",
+      "problem": "没有确认具体改哪里，容易造成订单信息错误。",
+      "better": "Sure. Please confirm the exact changes.",
+      "upgrade": "Sure. Could you please confirm the exact change request so we can update the order correctly?"
+    },
+    {
+      "old": "price change",
+      "problem": "太直接，容易让客户觉得你临时加价。",
+      "better": "This change may affect the price.",
+      "upgrade": "This adjustment may affect the price and lead time, so I need to check with our factory first."
+    },
+    {
+      "old": "send new PI later",
+      "problem": "缺少前置确认，应该先确认更新后的要求，再修改 PI。",
+      "better": "I will revise the PI after you confirm the details.",
+      "upgrade": "After you confirm the updated requirement, I will revise the PI and send it to you again."
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "慢速基础版：客户修改数量",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Can we change the quantity?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. Please confirm the new quantity you need."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Change it from 1,000 pieces to 2,000 pieces."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Got it. I will check if this adjustment affects the price and lead time."
+        }
+      ]
+    },
+    {
+      "title": "正常商务版：客户修改包装",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "We want to change the packaging to a color box."
+        },
+        {
+          "speaker": "Sales",
+          "text": "No problem. Please send us the updated packaging requirement."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Will there be extra cost?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Customized packaging may require extra cost. I will check the exact cost for you."
+        }
+      ]
+    },
+    {
+      "title": "压力场景版：客户生产前临时改规格",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "We need to revise the size before production."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Please send us the updated size requirement as soon as possible."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Will it delay production?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "It may affect the production schedule, so I need to check with our factory first."
+        }
+      ]
+    }
+  ],
+  "longDialogues": [
+    {
+      "title": "长对话实战：客户连续修改数量、包装和 PI",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Hi, we need to change some order details."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. Could you please confirm the exact change request?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "First, we want to change the quantity."
+        },
+        {
+          "speaker": "Sales",
+          "text": "No problem. What is the new quantity you need?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please change it from 1,000 pieces to 2,000 pieces."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Got it. The original quantity was 1,000 pieces, and the new quantity is 2,000 pieces."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Yes, that is correct."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I will check if this adjustment affects the unit price and lead time."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Second, we want to change the packaging."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Please send us the updated packaging requirement."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We want one piece in one color box."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Understood. Customized packaging may require extra cost."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please check the extra cost."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will check the packaging cost with our factory and update you today."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you also revise the PI?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes. After you confirm all updated requirements, I will revise the PI."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Do you need anything else from us?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes. Please confirm the new quantity, packaging file, label requirement, and delivery address."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Will this change affect the production schedule?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "It may affect the production schedule, so I need to check with our factory first."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We have a deadline for this order."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand. Please confirm the changes before the deadline so we can keep the schedule."
+        },
+        {
+          "speaker": "Customer",
+          "text": "What is the deadline for changes?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Please confirm all changes before tomorrow morning because production will start tomorrow afternoon."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Okay, we will send the final files today."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. After receiving the final files, I will revise the PI and update the order details."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please make sure there is no mistake."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Of course. I will send you a final summary for confirmation before we proceed."
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "d9-q1",
+      "type": "translate",
+      "prompt": "中译英：请确认具体的修改要求。",
+      "answer": "Please confirm the exact change request.",
+      "acceptable": [
+        "please confirm the exact change request",
+        "could you please confirm the exact change request"
+      ],
+      "hint": "change request 表示修改要求。"
+    },
+    {
+      "id": "d9-q2",
+      "type": "rewrite",
+      "prompt": "把这句话改得更自然：ok change",
+      "answer": "Sure. Please confirm the exact changes.",
+      "acceptable": [
+        "sure please confirm the exact changes",
+        "could you please confirm the exact change request"
+      ],
+      "hint": "不要只说 OK，要确认具体修改。"
+    },
+    {
+      "id": "d9-q3",
+      "type": "fill",
+      "prompt": "填空：This adjustment may ____ the price and lead time.",
+      "answer": "affect",
+      "acceptable": [
+        "affect"
+      ],
+      "hint": "affect 表示影响。"
+    },
+    {
+      "id": "d9-q4",
+      "type": "choice",
+      "prompt": "客户说要改包装，哪个回复更适合？",
+      "options": [
+        "OK change",
+        "Please send us the updated packaging requirement, and I will check if there is any extra cost.",
+        "No problem later",
+        "Price change"
+      ],
+      "answer": "Please send us the updated packaging requirement, and I will check if there is any extra cost.",
+      "acceptable": [
+        "please send us the updated packaging requirement and i will check if there is any extra cost"
+      ],
+      "hint": "确认更新后的要求，并说明会检查额外费用。"
+    },
+    {
+      "id": "d9-q5",
+      "type": "translate",
+      "prompt": "中译英：我会修改 PI 并重新发给你。",
+      "answer": "I will revise the PI and send it to you again.",
+      "acceptable": [
+        "i will revise the pi and send it to you again",
+        "i will revise the pi and resend it to you"
+      ],
+      "hint": "revise 表示修改或修订。"
+    },
+    {
+      "id": "d9-q6",
+      "type": "reply",
+      "prompt": "客户说：Will this change delay production? 你应该怎么回复？",
+      "answer": "It may affect the production schedule, so I need to check with our factory first.",
+      "acceptable": [
+        "it may affect the production schedule so i need to check with our factory first",
+        "this change may affect the production schedule so i need to check with our factory first"
+      ],
+      "hint": "不要直接承诺不影响，要先和工厂确认。"
+    }
+  ],
+  "homework": [
+    "把 revise、change request、adjustment、affect、extra cost 各造 1 句。",
+    "把 5 个核心句子的 business 版本各读 5 遍。",
+    "跟读长对话 2 遍，重点练客户临时修改订单时的确认方式。"
+  ],
+  "tomorrow": "Day 10 会练客户投诉、质量问题和补救方案的表达。"
+}

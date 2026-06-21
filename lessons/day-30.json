@@ -1,0 +1,471 @@
+{
+  "day": 30,
+  "title": "综合实战复盘：从询价到售后完整订单",
+  "theme": "从 order lifecycle / project recap / final recap 开始",
+  "durationMinutes": 50,
+  "goals": [
+    "能把客户从询价、需求确认、报价、样品、PI、付款、生产、物流到售后的完整流程串起来",
+    "能用 requirement summary、commercial terms 和 approval chain 做清晰复盘",
+    "能在长对话中自然处理价格、交期、样品确认、付款、物流异常和售后反馈"
+  ],
+  "review": {
+    "title": "Day 29 复习",
+    "items": [
+      "昨天练了 follow-up、quotation follow-up、sample feedback、decision timeline、next step、pending decision、gentle reminder 和 reconnect。",
+      "长期客户跟进的关键是给客户一个容易回复的问题，而不是只问 any update。",
+      "今天做 30 天最终综合实战，把询价到售后的核心能力放进一条完整订单流程里。"
+    ]
+  },
+  "preview": {
+    "scenario": "客户从第一次询价开始，逐步确认规格、数量、价格、样品、PI、付款、生产、物流和售后问题。你需要像真实外贸销售一样，逐步确认信息、推进订单、处理异常并做最终复盘。",
+    "needToKnow": [
+      "order lifecycle 是完整订单生命周期，不只是报价或出货其中一步。",
+      "project recap 用于阶段性总结，让客户确认你们对需求、价格、交期和下一步理解一致。",
+      "final recap 是最后复盘，适合在课程结束或项目结束时总结经验和后续动作。"
+    ]
+  },
+  "vocabulary": [
+    {
+      "word": "order lifecycle",
+      "phonetic": "/ˈɔːrdər ˈlaɪfsaɪkəl/",
+      "meaning": "订单生命周期 / 订单完整流程",
+      "usage": "用于从询价、报价、付款、生产、出货到售后的完整流程。",
+      "example": "This lesson reviews the full order lifecycle from inquiry to after-sales support."
+    },
+    {
+      "word": "project recap",
+      "phonetic": "/ˈprɑːdʒekt ˈriːkæp/",
+      "meaning": "项目复盘 / 项目阶段总结",
+      "usage": "用于给客户总结项目进展、已确认事项和未决事项。",
+      "example": "Let me send a project recap so we are aligned on all details."
+    },
+    {
+      "word": "requirement summary",
+      "phonetic": "/rɪˈkwaɪərmənt ˈsʌməri/",
+      "meaning": "需求总结",
+      "usage": "用于把客户的产品规格、数量、包装、颜色、交期等需求整理成清单。",
+      "example": "Here is the requirement summary for your confirmation."
+    },
+    {
+      "word": "commercial terms",
+      "phonetic": "/kəˈmɜːrʃəl tɜːrmz/",
+      "meaning": "商务条款",
+      "usage": "用于价格、付款、交期、样品费、运费和有效期等交易条件。",
+      "example": "Please review the commercial terms before we prepare the PI."
+    },
+    {
+      "word": "approval chain",
+      "phonetic": "/əˈpruːvəl tʃeɪn/",
+      "meaning": "审批链 / 内部审批流程",
+      "usage": "用于客户内部需要采购、工程、财务或老板确认的流程。",
+      "example": "Could you let us know who is involved in the approval chain?"
+    },
+    {
+      "word": "shipment follow-through",
+      "phonetic": "/ˈʃɪpmənt ˈfɑːloʊ θruː/",
+      "meaning": "出货后续跟进",
+      "usage": "用于货物发出后继续跟进物流、清关、到货和异常。",
+      "example": "We will handle the shipment follow-through until the goods arrive."
+    },
+    {
+      "word": "after-sales handling",
+      "phonetic": "/ˈæftər seɪlz ˈhændlɪŋ/",
+      "meaning": "售后处理",
+      "usage": "用于到货后客户反馈破损、缺件、质量问题或补救方案。",
+      "example": "Our team will support the after-sales handling if any issue appears."
+    },
+    {
+      "word": "final recap",
+      "phonetic": "/ˈfaɪnəl ˈriːkæp/",
+      "meaning": "最终复盘 / 最终总结",
+      "usage": "用于项目完成后总结已完成事项、问题、经验和后续合作动作。",
+      "example": "Let me give you a final recap of the full order process."
+    }
+  ],
+  "sentences": [
+    {
+      "label": "总结完整订单流程",
+      "basic": "We finish all order process.",
+      "natural": "This lesson reviews the full order lifecycle from inquiry to after-sales support.",
+      "business": "This final lesson reviews the full order lifecycle, including inquiry, quotation, sample approval, PI, payment, production, shipment follow-through, and after-sales handling."
+    },
+    {
+      "label": "整理客户需求",
+      "basic": "I write your details.",
+      "natural": "Here is the requirement summary for your confirmation.",
+      "business": "Here is the requirement summary for your confirmation, including quantity, color, material, packing, delivery time, and shipping method."
+    },
+    {
+      "label": "确认商务条款",
+      "basic": "Please check price and payment.",
+      "natural": "Please review the commercial terms before we prepare the PI.",
+      "business": "Please review the commercial terms, including unit price, payment terms, lead time, validity, and shipping arrangement before we prepare the PI."
+    },
+    {
+      "label": "了解客户内部审批",
+      "basic": "Who approve order?",
+      "natural": "Could you let us know who is involved in the approval chain?",
+      "business": "Could you let us know who is involved in the approval chain so we can provide the right documents and support your internal review?"
+    },
+    {
+      "label": "做最终复盘",
+      "basic": "Let me summary all things.",
+      "natural": "Let me give you a final recap of the full order process.",
+      "business": "Let me give you a final recap of the full order process, including what was confirmed, what changed, what issues appeared, and what we should improve for the next order."
+    }
+  ],
+  "chatAnalysis": [
+    {
+      "old": "all details okay?",
+      "problem": "太笼统，客户不知道要确认哪些细节，容易漏掉颜色、包装、交期或运输方式。",
+      "better": "Here is the requirement summary for your confirmation.",
+      "upgrade": "Here is the requirement summary for your confirmation, including quantity, color, material, packing, delivery time, and shipping method."
+    },
+    {
+      "old": "price ok then pay",
+      "problem": "表达不专业，也没有包含付款条款、有效期、交期和发货安排。",
+      "better": "Please review the commercial terms before we prepare the PI.",
+      "upgrade": "Please review the commercial terms, including unit price, payment terms, lead time, validity, and shipping arrangement before we prepare the PI."
+    },
+    {
+      "old": "we will follow goods",
+      "problem": "follow goods 不自然，也没有说明会跟进物流、清关、到货和售后。",
+      "better": "We will handle the shipment follow-through until the goods arrive.",
+      "upgrade": "We will handle the shipment follow-through until the goods arrive and support the after-sales handling if any issue appears."
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "慢速基础版：整理需求",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Can you summarize what we confirmed?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. Here is the requirement summary for your confirmation."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please include quantity, color, packing, and delivery time."
+        },
+        {
+          "speaker": "Sales",
+          "text": "No problem. I will include all these details in the summary."
+        }
+      ]
+    },
+    {
+      "title": "正常商务版：确认商务条款",
+      "lines": [
+        {
+          "speaker": "Sales",
+          "text": "Please review the commercial terms before we prepare the PI."
+        },
+        {
+          "speaker": "Customer",
+          "text": "What terms should I check?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Please check the unit price, payment terms, lead time, validity, and shipping arrangement."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Okay. I will review them with our purchasing manager today."
+        }
+      ]
+    },
+    {
+      "title": "压力场景版：订单结束后复盘",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "This order had delays and some after-sales issues."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand. Let me give you a final recap of the full order process."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please also include what you will improve next time."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will include what was confirmed, what changed, what issues appeared, and how we will improve for the next order."
+        }
+      ]
+    }
+  ],
+  "longDialogues": [
+    {
+      "title": "长对话实战：从询价到售后的一条完整订单",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Hi, we are looking for a new product for our next promotion."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. Could you please share the product size, material, quantity, target delivery time, and destination country?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "We need five thousand pieces, matte finish, custom logo, and delivery to Los Angeles."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. Let me prepare a requirement summary so we are aligned on all details."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please also include the packaging details."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Of course. The requirement summary will include quantity, color, material, logo, packing, delivery time, and shipping method."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you send the quotation today?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes. I will check the cost with our factory and send the quotation today."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Your price is a little higher than another supplier."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand. It is difficult to compare prices without checking the same specifications, packing, and quality standard."
+        },
+        {
+          "speaker": "Customer",
+          "text": "If we increase the quantity, can you improve the price?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes. If the quantity increases, we can review better bulk pricing and send you an updated offer."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Before we place the order, we need a sample."
+        },
+        {
+          "speaker": "Sales",
+          "text": "No problem. We can arrange the sample and confirm the sample cost and shipping cost first."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you provide the sample without charge?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "We can support the sample without charge as a concession, but the sample shipping cost needs to be covered by your side."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Okay. After we approve the sample, what is the next step?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "After sample approval, please confirm the final quantity and commercial terms, then we can prepare the PI."
+        },
+        {
+          "speaker": "Customer",
+          "text": "What commercial terms should we review?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Please review the unit price, payment terms, lead time, validity, and shipping arrangement."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Our approval chain includes purchasing, finance, and the sales director."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. Since several people are involved in the approval chain, I can provide the quotation, sample photos, packing details, and PI for your internal review."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please send the PI once the sample is approved."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. Once the sample is approved, I will prepare the PI with the confirmed commercial terms."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We have paid the deposit. Please start production."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. We have received the deposit and will arrange production start today."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please keep us updated during production."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will send production updates, packing photos, and the final check result before shipment."
+        },
+        {
+          "speaker": "Customer",
+          "text": "The schedule is urgent. Can you avoid any delay?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "We will push the factory and keep you posted, but I will also give you a realistic timeline if any issue appears."
+        },
+        {
+          "speaker": "Customer",
+          "text": "The goods are ready now. Please arrange shipment."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. Please confirm the delivery address, consignee information, and shipping method so we can arrange shipment release."
+        },
+        {
+          "speaker": "Customer",
+          "text": "After shipment, please follow the tracking closely."
+        },
+        {
+          "speaker": "Sales",
+          "text": "No problem. We will handle the shipment follow-through until the goods arrive."
+        },
+        {
+          "speaker": "Customer",
+          "text": "The tracking shows customs hold. What should we do?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "The shipment is currently waiting for customs review. We are checking the clearance status with the forwarder."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please update us today."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Understood. I will contact the forwarder now and send you the latest update today."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We received the goods, but two cartons were damaged."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I am sorry to hear that. Please send us clear photos of the damaged goods, inner packing, and outer cartons."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We will send the photos now."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. We will support the after-sales handling after we confirm the photos and damaged quantity."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you also summarize the whole order for our records?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. Let me send a project recap first, then I will give you a final recap of the full order process."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please include what was confirmed, what changed, and what should improve next time."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Of course. The final recap will include confirmed requirements, commercial terms, sample approval, payment, production, shipment follow-through, after-sales handling, and improvement points for the next order."
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "d30-q1",
+      "type": "translate",
+      "prompt": "中译英：这节最终课程复盘完整订单流程，包括询价、报价、样品确认、PI、付款、生产、出货跟进和售后处理。",
+      "answer": "This final lesson reviews the full order lifecycle, including inquiry, quotation, sample approval, PI, payment, production, shipment follow-through, and after-sales handling.",
+      "acceptable": [
+        "this final lesson reviews the full order lifecycle including inquiry quotation sample approval pi payment production shipment follow-through and after-sales handling",
+        "this lesson reviews the full order lifecycle including inquiry quotation sample approval pi payment production shipment follow-through and after-sales handling"
+      ],
+      "hint": "order lifecycle 是完整订单流程。"
+    },
+    {
+      "id": "d30-q2",
+      "type": "rewrite",
+      "prompt": "把这句话改得更专业：all details okay?",
+      "answer": "Here is the requirement summary for your confirmation, including quantity, color, material, packing, delivery time, and shipping method.",
+      "acceptable": [
+        "here is the requirement summary for your confirmation including quantity color material packing delivery time and shipping method",
+        "here is the requirement summary for your confirmation including quantity color material packaging delivery time and shipping method"
+      ],
+      "hint": "不要笼统问 all details，要列出客户需要确认的项目。"
+    },
+    {
+      "id": "d30-q3",
+      "type": "fill",
+      "prompt": "填空：Please review the commercial ____ before we prepare the PI.",
+      "answer": "terms",
+      "acceptable": [
+        "terms"
+      ],
+      "hint": "commercial terms 是商务条款。"
+    },
+    {
+      "id": "d30-q4",
+      "type": "choice",
+      "prompt": "客户内部需要采购、财务和老板确认，哪个问题更专业？",
+      "options": [
+        "Why so many people approve?",
+        "Could you let us know who is involved in the approval chain so we can provide the right documents?",
+        "Please approve fast",
+        "Your company is too slow"
+      ],
+      "answer": "Could you let us know who is involved in the approval chain so we can provide the right documents?",
+      "acceptable": [
+        "could you let us know who is involved in the approval chain so we can provide the right documents"
+      ],
+      "hint": "approval chain 用于客户内部审批流程。"
+    },
+    {
+      "id": "d30-q5",
+      "type": "translate",
+      "prompt": "中译英：我们会持续跟进出货直到货物到达，并在出现任何问题时支持售后处理。",
+      "answer": "We will handle the shipment follow-through until the goods arrive and support the after-sales handling if any issue appears.",
+      "acceptable": [
+        "we will handle the shipment follow-through until the goods arrive and support the after-sales handling if any issue appears",
+        "we will handle shipment follow-through until the goods arrive and support after-sales handling if any issue appears"
+      ],
+      "hint": "shipment follow-through 是出货后续跟进，after-sales handling 是售后处理。"
+    },
+    {
+      "id": "d30-q6",
+      "type": "reply",
+      "prompt": "客户说：Can you summarize the whole order for our records? 你应该怎么回复？",
+      "answer": "Sure. I will send a final recap including confirmed requirements, commercial terms, sample approval, payment, production, shipment follow-through, after-sales handling, and improvement points.",
+      "acceptable": [
+        "sure i will send a final recap including confirmed requirements commercial terms sample approval payment production shipment follow-through after-sales handling and improvement points",
+        "sure i will send a final recap including the confirmed requirements commercial terms sample approval payment production shipment follow-through after-sales handling and improvement points"
+      ],
+      "hint": "final recap 要覆盖整个订单流程和改进点。"
+    }
+  ],
+  "homework": [
+    "把 order lifecycle、project recap、requirement summary、commercial terms、approval chain、shipment follow-through、after-sales handling、final recap 各造 1 句。",
+    "把 5 个核心句子的 business 版本各读 5 遍，重点练 requirement summary、commercial terms 和 final recap。",
+    "写一段完整 WhatsApp 复盘：客户要求你总结一个订单，你要覆盖需求、报价、样品、PI、付款、生产、物流、售后问题和下一单改进点。"
+  ],
+  "tomorrow": "30 天课程已完成。建议从 Day 01 到 Day 30 复听长对话，并把每一天的 business 句子改写成自己的真实客户话术。"
+}

@@ -1,0 +1,399 @@
+{
+  "day": 5,
+  "title": "确认包装、唛头和出货方式",
+  "theme": "从 packaging / shipping mark / carton size 开始",
+  "durationMinutes": 32,
+  "goals": [
+    "能向客户确认包装方式、纸箱信息和唛头要求",
+    "能说明包装是否可定制，以及是否会影响价格和交期",
+    "能在出货前收集客户需要的箱规、重量和标签信息"
+  ],
+  "review": {
+    "title": "Day 04 复习",
+    "items": [
+      "昨天练了 quotation、unit price、payment terms、deposit、balance 和 PI。",
+      "今天继续订单确认后的下一步：包装、唛头、箱规和标签。",
+      "客户准备付款或安排出货前，包装信息必须确认清楚，不能只说 OK。"
+    ]
+  },
+  "preview": {
+    "scenario": "客户确认报价和 PI 后，开始询问包装方式、纸箱尺寸、重量、唛头和标签要求。",
+    "needToKnow": [
+      "packaging 不只是外箱，也包括单个产品包装、内盒、外箱和标签。",
+      "shipping mark 是外箱唛头，通常包含客户公司名、箱号、数量或目的港。",
+      "carton size、gross weight、net weight 会影响运费报价和物流安排。"
+    ]
+  },
+  "vocabulary": [
+    {
+      "word": "packaging",
+      "phonetic": "/ˈpækɪdʒɪŋ/",
+      "meaning": "包装",
+      "usage": "用于说明产品包装、外箱包装或定制包装。",
+      "example": "Please confirm if you need standard packaging or customized packaging."
+    },
+    {
+      "word": "carton",
+      "phonetic": "/ˈkɑːrtn/",
+      "meaning": "纸箱 / 外箱",
+      "usage": "用于外箱包装和装箱数量。",
+      "example": "Each carton contains 50 pieces."
+    },
+    {
+      "word": "carton size",
+      "phonetic": "/ˈkɑːrtn saɪz/",
+      "meaning": "箱规 / 纸箱尺寸",
+      "usage": "用于提供纸箱长宽高，方便客户计算运输空间。",
+      "example": "I will send you the carton size after checking with our warehouse."
+    },
+    {
+      "word": "gross weight",
+      "phonetic": "/ɡroʊs weɪt/",
+      "meaning": "毛重",
+      "usage": "包含产品和包装后的总重量。",
+      "example": "The gross weight is about 18 kilograms per carton."
+    },
+    {
+      "word": "net weight",
+      "phonetic": "/net weɪt/",
+      "meaning": "净重",
+      "usage": "只计算产品本身重量，不含包装。",
+      "example": "The net weight is about 16 kilograms per carton."
+    },
+    {
+      "word": "shipping mark",
+      "phonetic": "/ˈʃɪpɪŋ mɑːrk/",
+      "meaning": "唛头 / 外箱标记",
+      "usage": "用于客户要求印在外箱上的识别信息。",
+      "example": "Please send us your shipping mark before production."
+    },
+    {
+      "word": "label",
+      "phonetic": "/ˈleɪbl/",
+      "meaning": "标签",
+      "usage": "用于产品标签、条码标签或外箱标签。",
+      "example": "We can add your label on the package."
+    },
+    {
+      "word": "fragile",
+      "phonetic": "/ˈfrædʒl/",
+      "meaning": "易碎的",
+      "usage": "用于提醒包装或外箱标识需要防护。",
+      "example": "If the product is fragile, we can add a fragile mark on the carton."
+    }
+  ],
+  "sentences": [
+    {
+      "label": "确认包装",
+      "basic": "What packaging?",
+      "natural": "What packaging do you need?",
+      "business": "Could you please confirm if you need standard packaging or customized packaging?"
+    },
+    {
+      "label": "说明标准包装",
+      "basic": "We use normal box.",
+      "natural": "We use standard packaging for this item.",
+      "business": "For this item, our standard packaging is one piece in one inner box and 50 pieces in one carton."
+    },
+    {
+      "label": "确认唛头",
+      "basic": "Send shipping mark.",
+      "natural": "Please send us your shipping mark.",
+      "business": "Please send us your shipping mark before production so we can print it on the cartons correctly."
+    },
+    {
+      "label": "提供箱规重量",
+      "basic": "I send carton size later.",
+      "natural": "I will send you the carton size and weight later.",
+      "business": "I will check the carton size, gross weight, and net weight with our warehouse and update you today."
+    },
+    {
+      "label": "确认标签",
+      "basic": "Need label?",
+      "natural": "Do you need a label on the package?",
+      "business": "Could you please confirm if you need your own label or barcode on the package?"
+    }
+  ],
+  "chatAnalysis": [
+    {
+      "old": "packing normal",
+      "problem": "normal 不够清楚，客户不知道是一件一袋、一盒，还是整箱包装。",
+      "better": "We use standard packaging for this item.",
+      "upgrade": "Our standard packaging is one piece in one inner box and 50 pieces in one carton."
+    },
+    {
+      "old": "send mark",
+      "problem": "mark 太模糊，客户可能不知道你要 logo、标签还是外箱唛头。",
+      "better": "Please send us your shipping mark.",
+      "upgrade": "Please send us your shipping mark before production so we can print it on the cartons correctly."
+    },
+    {
+      "old": "weight later",
+      "problem": "太短，缺少你要确认什么、向谁确认、什么时候回复。",
+      "better": "I will send you the carton size and weight later.",
+      "upgrade": "I will check the carton size, gross weight, and net weight with our warehouse and update you today."
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "慢速基础版：确认标准包装",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "What is your standard packaging?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Our standard packaging is one piece in one inner box and 50 pieces in one carton."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you send the carton size?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will check the carton size with our warehouse and update you today."
+        }
+      ]
+    },
+    {
+      "title": "正常商务版：客户要求定制标签",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Can you add our label on the package?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, we can add your label. Please send us the label file and placement requirement."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Will it affect the price?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Let me check the label cost with our factory and update you today."
+        }
+      ]
+    },
+    {
+      "title": "压力场景版：客户临时修改唛头",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "We need to change the shipping mark."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Please send the new shipping mark as soon as possible."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you still change it before shipment?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "I will check the carton printing status first and confirm if we can still change it."
+        }
+      ]
+    }
+  ],
+  "longDialogues": [
+    {
+      "title": "长对话实战：从包装确认到唛头、箱规和标签",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Hi, before we confirm the order, please tell me your standard packaging."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. Our standard packaging is one piece in one inner box and 50 pieces in one carton."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can we use our own color box?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, customized packaging is possible, but it may affect the price and lead time."
+        },
+        {
+          "speaker": "Customer",
+          "text": "What file do you need for the color box?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Please send us the artwork file in AI or PDF format if possible."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you also add our barcode label?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, we can add your barcode label on the package."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Do you need the label size?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes. Please confirm the label size, file, and placement requirement."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please send the carton size first."
+        },
+        {
+          "speaker": "Sales",
+          "text": "No problem. I will check the carton size with our warehouse and update you today."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We also need the gross weight and net weight."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will check the gross weight and net weight per carton together."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you print our shipping mark on each carton?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, we can print your shipping mark on each carton."
+        },
+        {
+          "speaker": "Customer",
+          "text": "What information should be included in the shipping mark?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "It usually includes company name, item number, carton number, quantity, and destination."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can we send the shipping mark after payment?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, but please send it before carton printing, otherwise it may delay shipment."
+        },
+        {
+          "speaker": "Customer",
+          "text": "The product is fragile. Can you add a fragile mark?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, we can add a fragile mark on the carton and improve the protection if needed."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Will better protection increase the cost?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "It may increase the packaging cost a little. I will check the exact cost for you."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please include all packaging details in the PI."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will include the packaging, carton size, weight, shipping mark, and label requirements in the PI."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please make sure the shipping mark is correct."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Of course. I will send you the final shipping mark layout for approval before printing."
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "d5-q1",
+      "type": "translate",
+      "prompt": "中译英：请确认你需要标准包装还是定制包装。",
+      "answer": "Please confirm if you need standard packaging or customized packaging.",
+      "acceptable": [
+        "please confirm if you need standard packaging or customized packaging",
+        "could you please confirm if you need standard packaging or customized packaging"
+      ],
+      "hint": "packaging 表示包装。"
+    },
+    {
+      "id": "d5-q2",
+      "type": "rewrite",
+      "prompt": "把这句话改得更自然：packing normal",
+      "answer": "We use standard packaging for this item.",
+      "acceptable": [
+        "we use standard packaging for this item",
+        "our standard packaging is used for this item"
+      ],
+      "hint": "standard packaging 比 normal packing 更清楚。"
+    },
+    {
+      "id": "d5-q3",
+      "type": "fill",
+      "prompt": "填空：Please send us your shipping ____ before production.",
+      "answer": "mark",
+      "acceptable": [
+        "mark"
+      ],
+      "hint": "shipping mark 表示唛头。"
+    },
+    {
+      "id": "d5-q4",
+      "type": "choice",
+      "prompt": "客户要求外箱上印唛头，哪个回复更适合？",
+      "options": [
+        "Send mark",
+        "Please send us your shipping mark before production so we can print it correctly.",
+        "No problem mark",
+        "We print later"
+      ],
+      "answer": "Please send us your shipping mark before production so we can print it correctly.",
+      "acceptable": [
+        "please send us your shipping mark before production so we can print it correctly"
+      ],
+      "hint": "要说明需要客户提供 shipping mark，并说明用途。"
+    },
+    {
+      "id": "d5-q5",
+      "type": "translate",
+      "prompt": "中译英：我会确认箱规、毛重和净重，然后今天更新你。",
+      "answer": "I will check the carton size, gross weight, and net weight, and update you today.",
+      "acceptable": [
+        "i will check the carton size gross weight and net weight and update you today",
+        "i will confirm the carton size gross weight and net weight and update you today"
+      ],
+      "hint": "箱规 carton size，毛重 gross weight，净重 net weight。"
+    },
+    {
+      "id": "d5-q6",
+      "type": "reply",
+      "prompt": "客户说：Can you add our barcode label? 你应该怎么回复？",
+      "answer": "Yes, we can add your barcode label. Please send us the label file, size, and placement requirement.",
+      "acceptable": [
+        "yes we can add your barcode label please send us the label file size and placement requirement",
+        "we can add your barcode label please send us the label file and placement requirement"
+      ],
+      "hint": "同意后要继续确认 label file、size 和 placement。"
+    }
+  ],
+  "homework": [
+    "把 packaging、carton、carton size、gross weight、net weight、shipping mark 各造 1 句。",
+    "把 5 个核心句子的 business 版本各读 5 遍。",
+    "跟读长对话 2 遍，重点练包装、唛头和标签确认。"
+  ],
+  "tomorrow": "Day 6 会练物流方式、快递、空运和海运的表达。"
+}

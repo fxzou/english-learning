@@ -1,0 +1,385 @@
+{
+  "day": 1,
+  "title": "把生硬回复改自然",
+  "theme": "从 pls wait / pls check it / OK no problem 开始",
+  "durationMinutes": 25,
+  "goals": [
+    "把生硬、太短的 WhatsApp 回复改成礼貌商务表达",
+    "掌握 check / confirm / update / arrange 的基础用法",
+    "能在客户催你时，用一句完整英文稳住客户"
+  ],
+  "review": {
+    "title": "课程起点",
+    "items": [
+      "你当前高频使用 OK、No problem、pls wait、pls check it。",
+      "这些表达能被理解，但经常不够礼貌、不够完整，也缺少下一步动作。",
+      "今天先练“稍等、检查、确认、安排”四类基础销售回复。"
+    ]
+  },
+  "preview": {
+    "scenario": "客户要求你检查报价、确认图片、等待工厂回复。",
+    "needToKnow": [
+      "客户说 Please check 时，不只是让你看一下，通常期待你给出结果。",
+      "客户催促时，不要只说 wait，要告诉客户你会查什么、什么时候更新。",
+      "OK no problem 后面最好加一个动作，例如 I will arrange it."
+    ]
+  },
+  "vocabulary": [
+    {
+      "word": "check",
+      "phonetic": "/tʃek/",
+      "meaning": "检查 / 看一下",
+      "usage": "用于普通确认，适合 Let me check.",
+      "example": "Let me check it and get back to you soon."
+    },
+    {
+      "word": "confirm",
+      "phonetic": "/kənˈfɜːrm/",
+      "meaning": "确认",
+      "usage": "比 check 更正式，表示需要最终确认。",
+      "example": "Please confirm the final quantity."
+    },
+    {
+      "word": "update",
+      "phonetic": "/ˌʌpˈdeɪt/",
+      "meaning": "更新 / 告知进展",
+      "usage": "常用于承诺稍后回复客户。",
+      "example": "I will update you today."
+    },
+    {
+      "word": "arrange",
+      "phonetic": "/əˈreɪndʒ/",
+      "meaning": "安排",
+      "usage": "用于安排生产、发货、样品、付款资料。",
+      "example": "Sure, I will arrange it accordingly."
+    },
+    {
+      "word": "moment",
+      "phonetic": "/ˈmoʊmənt/",
+      "meaning": "片刻 / 一会儿",
+      "usage": "比 wait 更礼貌。",
+      "example": "Please give me a moment to check."
+    },
+    {
+      "word": "factory",
+      "phonetic": "/ˈfæktəri/",
+      "meaning": "工厂",
+      "usage": "说明你需要和工厂核实。",
+      "example": "I will check with our factory."
+    },
+    {
+      "word": "accordingly",
+      "phonetic": "/əˈkɔːrdɪŋli/",
+      "meaning": "相应地 / 按此",
+      "usage": "商务回复中表示会按客户确认内容执行。",
+      "example": "I will arrange it accordingly."
+    },
+    {
+      "word": "question",
+      "phonetic": "/ˈkwestʃən/",
+      "meaning": "问题",
+      "usage": "用于结尾礼貌句。",
+      "example": "Please let me know if you have any questions."
+    }
+  ],
+  "sentences": [
+    {
+      "label": "稍等",
+      "basic": "Please wait.",
+      "natural": "Please give me a moment to check.",
+      "business": "Please give me a moment to check with our factory, and I will update you today."
+    },
+    {
+      "label": "检查文件",
+      "basic": "Please check it.",
+      "natural": "Please check it when you have time.",
+      "business": "Please check the PI and let me know if you have any questions."
+    },
+    {
+      "label": "没问题",
+      "basic": "No problem.",
+      "natural": "Sure, no problem.",
+      "business": "Sure, I will arrange it accordingly."
+    },
+    {
+      "label": "我确认一下",
+      "basic": "Let me check it.",
+      "natural": "Let me check it and get back to you soon.",
+      "business": "Let me check with our factory and get back to you as soon as possible."
+    },
+    {
+      "label": "确认数量",
+      "basic": "How many would you like?",
+      "natural": "How many pieces do you need?",
+      "business": "Could you please confirm the quantity you need?"
+    }
+  ],
+  "chatAnalysis": [
+    {
+      "old": "pls wait",
+      "problem": "太短，像命令客户等待，没有说明你要做什么。",
+      "better": "Please give me a moment to check.",
+      "upgrade": "Please give me a moment to check with our factory, and I will update you today."
+    },
+    {
+      "old": "pls check it",
+      "problem": "pls 太随意，it 不够明确。",
+      "better": "Please check it when you have time.",
+      "upgrade": "Please check the PI and let me know if you have any questions."
+    },
+    {
+      "old": "OK, no problem",
+      "problem": "可以用，但重复太多，而且没有下一步动作。",
+      "better": "Sure, no problem.",
+      "upgrade": "Sure, I will arrange it accordingly."
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "慢速基础版：客户让你检查 PI",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Please check the PI."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. Please give me a moment to check."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you update me today?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes. I will check it and update you today."
+        }
+      ]
+    },
+    {
+      "title": "正常商务版：客户催确认",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Can you confirm the quantity and price?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. Please give me a moment to check with our factory."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We need to confirm it today."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand. I will update you today as soon as I confirm it."
+        }
+      ]
+    },
+    {
+      "title": "压力场景版：客户着急",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Why is it taking so long?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand your concern. Let me check the current status first."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please hurry. We need an answer."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I will push the factory and get back to you as soon as possible."
+        }
+      ]
+    }
+  ],
+  "longDialogues": [
+    {
+      "title": "长对话实战：客户催确认 PI、数量和发货安排",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Hi, please check the PI again."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. Please give me a moment to check it carefully."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We need to confirm it today."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand. I will check the details and update you today."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please confirm the quantity and price first."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Could you please confirm the final quantity you need?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "We need 5,000 pieces for the first order."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. Let me check the unit price with our factory."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Why do you need to check again?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Because the price depends on the quantity and finish."
+        },
+        {
+          "speaker": "Customer",
+          "text": "The finish is matte black."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Got it. I will confirm the matte black finish with our factory."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you also check the logo position?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes. Please send me the latest logo file for reference."
+        },
+        {
+          "speaker": "Customer",
+          "text": "I already sent it yesterday."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. I will check the file again and confirm it with our designer."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please hurry. We cannot wait too long."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand this is urgent. I will push the factory and update you as soon as possible."
+        },
+        {
+          "speaker": "Customer",
+          "text": "When can you send the revised PI?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "I will send the revised PI to you today after I confirm the details."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please make sure there are no mistakes."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will check the quantity, price, finish, and logo position carefully."
+        },
+        {
+          "speaker": "Customer",
+          "text": "If everything is correct, we will arrange payment."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. Once you confirm the PI, I will arrange the next steps accordingly."
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "d1-q1",
+      "type": "translate",
+      "prompt": "中译英：请稍等，我确认一下。",
+      "answer": "Please give me a moment to check.",
+      "acceptable": [
+        "please give me a moment to check",
+        "please give me a moment to check it"
+      ],
+      "hint": "不要用 pls wait。"
+    },
+    {
+      "id": "d1-q2",
+      "type": "rewrite",
+      "prompt": "把这句话改得更自然：pls wait",
+      "answer": "Please give me a moment to check.",
+      "acceptable": [
+        "please give me a moment to check",
+        "please give me a moment to check it",
+        "please give me a moment"
+      ],
+      "hint": "moment 比 wait 更礼貌。"
+    },
+    {
+      "id": "d1-q3",
+      "type": "fill",
+      "prompt": "填空：I will check with our factory and ____ you today.",
+      "answer": "update",
+      "acceptable": [
+        "update"
+      ],
+      "hint": "意思是“更新你 / 告诉你进展”。"
+    },
+    {
+      "id": "d1-q4",
+      "type": "choice",
+      "prompt": "哪个表达更适合发给客户？",
+      "options": [
+        "pls wait",
+        "Please give me a moment to check.",
+        "wait me",
+        "I check"
+      ],
+      "answer": "Please give me a moment to check.",
+      "acceptable": [
+        "please give me a moment to check"
+      ],
+      "hint": "选完整、礼貌、有动作的句子。"
+    },
+    {
+      "id": "d1-q5",
+      "type": "translate",
+      "prompt": "中译英：我会和工厂确认，并今天给你更新。",
+      "answer": "I will check with our factory and update you today.",
+      "acceptable": [
+        "i will check with our factory and update you today",
+        "i will confirm with our factory and update you today"
+      ],
+      "hint": "check with our factory。"
+    },
+    {
+      "id": "d1-q6",
+      "type": "reply",
+      "prompt": "客户说：Please check the PI. 你应该怎么回复？",
+      "answer": "Sure. I will check the PI and let you know if there are any questions.",
+      "acceptable": [
+        "sure i will check the pi",
+        "i will check the pi",
+        "please give me a moment to check the pi"
+      ],
+      "hint": "回复要包含 check the PI。"
+    }
+  ],
+  "homework": [
+    "把今天 5 个核心句子各读 5 遍。",
+    "把 pls wait / pls check it / OK no problem 分别改写成更商务的句子。",
+    "把三个 TTS 对话和长对话各听 2 遍，然后跟读 1 遍。"
+  ],
+  "tomorrow": "Day 2 会继续练 check / confirm，并加入客户问数量和颜色的场景。"
+}

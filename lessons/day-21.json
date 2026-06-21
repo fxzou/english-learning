@@ -1,0 +1,391 @@
+{
+  "day": 21,
+  "title": "付款凭证、到账和财务审核",
+  "theme": "从 payment receipt / bank review / finance confirmation 开始",
+  "durationMinutes": 40,
+  "goals": [
+    "能向客户索要清晰的付款凭证和交易记录",
+    "能说明银行到账和财务审核需要时间，避免误判已收款",
+    "能处理到账金额、银行手续费和 pending payment 的沟通"
+  ],
+  "review": {
+    "title": "Day 20 复习",
+    "items": [
+      "昨天练了 pre-shipment inspection、inspection report、photo confirmation、video confirmation 和 shipment release。",
+      "今天进入付款和财务沟通阶段：客户发来付款截图后，不能立刻默认已经到账。",
+      "财务沟通要准确：区分 payment receipt、bank review、finance confirmation 和实际 received amount。"
+    ]
+  },
+  "preview": {
+    "scenario": "客户说已经付款，并发来截图。你需要确认付款凭证是否清晰、银行是否到账、财务是否审核完成，以及到账金额是否和 PI 一致。",
+    "needToKnow": [
+      "payment receipt 可以指付款凭证或收款凭证，实际沟通中要结合上下文。",
+      "bank review 表示银行处理中，不能说 we received payment，除非财务确认到账。",
+      "bank fee 可能导致到账金额少于 PI 金额，需要礼貌说明并让客户确认。"
+    ]
+  },
+  "vocabulary": [
+    {
+      "word": "payment receipt",
+      "phonetic": "/ˈpeɪmənt rɪˈsiːt/",
+      "meaning": "付款凭证 / 收款凭证",
+      "usage": "用于客户提供付款证明，或供应商确认已收到款项。",
+      "example": "Could you please send us the payment receipt?"
+    },
+    {
+      "word": "bank review",
+      "phonetic": "/bæŋk rɪˈvjuː/",
+      "meaning": "银行审核 / 银行处理中",
+      "usage": "用于说明银行转账仍在处理中，尚未最终到账。",
+      "example": "The payment is still under bank review."
+    },
+    {
+      "word": "finance confirmation",
+      "phonetic": "/ˈfaɪnæns ˌkɑːnfərˈmeɪʃən/",
+      "meaning": "财务确认",
+      "usage": "用于公司财务确认款项是否到账、金额是否正确。",
+      "example": "We will update you after finance confirmation."
+    },
+    {
+      "word": "remittance slip",
+      "phonetic": "/rɪˈmɪtəns slɪp/",
+      "meaning": "汇款单 / 转账水单",
+      "usage": "用于国际付款后客户提供的银行汇款凭证。",
+      "example": "Please send the remittance slip for our finance team to check."
+    },
+    {
+      "word": "transaction record",
+      "phonetic": "/trænˈzækʃən ˈrekərd/",
+      "meaning": "交易记录",
+      "usage": "用于确认付款日期、金额、收款人和交易编号。",
+      "example": "The transaction record should show the amount and bank reference number."
+    },
+    {
+      "word": "received amount",
+      "phonetic": "/rɪˈsiːvd əˈmaʊnt/",
+      "meaning": "到账金额 / 实收金额",
+      "usage": "用于说明实际收到的金额，可能与客户汇出金额不同。",
+      "example": "The received amount is USD 30 less than the PI amount."
+    },
+    {
+      "word": "bank fee",
+      "phonetic": "/bæŋk fiː/",
+      "meaning": "银行手续费",
+      "usage": "用于说明转账中被银行扣除的费用。",
+      "example": "The difference may be caused by the bank fee."
+    },
+    {
+      "word": "pending payment",
+      "phonetic": "/ˈpendɪŋ ˈpeɪmənt/",
+      "meaning": "待处理付款 / 未到账付款",
+      "usage": "用于说明客户已发起付款但供应商尚未确认到账。",
+      "example": "The payment is still pending in our bank account."
+    }
+  ],
+  "sentences": [
+    {
+      "label": "索要付款凭证",
+      "basic": "Send payment picture.",
+      "natural": "Could you please send us the payment receipt?",
+      "business": "Could you please send us the payment receipt or remittance slip so our finance team can check it?"
+    },
+    {
+      "label": "说明银行审核中",
+      "basic": "Bank not received.",
+      "natural": "The payment is still under bank review.",
+      "business": "The payment is still under bank review, and we will update you after finance confirmation."
+    },
+    {
+      "label": "确认到账金额",
+      "basic": "Money is less.",
+      "natural": "The received amount is less than the PI amount.",
+      "business": "Our finance team found that the received amount is USD 30 less than the PI amount, possibly because of the bank fee."
+    },
+    {
+      "label": "让客户核对交易记录",
+      "basic": "Check your transfer.",
+      "natural": "Please check the transaction record on your side.",
+      "business": "Please check the transaction record on your side and confirm if any bank fee was deducted during the transfer."
+    },
+    {
+      "label": "财务确认后更新",
+      "basic": "Finance check, then tell you.",
+      "natural": "We will update you after finance confirmation.",
+      "business": "Once our finance team completes the confirmation, we will update you and arrange the next step immediately."
+    }
+  ],
+  "chatAnalysis": [
+    {
+      "old": "send payment screenshot",
+      "problem": "screenshot 太随意，且没有说明财务需要核对什么。",
+      "better": "Could you please send us the payment receipt?",
+      "upgrade": "Could you please send us the payment receipt or remittance slip so our finance team can check it?"
+    },
+    {
+      "old": "payment not arrive",
+      "problem": "语气容易让客户觉得你在否认付款，最好说明银行审核状态。",
+      "better": "The payment is still under bank review.",
+      "upgrade": "The payment is still under bank review, and we will update you after finance confirmation."
+    },
+    {
+      "old": "you paid less",
+      "problem": "太直接，容易让客户不舒服；应该说明实收金额差额和可能原因。",
+      "better": "The received amount is less than the PI amount.",
+      "upgrade": "Our finance team found that the received amount is USD 30 less than the PI amount, possibly because of the bank fee."
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "慢速基础版：索要付款凭证",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "We have arranged the payment."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. Could you please send us the payment receipt or remittance slip?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "I will send it now."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Great. Our finance team will check it after receiving the document."
+        }
+      ]
+    },
+    {
+      "title": "正常商务版：银行审核中",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "We sent the payment yesterday. Have you received it?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "The payment is still under bank review in our account."
+        },
+        {
+          "speaker": "Customer",
+          "text": "How long will it take?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Usually it takes one to three working days. We will update you after finance confirmation."
+        }
+      ]
+    },
+    {
+      "title": "压力场景版：到账金额少于 PI",
+      "lines": [
+        {
+          "speaker": "Sales",
+          "text": "Our finance team found that the received amount is USD 30 less than the PI amount."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We paid the full amount from our side."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Understood. The difference may be caused by the bank fee during the transfer."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Let me check the transaction record with our bank."
+        }
+      ]
+    }
+  ],
+  "longDialogues": [
+    {
+      "title": "长对话实战：客户付款后核对凭证、到账和手续费",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Hi, we have arranged the payment for the order."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. Could you please send us the payment receipt or remittance slip?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "I only have a screenshot from our online bank. Is that okay?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, please send it first. If possible, please make sure the amount, date, beneficiary, and bank reference number are visible."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Okay, I will send the transaction record now."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Thank you. I will forward it to our finance team for checking."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you start production after receiving the screenshot?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "We need finance confirmation first, because the payment may still be under bank review."
+        },
+        {
+          "speaker": "Customer",
+          "text": "But the money has already left our account."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand. International payments may take one to three working days before the received amount shows in our account."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please check again today."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will ask our finance team to check the bank account again today and keep you posted."
+        },
+        {
+          "speaker": "Customer",
+          "text": "What if the payment is still pending?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "If the payment is still pending, we will wait for bank confirmation and update you as soon as it arrives."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please let us know if there is any difference in the amount."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Of course. We will compare the received amount with the PI amount after finance confirmation."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Sometimes our bank deducts a fee."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Understood. If there is a bank fee deduction, we will let you know the exact difference."
+        },
+        {
+          "speaker": "Customer",
+          "text": "If the amount is short, can we pay the difference later?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Let us confirm the received amount first, then we can discuss how to handle any difference."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Okay. Please update me once your finance team checks it."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. Once our finance team completes the confirmation, we will update you and arrange the next step immediately."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please also confirm whether the bank information we used was correct."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, I will compare the beneficiary information on your transaction record with our PI."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Thank you. We want to avoid any payment issue."
+        },
+        {
+          "speaker": "Sales",
+          "text": "I understand. We will check it carefully and keep the communication clear until the payment is fully confirmed."
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "d21-q1",
+      "type": "translate",
+      "prompt": "中译英：请发送付款凭证或汇款单，方便我们财务核对。",
+      "answer": "Please send us the payment receipt or remittance slip so our finance team can check it.",
+      "acceptable": [
+        "please send us the payment receipt or remittance slip so our finance team can check it",
+        "could you please send us the payment receipt or remittance slip so our finance team can check it"
+      ],
+      "hint": "remittance slip 是汇款单。"
+    },
+    {
+      "id": "d21-q2",
+      "type": "rewrite",
+      "prompt": "把这句话改得更专业：payment not arrive",
+      "answer": "The payment is still under bank review, and we will update you after finance confirmation.",
+      "acceptable": [
+        "the payment is still under bank review and we will update you after finance confirmation",
+        "the payment is still under bank review"
+      ],
+      "hint": "不要直接否定客户付款，用 bank review。"
+    },
+    {
+      "id": "d21-q3",
+      "type": "fill",
+      "prompt": "填空：The received ____ is USD 30 less than the PI amount.",
+      "answer": "amount",
+      "acceptable": [
+        "amount"
+      ],
+      "hint": "received amount 是到账金额。"
+    },
+    {
+      "id": "d21-q4",
+      "type": "choice",
+      "prompt": "客户说钱已经从他们账户扣了，但你这边还没到账，哪个回复更合适？",
+      "options": [
+        "We did not receive it",
+        "The payment is still under bank review, and we will update you after finance confirmation.",
+        "Send again",
+        "Your bank is slow"
+      ],
+      "answer": "The payment is still under bank review, and we will update you after finance confirmation.",
+      "acceptable": [
+        "the payment is still under bank review and we will update you after finance confirmation"
+      ],
+      "hint": "银行审核中是更稳妥的表达。"
+    },
+    {
+      "id": "d21-q5",
+      "type": "translate",
+      "prompt": "中译英：差额可能是银行手续费造成的。",
+      "answer": "The difference may be caused by the bank fee.",
+      "acceptable": [
+        "the difference may be caused by the bank fee",
+        "the difference may be due to the bank fee"
+      ],
+      "hint": "bank fee 是银行手续费。"
+    },
+    {
+      "id": "d21-q6",
+      "type": "reply",
+      "prompt": "客户说：Can you start production after receiving the screenshot? 你应该怎么回复？",
+      "answer": "We need finance confirmation first, because the payment may still be under bank review.",
+      "acceptable": [
+        "we need finance confirmation first because the payment may still be under bank review",
+        "we need finance confirmation first as the payment may still be under bank review"
+      ],
+      "hint": "截图不等于到账，要等 finance confirmation。"
+    }
+  ],
+  "homework": [
+    "把 payment receipt、bank review、finance confirmation、remittance slip、transaction record、received amount、bank fee、pending payment 各造 1 句。",
+    "把 5 个核心句子的 business 版本各读 5 遍，重点练 bank review 和 finance confirmation。",
+    "写一段 WhatsApp 回复：客户说已付款并发截图，你要索要清晰凭证，说明银行审核中，并承诺财务确认后更新。"
+  ],
+  "tomorrow": "Day 22 会练尾款、发货前付款和付款提醒。"
+}

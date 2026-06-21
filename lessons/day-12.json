@@ -1,0 +1,391 @@
+{
+  "day": 12,
+  "title": "说明模具费、开模时间和模具归属",
+  "theme": "从 mold cost / mold making / mold ownership 开始",
+  "durationMinutes": 36,
+  "goals": [
+    "能解释为什么新款或定制规格需要模具费",
+    "能说明开模时间、样品时间和大货时间的区别",
+    "能回答模具归属、退款政策和专属使用权等敏感问题"
+  ],
+  "review": {
+    "title": "Day 11 复习",
+    "items": [
+      "昨天练了 price difference、raw material、margin 和 target price。",
+      "今天进入报价深化里的模具问题：模具费、开模周期、模具归属和退款政策。",
+      "客户问 mold cost 时，不要只报数字，要说明费用包含什么、什么时候支付、后续怎么安排。"
+    ]
+  },
+  "preview": {
+    "scenario": "客户需要一个新尺寸、新结构或定制 logo 位置，工厂需要开模；客户会问模具费为什么要收、模具是否属于他们、后续订单能不能退模具费。",
+    "needToKnow": [
+      "mold cost 是模具费，不等于产品单价，也通常不包含大货费用。",
+      "mold making 是开模过程，完成后通常还要打样确认。",
+      "mold ownership 和 exclusive use 是敏感问题，需要说明公司政策，不要随便承诺。"
+    ]
+  },
+  "vocabulary": [
+    {
+      "word": "mold cost",
+      "phonetic": "/moʊld kɔːst/",
+      "meaning": "模具费",
+      "usage": "用于说明新产品、新尺寸或特殊结构需要支付的模具费用。",
+      "example": "The mold cost is 800 dollars, and it needs to be paid before mold making."
+    },
+    {
+      "word": "mold making",
+      "phonetic": "/moʊld ˈmeɪkɪŋ/",
+      "meaning": "开模",
+      "usage": "用于说明制作新模具的过程和时间。",
+      "example": "Mold making will take about 20 days after payment."
+    },
+    {
+      "word": "mold ownership",
+      "phonetic": "/moʊld ˈoʊnərʃɪp/",
+      "meaning": "模具归属",
+      "usage": "用于说明模具由谁拥有、保管或使用。",
+      "example": "We can confirm the mold ownership in the agreement."
+    },
+    {
+      "word": "refund policy",
+      "phonetic": "/ˈriːfʌnd ˈpɑːləsi/",
+      "meaning": "退款政策",
+      "usage": "用于解释模具费是否可退、什么时候退、退多少。",
+      "example": "Please let me check our refund policy for the mold cost."
+    },
+    {
+      "word": "tooling",
+      "phonetic": "/ˈtuːlɪŋ/",
+      "meaning": "工装 / 模具工具",
+      "usage": "用于更正式地描述模具、夹具或生产工具。",
+      "example": "The tooling cost depends on the product structure."
+    },
+    {
+      "word": "cavity",
+      "phonetic": "/ˈkævəti/",
+      "meaning": "模穴",
+      "usage": "用于说明模具一次能生产几个产品，影响模具费和效率。",
+      "example": "A multi-cavity mold can improve production efficiency."
+    },
+    {
+      "word": "prototype",
+      "phonetic": "/ˈproʊtətaɪp/",
+      "meaning": "原型 / 手板",
+      "usage": "用于开模前确认外观、结构或尺寸的初步样件。",
+      "example": "We can make a prototype before mold making if needed."
+    },
+    {
+      "word": "exclusive",
+      "phonetic": "/ɪkˈskluːsɪv/",
+      "meaning": "专属的 / 独家的",
+      "usage": "用于客户要求模具只给自己使用的情况。",
+      "example": "If you need exclusive use of the mold, we need to confirm it in writing."
+    }
+  ],
+  "sentences": [
+    {
+      "label": "说明需要开模",
+      "basic": "Need new mold.",
+      "natural": "This design needs a new mold.",
+      "business": "This design requires a new mold because the size and structure are different from our existing models."
+    },
+    {
+      "label": "说明模具费",
+      "basic": "Mold cost is 800 dollars.",
+      "natural": "The mold cost is 800 dollars.",
+      "business": "The mold cost is 800 dollars, and it needs to be paid before mold making."
+    },
+    {
+      "label": "说明开模时间",
+      "basic": "Mold takes 20 days.",
+      "natural": "Mold making will take about 20 days.",
+      "business": "Mold making will take about 20 days after payment and final drawing approval."
+    },
+    {
+      "label": "解释模具归属",
+      "basic": "Mold stays factory.",
+      "natural": "The mold will be kept in our factory.",
+      "business": "The mold will be kept in our factory for your future orders, and we can confirm the mold ownership in writing."
+    },
+    {
+      "label": "回应退款问题",
+      "basic": "Mold cost no refund.",
+      "natural": "The mold cost is usually not refundable.",
+      "business": "The mold cost is usually not refundable, but I can check if there is any refund policy for repeat orders."
+    }
+  ],
+  "chatAnalysis": [
+    {
+      "old": "need mold fee",
+      "problem": "太突然，客户不知道为什么要收模具费。",
+      "better": "This design needs a new mold.",
+      "upgrade": "This design requires a new mold because the size and structure are different from our existing models."
+    },
+    {
+      "old": "mold 20 days",
+      "problem": "缺少起算条件，客户不知道从什么时候开始算。",
+      "better": "Mold making will take about 20 days.",
+      "upgrade": "Mold making will take about 20 days after payment and final drawing approval."
+    },
+    {
+      "old": "mold belongs us",
+      "problem": "语气容易引起争议，模具归属要更正式地说明。",
+      "better": "The mold will be kept in our factory.",
+      "upgrade": "The mold will be kept in our factory for your future orders, and we can confirm the mold ownership in writing."
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "慢速基础版：说明为什么需要模具费",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Why do we need to pay mold cost?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "This design requires a new mold because the size and structure are different from our existing models."
+        },
+        {
+          "speaker": "Customer",
+          "text": "How much is the mold cost?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "The mold cost is 800 dollars, and it needs to be paid before mold making."
+        }
+      ]
+    },
+    {
+      "title": "正常商务版：确认开模时间",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "How long does mold making take?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Mold making will take about 20 days after payment and final drawing approval."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you make a sample after the mold is ready?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes. After the mold is ready, we will arrange samples for your confirmation."
+        }
+      ]
+    },
+    {
+      "title": "压力场景版：客户问模具归属",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "If we pay the mold cost, does the mold belong to us?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "The mold will be kept in our factory for your future orders."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can other customers use it?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "If you need exclusive use of the mold, we need to confirm it in writing before mold making."
+        }
+      ]
+    }
+  ],
+  "longDialogues": [
+    {
+      "title": "长对话实战：从模具费到开模、样品和模具归属",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Hi, we want to make a new size for this product."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. Please send us the drawing or detailed size requirement first."
+        },
+        {
+          "speaker": "Customer",
+          "text": "If we change the size, do we need a new mold?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, this design requires a new mold because the size is different from our existing models."
+        },
+        {
+          "speaker": "Customer",
+          "text": "How much is the mold cost?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "The estimated mold cost is 800 dollars, but I need to confirm it after checking the final drawing."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Why is the mold cost so high?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "The tooling cost depends on the product structure, size, and mold cavity."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can we make a prototype first?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, we can make a prototype before mold making if you want to confirm the structure first."
+        },
+        {
+          "speaker": "Customer",
+          "text": "How long does the prototype take?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "The prototype usually takes about 7 days after drawing approval."
+        },
+        {
+          "speaker": "Customer",
+          "text": "And how long does mold making take?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Mold making will take about 20 days after payment and final drawing approval."
+        },
+        {
+          "speaker": "Customer",
+          "text": "After the mold is ready, can you make samples?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes. After the mold is ready, we will arrange samples for your confirmation."
+        },
+        {
+          "speaker": "Customer",
+          "text": "If we pay the mold cost, does the mold belong to us?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "The mold will be kept in our factory for your future orders, and we can confirm the mold ownership in writing."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can other customers use this mold?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "If you need exclusive use of the mold, we need to confirm it in writing before mold making."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can the mold cost be refunded after bulk orders?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "The mold cost is usually not refundable, but I can check if there is any refund policy for repeat orders."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please check the refund policy."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will check the mold cost, mold making time, ownership terms, and refund policy together."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please include all details in the quotation."
+        },
+        {
+          "speaker": "Sales",
+          "text": "No problem. I will include the mold cost, mold making time, sample time, and mold ownership terms in the quotation."
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "d12-q1",
+      "type": "translate",
+      "prompt": "中译英：这个设计需要一个新模具。",
+      "answer": "This design requires a new mold.",
+      "acceptable": [
+        "this design requires a new mold",
+        "this design needs a new mold"
+      ],
+      "hint": "requires 比 needs 更商务。"
+    },
+    {
+      "id": "d12-q2",
+      "type": "rewrite",
+      "prompt": "把这句话改得更自然：need mold fee",
+      "answer": "This design requires a new mold because the size and structure are different.",
+      "acceptable": [
+        "this design requires a new mold because the size and structure are different",
+        "this design needs a new mold because the size and structure are different"
+      ],
+      "hint": "先解释为什么需要模具。"
+    },
+    {
+      "id": "d12-q3",
+      "type": "fill",
+      "prompt": "填空：Mold making will take about 20 days after payment and final drawing ____.",
+      "answer": "approval",
+      "acceptable": [
+        "approval"
+      ],
+      "hint": "drawing approval 表示图纸确认。"
+    },
+    {
+      "id": "d12-q4",
+      "type": "choice",
+      "prompt": "客户问模具是否属于他们，哪个回复更适合？",
+      "options": [
+        "Mold belongs us",
+        "The mold will be kept in our factory for your future orders, and we can confirm the mold ownership in writing.",
+        "No, it is ours",
+        "You cannot take it"
+      ],
+      "answer": "The mold will be kept in our factory for your future orders, and we can confirm the mold ownership in writing.",
+      "acceptable": [
+        "the mold will be kept in our factory for your future orders and we can confirm the mold ownership in writing"
+      ],
+      "hint": "模具归属要正式、稳妥地说明。"
+    },
+    {
+      "id": "d12-q5",
+      "type": "translate",
+      "prompt": "中译英：模具费通常不可退。",
+      "answer": "The mold cost is usually not refundable.",
+      "acceptable": [
+        "the mold cost is usually not refundable",
+        "mold cost is usually not refundable"
+      ],
+      "hint": "not refundable 表示不可退款。"
+    },
+    {
+      "id": "d12-q6",
+      "type": "reply",
+      "prompt": "客户说：Can other customers use this mold? 你应该怎么回复？",
+      "answer": "If you need exclusive use of the mold, we need to confirm it in writing before mold making.",
+      "acceptable": [
+        "if you need exclusive use of the mold we need to confirm it in writing before mold making",
+        "if you need exclusive use we need to confirm it in writing before mold making"
+      ],
+      "hint": "exclusive use 表示专属使用。"
+    }
+  ],
+  "homework": [
+    "把 mold cost、mold making、mold ownership、tooling、exclusive 各造 1 句。",
+    "把 5 个核心句子的 business 版本各读 5 遍。",
+    "跟读长对话 2 遍，重点练模具费、开模时间和模具归属说明。"
+  ],
+  "tomorrow": "Day 13 会练样品确认、修改和大货前批准。"
+}

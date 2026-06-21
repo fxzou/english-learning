@@ -1,0 +1,401 @@
+{
+  "day": 14,
+  "title": "表面处理、Logo 工艺和颜色确认",
+  "theme": "从 finish / matte / Pantone / color matching 开始",
+  "durationMinutes": 38,
+  "goals": [
+    "能确认客户需要哑光、亮面或其他表面效果",
+    "能解释 logo 工艺选择，如 printing 和 engraving 的区别",
+    "能用 Pantone、swatch 和 color matching 把颜色确认说清楚"
+  ],
+  "review": {
+    "title": "Day 13 复习",
+    "items": [
+      "昨天练了 sample approval、sample revision、pre-production sample 和 proceed。",
+      "今天继续样品确认后的细节：表面处理、Logo 工艺和颜色标准。",
+      "客户说 color is wrong 或 logo not clear 时，不要只说 we will change，要先确认 finish、logo method、Pantone code 和 reference sample。"
+    ]
+  },
+  "preview": {
+    "scenario": "客户对产品外观要求更细：要 matte finish、亮面效果、logo engraving、指定 Pantone 色号，或要求你寄色卡确认。",
+    "needToKnow": [
+      "finish 表示产品表面效果，不只是颜色。",
+      "printing 和 engraving 是不同 logo 工艺，清晰度、成本和适用材质可能不同。",
+      "Pantone 和 swatch 可以减少颜色理解偏差，尤其适合定制颜色。"
+    ]
+  },
+  "vocabulary": [
+    {
+      "word": "finish",
+      "phonetic": "/ˈfɪnɪʃ/",
+      "meaning": "表面处理 / 表面效果",
+      "usage": "用于描述产品表面是哑光、亮面、磨砂、金属感等。",
+      "example": "Could you please confirm the finish you need?"
+    },
+    {
+      "word": "matte",
+      "phonetic": "/mæt/",
+      "meaning": "哑光的",
+      "usage": "用于说明没有明显反光的表面效果。",
+      "example": "The customer prefers a matte black finish."
+    },
+    {
+      "word": "glossy",
+      "phonetic": "/ˈɡlɑːsi/",
+      "meaning": "亮面的 / 有光泽的",
+      "usage": "用于说明表面更亮、更有反光感。",
+      "example": "The glossy finish may look brighter than the matte finish."
+    },
+    {
+      "word": "engraving",
+      "phonetic": "/ɪnˈɡreɪvɪŋ/",
+      "meaning": "雕刻 / 镭雕",
+      "usage": "用于 logo 刻在产品表面，常见于金属、木材或硬质材料。",
+      "example": "Engraving is more durable than normal printing."
+    },
+    {
+      "word": "printing",
+      "phonetic": "/ˈprɪntɪŋ/",
+      "meaning": "印刷",
+      "usage": "用于 logo 或图案印在产品、包装或标签上。",
+      "example": "Logo printing is suitable for this material."
+    },
+    {
+      "word": "Pantone",
+      "phonetic": "/ˈpænˌtoʊn/",
+      "meaning": "潘通色号",
+      "usage": "用于客户指定标准颜色，减少颜色沟通误差。",
+      "example": "Please send us the Pantone code for color matching."
+    },
+    {
+      "word": "color matching",
+      "phonetic": "/ˈkʌlər ˈmætʃɪŋ/",
+      "meaning": "配色 / 颜色匹配",
+      "usage": "用于工厂按照客户色号、样品或图片匹配颜色。",
+      "example": "Color matching will be more accurate with a Pantone code."
+    },
+    {
+      "word": "swatch",
+      "phonetic": "/swɑːtʃ/",
+      "meaning": "色卡 / 小样片",
+      "usage": "用于寄给客户确认颜色、材质或表面效果的小样。",
+      "example": "We can send a swatch for your color confirmation."
+    }
+  ],
+  "sentences": [
+    {
+      "label": "确认表面效果",
+      "basic": "Which finish you want?",
+      "natural": "Which finish would you like, matte or glossy?",
+      "business": "Could you please confirm which finish you prefer, matte or glossy, before we arrange the sample?"
+    },
+    {
+      "label": "确认 Logo 工艺",
+      "basic": "Logo print or engrave?",
+      "natural": "Would you like the logo by printing or engraving?",
+      "business": "Could you please confirm whether you prefer logo printing or engraving for this product?"
+    },
+    {
+      "label": "请求 Pantone 色号",
+      "basic": "Send Pantone.",
+      "natural": "Please send us the Pantone code.",
+      "business": "Please send us the Pantone code so our factory can do the color matching more accurately."
+    },
+    {
+      "label": "说明颜色可能有偏差",
+      "basic": "Color maybe different.",
+      "natural": "The color may look slightly different on different screens.",
+      "business": "Please note that the color may look slightly different on different screens, so a Pantone code or swatch is better for confirmation."
+    },
+    {
+      "label": "建议寄色卡确认",
+      "basic": "We can send color card.",
+      "natural": "We can send a swatch for your confirmation.",
+      "business": "If you need exact color confirmation, we can send a swatch before making the final sample."
+    }
+  ],
+  "chatAnalysis": [
+    {
+      "old": "which surface?",
+      "problem": "surface 太泛，客户可能不清楚你在问颜色、材质还是表面效果。",
+      "better": "Which finish would you like, matte or glossy?",
+      "upgrade": "Could you please confirm which finish you prefer, matte or glossy, before we arrange the sample?"
+    },
+    {
+      "old": "logo can print",
+      "problem": "只给一个选项，没有确认客户是否需要 engraving，也没有说明适用性。",
+      "better": "Would you like the logo by printing or engraving?",
+      "upgrade": "Could you please confirm whether you prefer logo printing or engraving? We will also check which method is more suitable for this material."
+    },
+    {
+      "old": "send color number",
+      "problem": "color number 不够专业，客户如果有品牌标准，通常会给 Pantone code。",
+      "better": "Please send us the Pantone code.",
+      "upgrade": "Please send us the Pantone code so our factory can do the color matching more accurately."
+    }
+  ],
+  "dialogues": [
+    {
+      "title": "慢速基础版：确认哑光还是亮面",
+      "lines": [
+        {
+          "speaker": "Sales",
+          "text": "Could you please confirm which finish you prefer, matte or glossy?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "We prefer a matte finish."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Understood. We will make the sample with a matte finish."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please make sure it is not shiny."
+        }
+      ]
+    },
+    {
+      "title": "正常商务版：确认 Logo 印刷或雕刻",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "Can you put our logo on the product?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes. Could you please confirm whether you prefer logo printing or engraving?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "Which method is more durable?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Engraving is usually more durable, but we need to check if it is suitable for this material."
+        }
+      ]
+    },
+    {
+      "title": "压力场景版：客户担心颜色不准",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "The color must match our brand color exactly."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Understood. Please send us the Pantone code for accurate color matching."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you send something for us to confirm before the sample?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, we can send a swatch for your color confirmation before making the final sample."
+        }
+      ]
+    }
+  ],
+  "longDialogues": [
+    {
+      "title": "长对话实战：确认表面处理、Logo 工艺和品牌色",
+      "lines": [
+        {
+          "speaker": "Customer",
+          "text": "We want to confirm the product appearance before you make the sample."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. Let us confirm the finish, logo method, and color standard first."
+        },
+        {
+          "speaker": "Customer",
+          "text": "The product should be black, but not shiny."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Understood. You prefer a matte black finish, correct?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "Yes, matte black is correct."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Great. For the logo, would you like printing or engraving?"
+        },
+        {
+          "speaker": "Customer",
+          "text": "We are not sure. Which one looks better?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Printing can show more color details, while engraving is usually more durable."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Our logo is simple, only one color."
+        },
+        {
+          "speaker": "Sales",
+          "text": "In that case, engraving may be a good option, but we need to check if it works well on this material."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please check it with your factory."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. I will check the engraving effect with our factory and update you today."
+        },
+        {
+          "speaker": "Customer",
+          "text": "The color also needs to match our brand color."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Please send us the Pantone code so we can do the color matching more accurately."
+        },
+        {
+          "speaker": "Customer",
+          "text": "We have a color sample, but I do not know the Pantone code."
+        },
+        {
+          "speaker": "Sales",
+          "text": "No problem. You can send us the color sample or a clear reference photo first."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Will a photo be accurate enough?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "A photo is useful for reference, but a Pantone code or physical swatch is better for exact confirmation."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Can you send us a swatch before making the sample?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, we can send a swatch for your color confirmation before making the final sample."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Will the swatch take extra time?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes, preparing the swatch may take about 3 to 5 days, depending on the color matching result."
+        },
+        {
+          "speaker": "Customer",
+          "text": "That is okay. Please make sure the finish is matte."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Sure. We will use a matte finish and prepare the swatch based on your color reference."
+        },
+        {
+          "speaker": "Customer",
+          "text": "Please also send photos of the logo effect."
+        },
+        {
+          "speaker": "Sales",
+          "text": "Of course. After we test the logo method, we will send photos of the printing or engraving effect for your confirmation."
+        },
+        {
+          "speaker": "Customer",
+          "text": "If the logo and color are approved, can you proceed with the final sample?"
+        },
+        {
+          "speaker": "Sales",
+          "text": "Yes. After you approve the finish, logo method, and color swatch, we can proceed with the final sample."
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "d14-q1",
+      "type": "translate",
+      "prompt": "中译英：请确认您需要哑光还是亮面。",
+      "answer": "Please confirm whether you need matte or glossy.",
+      "acceptable": [
+        "please confirm whether you need matte or glossy",
+        "could you please confirm whether you need matte or glossy",
+        "could you please confirm which finish you prefer matte or glossy"
+      ],
+      "hint": "matte 是哑光，glossy 是亮面。"
+    },
+    {
+      "id": "d14-q2",
+      "type": "rewrite",
+      "prompt": "把这句话改得更自然：which surface?",
+      "answer": "Which finish would you like, matte or glossy?",
+      "acceptable": [
+        "which finish would you like matte or glossy",
+        "could you please confirm which finish you prefer matte or glossy"
+      ],
+      "hint": "finish 比 surface 更适合表达表面效果。"
+    },
+    {
+      "id": "d14-q3",
+      "type": "fill",
+      "prompt": "填空：Please send us the ____ code for accurate color matching.",
+      "answer": "Pantone",
+      "acceptable": [
+        "pantone"
+      ],
+      "hint": "客户指定标准颜色时常用 Pantone code。"
+    },
+    {
+      "id": "d14-q4",
+      "type": "choice",
+      "prompt": "客户要求颜色完全匹配品牌色，哪个回复更适合？",
+      "options": [
+        "Color is ok",
+        "Please send us the Pantone code so our factory can do the color matching more accurately.",
+        "Send picture only",
+        "We will make black"
+      ],
+      "answer": "Please send us the Pantone code so our factory can do the color matching more accurately.",
+      "acceptable": [
+        "please send us the pantone code so our factory can do the color matching more accurately"
+      ],
+      "hint": "准确颜色要用 Pantone code 或 swatch。"
+    },
+    {
+      "id": "d14-q5",
+      "type": "translate",
+      "prompt": "中译英：我们可以先寄色卡给您确认颜色。",
+      "answer": "We can send a swatch for your color confirmation first.",
+      "acceptable": [
+        "we can send a swatch for your color confirmation first",
+        "we can send a swatch first for your color confirmation",
+        "we can send a swatch for your confirmation first"
+      ],
+      "hint": "swatch 是色卡 / 小样片。"
+    },
+    {
+      "id": "d14-q6",
+      "type": "reply",
+      "prompt": "客户说：We want the logo to be durable. 你应该怎么回复？",
+      "answer": "Engraving is usually more durable, but we need to check if it is suitable for this material.",
+      "acceptable": [
+        "engraving is usually more durable but we need to check if it is suitable for this material",
+        "engraving is more durable but we need to check if it is suitable for this material"
+      ],
+      "hint": "耐用可以推荐 engraving，但要确认材质是否适合。"
+    }
+  ],
+  "homework": [
+    "把 finish、matte、glossy、engraving、printing、Pantone、color matching、swatch 各造 1 句。",
+    "把 5 个核心句子的 business 版本各读 5 遍，重点练 confirm which finish 和 Pantone code。",
+    "用今天的词写一段 WhatsApp 回复：客户要求 matte black、logo durable、brand color exact。"
+  ],
+  "tomorrow": "Day 15 会练低数量、小订单和试单谈判。"
+}
