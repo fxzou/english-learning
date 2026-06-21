@@ -311,6 +311,7 @@ body {
 .voice-config-head {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   gap: 12px;
   margin-bottom: 12px;
 }
@@ -324,6 +325,17 @@ body {
 .voice-config-head span,
 .voice-config label span {
   color: var(--muted);
+}
+
+.tts-mode-toggle {
+  color: var(--accent);
+}
+
+.tts-mode-text {
+  margin: -6px 0 12px;
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.45;
 }
 
 .voice-config-grid {

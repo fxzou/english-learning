@@ -43,6 +43,8 @@ const salesVoiceSelect = document.getElementById("salesVoiceSelect");
 const previewDefaultVoice = document.getElementById("previewDefaultVoice");
 const previewCustomerVoice = document.getElementById("previewCustomerVoice");
 const previewSalesVoice = document.getElementById("previewSalesVoice");
+const ttsModeToggle = document.getElementById("ttsModeToggle");
+const ttsModeText = document.getElementById("ttsModeText");
 const speechDock = document.getElementById("speechDock");
 const pauseSpeech = document.getElementById("pauseSpeech");
 const stopSpeech = document.getElementById("stopSpeech");
@@ -58,6 +60,11 @@ let currentDay = 1;
 let progress = JSON.parse(localStorage.getItem("salesCoachProgress") || "{}");
 const readyDays = new Set([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]);
 const ttsEndpoint = "https://tts-voice-magic-2.fxzouv.workers.dev/v1/audio/speech";
+const ttsModeKey = "salesCoachTtsMode";
+const ttsModes = {
+  direct: "direct",
+  proxy: "proxy",
+};
 const defaultTtsVoice = "en-US-JennyNeural";
 const defaultCustomerVoice = "en-CA-LiamNeural";
 const defaultSalesVoice = "en-US-JennyNeural";
@@ -83,6 +90,7 @@ let activeTtsRequest = null;
 let activeDialogueSession = null;
 let activePlaybackButton = null;
 let vocabularyIndex = null;
+let ttsMode = localStorage.getItem(ttsModeKey) === ttsModes.proxy ? ttsModes.proxy : ttsModes.direct;
 
 const englishVoices = [
   { shortName: "en-AU-NatashaNeural", gender: "Female", locale: "en-AU", name: "Natasha" },
@@ -142,6 +150,8 @@ const icons = {
   check: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.2 16.6 4.9 12.3 3.5 13.7 9.2 19.4 20.5 8.1 19.1 6.7z"></path></svg>',
   send: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20 21 12 3 4v6l11 2-11 2z"></path></svg>',
   list: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6h13v2H8zM8 11h13v2H8zM8 16h13v2H8zM3 6h2v2H3zM3 11h2v2H3zM3 16h2v2H3z"></path></svg>',
+  cloud: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 18H8a5 5 0 0 1-.9-9.9A7 7 0 0 1 20.7 10.4 4 4 0 0 1 19 18z"></path></svg>',
+  link: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 15.5a4 4 0 0 1 0-5.7l2.3-2.3 1.4 1.4-2.3 2.3a2 2 0 0 0 2.8 2.8l2.3-2.3 1.4 1.4-2.3 2.3a4 4 0 0 1-5.6.1z"></path><path d="M12.8 16.5 15.1 14a2 2 0 0 0-2.8-2.8L10 13.5l-1.4-1.4 2.3-2.3a4 4 0 0 1 5.7 5.7l-2.3 2.3z"></path></svg>',
 };
 
 function saveProgress() {
@@ -171,6 +181,21 @@ function setButtonIcon(button, icon, label) {
   button.innerHTML = icons[icon];
   button.setAttribute("aria-label", label);
   button.title = label;
+}
+
+function renderTtsMode() {
+  const isProxy = ttsMode === ttsModes.proxy;
+  setButtonIcon(ttsModeToggle, isProxy ? "cloud" : "link", isProxy ? "TTS 后端转发模式" : "TTS 直连模式");
+  ttsModeText.textContent = isProxy
+    ? "当前：后端转发。多句朗读会轻度拼接成单个音频，加载会更久。"
+    : "当前：直连 TTS。启动更快，分句播放。";
+}
+
+function toggleTtsMode() {
+  ttsMode = ttsMode === ttsModes.proxy ? ttsModes.direct : ttsModes.proxy;
+  localStorage.setItem(ttsModeKey, ttsMode);
+  renderTtsMode();
+  setFeedback(ttsMode === ttsModes.proxy ? "已切换到后端转发 TTS。" : "已切换到直连 TTS。");
 }
 
 function setActivePlaybackButton(button) {
@@ -268,6 +293,7 @@ function setupStaticIconButtons() {
   setButtonIcon(markDone, "check", "标记今日完成");
   setButtonIcon(copyTts, "copy", "复制对话文本");
   setButtonIcon(copyVocabIndex, "copy", "复制单词列表");
+  renderTtsMode();
 }
 
 function clearActiveAudio(options = {}) {
@@ -349,7 +375,7 @@ function extractEnglish(text) {
 }
 
 async function requestSpeechBlob(input, voice, signal) {
-  const response = await fetch(ttsEndpoint, {
+  const response = await fetch(ttsMode === ttsModes.proxy ? "/api/tts" : ttsEndpoint, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     signal,
@@ -364,6 +390,31 @@ async function requestSpeechBlob(input, voice, signal) {
   if (!response.ok) {
     throw new Error(`TTS request failed: ${response.status}`);
   }
+  return response.blob();
+}
+
+async function requestCombinedSpeechBlob(speechItems, signal) {
+  const items = speechItems
+    .map((item) => ({
+      input: extractEnglish(item.text),
+      voice: item.voice,
+      speed: 1.0,
+      pitch: "0",
+      style: "general",
+    }))
+    .filter((item) => item.input);
+
+  const response = await fetch("/api/tts-combine", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    signal,
+    body: JSON.stringify({ items }),
+  });
+
+  if (!response.ok) {
+    throw new Error(`Combined TTS request failed: ${response.status}`);
+  }
+
   return response.blob();
 }
 
@@ -454,6 +505,12 @@ async function playSpeechItems(speechItems, labels, triggerButton = null) {
     setFeedback("没有可朗读的内容。");
     return;
   }
+
+  if (ttsMode === ttsModes.proxy) {
+    await playCombinedSpeechItems(playableItems, labels, triggerButton);
+    return;
+  }
+
   beginPlayback(triggerButton);
   const session = {
     cancelled: false,
@@ -488,6 +545,35 @@ async function playSpeechItems(speechItems, labels, triggerButton = null) {
       clearActiveAudio();
       setFeedback(labels.complete);
     }
+  } catch (error) {
+    if (error.name === "AbortError") {
+      setFeedback(labels.stopped);
+      return;
+    }
+    clearActiveAudio();
+    setFeedback(`${labels.failed}：${error.message}`);
+  }
+}
+
+async function playCombinedSpeechItems(speechItems, labels, triggerButton = null) {
+  beginPlayback(triggerButton);
+  activeTtsRequest = new AbortController();
+  updateSpeechControls(true, false);
+  setFeedback(`${labels.generating}，正在由后端轻度拼接 ${speechItems.length} 段音频...`);
+  try {
+    const blob = await requestCombinedSpeechBlob(speechItems, activeTtsRequest.signal);
+    activeTtsRequest = null;
+    activeAudioUrl = URL.createObjectURL(blob);
+    activeAudio = new Audio(activeAudioUrl);
+    activeAudio.addEventListener("ended", () => {
+      clearActiveAudio();
+      setFeedback(labels.complete);
+    }, { once: true });
+    activeAudio.addEventListener("pause", () => updateSpeechControls(Boolean(activeAudio)));
+    activeAudio.addEventListener("play", () => updateSpeechControls(true));
+    await startAudio(activeAudio, audioStartDelayMs);
+    updateSpeechControls(true);
+    setFeedback("正在播放后端拼接音频。");
   } catch (error) {
     if (error.name === "AbortError") {
       setFeedback(labels.stopped);
@@ -1040,6 +1126,8 @@ stopSpeech.addEventListener("click", () => {
 vocabIndexSearch.addEventListener("input", () => {
   renderVocabularyIndex(vocabIndexSearch.value);
 });
+
+ttsModeToggle.addEventListener("click", toggleTtsMode);
 
 setupStaticIconButtons();
 setupVoiceConfig();

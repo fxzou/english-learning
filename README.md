@@ -47,8 +47,15 @@ The app can be deployed as a static frontend with Vercel serverless API routes:
 - `api/lesson.js`: serves daily lesson JSON
 - `api/vocabulary.js`: serves the vocabulary index
 - `api/progress.js`: returns success for progress saves; browser progress is kept in localStorage
+- `api/tts.js`: optional TTS proxy for single audio requests
+- `api/tts-combine.js`: optional lightweight TTS concatenation endpoint for multi-line playback
 
 Import this GitHub repo in Vercel and deploy with the default settings. No build command is required.
+
+The frontend includes a TTS mode toggle in the voice settings area:
+
+- Direct mode: the browser calls the TTS service directly and keeps the original segmented playback.
+- Backend mode: the browser calls Vercel API routes; multi-line playback is lightly concatenated into one audio response. This avoids heavy ffmpeg processing, but very long readings may take longer to start.
 
 ## Privacy
 

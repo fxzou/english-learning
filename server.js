@@ -2,6 +2,8 @@ import http from "node:http";
 import { readFile, writeFile, mkdir, stat } from "node:fs/promises";
 import path from "node:path";
 import os from "node:os";
+import ttsHandler from "./api/tts.js";
+import ttsCombineHandler from "./api/tts-combine.js";
 
 const rootDir = process.cwd();
 const publicDir = path.join(rootDir, "public");
@@ -36,6 +38,29 @@ async function writeJson(filePath, value) {
 function send(res, statusCode, body, contentType = "text/plain; charset=utf-8") {
   res.writeHead(statusCode, { "Content-Type": contentType });
   res.end(body);
+}
+
+function createApiResponse(res) {
+  return {
+    statusCode: 200,
+    headers: {},
+    status(statusCode) {
+      this.statusCode = statusCode;
+      return this;
+    },
+    setHeader(name, value) {
+      this.headers[name] = value;
+    },
+    json(value) {
+      this.setHeader("Content-Type", "application/json; charset=utf-8");
+      res.writeHead(this.statusCode, this.headers);
+      res.end(JSON.stringify(value));
+    },
+    send(value) {
+      res.writeHead(this.statusCode, this.headers);
+      res.end(value);
+    },
+  };
 }
 
 function sanitizeDayId(dayId) {
@@ -73,6 +98,16 @@ async function serveStatic(req, res) {
 }
 
 async function handleApi(req, res, url) {
+  if (req.method === "POST" && url.pathname === "/api/tts") {
+    await ttsHandler(req, createApiResponse(res));
+    return;
+  }
+
+  if (req.method === "POST" && url.pathname === "/api/tts-combine") {
+    await ttsCombineHandler(req, createApiResponse(res));
+    return;
+  }
+
   if (req.method === "GET" && url.pathname === "/api/lesson") {
     const day = url.searchParams.get("day") || "1";
     const lesson = await loadLesson(day);
