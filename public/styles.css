@@ -575,15 +575,23 @@ body {
 .panel-head {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   gap: 12px;
   margin-bottom: 16px;
+}
+
+.panel-head > div {
+  min-width: 0;
 }
 
 .panel-head h2 {
   margin: 0;
   font-size: 1.25rem;
   letter-spacing: 0;
+}
+
+.section-speak-btn {
+  color: var(--accent);
 }
 
 .section-copy {
@@ -1392,6 +1400,12 @@ body {
   .panel-head {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .panel-head:has(.section-speak-btn),
+  .panel-head:has(.vocab-index-toggle) {
+    align-items: center;
+    flex-direction: row;
   }
 
   .card-top,

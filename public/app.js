@@ -39,6 +39,11 @@ const feedback = document.getElementById("feedback");
 const markDone = document.getElementById("markDone");
 const copyTts = document.getElementById("copyTts");
 const speakLesson = document.getElementById("speakLesson");
+const speakVocabularySection = document.getElementById("speakVocabularySection");
+const speakSentenceSection = document.getElementById("speakSentenceSection");
+const speakAnalysisSection = document.getElementById("speakAnalysisSection");
+const speakDialogueSection = document.getElementById("speakDialogueSection");
+const speakLongDialogueSection = document.getElementById("speakLongDialogueSection");
 const defaultVoiceSelect = document.getElementById("defaultVoiceSelect");
 const customerVoiceSelect = document.getElementById("customerVoiceSelect");
 const salesVoiceSelect = document.getElementById("salesVoiceSelect");
@@ -336,6 +341,11 @@ function setupStaticIconButtons() {
   setButtonIcon(markDone, "check", "标记今日完成");
   setButtonIcon(copyTts, "copy", "复制对话文本");
   setButtonIcon(copyVocabIndex, "copy", "复制单词列表");
+  setButtonIcon(speakVocabularySection, "play", "朗读新单词整节");
+  setButtonIcon(speakSentenceSection, "play", "朗读核心句子整节");
+  setButtonIcon(speakAnalysisSection, "play", "朗读聊天分析整节");
+  setButtonIcon(speakDialogueSection, "play", "朗读模拟对话整节");
+  setButtonIcon(speakLongDialogueSection, "play", "朗读长对话整节");
   renderTtsMode();
   renderSpeechLoop();
   setVocabularyIndexExpanded(false);
@@ -1194,6 +1204,66 @@ function buildLessonSpeechItems() {
   return items;
 }
 
+function buildVocabularySpeechItems() {
+  if (!currentLesson) return [];
+  return currentLesson.vocabulary.map((item, index) => {
+    const speaker = getAlternatingSpeaker(index);
+    return {
+      text: `${item.word}\n${item.example}`,
+      voice: getVoiceForSpeaker(speaker),
+      label: `Vocabulary ${index + 1}`,
+    };
+  });
+}
+
+function buildSentenceSpeechItems() {
+  if (!currentLesson) return [];
+  return currentLesson.sentences.map((item, index) => {
+    const speaker = getAlternatingSpeaker(index);
+    return {
+      text: [item.basic, item.natural, item.business].join("\n"),
+      voice: getVoiceForSpeaker(speaker),
+      label: `Sentence ${index + 1}`,
+    };
+  });
+}
+
+function buildAnalysisSpeechItems() {
+  if (!currentLesson) return [];
+  return currentLesson.chatAnalysis.map((item, index) => {
+    const speaker = getAlternatingSpeaker(index);
+    return {
+      text: [item.old, item.better, item.upgrade].filter(Boolean).join("\n"),
+      voice: getVoiceForSpeaker(speaker),
+      label: `Analysis ${index + 1}`,
+    };
+  });
+}
+
+function buildDialogueSectionSpeechItems(dialogues) {
+  const items = [];
+  (dialogues || []).forEach((dialogue, index) => {
+    items.push(createLessonHeading(`Dialogue ${index + 1}`));
+    dialogue.lines.forEach((line) => {
+      items.push({
+        text: line.text,
+        voice: getVoiceForSpeaker(line.speaker),
+        label: line.speaker,
+      });
+    });
+  });
+  return items;
+}
+
+function playSectionSpeech(sectionName, speechItems, triggerButton = null) {
+  playSpeechItems(speechItems, {
+    generating: `正在生成${sectionName}音频`,
+    complete: `${sectionName}朗读完成。`,
+    stopped: `已停止${sectionName}朗读。`,
+    failed: `${sectionName}朗读失败`,
+  }, triggerButton);
+}
+
 function playLessonSpeech(triggerButton = null) {
   playSpeechItems(buildLessonSpeechItems(), {
     generating: "正在生成阅读全文音频",
@@ -1269,6 +1339,26 @@ copyVocabIndex.addEventListener("click", async () => {
 
 speakLesson.addEventListener("click", () => {
   playLessonSpeech(speakLesson);
+});
+
+speakVocabularySection.addEventListener("click", () => {
+  playSectionSpeech("新单词整节", buildVocabularySpeechItems(), speakVocabularySection);
+});
+
+speakSentenceSection.addEventListener("click", () => {
+  playSectionSpeech("核心句子整节", buildSentenceSpeechItems(), speakSentenceSection);
+});
+
+speakAnalysisSection.addEventListener("click", () => {
+  playSectionSpeech("聊天分析整节", buildAnalysisSpeechItems(), speakAnalysisSection);
+});
+
+speakDialogueSection.addEventListener("click", () => {
+  playSectionSpeech("模拟对话整节", buildDialogueSectionSpeechItems(currentLesson?.dialogues || []), speakDialogueSection);
+});
+
+speakLongDialogueSection.addEventListener("click", () => {
+  playSectionSpeech("长对话整节", buildDialogueSectionSpeechItems(currentLesson?.longDialogues || []), speakLongDialogueSection);
 });
 
 pauseSpeech.addEventListener("click", async () => {
