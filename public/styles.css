@@ -176,6 +176,26 @@ body {
   border-color: var(--accent);
 }
 
+.day-btn.completed {
+  border-color: rgba(22, 163, 74, 0.42);
+  background: rgba(22, 163, 74, 0.08);
+}
+
+.day-btn.completed span:last-child {
+  color: var(--good);
+  font-weight: 800;
+}
+
+.day-btn.next:not(.active) {
+  border-color: rgba(245, 158, 11, 0.45);
+  background: rgba(245, 158, 11, 0.08);
+}
+
+.day-btn.next span:last-child {
+  color: #b45309;
+  font-weight: 800;
+}
+
 .day-btn.active,
 .day-btn.active:hover {
   background: var(--accent-soft);
@@ -808,6 +828,10 @@ body {
   color: white;
 }
 
+.primary-btn.is-ready {
+  background: var(--good);
+}
+
 .mini-btn:hover,
 .secondary-btn:hover {
   border-color: var(--accent);
@@ -815,6 +839,10 @@ body {
 
 .primary-btn:hover {
   background: #1d4ed8;
+}
+
+.primary-btn.is-ready:hover {
+  background: #15803d;
 }
 
 .mini-btn:disabled,

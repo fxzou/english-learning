@@ -176,6 +176,21 @@ function saveProgress() {
   localStorage.setItem("salesCoachProgress", JSON.stringify(progress));
 }
 
+function getCompletedDays() {
+  return progress.completed && typeof progress.completed === "object" ? progress.completed : {};
+}
+
+function isDayCompleted(day) {
+  return Boolean(getCompletedDays()[String(day)]);
+}
+
+function getFirstIncompleteDay() {
+  for (let day = 1; day <= 30; day += 1) {
+    if (!isDayCompleted(day)) return day;
+  }
+  return 30;
+}
+
 function saveVoiceConfig() {
   localStorage.setItem("salesCoachVoiceConfig", JSON.stringify({
     ...voiceConfig,
@@ -784,17 +799,20 @@ function playDialogueSpeech(dialogue, triggerButton = null) {
 function buildDayButtons(activeDay = 1) {
   dayNav.innerHTML = "";
   availableDays.textContent = `${readyDays.size} day ready`;
+  const firstIncomplete = getFirstIncompleteDay();
   for (let day = 1; day <= 30; day += 1) {
     const isReady = readyDays.has(day);
+    const completed = isDayCompleted(day);
+    const isNext = day === firstIncomplete && isReady && !completed;
     const button = document.createElement("button");
-    button.className = `day-btn ${day === activeDay ? "active" : ""} ${isReady ? "ready" : "locked"}`;
+    button.className = `day-btn ${day === activeDay ? "active" : ""} ${isReady ? "ready" : "locked"} ${completed ? "completed" : ""} ${isNext ? "next" : ""}`;
     button.disabled = !isReady;
     button.innerHTML = `
       <span>
         <strong>Day ${String(day).padStart(2, "0")}</strong>
         <small>${day <= 5 ? "基础回复" : day <= 10 ? "产品细节" : day <= 15 ? "报价模具" : day <= 20 ? "生产进度" : day <= 25 ? "物流付款" : "实战复盘"}</small>
       </span>
-      <span>${isReady ? "Ready" : "Soon"}</span>
+      <span>${completed ? "Done" : isNext ? "Next" : isReady ? "Ready" : "Soon"}</span>
     `;
     if (isReady) {
       button.addEventListener("click", () => loadLesson(day));
@@ -1080,6 +1098,40 @@ function countMasteredWords(items) {
   }, 0);
 }
 
+function getCompletionState() {
+  const exercises = currentLesson?.exercises || [];
+  const vocab = currentLesson?.vocabulary || [];
+  const score = countCorrect(exercises);
+  const knownWords = countMasteredWords(vocab);
+  const firstIncomplete = getFirstIncompleteDay();
+  const completed = isDayCompleted(currentDay);
+  const wordsDone = vocab.length > 0 && knownWords === vocab.length;
+  const exercisesDone = exercises.length > 0 && score === exercises.length;
+  const sequential = currentDay === firstIncomplete;
+
+  return {
+    completed,
+    exercisesDone,
+    firstIncomplete,
+    knownWords,
+    score,
+    sequential,
+    totalExercises: exercises.length,
+    totalWords: vocab.length,
+    wordsDone,
+    canComplete: !completed && sequential && wordsDone && exercisesDone,
+  };
+}
+
+function getCompletionHint(state) {
+  if (state.completed) return "今日已完成";
+  if (!state.sequential) return `请先完成 Day ${String(state.firstIncomplete).padStart(2, "0")}`;
+  if (!state.wordsDone && !state.exercisesDone) return "需要先完成所有单词和习题";
+  if (!state.wordsDone) return "需要先完成所有单词";
+  if (!state.exercisesDone) return "需要先完成所有习题";
+  return "标记今日完成";
+}
+
 function renderGoalPills(goals) {
   goalPills.innerHTML = "";
   goals.forEach((goal) => {
@@ -1092,18 +1144,30 @@ function renderGoalPills(goals) {
 function updateStatus() {
   const exercises = currentLesson?.exercises || [];
   const vocab = currentLesson?.vocabulary || [];
-  const total = exercises.length;
-  const score = countCorrect(exercises);
-  const knownWords = countMasteredWords(vocab);
-  const totalTasks = total + vocab.length;
-  const doneTasks = score + knownWords;
+  const state = getCompletionState();
+  const totalTasks = state.totalExercises + state.totalWords;
+  const doneTasks = state.score + state.knownWords;
   const percent = totalTasks > 0 ? Math.round((doneTasks / totalTasks) * 100) : 0;
-  lessonScore.textContent = `${score} / ${total}`;
-  lessonStatus.textContent = score === total && total > 0 ? "Done" : score > 0 ? "In progress" : "Not started";
+  lessonScore.textContent = `${state.score} / ${state.totalExercises}`;
+  if (state.completed) {
+    lessonStatus.textContent = "Done";
+  } else if (state.canComplete) {
+    lessonStatus.textContent = "Ready";
+  } else if (!state.sequential) {
+    lessonStatus.textContent = "Locked";
+  } else if (doneTasks > 0) {
+    lessonStatus.textContent = "In progress";
+  } else {
+    lessonStatus.textContent = "Not started";
+  }
   progressPercent.textContent = `${percent}%`;
   progressBar.style.width = `${percent}%`;
-  masteredWords.textContent = `${knownWords} / ${vocab.length}`;
-  exerciseProgress.textContent = `${score} / ${total}`;
+  masteredWords.textContent = `${state.knownWords} / ${vocab.length}`;
+  exerciseProgress.textContent = `${state.score} / ${state.totalExercises}`;
+  markDone.disabled = !state.canComplete;
+  markDone.classList.toggle("is-ready", state.canComplete);
+  markDone.setAttribute("aria-label", getCompletionHint(state));
+  markDone.title = getCompletionHint(state);
 }
 
 function getAllDialogues() {
@@ -1322,14 +1386,34 @@ async function loadLesson(day) {
 }
 
 markDone.addEventListener("click", async () => {
-  const score = countCorrect(currentLesson?.exercises || []);
-  await fetch("/api/progress", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ day: currentDay, score, total: currentLesson?.exercises?.length || 0 }),
-  });
+  const state = getCompletionState();
+  if (!state.canComplete) {
+    setFeedback(getCompletionHint(state));
+    updateStatus();
+    return;
+  }
+
+  progress.completed = { ...getCompletedDays() };
+  progress.completed[String(currentDay)] = {
+    completedAt: new Date().toISOString(),
+    score: state.score,
+    total: state.totalExercises,
+    words: state.knownWords,
+    wordTotal: state.totalWords,
+  };
+  saveProgress();
+  try {
+    await fetch("/api/progress", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ day: currentDay, score: state.score, total: state.totalExercises }),
+    });
+  } catch (_error) {
+    // Local progress is the source of truth; the server endpoint is best effort.
+  }
+  buildDayButtons(currentDay);
+  updateStatus();
   setFeedback(`Day ${String(currentDay).padStart(2, "0")} 已标记完成。`);
-  lessonStatus.textContent = "Done";
 });
 
 copyTts.addEventListener("click", async () => {
@@ -1401,6 +1485,7 @@ loopSpeech.addEventListener("click", toggleSpeechLoop);
 
 setupStaticIconButtons();
 setupVoiceConfig();
-buildDayButtons(1);
+const initialDay = getFirstIncompleteDay();
+buildDayButtons(initialDay);
 loadVocabularyIndex();
-loadLesson(1);
+loadLesson(initialDay);
