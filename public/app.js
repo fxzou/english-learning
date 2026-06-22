@@ -95,6 +95,7 @@ if (!savedVoiceConfig || savedVoiceConfig.version !== voiceConfigVersion) {
   saveVoiceConfig();
 }
 let activeAudio = null;
+let currentAudioElement = null;
 let activeAudioUrl = null;
 let activeTtsRequest = null;
 let activeDialogueSession = null;
@@ -233,6 +234,13 @@ function renderSpeechLoop() {
 function toggleSpeechLoop() {
   speechLoopEnabled = !speechLoopEnabled;
   localStorage.setItem(speechLoopKey, String(speechLoopEnabled));
+  const nativeLoopEnabled = speechLoopEnabled && !activeDialogueSession;
+  if (activeAudio) {
+    activeAudio.loop = nativeLoopEnabled;
+  }
+  if (currentAudioElement) {
+    currentAudioElement.loop = nativeLoopEnabled;
+  }
   renderSpeechLoop();
   setFeedback(speechLoopEnabled ? "已开启循环播放。" : "已切换为单次播放。");
 }
@@ -366,6 +374,7 @@ function clearActiveAudio(options = {}) {
     activeAudio.pause();
     activeAudio = null;
   }
+  currentAudioElement = null;
   if (activeAudioUrl) {
     URL.revokeObjectURL(activeAudioUrl);
     activeAudioUrl = null;
@@ -595,10 +604,10 @@ async function playSpeech(text, voice = voiceConfig.default || defaultTtsVoice, 
     activeTtsRequest = null;
     activeAudioUrl = URL.createObjectURL(blob);
     activeAudio = new Audio(activeAudioUrl);
+    currentAudioElement = activeAudio;
+    activeAudio.loop = speechLoopEnabled;
     activeAudio.addEventListener("ended", () => {
-      if (!replayActivePlayback()) {
-        clearActiveAudio();
-      }
+      clearActiveAudio();
     }, { once: true });
     activeAudio.addEventListener("pause", () => updateSpeechControls(Boolean(activeAudio)));
     activeAudio.addEventListener("play", () => updateSpeechControls(true));
@@ -696,6 +705,8 @@ async function playSpeechItems(speechItems, labels, triggerButton = null) {
       const item = await waitForDialogueItem(session, index);
       if (item.skipped) continue;
       activeAudio = new Audio(item.url);
+      currentAudioElement = activeAudio;
+      activeAudio.loop = false;
       activeAudio.addEventListener("pause", () => updateSpeechControls(Boolean(activeAudio)));
       activeAudio.addEventListener("play", () => updateSpeechControls(true));
       await startAudio(activeAudio, index === 0 ? audioStartDelayMs : 0);
@@ -735,11 +746,11 @@ async function playCombinedSpeechItems(speechItems, labels, triggerButton = null
     activeTtsRequest = null;
     activeAudioUrl = URL.createObjectURL(blob);
     activeAudio = new Audio(activeAudioUrl);
+    currentAudioElement = activeAudio;
+    activeAudio.loop = speechLoopEnabled;
     activeAudio.addEventListener("ended", () => {
-      if (!replayActivePlayback()) {
-        clearActiveAudio();
-        setFeedback(labels.complete);
-      }
+      clearActiveAudio();
+      setFeedback(labels.complete);
     }, { once: true });
     activeAudio.addEventListener("pause", () => updateSpeechControls(Boolean(activeAudio)));
     activeAudio.addEventListener("play", () => updateSpeechControls(true));
