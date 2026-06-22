@@ -106,6 +106,7 @@ let vocabIndexExpanded = false;
 let speechLoopEnabled = localStorage.getItem(speechLoopKey) === "true";
 let activeReplay = null;
 let ttsDbPromise = null;
+let playbackGeneration = 0;
 
 const englishVoices = [
   { shortName: "en-AU-NatashaNeural", gender: "Female", locale: "en-AU", name: "Natasha" },
@@ -274,8 +275,16 @@ function setActivePlaybackButton(button) {
 
 function beginPlayback(button) {
   clearActiveAudio({ keepButton: true });
+  playbackGeneration += 1;
   activeReplay = null;
   setActivePlaybackButton(button);
+  return playbackGeneration;
+}
+
+function assertCurrentPlayback(generation) {
+  if (generation !== playbackGeneration) {
+    throw new DOMException("Playback superseded", "AbortError");
+  }
 }
 
 function replayActivePlayback() {
@@ -375,6 +384,7 @@ function setupStaticIconButtons() {
 }
 
 function clearActiveAudio(options = {}) {
+  playbackGeneration += 1;
   if (activeDialogueSession) {
     activeDialogueSession.cancelled = true;
     activeDialogueSession.controllers.forEach((controller) => controller.abort());
@@ -434,11 +444,13 @@ function waitForAudioReady(audio) {
   });
 }
 
-async function startAudio(audio, delayMs = 0) {
+async function startAudio(audio, delayMs = 0, beforePlay = null) {
   await waitForAudioReady(audio);
+  beforePlay?.();
   if (delayMs > 0) {
     await wait(delayMs);
   }
+  beforePlay?.();
   await audio.play();
 }
 
@@ -609,13 +621,14 @@ async function playSpeech(text, voice = voiceConfig.default || defaultTtsVoice, 
     setFeedback("没有可朗读的英文内容。");
     return;
   }
-  beginPlayback(triggerButton);
+  const generation = beginPlayback(triggerButton);
   activeReplay = () => playSpeech(text, voice, triggerButton);
   setFeedback("正在生成朗读音频...");
   activeTtsRequest = new AbortController();
   updateSpeechControls(true, false);
   try {
     const blob = await requestSpeechBlob(input, voice, activeTtsRequest.signal);
+    assertCurrentPlayback(generation);
     activeTtsRequest = null;
     activeAudioUrl = URL.createObjectURL(blob);
     activeAudio = new Audio(activeAudioUrl);
@@ -626,12 +639,15 @@ async function playSpeech(text, voice = voiceConfig.default || defaultTtsVoice, 
     }, { once: true });
     activeAudio.addEventListener("pause", () => updateSpeechControls(Boolean(activeAudio)));
     activeAudio.addEventListener("play", () => updateSpeechControls(true));
-    await startAudio(activeAudio, audioStartDelayMs);
+    await startAudio(activeAudio, audioStartDelayMs, () => assertCurrentPlayback(generation));
+    assertCurrentPlayback(generation);
     updateSpeechControls(true);
     setFeedback("正在播放朗读。");
   } catch (error) {
     if (error.name === "AbortError") {
-      setFeedback("已停止朗读。");
+      if (generation === playbackGeneration) {
+        setFeedback("已停止朗读。");
+      }
       return;
     }
     clearActiveAudio();
@@ -701,10 +717,11 @@ async function playSpeechItems(speechItems, labels, triggerButton = null) {
     return;
   }
 
-  beginPlayback(triggerButton);
+  const generation = beginPlayback(triggerButton);
   activeReplay = () => playSpeechItems(speechItems, labels, triggerButton);
   const session = {
     cancelled: false,
+    generation,
     controllers: new Set(),
     urls: new Set(),
     items: Array(playableItems.length),
@@ -717,24 +734,28 @@ async function playSpeechItems(speechItems, labels, triggerButton = null) {
   });
   try {
     for (let index = 0; index < playableItems.length; index += 1) {
+      assertCurrentPlayback(generation);
       const item = await waitForDialogueItem(session, index);
+      assertCurrentPlayback(generation);
       if (item.skipped) continue;
       activeAudio = new Audio(item.url);
       currentAudioElement = activeAudio;
       activeAudio.loop = false;
       activeAudio.addEventListener("pause", () => updateSpeechControls(Boolean(activeAudio)));
       activeAudio.addEventListener("play", () => updateSpeechControls(true));
-      await startAudio(activeAudio, index === 0 ? audioStartDelayMs : 0);
+      await startAudio(activeAudio, index === 0 ? audioStartDelayMs : 0, () => assertCurrentPlayback(generation));
+      assertCurrentPlayback(generation);
       updateSpeechControls(true);
       setFeedback(`正在播放 ${playableItems[index].label} ${index + 1} / ${playableItems.length}`);
       await new Promise((resolve, reject) => {
         activeAudio.addEventListener("ended", resolve, { once: true });
         activeAudio.addEventListener("error", reject, { once: true });
       });
+      assertCurrentPlayback(generation);
       activeAudio = null;
     }
     await preloadPromise;
-    if (activeDialogueSession === session) {
+    if (activeDialogueSession === session && generation === playbackGeneration) {
       if (!replayActivePlayback()) {
         clearActiveAudio();
         setFeedback(labels.complete);
@@ -742,7 +763,9 @@ async function playSpeechItems(speechItems, labels, triggerButton = null) {
     }
   } catch (error) {
     if (error.name === "AbortError") {
-      setFeedback(labels.stopped);
+      if (generation === playbackGeneration) {
+        setFeedback(labels.stopped);
+      }
       return;
     }
     clearActiveAudio();
@@ -751,13 +774,14 @@ async function playSpeechItems(speechItems, labels, triggerButton = null) {
 }
 
 async function playCombinedSpeechItems(speechItems, labels, triggerButton = null) {
-  beginPlayback(triggerButton);
+  const generation = beginPlayback(triggerButton);
   activeReplay = () => playCombinedSpeechItems(speechItems, labels, triggerButton);
   activeTtsRequest = new AbortController();
   updateSpeechControls(true, false);
   setFeedback(`${labels.generating}，正在由后端轻度拼接 ${speechItems.length} 段音频...`);
   try {
     const blob = await requestCombinedSpeechBlob(speechItems, activeTtsRequest.signal);
+    assertCurrentPlayback(generation);
     activeTtsRequest = null;
     activeAudioUrl = URL.createObjectURL(blob);
     activeAudio = new Audio(activeAudioUrl);
@@ -769,12 +793,15 @@ async function playCombinedSpeechItems(speechItems, labels, triggerButton = null
     }, { once: true });
     activeAudio.addEventListener("pause", () => updateSpeechControls(Boolean(activeAudio)));
     activeAudio.addEventListener("play", () => updateSpeechControls(true));
-    await startAudio(activeAudio, audioStartDelayMs);
+    await startAudio(activeAudio, audioStartDelayMs, () => assertCurrentPlayback(generation));
+    assertCurrentPlayback(generation);
     updateSpeechControls(true);
     setFeedback("正在播放后端拼接音频。");
   } catch (error) {
     if (error.name === "AbortError") {
-      setFeedback(labels.stopped);
+      if (generation === playbackGeneration) {
+        setFeedback(labels.stopped);
+      }
       return;
     }
     clearActiveAudio();
